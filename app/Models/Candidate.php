@@ -44,4 +44,4 @@ class Candidate extends Model
     {
         return $this->hasMany(CandidateSkill::class);
     }
-} 
+}

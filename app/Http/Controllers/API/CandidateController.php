@@ -4,8 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\Candidate;
-use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class CandidateController extends Controller
@@ -13,6 +13,7 @@ class CandidateController extends Controller
     public function index(): JsonResponse
     {
         $candidates = Candidate::all();
+
         return response()->json($candidates);
     }
 
@@ -41,6 +42,7 @@ class CandidateController extends Controller
         }
 
         $candidate = Candidate::create($request->all());
+
         return response()->json($candidate, 201);
     }
 
@@ -54,7 +56,7 @@ class CandidateController extends Controller
         $validator = Validator::make($request->all(), [
             'first_name' => 'sometimes|required|string|max:255',
             'last_name' => 'sometimes|required|string|max:255',
-            'email' => 'sometimes|required|email|unique:candidates,email,' . $candidate->id,
+            'email' => 'sometimes|required|email|unique:candidates,email,'.$candidate->id,
             'phone' => 'nullable|string|max:20',
             'location' => 'nullable|string|max:255',
             'resume_url' => 'nullable|url',
@@ -74,12 +76,14 @@ class CandidateController extends Controller
         }
 
         $candidate->update($request->all());
+
         return response()->json($candidate);
     }
 
     public function destroy(Candidate $candidate): JsonResponse
     {
         $candidate->delete();
+
         return response()->json(null, 204);
     }
-} 
+}

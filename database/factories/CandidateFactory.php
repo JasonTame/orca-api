@@ -29,4 +29,4 @@ class CandidateFactory extends Factory
             'status' => $this->faker->randomElement(['active', 'inactive', 'hired', 'rejected']),
         ];
     }
-} 
+}

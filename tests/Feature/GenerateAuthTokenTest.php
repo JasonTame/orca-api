@@ -1,10 +1,7 @@
 <?php
 
-use App\Console\Commands\GenerateAuthToken;
 use App\Models\User;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 
 test('it generates a token for an existing user', function () {
     // Create a test user
