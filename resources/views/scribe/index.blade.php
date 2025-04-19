@@ -66,6 +66,28 @@
                     <a href="#authenticating-requests">Authenticating requests</a>
                 </li>
                             </ul>
+                    <ul id="tocify-header-applications" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="applications">
+                    <a href="#applications">Applications</a>
+                </li>
+                                    <ul id="tocify-subheader-applications" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="applications-GETapi-applications">
+                                <a href="#applications-GETapi-applications">GET api/applications</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="applications-POSTapi-applications">
+                                <a href="#applications-POSTapi-applications">POST api/applications</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="applications-GETapi-applications--id-">
+                                <a href="#applications-GETapi-applications--id-">GET api/applications/{id}</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="applications-PUTapi-applications--id-">
+                                <a href="#applications-PUTapi-applications--id-">PUT api/applications/{id}</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="applications-DELETEapi-applications--id-">
+                                <a href="#applications-DELETEapi-applications--id-">DELETE api/applications/{id}</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
                     <ul id="tocify-header-candidates" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="candidates">
                     <a href="#candidates">Candidates</a>
@@ -162,7 +184,943 @@ You can switch the language used with the tabs at the top right (or from the nav
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
-        <h1 id="candidates">Candidates</h1>
+        <h1 id="applications">Applications</h1>
+
+    
+
+                                <h2 id="applications-GETapi-applications">GET api/applications</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-applications">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://orca-api.test/api/applications" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://orca-api.test/api/applications"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-applications">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-applications" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-applications"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-applications"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-applications" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-applications">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-applications" data-method="GET"
+      data-path="api/applications"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-applications', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-applications"
+                    onclick="tryItOut('GETapi-applications');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-applications"
+                    onclick="cancelTryOut('GETapi-applications');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-applications"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/applications</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-applications"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-applications"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-applications"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="applications-POSTapi-applications">POST api/applications</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-applications">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://orca-api.test/api/applications" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"job_opening_id\": \"architecto\",
+    \"candidate_id\": \"architecto\",
+    \"code_sample_url\": \"http:\\/\\/bailey.com\\/\",
+    \"status\": \"offered\",
+    \"rejection_reason\": \"m\",
+    \"notes\": \"architecto\",
+    \"referral_source\": \"n\",
+    \"applied_at\": \"2025-04-19T15:44:06\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://orca-api.test/api/applications"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "job_opening_id": "architecto",
+    "candidate_id": "architecto",
+    "code_sample_url": "http:\/\/bailey.com\/",
+    "status": "offered",
+    "rejection_reason": "m",
+    "notes": "architecto",
+    "referral_source": "n",
+    "applied_at": "2025-04-19T15:44:06"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-applications">
+</span>
+<span id="execution-results-POSTapi-applications" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-applications"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-applications"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-applications" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-applications">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-applications" data-method="POST"
+      data-path="api/applications"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-applications', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-applications"
+                    onclick="tryItOut('POSTapi-applications');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-applications"
+                    onclick="cancelTryOut('POSTapi-applications');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-applications"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/applications</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-applications"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-applications"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-applications"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>job_opening_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="job_opening_id"                data-endpoint="POSTapi-applications"
+               value="architecto"
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the job_openings table. Example: <code>architecto</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>candidate_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="candidate_id"                data-endpoint="POSTapi-applications"
+               value="architecto"
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the candidates table. Example: <code>architecto</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>code_sample_url</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="code_sample_url"                data-endpoint="POSTapi-applications"
+               value="http://bailey.com/"
+               data-component="body">
+    <br>
+<p>Must be a valid URL. Example: <code>http://bailey.com/</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="status"                data-endpoint="POSTapi-applications"
+               value="offered"
+               data-component="body">
+    <br>
+<p>Example: <code>offered</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>pending</code></li> <li><code>reviewing</code></li> <li><code>interviewing</code></li> <li><code>offered</code></li> <li><code>accepted</code></li> <li><code>rejected</code></li></ul>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>current_stage_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="current_stage_id"                data-endpoint="POSTapi-applications"
+               value=""
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the interview_stages table.</p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>rejection_reason</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="rejection_reason"                data-endpoint="POSTapi-applications"
+               value="m"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>m</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="notes"                data-endpoint="POSTapi-applications"
+               value="architecto"
+               data-component="body">
+    <br>
+<p>Example: <code>architecto</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>referral_source</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="referral_source"                data-endpoint="POSTapi-applications"
+               value="n"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>applied_at</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="applied_at"                data-endpoint="POSTapi-applications"
+               value="2025-04-19T15:44:06"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2025-04-19T15:44:06</code></p>
+        </div>
+        </form>
+
+                    <h2 id="applications-GETapi-applications--id-">GET api/applications/{id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-applications--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://orca-api.test/api/applications/16" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://orca-api.test/api/applications/16"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-applications--id-">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-applications--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-applications--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-applications--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-applications--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-applications--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-applications--id-" data-method="GET"
+      data-path="api/applications/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-applications--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-applications--id-"
+                    onclick="tryItOut('GETapi-applications--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-applications--id-"
+                    onclick="cancelTryOut('GETapi-applications--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-applications--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/applications/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-applications--id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-applications--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-applications--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="GETapi-applications--id-"
+               value="16"
+               data-component="url">
+    <br>
+<p>The ID of the application. Example: <code>16</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="applications-PUTapi-applications--id-">PUT api/applications/{id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-applications--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://orca-api.test/api/applications/16" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"job_opening_id\": \"architecto\",
+    \"candidate_id\": \"architecto\",
+    \"code_sample_url\": \"http:\\/\\/bailey.com\\/\",
+    \"status\": \"reviewing\",
+    \"rejection_reason\": \"m\",
+    \"notes\": \"architecto\",
+    \"referral_source\": \"n\",
+    \"applied_at\": \"2025-04-19T15:44:06\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://orca-api.test/api/applications/16"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "job_opening_id": "architecto",
+    "candidate_id": "architecto",
+    "code_sample_url": "http:\/\/bailey.com\/",
+    "status": "reviewing",
+    "rejection_reason": "m",
+    "notes": "architecto",
+    "referral_source": "n",
+    "applied_at": "2025-04-19T15:44:06"
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-applications--id-">
+</span>
+<span id="execution-results-PUTapi-applications--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-applications--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-applications--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-PUTapi-applications--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-applications--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-PUTapi-applications--id-" data-method="PUT"
+      data-path="api/applications/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-applications--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-applications--id-"
+                    onclick="tryItOut('PUTapi-applications--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-applications--id-"
+                    onclick="cancelTryOut('PUTapi-applications--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-applications--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/applications/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/applications/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-applications--id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="PUTapi-applications--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="PUTapi-applications--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="PUTapi-applications--id-"
+               value="16"
+               data-component="url">
+    <br>
+<p>The ID of the application. Example: <code>16</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>job_opening_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="job_opening_id"                data-endpoint="PUTapi-applications--id-"
+               value="architecto"
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the job_openings table. Example: <code>architecto</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>candidate_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="candidate_id"                data-endpoint="PUTapi-applications--id-"
+               value="architecto"
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the candidates table. Example: <code>architecto</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>code_sample_url</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="code_sample_url"                data-endpoint="PUTapi-applications--id-"
+               value="http://bailey.com/"
+               data-component="body">
+    <br>
+<p>Must be a valid URL. Example: <code>http://bailey.com/</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="status"                data-endpoint="PUTapi-applications--id-"
+               value="reviewing"
+               data-component="body">
+    <br>
+<p>Example: <code>reviewing</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>pending</code></li> <li><code>reviewing</code></li> <li><code>interviewing</code></li> <li><code>offered</code></li> <li><code>accepted</code></li> <li><code>rejected</code></li></ul>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>current_stage_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="current_stage_id"                data-endpoint="PUTapi-applications--id-"
+               value=""
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the interview_stages table.</p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>rejection_reason</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="rejection_reason"                data-endpoint="PUTapi-applications--id-"
+               value="m"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>m</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="notes"                data-endpoint="PUTapi-applications--id-"
+               value="architecto"
+               data-component="body">
+    <br>
+<p>Example: <code>architecto</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>referral_source</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="referral_source"                data-endpoint="PUTapi-applications--id-"
+               value="n"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>applied_at</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="applied_at"                data-endpoint="PUTapi-applications--id-"
+               value="2025-04-19T15:44:06"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2025-04-19T15:44:06</code></p>
+        </div>
+        </form>
+
+                    <h2 id="applications-DELETEapi-applications--id-">DELETE api/applications/{id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-applications--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://orca-api.test/api/applications/16" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://orca-api.test/api/applications/16"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-applications--id-">
+</span>
+<span id="execution-results-DELETEapi-applications--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-applications--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-applications--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-applications--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-applications--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-DELETEapi-applications--id-" data-method="DELETE"
+      data-path="api/applications/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-applications--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-applications--id-"
+                    onclick="tryItOut('DELETEapi-applications--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-applications--id-"
+                    onclick="cancelTryOut('DELETEapi-applications--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-applications--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/applications/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="DELETEapi-applications--id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="DELETEapi-applications--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="DELETEapi-applications--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="DELETEapi-applications--id-"
+               value="16"
+               data-component="url">
+    <br>
+<p>The ID of the application. Example: <code>16</code></p>
+            </div>
+                    </form>
+
+                <h1 id="candidates">Candidates</h1>
 
     
 
@@ -335,9 +1293,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"current_position\": \"p\",
     \"current_company\": \"w\",
     \"desired_salary\": 16,
-    \"source\": \"career_site\",
+    \"source\": \"referral\",
     \"notes\": \"architecto\",
-    \"status\": \"inactive\"
+    \"status\": \"rejected\"
 }"
 </code></pre></div>
 
@@ -366,9 +1324,9 @@ let body = {
     "current_position": "p",
     "current_company": "w",
     "desired_salary": 16,
-    "source": "career_site",
+    "source": "referral",
     "notes": "architecto",
-    "status": "inactive"
+    "status": "rejected"
 };
 
 fetch(url, {
@@ -600,10 +1558,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="source"                data-endpoint="POSTapi-candidates"
-               value="career_site"
+               value="referral"
                data-component="body">
     <br>
-<p>Example: <code>career_site</code></p>
+<p>Example: <code>referral</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>linkedin</code></li> <li><code>indeed</code></li> <li><code>referral</code></li> <li><code>career_site</code></li> <li><code>other</code></li></ul>
         </div>
@@ -624,10 +1582,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-candidates"
-               value="inactive"
+               value="rejected"
                data-component="body">
     <br>
-<p>Example: <code>inactive</code></p>
+<p>Example: <code>rejected</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>active</code></li> <li><code>inactive</code></li> <li><code>hired</code></li> <li><code>rejected</code></li></ul>
         </div>
@@ -813,9 +1771,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"current_position\": \"u\",
     \"current_company\": \"j\",
     \"desired_salary\": 87,
-    \"source\": \"career_site\",
+    \"source\": \"indeed\",
     \"notes\": \"architecto\",
-    \"status\": \"hired\"
+    \"status\": \"rejected\"
 }"
 </code></pre></div>
 
@@ -843,9 +1801,9 @@ let body = {
     "current_position": "u",
     "current_company": "j",
     "desired_salary": 87,
-    "source": "career_site",
+    "source": "indeed",
     "notes": "architecto",
-    "status": "hired"
+    "status": "rejected"
 };
 
 fetch(url, {
@@ -1093,10 +2051,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="source"                data-endpoint="PUTapi-candidates--id-"
-               value="career_site"
+               value="indeed"
                data-component="body">
     <br>
-<p>Example: <code>career_site</code></p>
+<p>Example: <code>indeed</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>linkedin</code></li> <li><code>indeed</code></li> <li><code>referral</code></li> <li><code>career_site</code></li> <li><code>other</code></li></ul>
         </div>
@@ -1117,10 +2075,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-candidates--id-"
-               value="hired"
+               value="rejected"
                data-component="body">
     <br>
-<p>Example: <code>hired</code></p>
+<p>Example: <code>rejected</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>active</code></li> <li><code>inactive</code></li> <li><code>hired</code></li> <li><code>rejected</code></li></ul>
         </div>
@@ -1425,10 +2383,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"logo_url\": \"http:\\/\\/bailey.com\\/\",
     \"website\": \"http:\\/\\/rempel.com\\/sunt-nihil-accusantium-harum-mollitia\",
     \"industry\": \"k\",
-    \"size\": \"medium\",
+    \"size\": \"enterprise\",
     \"description\": \"Eius et animi quos velit et.\",
     \"location\": \"v\",
-    \"status\": \"active\"
+    \"status\": \"inactive\"
 }"
 </code></pre></div>
 
@@ -1449,10 +2407,10 @@ let body = {
     "logo_url": "http:\/\/bailey.com\/",
     "website": "http:\/\/rempel.com\/sunt-nihil-accusantium-harum-mollitia",
     "industry": "k",
-    "size": "medium",
+    "size": "enterprise",
     "description": "Eius et animi quos velit et.",
     "location": "v",
-    "status": "active"
+    "status": "inactive"
 };
 
 fetch(url, {
@@ -1596,10 +2554,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="size"                data-endpoint="POSTapi-companies"
-               value="medium"
+               value="enterprise"
                data-component="body">
     <br>
-<p>Example: <code>medium</code></p>
+<p>Example: <code>enterprise</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>small</code></li> <li><code>medium</code></li> <li><code>large</code></li> <li><code>enterprise</code></li></ul>
         </div>
@@ -1631,10 +2589,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-companies"
-               value="active"
+               value="inactive"
                data-component="body">
     <br>
-<p>Example: <code>active</code></p>
+<p>Example: <code>inactive</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>active</code></li> <li><code>inactive</code></li></ul>
         </div>
@@ -1813,10 +2771,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"logo_url\": \"http:\\/\\/bailey.com\\/\",
     \"website\": \"http:\\/\\/rempel.com\\/sunt-nihil-accusantium-harum-mollitia\",
     \"industry\": \"k\",
-    \"size\": \"large\",
+    \"size\": \"enterprise\",
     \"description\": \"Eius et animi quos velit et.\",
     \"location\": \"v\",
-    \"status\": \"active\"
+    \"status\": \"inactive\"
 }"
 </code></pre></div>
 
@@ -1837,10 +2795,10 @@ let body = {
     "logo_url": "http:\/\/bailey.com\/",
     "website": "http:\/\/rempel.com\/sunt-nihil-accusantium-harum-mollitia",
     "industry": "k",
-    "size": "large",
+    "size": "enterprise",
     "description": "Eius et animi quos velit et.",
     "location": "v",
-    "status": "active"
+    "status": "inactive"
 };
 
 fetch(url, {
@@ -2000,10 +2958,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="size"                data-endpoint="PUTapi-companies--id-"
-               value="large"
+               value="enterprise"
                data-component="body">
     <br>
-<p>Example: <code>large</code></p>
+<p>Example: <code>enterprise</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>small</code></li> <li><code>medium</code></li> <li><code>large</code></li> <li><code>enterprise</code></li></ul>
         </div>
@@ -2035,10 +2993,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-companies--id-"
-               value="active"
+               value="inactive"
                data-component="body">
     <br>
-<p>Example: <code>active</code></p>
+<p>Example: <code>inactive</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>active</code></li> <li><code>inactive</code></li></ul>
         </div>
@@ -2345,15 +3303,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"team\": \"v\",
     \"location\": \"d\",
     \"type\": \"part_time\",
-    \"level\": \"lead\",
+    \"level\": \"junior\",
     \"salary_min\": 37,
     \"salary_max\": 9,
     \"requirements\": \"architecto\",
     \"benefits\": \"architecto\",
-    \"status\": \"published\",
+    \"status\": \"closed\",
     \"is_remote\": true,
-    \"published_at\": \"2025-04-19T15:24:36\",
-    \"closing_date\": \"2053-01-08\"
+    \"published_at\": \"2025-04-19T15:44:06\",
+    \"closing_date\": \"2019-08-22\"
 }"
 </code></pre></div>
 
@@ -2376,15 +3334,15 @@ let body = {
     "team": "v",
     "location": "d",
     "type": "part_time",
-    "level": "lead",
+    "level": "junior",
     "salary_min": 37,
     "salary_max": 9,
     "requirements": "architecto",
     "benefits": "architecto",
-    "status": "published",
+    "status": "closed",
     "is_remote": true,
-    "published_at": "2025-04-19T15:24:36",
-    "closing_date": "2053-01-08"
+    "published_at": "2025-04-19T15:44:06",
+    "closing_date": "2019-08-22"
 };
 
 fetch(url, {
@@ -2552,10 +3510,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="level"                data-endpoint="POSTapi-job-openings"
-               value="lead"
+               value="junior"
                data-component="body">
     <br>
-<p>Example: <code>lead</code></p>
+<p>Example: <code>junior</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>entry</code></li> <li><code>junior</code></li> <li><code>mid</code></li> <li><code>senior</code></li> <li><code>lead</code></li> <li><code>principal</code></li></ul>
         </div>
@@ -2620,10 +3578,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-job-openings"
-               value="published"
+               value="closed"
                data-component="body">
     <br>
-<p>Example: <code>published</code></p>
+<p>Example: <code>closed</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>draft</code></li> <li><code>published</code></li> <li><code>closed</code></li> <li><code>archived</code></li></ul>
         </div>
@@ -2654,10 +3612,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="published_at"                data-endpoint="POSTapi-job-openings"
-               value="2025-04-19T15:24:36"
+               value="2025-04-19T15:44:06"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-04-19T15:24:36</code></p>
+<p>Must be a valid date. Example: <code>2025-04-19T15:44:06</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>closing_date</code></b>&nbsp;&nbsp;
@@ -2665,10 +3623,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="closing_date"                data-endpoint="POSTapi-job-openings"
-               value="2053-01-08"
+               value="2019-08-22"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>published_at</code>. Example: <code>2053-01-08</code></p>
+<p>Must be a valid date. Must be a date after <code>published_at</code>. Example: <code>2019-08-22</code></p>
         </div>
         </form>
 
@@ -2846,16 +3804,16 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"description\": \"Eius et animi quos velit et.\",
     \"team\": \"v\",
     \"location\": \"d\",
-    \"type\": \"contract\",
-    \"level\": \"senior\",
+    \"type\": \"internship\",
+    \"level\": \"lead\",
     \"salary_min\": 37,
     \"salary_max\": 9,
     \"requirements\": \"architecto\",
     \"benefits\": \"architecto\",
-    \"status\": \"archived\",
-    \"is_remote\": true,
-    \"published_at\": \"2025-04-19T15:24:36\",
-    \"closing_date\": \"2053-01-08\"
+    \"status\": \"published\",
+    \"is_remote\": false,
+    \"published_at\": \"2025-04-19T15:44:06\",
+    \"closing_date\": \"2019-08-22\"
 }"
 </code></pre></div>
 
@@ -2877,16 +3835,16 @@ let body = {
     "description": "Eius et animi quos velit et.",
     "team": "v",
     "location": "d",
-    "type": "contract",
-    "level": "senior",
+    "type": "internship",
+    "level": "lead",
     "salary_min": 37,
     "salary_max": 9,
     "requirements": "architecto",
     "benefits": "architecto",
-    "status": "archived",
-    "is_remote": true,
-    "published_at": "2025-04-19T15:24:36",
-    "closing_date": "2053-01-08"
+    "status": "published",
+    "is_remote": false,
+    "published_at": "2025-04-19T15:44:06",
+    "closing_date": "2019-08-22"
 };
 
 fetch(url, {
@@ -3057,10 +4015,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="type"                data-endpoint="PUTapi-job-openings--id-"
-               value="contract"
+               value="internship"
                data-component="body">
     <br>
-<p>Example: <code>contract</code></p>
+<p>Example: <code>internship</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>full_time</code></li> <li><code>part_time</code></li> <li><code>contract</code></li> <li><code>internship</code></li></ul>
         </div>
@@ -3070,10 +4028,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="level"                data-endpoint="PUTapi-job-openings--id-"
-               value="senior"
+               value="lead"
                data-component="body">
     <br>
-<p>Example: <code>senior</code></p>
+<p>Example: <code>lead</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>entry</code></li> <li><code>junior</code></li> <li><code>mid</code></li> <li><code>senior</code></li> <li><code>lead</code></li> <li><code>principal</code></li></ul>
         </div>
@@ -3138,10 +4096,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-job-openings--id-"
-               value="archived"
+               value="published"
                data-component="body">
     <br>
-<p>Example: <code>archived</code></p>
+<p>Example: <code>published</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>draft</code></li> <li><code>published</code></li> <li><code>closed</code></li> <li><code>archived</code></li></ul>
         </div>
@@ -3164,7 +4122,7 @@ Must be one of:
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>published_at</code></b>&nbsp;&nbsp;
@@ -3172,10 +4130,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="published_at"                data-endpoint="PUTapi-job-openings--id-"
-               value="2025-04-19T15:24:36"
+               value="2025-04-19T15:44:06"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-04-19T15:24:36</code></p>
+<p>Must be a valid date. Example: <code>2025-04-19T15:44:06</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>closing_date</code></b>&nbsp;&nbsp;
@@ -3183,10 +4141,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="closing_date"                data-endpoint="PUTapi-job-openings--id-"
-               value="2053-01-08"
+               value="2019-08-22"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>published_at</code>. Example: <code>2053-01-08</code></p>
+<p>Must be a valid date. Must be a date after <code>published_at</code>. Example: <code>2019-08-22</code></p>
         </div>
         </form>
 
