@@ -1,9 +1,18 @@
 <?php
 
+use App\Models\User;
 use App\Models\Candidate;
+use Laravel\Sanctum\Sanctum;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 uses(RefreshDatabase::class);
+
+beforeEach(function () {
+    Sanctum::actingAs(
+        User::factory()->create(),
+        ['*']
+    );
+});
 
 test('can list all candidates', function () {
     Candidate::factory()->count(3)->create();
@@ -102,7 +111,7 @@ test('validates required fields when creating a candidate', function () {
 
 test('validates email uniqueness when creating a candidate', function () {
     $existingCandidate = Candidate::factory()->create();
-    
+
     $response = $this->postJson('/api/candidates', [
         'first_name' => 'John',
         'last_name' => 'Doe',
@@ -137,4 +146,4 @@ test('validates enum fields', function () {
 
     $response->assertStatus(422)
         ->assertJsonValidationErrors(['source', 'status']);
-}); 
+});
