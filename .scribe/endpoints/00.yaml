@@ -12,9 +12,10 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -35,7 +36,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
     controller: null
     method: null
     route: null
@@ -51,9 +55,10 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -65,8 +70,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '[]'
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -74,7 +79,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
     controller: null
     method: null
     route: null
@@ -90,9 +98,10 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -224,7 +233,7 @@ endpoints:
         name: source
         description: ''
         required: false
-        example: career_site
+        example: other
         type: string
         enumValues:
           - linkedin
@@ -249,7 +258,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: hired
+        example: inactive
         type: string
         enumValues:
           - active
@@ -272,13 +281,16 @@ endpoints:
       current_position: p
       current_company: w
       desired_salary: 16
-      source: career_site
+      source: other
       notes: architecto
-      status: hired
+      status: inactive
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
     controller: null
     method: null
     route: null
@@ -294,9 +306,10 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -304,14 +317,14 @@ endpoints:
         name: id
         description: 'The ID of the candidate.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -319,11 +332,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 404
-        content: |-
-          {
-              "message": "No query results for model [App\\Models\\Candidate] 16"
-          }
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -331,7 +341,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
     controller: null
     method: null
     route: null
@@ -348,9 +361,10 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -358,14 +372,14 @@ endpoints:
         name: id
         description: 'The ID of the candidate.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -493,7 +507,7 @@ endpoints:
         name: source
         description: ''
         required: false
-        example: other
+        example: referral
         type: string
         enumValues:
           - linkedin
@@ -518,7 +532,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: hired
+        example: rejected
         type: string
         enumValues:
           - active
@@ -540,13 +554,16 @@ endpoints:
       current_position: u
       current_company: j
       desired_salary: 87
-      source: other
+      source: referral
       notes: architecto
-      status: hired
+      status: rejected
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
     controller: null
     method: null
     route: null
@@ -562,9 +579,10 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -572,14 +590,14 @@ endpoints:
         name: id
         description: 'The ID of the candidate.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -587,7 +605,44 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/tokens/create
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
     controller: null
     method: null
     route: null
