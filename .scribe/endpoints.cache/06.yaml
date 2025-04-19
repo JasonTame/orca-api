@@ -41,7 +41,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -132,7 +132,7 @@ endpoints:
         name: difficulty
         description: ''
         required: true
-        example: easy
+        example: medium
         type: string
         enumValues:
           - easy
@@ -148,14 +148,14 @@ endpoints:
       instructions: architecto
       repository_url: 'http://bailey.com/'
       time_limit: 27
-      difficulty: easy
+      difficulty: medium
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -209,7 +209,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -335,7 +335,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -380,7 +380,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null

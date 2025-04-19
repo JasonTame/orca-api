@@ -41,7 +41,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -112,7 +112,7 @@ endpoints:
         name: size
         description: ''
         required: false
-        example: small
+        example: medium
         type: string
         enumValues:
           - small
@@ -159,7 +159,7 @@ endpoints:
       logo_url: 'http://bailey.com/'
       website: 'http://rempel.com/sunt-nihil-accusantium-harum-mollitia'
       industry: k
-      size: small
+      size: medium
       description: 'Eius et animi quos velit et.'
       location: v
       status: inactive
@@ -169,7 +169,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -223,7 +223,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -306,7 +306,7 @@ endpoints:
         name: size
         description: ''
         required: false
-        example: medium
+        example: large
         type: string
         enumValues:
           - small
@@ -353,7 +353,7 @@ endpoints:
       logo_url: 'http://bailey.com/'
       website: 'http://rempel.com/sunt-nihil-accusantium-harum-mollitia'
       industry: k
-      size: medium
+      size: large
       description: 'Eius et animi quos velit et.'
       location: v
       status: active
@@ -363,7 +363,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -408,7 +408,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null

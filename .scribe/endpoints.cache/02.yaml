@@ -41,7 +41,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -192,7 +192,7 @@ endpoints:
         name: source
         description: ''
         required: false
-        example: indeed
+        example: other
         type: string
         enumValues:
           - linkedin
@@ -217,7 +217,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: hired
+        example: inactive
         type: string
         enumValues:
           - active
@@ -240,16 +240,16 @@ endpoints:
       current_position: p
       current_company: w
       desired_salary: 16
-      source: indeed
+      source: other
       notes: architecto
-      status: hired
+      status: inactive
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -303,7 +303,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -466,7 +466,7 @@ endpoints:
         name: source
         description: ''
         required: false
-        example: linkedin
+        example: referral
         type: string
         enumValues:
           - linkedin
@@ -491,7 +491,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: inactive
+        example: rejected
         type: string
         enumValues:
           - active
@@ -513,16 +513,16 @@ endpoints:
       current_position: u
       current_company: j
       desired_salary: 87
-      source: linkedin
+      source: referral
       notes: architecto
-      status: inactive
+      status: rejected
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -567,7 +567,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null

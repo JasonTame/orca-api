@@ -41,7 +41,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -112,7 +112,7 @@ endpoints:
         name: completed_at
         description: 'Must be a valid date. Must be a date after <code>scheduled_at</code>.'
         required: false
-        example: '1981-09-25'
+        example: '2100-04-02'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -210,7 +210,7 @@ endpoints:
       stage_id: architecto
       interviewer_id: architecto
       scheduled_at: '2051-05-14'
-      completed_at: '1981-09-25'
+      completed_at: '2100-04-02'
       location: g
       meeting_url: 'http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html'
       status: cancelled
@@ -225,7 +225,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -279,7 +279,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -362,7 +362,7 @@ endpoints:
         name: completed_at
         description: 'Must be a valid date. Must be a date after <code>scheduled_at</code>.'
         required: false
-        example: '1981-09-25'
+        example: '2100-04-02'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -436,7 +436,7 @@ endpoints:
         name: decision
         description: ''
         required: false
-        example: reject
+        example: hold
         type: string
         enumValues:
           - proceed
@@ -460,14 +460,14 @@ endpoints:
       stage_id: architecto
       interviewer_id: architecto
       scheduled_at: '2051-05-14'
-      completed_at: '1981-09-25'
+      completed_at: '2100-04-02'
       location: g
       meeting_url: 'http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html'
       status: rescheduled
       technical_score: 3
       cultural_score: 4
       feedback: architecto
-      decision: reject
+      decision: hold
       notes: architecto
     fileParameters: []
     responses: []
@@ -475,7 +475,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -520,7 +520,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null

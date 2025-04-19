@@ -417,11 +417,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"job_opening_id\": \"architecto\",
     \"candidate_id\": \"architecto\",
     \"code_sample_url\": \"http:\\/\\/bailey.com\\/\",
-    \"status\": \"interviewing\",
+    \"status\": \"rejected\",
     \"rejection_reason\": \"m\",
     \"notes\": \"architecto\",
     \"referral_source\": \"n\",
-    \"applied_at\": \"2025-04-19T15:55:19\"
+    \"applied_at\": \"2025-04-19T16:57:12\"
 }"
 </code></pre></div>
 
@@ -441,11 +441,11 @@ let body = {
     "job_opening_id": "architecto",
     "candidate_id": "architecto",
     "code_sample_url": "http:\/\/bailey.com\/",
-    "status": "interviewing",
+    "status": "rejected",
     "rejection_reason": "m",
     "notes": "architecto",
     "referral_source": "n",
-    "applied_at": "2025-04-19T15:55:19"
+    "applied_at": "2025-04-19T16:57:12"
 };
 
 fetch(url, {
@@ -578,10 +578,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-applications"
-               value="interviewing"
+               value="rejected"
                data-component="body">
     <br>
-<p>Example: <code>interviewing</code></p>
+<p>Example: <code>rejected</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>pending</code></li> <li><code>reviewing</code></li> <li><code>interviewing</code></li> <li><code>offered</code></li> <li><code>accepted</code></li> <li><code>rejected</code></li></ul>
         </div>
@@ -635,10 +635,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="applied_at"                data-endpoint="POSTapi-applications"
-               value="2025-04-19T15:55:19"
+               value="2025-04-19T16:57:12"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-04-19T15:55:19</code></p>
+<p>Must be a valid date. Example: <code>2025-04-19T16:57:12</code></p>
         </div>
         </form>
 
@@ -814,11 +814,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"job_opening_id\": \"architecto\",
     \"candidate_id\": \"architecto\",
     \"code_sample_url\": \"http:\\/\\/bailey.com\\/\",
-    \"status\": \"interviewing\",
+    \"status\": \"reviewing\",
     \"rejection_reason\": \"m\",
     \"notes\": \"architecto\",
     \"referral_source\": \"n\",
-    \"applied_at\": \"2025-04-19T15:55:19\"
+    \"applied_at\": \"2025-04-19T16:57:12\"
 }"
 </code></pre></div>
 
@@ -838,11 +838,11 @@ let body = {
     "job_opening_id": "architecto",
     "candidate_id": "architecto",
     "code_sample_url": "http:\/\/bailey.com\/",
-    "status": "interviewing",
+    "status": "reviewing",
     "rejection_reason": "m",
     "notes": "architecto",
     "referral_source": "n",
-    "applied_at": "2025-04-19T15:55:19"
+    "applied_at": "2025-04-19T16:57:12"
 };
 
 fetch(url, {
@@ -991,10 +991,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-applications--id-"
-               value="interviewing"
+               value="reviewing"
                data-component="body">
     <br>
-<p>Example: <code>interviewing</code></p>
+<p>Example: <code>reviewing</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>pending</code></li> <li><code>reviewing</code></li> <li><code>interviewing</code></li> <li><code>offered</code></li> <li><code>accepted</code></li> <li><code>rejected</code></li></ul>
         </div>
@@ -1048,10 +1048,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="applied_at"                data-endpoint="PUTapi-applications--id-"
-               value="2025-04-19T15:55:19"
+               value="2025-04-19T16:57:12"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-04-19T15:55:19</code></p>
+<p>Must be a valid date. Example: <code>2025-04-19T16:57:12</code></p>
         </div>
         </form>
 
@@ -1362,9 +1362,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"current_position\": \"p\",
     \"current_company\": \"w\",
     \"desired_salary\": 16,
-    \"source\": \"indeed\",
+    \"source\": \"other\",
     \"notes\": \"architecto\",
-    \"status\": \"hired\"
+    \"status\": \"inactive\"
 }"
 </code></pre></div>
 
@@ -1393,9 +1393,9 @@ let body = {
     "current_position": "p",
     "current_company": "w",
     "desired_salary": 16,
-    "source": "indeed",
+    "source": "other",
     "notes": "architecto",
-    "status": "hired"
+    "status": "inactive"
 };
 
 fetch(url, {
@@ -1627,10 +1627,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="source"                data-endpoint="POSTapi-candidates"
-               value="indeed"
+               value="other"
                data-component="body">
     <br>
-<p>Example: <code>indeed</code></p>
+<p>Example: <code>other</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>linkedin</code></li> <li><code>indeed</code></li> <li><code>referral</code></li> <li><code>career_site</code></li> <li><code>other</code></li></ul>
         </div>
@@ -1651,10 +1651,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-candidates"
-               value="hired"
+               value="inactive"
                data-component="body">
     <br>
-<p>Example: <code>hired</code></p>
+<p>Example: <code>inactive</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>active</code></li> <li><code>inactive</code></li> <li><code>hired</code></li> <li><code>rejected</code></li></ul>
         </div>
@@ -1840,9 +1840,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"current_position\": \"u\",
     \"current_company\": \"j\",
     \"desired_salary\": 87,
-    \"source\": \"linkedin\",
+    \"source\": \"referral\",
     \"notes\": \"architecto\",
-    \"status\": \"inactive\"
+    \"status\": \"rejected\"
 }"
 </code></pre></div>
 
@@ -1870,9 +1870,9 @@ let body = {
     "current_position": "u",
     "current_company": "j",
     "desired_salary": 87,
-    "source": "linkedin",
+    "source": "referral",
     "notes": "architecto",
-    "status": "inactive"
+    "status": "rejected"
 };
 
 fetch(url, {
@@ -2120,10 +2120,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="source"                data-endpoint="PUTapi-candidates--id-"
-               value="linkedin"
+               value="referral"
                data-component="body">
     <br>
-<p>Example: <code>linkedin</code></p>
+<p>Example: <code>referral</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>linkedin</code></li> <li><code>indeed</code></li> <li><code>referral</code></li> <li><code>career_site</code></li> <li><code>other</code></li></ul>
         </div>
@@ -2144,10 +2144,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-candidates--id-"
-               value="inactive"
+               value="rejected"
                data-component="body">
     <br>
-<p>Example: <code>inactive</code></p>
+<p>Example: <code>rejected</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>active</code></li> <li><code>inactive</code></li> <li><code>hired</code></li> <li><code>rejected</code></li></ul>
         </div>
@@ -2454,7 +2454,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"instructions\": \"architecto\",
     \"repository_url\": \"http:\\/\\/bailey.com\\/\",
     \"time_limit\": 27,
-    \"difficulty\": \"easy\"
+    \"difficulty\": \"medium\"
 }"
 </code></pre></div>
 
@@ -2477,7 +2477,7 @@ let body = {
     "instructions": "architecto",
     "repository_url": "http:\/\/bailey.com\/",
     "time_limit": 27,
-    "difficulty": "easy"
+    "difficulty": "medium"
 };
 
 fetch(url, {
@@ -2643,10 +2643,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="difficulty"                data-endpoint="POSTapi-coding-challenges"
-               value="easy"
+               value="medium"
                data-component="body">
     <br>
-<p>Example: <code>easy</code></p>
+<p>Example: <code>medium</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>easy</code></li> <li><code>medium</code></li> <li><code>hard</code></li></ul>
         </div>
@@ -3340,7 +3340,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"logo_url\": \"http:\\/\\/bailey.com\\/\",
     \"website\": \"http:\\/\\/rempel.com\\/sunt-nihil-accusantium-harum-mollitia\",
     \"industry\": \"k\",
-    \"size\": \"small\",
+    \"size\": \"medium\",
     \"description\": \"Eius et animi quos velit et.\",
     \"location\": \"v\",
     \"status\": \"inactive\"
@@ -3364,7 +3364,7 @@ let body = {
     "logo_url": "http:\/\/bailey.com\/",
     "website": "http:\/\/rempel.com\/sunt-nihil-accusantium-harum-mollitia",
     "industry": "k",
-    "size": "small",
+    "size": "medium",
     "description": "Eius et animi quos velit et.",
     "location": "v",
     "status": "inactive"
@@ -3511,10 +3511,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="size"                data-endpoint="POSTapi-companies"
-               value="small"
+               value="medium"
                data-component="body">
     <br>
-<p>Example: <code>small</code></p>
+<p>Example: <code>medium</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>small</code></li> <li><code>medium</code></li> <li><code>large</code></li> <li><code>enterprise</code></li></ul>
         </div>
@@ -3728,7 +3728,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"logo_url\": \"http:\\/\\/bailey.com\\/\",
     \"website\": \"http:\\/\\/rempel.com\\/sunt-nihil-accusantium-harum-mollitia\",
     \"industry\": \"k\",
-    \"size\": \"medium\",
+    \"size\": \"large\",
     \"description\": \"Eius et animi quos velit et.\",
     \"location\": \"v\",
     \"status\": \"active\"
@@ -3752,7 +3752,7 @@ let body = {
     "logo_url": "http:\/\/bailey.com\/",
     "website": "http:\/\/rempel.com\/sunt-nihil-accusantium-harum-mollitia",
     "industry": "k",
-    "size": "medium",
+    "size": "large",
     "description": "Eius et animi quos velit et.",
     "location": "v",
     "status": "active"
@@ -3915,10 +3915,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="size"                data-endpoint="PUTapi-companies--id-"
-               value="medium"
+               value="large"
                data-component="body">
     <br>
-<p>Example: <code>medium</code></p>
+<p>Example: <code>large</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>small</code></li> <li><code>medium</code></li> <li><code>large</code></li> <li><code>enterprise</code></li></ul>
         </div>
@@ -4258,7 +4258,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"stage_id\": \"architecto\",
     \"interviewer_id\": \"architecto\",
     \"scheduled_at\": \"2051-05-14\",
-    \"completed_at\": \"1981-09-25\",
+    \"completed_at\": \"2100-04-02\",
     \"location\": \"g\",
     \"meeting_url\": \"http:\\/\\/www.okuneva.com\\/fugiat-sunt-nihil-accusantium-harum-mollitia.html\",
     \"status\": \"cancelled\",
@@ -4287,7 +4287,7 @@ let body = {
     "stage_id": "architecto",
     "interviewer_id": "architecto",
     "scheduled_at": "2051-05-14",
-    "completed_at": "1981-09-25",
+    "completed_at": "2100-04-02",
     "location": "g",
     "meeting_url": "http:\/\/www.okuneva.com\/fugiat-sunt-nihil-accusantium-harum-mollitia.html",
     "status": "cancelled",
@@ -4439,10 +4439,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="completed_at"                data-endpoint="POSTapi-interviews"
-               value="1981-09-25"
+               value="2100-04-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>scheduled_at</code>. Example: <code>1981-09-25</code></p>
+<p>Must be a valid date. Must be a date after <code>scheduled_at</code>. Example: <code>2100-04-02</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
@@ -4711,14 +4711,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"stage_id\": \"architecto\",
     \"interviewer_id\": \"architecto\",
     \"scheduled_at\": \"2051-05-14\",
-    \"completed_at\": \"1981-09-25\",
+    \"completed_at\": \"2100-04-02\",
     \"location\": \"g\",
     \"meeting_url\": \"http:\\/\\/www.okuneva.com\\/fugiat-sunt-nihil-accusantium-harum-mollitia.html\",
     \"status\": \"rescheduled\",
     \"technical_score\": 3,
     \"cultural_score\": 4,
     \"feedback\": \"architecto\",
-    \"decision\": \"reject\",
+    \"decision\": \"hold\",
     \"notes\": \"architecto\"
 }"
 </code></pre></div>
@@ -4740,14 +4740,14 @@ let body = {
     "stage_id": "architecto",
     "interviewer_id": "architecto",
     "scheduled_at": "2051-05-14",
-    "completed_at": "1981-09-25",
+    "completed_at": "2100-04-02",
     "location": "g",
     "meeting_url": "http:\/\/www.okuneva.com\/fugiat-sunt-nihil-accusantium-harum-mollitia.html",
     "status": "rescheduled",
     "technical_score": 3,
     "cultural_score": 4,
     "feedback": "architecto",
-    "decision": "reject",
+    "decision": "hold",
     "notes": "architecto"
 };
 
@@ -4908,10 +4908,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="completed_at"                data-endpoint="PUTapi-interviews--id-"
-               value="1981-09-25"
+               value="2100-04-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>scheduled_at</code>. Example: <code>1981-09-25</code></p>
+<p>Must be a valid date. Must be a date after <code>scheduled_at</code>. Example: <code>2100-04-02</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
@@ -4987,10 +4987,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="decision"                data-endpoint="PUTapi-interviews--id-"
-               value="reject"
+               value="hold"
                data-component="body">
     <br>
-<p>Example: <code>reject</code></p>
+<p>Example: <code>hold</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>proceed</code></li> <li><code>reject</code></li> <li><code>hold</code></li></ul>
         </div>
@@ -5307,16 +5307,16 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"description\": \"Eius et animi quos velit et.\",
     \"team\": \"v\",
     \"location\": \"d\",
-    \"type\": \"part_time\",
+    \"type\": \"contract\",
     \"level\": \"mid\",
     \"salary_min\": 37,
     \"salary_max\": 9,
     \"requirements\": \"architecto\",
     \"benefits\": \"architecto\",
-    \"status\": \"archived\",
-    \"is_remote\": true,
-    \"published_at\": \"2025-04-19T15:55:19\",
-    \"closing_date\": \"1981-09-25\"
+    \"status\": \"draft\",
+    \"is_remote\": false,
+    \"published_at\": \"2025-04-19T16:57:12\",
+    \"closing_date\": \"2100-04-02\"
 }"
 </code></pre></div>
 
@@ -5338,16 +5338,16 @@ let body = {
     "description": "Eius et animi quos velit et.",
     "team": "v",
     "location": "d",
-    "type": "part_time",
+    "type": "contract",
     "level": "mid",
     "salary_min": 37,
     "salary_max": 9,
     "requirements": "architecto",
     "benefits": "architecto",
-    "status": "archived",
-    "is_remote": true,
-    "published_at": "2025-04-19T15:55:19",
-    "closing_date": "1981-09-25"
+    "status": "draft",
+    "is_remote": false,
+    "published_at": "2025-04-19T16:57:12",
+    "closing_date": "2100-04-02"
 };
 
 fetch(url, {
@@ -5502,10 +5502,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="type"                data-endpoint="POSTapi-job-openings"
-               value="part_time"
+               value="contract"
                data-component="body">
     <br>
-<p>Example: <code>part_time</code></p>
+<p>Example: <code>contract</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>full_time</code></li> <li><code>part_time</code></li> <li><code>contract</code></li> <li><code>internship</code></li></ul>
         </div>
@@ -5583,10 +5583,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-job-openings"
-               value="archived"
+               value="draft"
                data-component="body">
     <br>
-<p>Example: <code>archived</code></p>
+<p>Example: <code>draft</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>draft</code></li> <li><code>published</code></li> <li><code>closed</code></li> <li><code>archived</code></li></ul>
         </div>
@@ -5609,7 +5609,7 @@ Must be one of:
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>published_at</code></b>&nbsp;&nbsp;
@@ -5617,10 +5617,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="published_at"                data-endpoint="POSTapi-job-openings"
-               value="2025-04-19T15:55:19"
+               value="2025-04-19T16:57:12"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-04-19T15:55:19</code></p>
+<p>Must be a valid date. Example: <code>2025-04-19T16:57:12</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>closing_date</code></b>&nbsp;&nbsp;
@@ -5628,10 +5628,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="closing_date"                data-endpoint="POSTapi-job-openings"
-               value="1981-09-25"
+               value="2100-04-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>published_at</code>. Example: <code>1981-09-25</code></p>
+<p>Must be a valid date. Must be a date after <code>published_at</code>. Example: <code>2100-04-02</code></p>
         </div>
         </form>
 
@@ -5809,16 +5809,16 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"description\": \"Eius et animi quos velit et.\",
     \"team\": \"v\",
     \"location\": \"d\",
-    \"type\": \"full_time\",
-    \"level\": \"mid\",
+    \"type\": \"contract\",
+    \"level\": \"principal\",
     \"salary_min\": 37,
     \"salary_max\": 9,
     \"requirements\": \"architecto\",
     \"benefits\": \"architecto\",
-    \"status\": \"draft\",
-    \"is_remote\": false,
-    \"published_at\": \"2025-04-19T15:55:19\",
-    \"closing_date\": \"1981-09-25\"
+    \"status\": \"closed\",
+    \"is_remote\": true,
+    \"published_at\": \"2025-04-19T16:57:12\",
+    \"closing_date\": \"2100-04-02\"
 }"
 </code></pre></div>
 
@@ -5840,16 +5840,16 @@ let body = {
     "description": "Eius et animi quos velit et.",
     "team": "v",
     "location": "d",
-    "type": "full_time",
-    "level": "mid",
+    "type": "contract",
+    "level": "principal",
     "salary_min": 37,
     "salary_max": 9,
     "requirements": "architecto",
     "benefits": "architecto",
-    "status": "draft",
-    "is_remote": false,
-    "published_at": "2025-04-19T15:55:19",
-    "closing_date": "1981-09-25"
+    "status": "closed",
+    "is_remote": true,
+    "published_at": "2025-04-19T16:57:12",
+    "closing_date": "2100-04-02"
 };
 
 fetch(url, {
@@ -6020,10 +6020,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="type"                data-endpoint="PUTapi-job-openings--id-"
-               value="full_time"
+               value="contract"
                data-component="body">
     <br>
-<p>Example: <code>full_time</code></p>
+<p>Example: <code>contract</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>full_time</code></li> <li><code>part_time</code></li> <li><code>contract</code></li> <li><code>internship</code></li></ul>
         </div>
@@ -6033,10 +6033,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="level"                data-endpoint="PUTapi-job-openings--id-"
-               value="mid"
+               value="principal"
                data-component="body">
     <br>
-<p>Example: <code>mid</code></p>
+<p>Example: <code>principal</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>entry</code></li> <li><code>junior</code></li> <li><code>mid</code></li> <li><code>senior</code></li> <li><code>lead</code></li> <li><code>principal</code></li></ul>
         </div>
@@ -6101,10 +6101,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-job-openings--id-"
-               value="draft"
+               value="closed"
                data-component="body">
     <br>
-<p>Example: <code>draft</code></p>
+<p>Example: <code>closed</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>draft</code></li> <li><code>published</code></li> <li><code>closed</code></li> <li><code>archived</code></li></ul>
         </div>
@@ -6127,7 +6127,7 @@ Must be one of:
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>published_at</code></b>&nbsp;&nbsp;
@@ -6135,10 +6135,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="published_at"                data-endpoint="PUTapi-job-openings--id-"
-               value="2025-04-19T15:55:19"
+               value="2025-04-19T16:57:12"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-04-19T15:55:19</code></p>
+<p>Must be a valid date. Example: <code>2025-04-19T16:57:12</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>closing_date</code></b>&nbsp;&nbsp;
@@ -6146,10 +6146,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="closing_date"                data-endpoint="PUTapi-job-openings--id-"
-               value="1981-09-25"
+               value="2100-04-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>published_at</code>. Example: <code>1981-09-25</code></p>
+<p>Must be a valid date. Must be a date after <code>published_at</code>. Example: <code>2100-04-02</code></p>
         </div>
         </form>
 
@@ -6587,10 +6587,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"name\": \"b\",
-    \"category\": \"platform\",
-    \"is_language\": false,
-    \"is_framework\": true,
-    \"is_tool\": false
+    \"category\": \"language\",
+    \"is_language\": true,
+    \"is_framework\": false,
+    \"is_tool\": true
 }"
 </code></pre></div>
 
@@ -6608,10 +6608,10 @@ const headers = {
 
 let body = {
     "name": "b",
-    "category": "platform",
-    "is_language": false,
-    "is_framework": true,
-    "is_tool": false
+    "category": "language",
+    "is_language": true,
+    "is_framework": false,
+    "is_tool": true
 };
 
 fetch(url, {
@@ -6722,10 +6722,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="category"                data-endpoint="POSTapi-tech-skills"
-               value="platform"
+               value="language"
                data-component="body">
     <br>
-<p>Example: <code>platform</code></p>
+<p>Example: <code>language</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>language</code></li> <li><code>framework</code></li> <li><code>database</code></li> <li><code>tool</code></li> <li><code>platform</code></li></ul>
         </div>
@@ -6748,7 +6748,7 @@ Must be one of:
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_framework</code></b>&nbsp;&nbsp;
@@ -6769,7 +6769,7 @@ Must be one of:
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_tool</code></b>&nbsp;&nbsp;
@@ -6790,7 +6790,7 @@ Must be one of:
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>parent_skill_id</code></b>&nbsp;&nbsp;
@@ -6974,10 +6974,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"category\": \"language\",
+    \"category\": \"database\",
     \"is_language\": true,
     \"is_framework\": false,
-    \"is_tool\": false
+    \"is_tool\": true
 }"
 </code></pre></div>
 
@@ -6994,10 +6994,10 @@ const headers = {
 };
 
 let body = {
-    "category": "language",
+    "category": "database",
     "is_language": true,
     "is_framework": false,
-    "is_tool": false
+    "is_tool": true
 };
 
 fetch(url, {
@@ -7124,10 +7124,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="category"                data-endpoint="PUTapi-tech-skills--id-"
-               value="language"
+               value="database"
                data-component="body">
     <br>
-<p>Example: <code>language</code></p>
+<p>Example: <code>database</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>language</code></li> <li><code>framework</code></li> <li><code>database</code></li> <li><code>tool</code></li> <li><code>platform</code></li></ul>
         </div>
@@ -7192,7 +7192,7 @@ Must be one of:
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>parent_skill_id</code></b>&nbsp;&nbsp;
