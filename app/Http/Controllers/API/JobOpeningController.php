@@ -1,0 +1,91 @@
+<?php
+
+namespace App\Http\Controllers\API;
+
+use App\Http\Controllers\Controller;
+use App\Models\JobOpening;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
+class JobOpeningController extends Controller
+{
+    public function index(): JsonResponse
+    {
+        $jobOpenings = JobOpening::all();
+
+        return response()->json($jobOpenings);
+    }
+
+    public function store(Request $request): JsonResponse
+    {
+        $validator = Validator::make($request->all(), [
+            'company_id' => 'required|exists:companies,id',
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'team' => 'nullable|string|max:255',
+            'location' => 'nullable|string|max:255',
+            'type' => 'required|in:full_time,part_time,contract,internship',
+            'level' => 'required|in:entry,junior,mid,senior,lead,principal',
+            'salary_min' => 'nullable|numeric|min:0',
+            'salary_max' => 'nullable|numeric|min:0|gte:salary_min',
+            'requirements' => 'nullable|string',
+            'benefits' => 'nullable|string',
+            'hiring_manager_id' => 'nullable|exists:users,id',
+            'status' => 'required|in:draft,published,closed,archived',
+            'is_remote' => 'boolean',
+            'published_at' => 'nullable|date',
+            'closing_date' => 'nullable|date|after:published_at',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+
+        $jobOpening = JobOpening::create($request->all());
+
+        return response()->json($jobOpening, 201);
+    }
+
+    public function show(JobOpening $jobOpening): JsonResponse
+    {
+        return response()->json($jobOpening);
+    }
+
+    public function update(Request $request, JobOpening $jobOpening): JsonResponse
+    {
+        $validator = Validator::make($request->all(), [
+            'company_id' => 'sometimes|required|exists:companies,id',
+            'title' => 'sometimes|required|string|max:255',
+            'description' => 'sometimes|required|string',
+            'team' => 'nullable|string|max:255',
+            'location' => 'nullable|string|max:255',
+            'type' => 'sometimes|required|in:full_time,part_time,contract,internship',
+            'level' => 'sometimes|required|in:entry,junior,mid,senior,lead,principal',
+            'salary_min' => 'nullable|numeric|min:0',
+            'salary_max' => 'nullable|numeric|min:0|gte:salary_min',
+            'requirements' => 'nullable|string',
+            'benefits' => 'nullable|string',
+            'hiring_manager_id' => 'nullable|exists:users,id',
+            'status' => 'sometimes|required|in:draft,published,closed,archived',
+            'is_remote' => 'boolean',
+            'published_at' => 'nullable|date',
+            'closing_date' => 'nullable|date|after:published_at',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+
+        $jobOpening->update($request->all());
+
+        return response()->json($jobOpening);
+    }
+
+    public function destroy(JobOpening $jobOpening): JsonResponse
+    {
+        $jobOpening->delete();
+
+        return response()->json(null, 204);
+    }
+}

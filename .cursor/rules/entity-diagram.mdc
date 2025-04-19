@@ -8,7 +8,7 @@ When building within this repo, use the following entity diagram to understand t
 ```mermaid
 erDiagram
     COMPANIES ||--o{ USERS : "employs"
-    COMPANIES ||--o{ JOBS : "posts"
+    COMPANIES ||--o{ JOB_OPENINGS : "posts"
     COMPANIES {
         id integer PK
         name varchar
@@ -23,7 +23,7 @@ erDiagram
         updated_at timestamp
     }
 
-    USERS ||--o{ JOBS : "creates/manages"
+    USERS ||--o{ JOB_OPENINGS : "creates/manages"
     USERS ||--o{ INTERVIEWS : "conducts"
     USERS {
         id integer PK
@@ -61,10 +61,10 @@ erDiagram
         updated_at timestamp
     }
     
-    JOBS ||--o{ APPLICATIONS : "receives"
-    JOBS ||--o{ JOB_SKILLS : "requires"
-    JOBS ||--o{ INTERVIEW_STAGES : "has"
-    JOBS {
+    JOB_OPENINGS ||--o{ APPLICATIONS : "receives"
+    JOB_OPENINGS ||--o{ JOB_OPENING_SKILLS : "requires"
+    JOB_OPENINGS ||--o{ INTERVIEW_STAGES : "has"
+    JOB_OPENINGS {
         id integer PK
         company_id integer FK
         title varchar
@@ -86,7 +86,7 @@ erDiagram
         updated_at timestamp
     }
     
-    TECH_SKILLS ||--o{ JOB_SKILLS : "used in"
+    TECH_SKILLS ||--o{ JOB_OPENING_SKILLS : "used in"
     TECH_SKILLS ||--o{ CANDIDATE_SKILLS : "possessed by"
     TECH_SKILLS {
         id integer PK
@@ -100,9 +100,9 @@ erDiagram
         updated_at timestamp
     }
     
-    JOB_SKILLS {
+    JOB_OPENING_SKILLS {
         id integer PK
-        job_id integer FK
+        job_opening_id integer FK
         skill_id integer FK
         is_required boolean
         importance enum
@@ -123,7 +123,7 @@ erDiagram
     APPLICATIONS ||--o{ INTERVIEWS : "progresses through"
     APPLICATIONS {
         id integer PK
-        job_id integer FK
+        job_opening_id integer FK
         candidate_id integer FK
         code_sample_url varchar
         status enum
@@ -138,7 +138,7 @@ erDiagram
     
     INTERVIEW_STAGES {
         id integer PK
-        job_id integer FK
+        job_opening_id integer FK
         name varchar
         description text
         sequence integer
@@ -171,7 +171,7 @@ erDiagram
     CODING_CHALLENGES ||--o{ APPLICATIONS : "completed by"
     CODING_CHALLENGES {
         id integer PK
-        job_id integer FK
+        job_opening_id integer FK
         title varchar
         description text
         instructions text

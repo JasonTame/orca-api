@@ -2,10 +2,7 @@
 
 use App\Models\Company;
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Sanctum\Sanctum;
-
-uses(RefreshDatabase::class);
 
 beforeEach(function () {
     Sanctum::actingAs(

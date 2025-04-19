@@ -6,66 +6,61 @@ alwaysApply: false
 The endpoints that this ATS API should serve:
 
 # Company Endpoints
-GET    /api/companies                 # List all companies
-POST   /api/companies                 # Create new company
-GET    /api/companies/:id             # Get company details
-PUT    /api/companies/:id             # Update company
-DELETE /api/companies/:id             # Delete/deactivate company
-GET    /api/companies/:id/jobs        # Get all jobs for a company
-GET    /api/companies/:id/users       # Get all users for a company
+GET    /api/companies                       # List all companies
+POST   /api/companies                       # Create new company
+GET    /api/companies/:id                   # Get company details
+PUT    /api/companies/:id                   # Update company
+DELETE /api/companies/:id                   # Delete/deactivate company
+GET    /api/companies/:id/job-openings      # Get all job openings for a company
+GET    /api/companies/:id/users             # Get all users for a company
 
-# Jobs Endpoints
-GET    /api/jobs                      # List all jobs
-POST   /api/jobs                      # Create new job
-GET    /api/jobs/:id                  # Get job details
-PUT    /api/jobs/:id                  # Update job
-DELETE /api/jobs/:id                  # Delete job
-GET    /api/jobs/:id/applications     # Get applications for a job
-GET    /api/jobs/:id/stages           # Get interview stages for a job
-GET    /api/jobs/:id/skills           # Get required skills for a job
+# Job Openings Endpoints
+GET    /api/job-openings                    # List all job openings
+POST   /api/job-openings                    # Create new job opening
+GET    /api/job-openings/:id                # Get job opening details
+PUT    /api/job-openings/:id                # Update job opening
+DELETE /api/job-openings/:id                # Delete job opening
+GET    /api/job-openings/:id/applications   # Get applications for a job opening
+GET    /api/job-openings/:id/stages         # Get interview stages for a job opening
+GET    /api/job-openings/:id/skills         # Get required skills for a job opening
 
 # Candidates Endpoints
-GET    /api/candidates                # List all candidates
-POST   /api/candidates                # Create candidate
-GET    /api/candidates/:id            # Get candidate details
-PUT    /api/candidates/:id            # Update candidate
-DELETE /api/candidates/:id            # Delete candidate
-GET    /api/candidates/:id/skills     # Get candidate skills
-GET    /api/candidates/:id/applications  # Get candidate applications
+GET    /api/candidates                      # List all candidates
+POST   /api/candidates                      # Create candidate
+GET    /api/candidates/:id                  # Get candidate details
+PUT    /api/candidates/:id                  # Update candidate
+DELETE /api/candidates/:id                  # Delete candidate
+GET    /api/candidates/:id/skills           # Get candidate skills
+GET    /api/candidates/:id/applications     # Get candidate applications
 
 # Applications Endpoints
-GET    /api/applications              # List all applications
-POST   /api/applications              # Create application
-GET    /api/applications/:id          # Get application details
-PUT    /api/applications/:id          # Update application
-DELETE /api/applications/:id          # Delete application
-GET    /api/applications/:id/interviews  # Get interviews for application
-POST   /api/applications/:id/advance  # Advance to next stage
-POST   /api/applications/:id/reject   # Reject application
+GET    /api/applications                    # List all applications
+POST   /api/applications                    # Create application
+GET    /api/applications/:id                # Get application details
+PUT    /api/applications/:id                # Update application
+DELETE /api/applications/:id                # Delete application
+GET    /api/applications/:id/interviews     # Get interviews for application
+POST   /api/applications/:id/advance        # Advance to next stage
+POST   /api/applications/:id/reject         # Reject application
 
 # Interviews Endpoints
-GET    /api/interviews                # List all interviews
-POST   /api/interviews                # Schedule interview
-GET    /api/interviews/:id            # Get interview details
-PUT    /api/interviews/:id            # Update interview/feedback
-DELETE /api/interviews/:id            # Cancel interview
+GET    /api/interviews                      # List all interviews
+POST   /api/interviews                      # Schedule interview
+GET    /api/interviews/:id                  # Get interview details
+PUT    /api/interviews/:id                  # Update interview/feedback
+DELETE /api/interviews/:id                  # Cancel interview
 
 # Tech Skills Endpoints
-GET    /api/tech-skills               # List all tech skills
-POST   /api/tech-skills               # Create tech skill
-GET    /api/tech-skills/:id           # Get skill details
-PUT    /api/tech-skills/:id           # Update skill
-DELETE /api/tech-skills/:id           # Delete skill
-GET    /api/tech-skills/categories    # Get skill categories
+GET    /api/tech-skills                     # List all tech skills
+POST   /api/tech-skills                     # Create tech skill
+GET    /api/tech-skills/:id                 # Get skill details
+PUT    /api/tech-skills/:id                 # Update skill
+DELETE /api/tech-skills/:id                 # Delete skill
+GET    /api/tech-skills/categories          # Get skill categories
 
 # Coding Challenges Endpoints
-GET    /api/coding-challenges         # List all coding challenges
-POST   /api/coding-challenges         # Create coding challenge
-GET    /api/coding-challenges/:id     # Get challenge details
-PUT    /api/coding-challenges/:id     # Update challenge
-DELETE /api/coding-challenges/:id     # Delete challenge
-Admin Dashboard Endpoints:
-GET    /api/admin/dashboard/stats     # Get system-wide statistics
-GET    /api/admin/companies/stats     # Get company comparison stats
-GET    /api/admin/activity-log        # Get system activity logs
-GET    /api/admin/users               # Manage system users
+GET    /api/coding-challenges               # List all coding challenges
+POST   /api/coding-challenges               # Create coding challenge
+GET    /api/coding-challenges/:id           # Get challenge details
+PUT    /api/coding-challenges/:id           # Update challenge
+DELETE /api/coding-challenges/:id           # Delete challenge

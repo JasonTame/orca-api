@@ -1,0 +1,35 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\Company;
+use App\Models\JobOpening;
+use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class JobOpeningFactory extends Factory
+{
+    protected $model = JobOpening::class;
+
+    public function definition(): array
+    {
+        return [
+            'company_id' => Company::factory(),
+            'title' => fake()->jobTitle(),
+            'description' => fake()->paragraphs(3, true),
+            'team' => fake()->word(),
+            'location' => fake()->city(),
+            'type' => fake()->randomElement(['full_time', 'part_time', 'contract', 'internship']),
+            'level' => fake()->randomElement(['entry', 'junior', 'mid', 'senior', 'lead', 'principal']),
+            'salary_min' => fake()->numberBetween(50000, 100000),
+            'salary_max' => fake()->numberBetween(100000, 200000),
+            'requirements' => fake()->paragraphs(2, true),
+            'benefits' => fake()->paragraphs(2, true),
+            'hiring_manager_id' => User::factory(),
+            'status' => fake()->randomElement(['draft', 'published', 'closed', 'archived']),
+            'is_remote' => fake()->boolean(),
+            'published_at' => fake()->optional()->dateTime(),
+            'closing_date' => fake()->optional()->dateTime(),
+        ];
+    }
+}
