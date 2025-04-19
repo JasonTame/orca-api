@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\ApplicationController;
 use App\Http\Controllers\API\CandidateController;
+use App\Http\Controllers\API\CodingChallengeController;
 use App\Http\Controllers\API\CompanyController;
 use App\Http\Controllers\API\InterviewController;
 use App\Http\Controllers\API\JobOpeningController;
@@ -29,4 +30,5 @@ Route::middleware([
     Route::apiResource('job-openings', JobOpeningController::class);
     Route::apiResource('applications', ApplicationController::class);
     Route::apiResource('interviews', InterviewController::class);
+    Route::apiResource('coding-challenges', CodingChallengeController::class);
 });

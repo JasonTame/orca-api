@@ -160,7 +160,7 @@ endpoints:
         name: is_tool
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -181,7 +181,7 @@ endpoints:
       category: platform
       is_language: false
       is_framework: true
-      is_tool: true
+      is_tool: false
     fileParameters: []
     responses: []
     responseFields: []
@@ -295,7 +295,7 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: tool
+        example: language
         type: string
         enumValues:
           - language
@@ -320,7 +320,7 @@ endpoints:
         name: is_framework
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -330,7 +330,7 @@ endpoints:
         name: is_tool
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -347,10 +347,10 @@ endpoints:
         nullable: true
         custom: []
     cleanBodyParameters:
-      category: tool
+      category: language
       is_language: true
-      is_framework: true
-      is_tool: true
+      is_framework: false
+      is_tool: false
     fileParameters: []
     responses: []
     responseFields: []

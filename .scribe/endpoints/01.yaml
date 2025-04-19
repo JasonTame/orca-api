@@ -144,7 +144,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: active
+        example: inactive
         type: string
         enumValues:
           - active
@@ -160,7 +160,7 @@ endpoints:
       size: small
       description: 'Eius et animi quos velit et.'
       location: v
-      status: active
+      status: inactive
     fileParameters: []
     responses: []
     responseFields: []
