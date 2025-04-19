@@ -8,6 +8,10 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+
+/**
+ * @group Candidates
+ */
 class CandidateController extends Controller
 {
     public function index(): JsonResponse
@@ -56,7 +60,7 @@ class CandidateController extends Controller
         $validator = Validator::make($request->all(), [
             'first_name' => 'sometimes|required|string|max:255',
             'last_name' => 'sometimes|required|string|max:255',
-            'email' => 'sometimes|required|email|unique:candidates,email,'.$candidate->id,
+            'email' => 'sometimes|required|email|unique:candidates,email,' . $candidate->id,
             'phone' => 'nullable|string|max:20',
             'location' => 'nullable|string|max:255',
             'resume_url' => 'nullable|url',
