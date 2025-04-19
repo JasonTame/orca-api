@@ -7,14 +7,32 @@ When building within this repo, use the following entity diagram to understand t
 
 ```mermaid
 erDiagram
+    COMPANIES ||--o{ USERS : "employs"
+    COMPANIES ||--o{ JOBS : "posts"
+    COMPANIES {
+        id integer PK
+        name varchar
+        logo_url varchar
+        website varchar
+        industry varchar
+        size enum
+        description text
+        location varchar
+        status enum
+        created_at timestamp
+        updated_at timestamp
+    }
+
     USERS ||--o{ JOBS : "creates/manages"
     USERS ||--o{ INTERVIEWS : "conducts"
     USERS {
         id integer PK
+        company_id integer FK
         name varchar
         email varchar
         role enum
         department varchar
+        is_admin boolean
         created_at timestamp
         updated_at timestamp
     }
@@ -29,6 +47,7 @@ erDiagram
         phone varchar
         location varchar
         resume_url varchar
+        github_url varchar
         portfolio_url varchar
         linkedin_url varchar
         years_experience integer
@@ -47,29 +66,36 @@ erDiagram
     JOBS ||--o{ INTERVIEW_STAGES : "has"
     JOBS {
         id integer PK
+        company_id integer FK
         title varchar
         description text
-        department varchar
+        team varchar
         location varchar
         type enum
+        level enum
         salary_min decimal
         salary_max decimal
         requirements text
         benefits text
         hiring_manager_id integer FK
         status enum
+        is_remote boolean
         published_at timestamp
         closing_date timestamp
         created_at timestamp
         updated_at timestamp
     }
     
-    SKILLS ||--o{ JOB_SKILLS : "used in"
-    SKILLS ||--o{ CANDIDATE_SKILLS : "possessed by"
-    SKILLS {
+    TECH_SKILLS ||--o{ JOB_SKILLS : "used in"
+    TECH_SKILLS ||--o{ CANDIDATE_SKILLS : "possessed by"
+    TECH_SKILLS {
         id integer PK
         name varchar
-        category varchar
+        category enum
+        is_language boolean
+        is_framework boolean
+        is_tool boolean
+        parent_skill_id integer FK
         created_at timestamp
         updated_at timestamp
     }
@@ -78,6 +104,7 @@ erDiagram
         id integer PK
         job_id integer FK
         skill_id integer FK
+        is_required boolean
         importance enum
         created_at timestamp
         updated_at timestamp
@@ -98,11 +125,12 @@ erDiagram
         id integer PK
         job_id integer FK
         candidate_id integer FK
-        cover_letter_url varchar
+        code_sample_url varchar
         status enum
         current_stage_id integer FK
         rejection_reason varchar
         notes text
+        referral_source varchar
         applied_at timestamp
         created_at timestamp
         updated_at timestamp
@@ -116,6 +144,7 @@ erDiagram
         sequence integer
         duration integer
         format enum
+        is_technical boolean
         created_at timestamp
         updated_at timestamp
     }
@@ -130,22 +159,26 @@ erDiagram
         location varchar
         meeting_url varchar
         status enum
+        technical_score integer
+        cultural_score integer
         feedback text
-        rating integer
         decision enum
         notes text
         created_at timestamp
         updated_at timestamp
     }
     
-    DEPARTMENTS {
+    CODING_CHALLENGES ||--o{ APPLICATIONS : "completed by"
+    CODING_CHALLENGES {
         id integer PK
-        name varchar
+        job_id integer FK
+        title varchar
         description text
+        instructions text
+        repository_url varchar
+        time_limit integer
+        difficulty enum
         created_at timestamp
         updated_at timestamp
     }
-    
-    DEPARTMENTS ||--o{ JOBS : "contains"
-    DEPARTMENTS ||--o{ USERS : "employs"
 ```
