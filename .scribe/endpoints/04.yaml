@@ -1,55 +1,12 @@
-name: 'Tech Skills'
+name: Applications
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/tech-skills/categories
+    uri: api/applications
     metadata:
-      groupName: 'Tech Skills'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 8b1268a44e796e237d62702c04e1db69ad73ae107f7b81acf9112657ca85eb28'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/tech-skills
-    metadata:
-      groupName: 'Tech Skills'
+      groupName: Applications
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -90,9 +47,9 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/tech-skills
+    uri: api/applications
     metadata:
-      groupName: 'Tech Skills'
+      groupName: Applications
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -109,64 +66,55 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      name:
-        name: name
-        description: 'Must not be greater than 255 characters.'
+      job_opening_id:
+        name: job_opening_id
+        description: 'The <code>id</code> of an existing record in the job_openings table.'
         required: true
-        example: b
+        example: architecto
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
-      category:
-        name: category
+      candidate_id:
+        name: candidate_id
+        description: 'The <code>id</code> of an existing record in the candidates table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      code_sample_url:
+        name: code_sample_url
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://bailey.com/'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      status:
+        name: status
         description: ''
         required: true
-        example: platform
+        example: pending
         type: string
         enumValues:
-          - language
-          - framework
-          - database
-          - tool
-          - platform
+          - pending
+          - reviewing
+          - interviewing
+          - offered
+          - accepted
+          - rejected
         exampleWasSpecified: false
         nullable: false
         custom: []
-      is_language:
-        name: is_language
-        description: ''
-        required: false
-        example: false
-        type: boolean
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      is_framework:
-        name: is_framework
-        description: ''
-        required: false
-        example: true
-        type: boolean
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      is_tool:
-        name: is_tool
-        description: ''
-        required: false
-        example: true
-        type: boolean
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      parent_skill_id:
-        name: parent_skill_id
-        description: 'The <code>id</code> of an existing record in the tech_skills table.'
+      current_stage_id:
+        name: current_stage_id
+        description: 'The <code>id</code> of an existing record in the interview_stages table.'
         required: false
         example: null
         type: string
@@ -174,12 +122,55 @@ endpoints:
         exampleWasSpecified: false
         nullable: true
         custom: []
+      rejection_reason:
+        name: rejection_reason
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: m
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      notes:
+        name: notes
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      referral_source:
+        name: referral_source
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      applied_at:
+        name: applied_at
+        description: 'Must be a valid date.'
+        required: false
+        example: '2025-04-19T15:52:33'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
     cleanBodyParameters:
-      name: b
-      category: platform
-      is_language: false
-      is_framework: true
-      is_tool: true
+      job_opening_id: architecto
+      candidate_id: architecto
+      code_sample_url: 'http://bailey.com/'
+      status: pending
+      rejection_reason: m
+      notes: architecto
+      referral_source: 'n'
+      applied_at: '2025-04-19T15:52:33'
     fileParameters: []
     responses: []
     responseFields: []
@@ -194,9 +185,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/tech-skills/{id}'
+    uri: 'api/applications/{id}'
     metadata:
-      groupName: 'Tech Skills'
+      groupName: Applications
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -211,7 +202,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the tech skill.'
+        description: 'The ID of the application.'
         required: true
         example: 16
         type: integer
@@ -249,9 +240,9 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'api/tech-skills/{id}'
+    uri: 'api/applications/{id}'
     metadata:
-      groupName: 'Tech Skills'
+      groupName: Applications
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -266,7 +257,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the tech skill.'
+        description: 'The ID of the application.'
         required: true
         example: 16
         type: integer
@@ -279,64 +270,55 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      name:
-        name: name
-        description: ''
-        required: false
-        example: null
+      job_opening_id:
+        name: job_opening_id
+        description: 'The <code>id</code> of an existing record in the job_openings table.'
+        required: true
+        example: architecto
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
-      category:
-        name: category
+      candidate_id:
+        name: candidate_id
+        description: 'The <code>id</code> of an existing record in the candidates table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      code_sample_url:
+        name: code_sample_url
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://bailey.com/'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      status:
+        name: status
         description: ''
         required: true
-        example: tool
+        example: reviewing
         type: string
         enumValues:
-          - language
-          - framework
-          - database
-          - tool
-          - platform
+          - pending
+          - reviewing
+          - interviewing
+          - offered
+          - accepted
+          - rejected
         exampleWasSpecified: false
         nullable: false
         custom: []
-      is_language:
-        name: is_language
-        description: ''
-        required: false
-        example: true
-        type: boolean
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      is_framework:
-        name: is_framework
-        description: ''
-        required: false
-        example: true
-        type: boolean
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      is_tool:
-        name: is_tool
-        description: ''
-        required: false
-        example: true
-        type: boolean
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      parent_skill_id:
-        name: parent_skill_id
-        description: 'The <code>id</code> of an existing record in the tech_skills table.'
+      current_stage_id:
+        name: current_stage_id
+        description: 'The <code>id</code> of an existing record in the interview_stages table.'
         required: false
         example: null
         type: string
@@ -344,11 +326,55 @@ endpoints:
         exampleWasSpecified: false
         nullable: true
         custom: []
+      rejection_reason:
+        name: rejection_reason
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: m
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      notes:
+        name: notes
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      referral_source:
+        name: referral_source
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      applied_at:
+        name: applied_at
+        description: 'Must be a valid date.'
+        required: false
+        example: '2025-04-19T15:52:33'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
     cleanBodyParameters:
-      category: tool
-      is_language: true
-      is_framework: true
-      is_tool: true
+      job_opening_id: architecto
+      candidate_id: architecto
+      code_sample_url: 'http://bailey.com/'
+      status: reviewing
+      rejection_reason: m
+      notes: architecto
+      referral_source: 'n'
+      applied_at: '2025-04-19T15:52:33'
     fileParameters: []
     responses: []
     responseFields: []
@@ -363,9 +389,9 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/tech-skills/{id}'
+    uri: 'api/applications/{id}'
     metadata:
-      groupName: 'Tech Skills'
+      groupName: Applications
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -380,7 +406,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the tech skill.'
+        description: 'The ID of the application.'
         required: true
         example: 16
         type: integer

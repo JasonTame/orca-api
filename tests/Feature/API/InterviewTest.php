@@ -1,10 +1,10 @@
 <?php
 
-use App\Models\User;
-use App\Models\Interview;
-use App\Models\JobOpening;
 use App\Models\Application;
+use App\Models\Interview;
 use App\Models\InterviewStage;
+use App\Models\JobOpening;
+use App\Models\User;
 
 test('can list interviews', function () {
     $user = User::factory()->create();
