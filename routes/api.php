@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\CandidateController;
+use App\Http\Controllers\API\CompanyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,5 +23,6 @@ Route::middleware([
         return $request->user();
     });
 
+    Route::apiResource('companies', CompanyController::class);
     Route::apiResource('candidates', CandidateController::class);
 });
