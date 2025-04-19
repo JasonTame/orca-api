@@ -1,0 +1,107 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+The endpoints that this ATS API should serve:
+
+### Core Resource Endpoints
+
+**Jobs**
+```
+GET    /api/jobs                # List all job postings
+POST   /api/jobs                # Create new job posting
+GET    /api/jobs/:id            # Get job details
+PUT    /api/jobs/:id            # Update job details
+DELETE /api/jobs/:id            # Delete/archive job
+```
+
+**Candidates**
+```
+GET    /api/candidates              # List all candidates
+POST   /api/candidates              # Create new candidate
+GET    /api/candidates/:id          # Get candidate details
+PUT    /api/candidates/:id          # Update candidate information
+DELETE /api/candidates/:id          # Delete candidate record
+```
+
+**Applications**
+```
+GET    /api/applications            # List all applications
+POST   /api/applications            # Create new application
+GET    /api/applications/:id        # Get application details
+PUT    /api/applications/:id        # Update application status
+DELETE /api/applications/:id        # Delete application
+```
+
+**Interviews**
+```
+GET    /api/interviews              # List all interviews
+POST   /api/interviews              # Schedule new interview
+GET    /api/interviews/:id          # Get interview details
+PUT    /api/interviews/:id          # Update interview details/feedback
+DELETE /api/interviews/:id          # Cancel/delete interview
+```
+
+**Interview Stages**
+```
+GET    /api/interview-stages              # List all interview stages
+POST   /api/interview-stages              # Create interview stage
+GET    /api/interview-stages/:id          # Get stage details
+PUT    /api/interview-stages/:id          # Update stage details
+DELETE /api/interview-stages/:id          # Delete interview stage
+```
+
+**Skills**
+```
+GET    /api/skills                  # List all skills
+POST   /api/skills                  # Create new skill
+GET    /api/skills/:id              # Get skill details
+PUT    /api/skills/:id              # Update skill
+DELETE /api/skills/:id              # Delete skill
+```
+
+**Users**
+```
+GET    /api/users                   # List all users
+POST   /api/users                   # Create new user
+GET    /api/users/:id               # Get user details
+PUT    /api/users/:id               # Update user
+DELETE /api/users/:id               # Deactivate user
+```
+
+**Departments**
+```
+GET    /api/departments             # List all departments
+POST   /api/departments             # Create department
+GET    /api/departments/:id         # Get department details
+PUT    /api/departments/:id         # Update department
+DELETE /api/departments/:id         # Delete department
+```
+
+### Relationship Endpoints
+
+```
+GET    /api/jobs/:id/applications   # Get applications for a specific job
+GET    /api/jobs/:id/stages         # Get interview stages for a job
+
+GET    /api/candidates/:id/applications    # Get all applications from a candidate
+GET    /api/candidates/:id/skills          # Get candidate skills
+
+GET    /api/applications/:id/interviews    # Get interviews for an application
+
+GET    /api/departments/:id/jobs           # Get jobs in a department
+GET    /api/departments/:id/users          # Get users in a department
+```
+
+### Additional Utility Endpoints
+```
+GET    /api/applications/metrics    # Get application metrics/statistics
+GET    /api/jobs/metrics            # Get job metrics/statistics
+
+GET    /api/dashboard/stats         # Get aggregate dashboard statistics
+GET    /api/dashboard/recent-activity # Get recent system activity
+
+POST   /api/applications/:id/advance # Advance application to next stage
+POST   /api/applications/:id/reject  # Reject an application
+```
