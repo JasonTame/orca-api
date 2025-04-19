@@ -1,0 +1,151 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+When building within this repo, use the following entity diagram to understand the models and relationships:
+
+```mermaid
+erDiagram
+    USERS ||--o{ JOBS : "creates/manages"
+    USERS ||--o{ INTERVIEWS : "conducts"
+    USERS {
+        id integer PK
+        name varchar
+        email varchar
+        role enum
+        department varchar
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    CANDIDATES ||--o{ APPLICATIONS : "submits"
+    CANDIDATES ||--o{ CANDIDATE_SKILLS : "has"
+    CANDIDATES {
+        id integer PK
+        first_name varchar
+        last_name varchar
+        email varchar
+        phone varchar
+        location varchar
+        resume_url varchar
+        portfolio_url varchar
+        linkedin_url varchar
+        years_experience integer
+        current_position varchar
+        current_company varchar
+        desired_salary decimal
+        source enum
+        notes text
+        status enum
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    JOBS ||--o{ APPLICATIONS : "receives"
+    JOBS ||--o{ JOB_SKILLS : "requires"
+    JOBS ||--o{ INTERVIEW_STAGES : "has"
+    JOBS {
+        id integer PK
+        title varchar
+        description text
+        department varchar
+        location varchar
+        type enum
+        salary_min decimal
+        salary_max decimal
+        requirements text
+        benefits text
+        hiring_manager_id integer FK
+        status enum
+        published_at timestamp
+        closing_date timestamp
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    SKILLS ||--o{ JOB_SKILLS : "used in"
+    SKILLS ||--o{ CANDIDATE_SKILLS : "possessed by"
+    SKILLS {
+        id integer PK
+        name varchar
+        category varchar
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    JOB_SKILLS {
+        id integer PK
+        job_id integer FK
+        skill_id integer FK
+        importance enum
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    CANDIDATE_SKILLS {
+        id integer PK
+        candidate_id integer FK
+        skill_id integer FK
+        proficiency enum
+        years_experience integer
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    APPLICATIONS ||--o{ INTERVIEWS : "progresses through"
+    APPLICATIONS {
+        id integer PK
+        job_id integer FK
+        candidate_id integer FK
+        cover_letter_url varchar
+        status enum
+        current_stage_id integer FK
+        rejection_reason varchar
+        notes text
+        applied_at timestamp
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    INTERVIEW_STAGES {
+        id integer PK
+        job_id integer FK
+        name varchar
+        description text
+        sequence integer
+        duration integer
+        format enum
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    INTERVIEWS {
+        id integer PK
+        application_id integer FK
+        stage_id integer FK
+        interviewer_id integer FK
+        scheduled_at timestamp
+        completed_at timestamp
+        location varchar
+        meeting_url varchar
+        status enum
+        feedback text
+        rating integer
+        decision enum
+        notes text
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    DEPARTMENTS {
+        id integer PK
+        name varchar
+        description text
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    DEPARTMENTS ||--o{ JOBS : "contains"
+    DEPARTMENTS ||--o{ USERS : "employs"
+```
