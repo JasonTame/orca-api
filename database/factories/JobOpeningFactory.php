@@ -23,7 +23,7 @@ class JobOpeningFactory extends Factory
                 'DevOps Engineer',
                 'Data Scientist',
                 'Database Administrator',
-                'QA Engineer'
+                'QA Engineer',
             ]),
             'description' => fake()->paragraphs(3, true),
             'team' => fake()->word(),
