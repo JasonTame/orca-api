@@ -100,7 +100,7 @@ endpoints:
         name: scheduled_at
         description: 'Must be a valid date. Must be a date after <code>now</code>.'
         required: true
-        example: '2051-05-15'
+        example: '2051-05-16'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -110,7 +110,7 @@ endpoints:
         name: completed_at
         description: 'Must be a valid date. Must be a date after <code>scheduled_at</code>.'
         required: false
-        example: '2018-12-26'
+        example: '2055-09-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -140,7 +140,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: cancelled
+        example: scheduled
         type: string
         enumValues:
           - scheduled
@@ -207,11 +207,11 @@ endpoints:
       application_id: 16
       stage_id: 16
       interviewer_id: 16
-      scheduled_at: '2051-05-15'
-      completed_at: '2018-12-26'
+      scheduled_at: '2051-05-16'
+      completed_at: '2055-09-23'
       location: g
       meeting_url: 'http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html'
-      status: cancelled
+      status: scheduled
       technical_score: 3
       cultural_score: 4
       feedback: architecto
@@ -350,7 +350,7 @@ endpoints:
         name: scheduled_at
         description: 'Must be a valid date. Must be a date after <code>now</code>.'
         required: true
-        example: '2051-05-15'
+        example: '2051-05-16'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -360,7 +360,7 @@ endpoints:
         name: completed_at
         description: 'Must be a valid date. Must be a date after <code>scheduled_at</code>.'
         required: false
-        example: '2018-12-26'
+        example: '2055-09-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -390,7 +390,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: rescheduled
+        example: completed
         type: string
         enumValues:
           - scheduled
@@ -457,11 +457,11 @@ endpoints:
       application_id: architecto
       stage_id: architecto
       interviewer_id: architecto
-      scheduled_at: '2051-05-15'
-      completed_at: '2018-12-26'
+      scheduled_at: '2051-05-16'
+      completed_at: '2055-09-23'
       location: g
       meeting_url: 'http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html'
-      status: rescheduled
+      status: completed
       technical_score: 3
       cultural_score: 4
       feedback: architecto

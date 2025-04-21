@@ -13,9 +13,15 @@ use Illuminate\Support\Facades\Validator;
  */
 class CompanyMemberController extends Controller
 {
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
-        $companyMembers = CompanyMember::with(['company', 'jobOpenings', 'interviews'])->get();
+        $query = CompanyMember::with(['company', 'jobOpenings', 'interviews']);
+
+        if ($request->has('company_id')) {
+            $query->where('company_id', $request->input('company_id'));
+        }
+
+        $companyMembers = $query->get();
 
         return response()->json($companyMembers);
     }

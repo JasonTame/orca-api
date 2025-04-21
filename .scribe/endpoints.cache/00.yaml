@@ -125,7 +125,7 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: database
+        example: tool
         type: string
         enumValues:
           - language
@@ -140,7 +140,7 @@ endpoints:
         name: is_language
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -150,7 +150,7 @@ endpoints:
         name: is_framework
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -178,9 +178,9 @@ endpoints:
         custom: []
     cleanBodyParameters:
       name: b
-      category: database
-      is_language: false
-      is_framework: false
+      category: tool
+      is_language: true
+      is_framework: true
       is_tool: false
       parent_skill_id: 16
     fileParameters: []
@@ -296,7 +296,7 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: framework
+        example: platform
         type: string
         enumValues:
           - language
@@ -311,7 +311,7 @@ endpoints:
         name: is_language
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -321,7 +321,7 @@ endpoints:
         name: is_framework
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -331,7 +331,7 @@ endpoints:
         name: is_tool
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -348,10 +348,10 @@ endpoints:
         nullable: true
         custom: []
     cleanBodyParameters:
-      category: framework
-      is_language: false
-      is_framework: true
-      is_tool: false
+      category: platform
+      is_language: true
+      is_framework: false
+      is_tool: true
       parent_skill_id: 16
     fileParameters: []
     responses: []

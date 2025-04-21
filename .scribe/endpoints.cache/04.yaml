@@ -132,7 +132,7 @@ endpoints:
         name: type
         description: ''
         required: true
-        example: part_time
+        example: internship
         type: string
         enumValues:
           - full_time
@@ -146,7 +146,7 @@ endpoints:
         name: level
         description: ''
         required: true
-        example: mid
+        example: entry
         type: string
         enumValues:
           - entry
@@ -202,7 +202,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: archived
+        example: draft
         type: string
         enumValues:
           - draft
@@ -226,7 +226,7 @@ endpoints:
         name: published_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-04-21T09:18:22'
+        example: '2025-04-21T12:38:20'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -236,7 +236,7 @@ endpoints:
         name: closing_date
         description: 'Must be a valid date. Must be a date after <code>published_at</code>.'
         required: false
-        example: '2018-12-26'
+        example: '2055-09-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -249,16 +249,16 @@ endpoints:
       description: 'Eius et animi quos velit et.'
       team: v
       location: d
-      type: part_time
-      level: mid
+      type: internship
+      level: entry
       salary_min: 37
       salary_max: 9
       requirements: architecto
       benefits: architecto
-      status: archived
+      status: draft
       is_remote: false
-      published_at: '2025-04-21T09:18:22'
-      closing_date: '2018-12-26'
+      published_at: '2025-04-21T12:38:20'
+      closing_date: '2055-09-23'
     fileParameters: []
     responses: []
     responseFields: []
@@ -422,7 +422,7 @@ endpoints:
         name: type
         description: ''
         required: true
-        example: full_time
+        example: part_time
         type: string
         enumValues:
           - full_time
@@ -492,7 +492,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: draft
+        example: archived
         type: string
         enumValues:
           - draft
@@ -506,7 +506,7 @@ endpoints:
         name: is_remote
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -516,7 +516,7 @@ endpoints:
         name: published_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-04-21T09:18:22'
+        example: '2025-04-21T12:38:20'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -526,7 +526,7 @@ endpoints:
         name: closing_date
         description: 'Must be a valid date. Must be a date after <code>published_at</code>.'
         required: false
-        example: '2018-12-26'
+        example: '2055-09-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -539,16 +539,16 @@ endpoints:
       description: 'Eius et animi quos velit et.'
       team: v
       location: d
-      type: full_time
+      type: part_time
       level: lead
       salary_min: 37
       salary_max: 9
       requirements: architecto
       benefits: architecto
-      status: draft
-      is_remote: true
-      published_at: '2025-04-21T09:18:22'
-      closing_date: '2018-12-26'
+      status: archived
+      is_remote: false
+      published_at: '2025-04-21T12:38:20'
+      closing_date: '2055-09-23'
     fileParameters: []
     responses: []
     responseFields: []

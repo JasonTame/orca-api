@@ -163,6 +163,34 @@ test('can get company members', function () {
         ]);
 });
 
+test('can filter company members by company_id', function () {
+    $company1 = Company::factory()->create();
+    $company2 = Company::factory()->create();
+
+    CompanyMember::factory()->count(3)->create(['company_id' => $company1->id]);
+    CompanyMember::factory()->count(2)->create(['company_id' => $company2->id]);
+
+    $response1 = $this->getJson("/api/company-members?company_id={$company1->id}");
+    $response1->assertStatus(200)
+        ->assertJsonCount(3)
+        ->assertJsonStructure([
+            '*' => [
+                'id',
+                'name',
+                'email',
+                'company_id',
+            ],
+        ]);
+
+    $response2 = $this->getJson("/api/company-members?company_id={$company2->id}");
+    $response2->assertStatus(200)
+        ->assertJsonCount(2);
+
+    $responseAll = $this->getJson('/api/company-members');
+    $responseAll->assertStatus(200)
+        ->assertJsonCount(5);
+});
+
 test('can get company hiring managers', function () {
     $company = Company::factory()->create();
     CompanyMember::factory()->count(2)->create([

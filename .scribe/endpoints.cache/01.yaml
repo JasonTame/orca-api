@@ -112,7 +112,7 @@ endpoints:
         name: size
         description: ''
         required: false
-        example: enterprise
+        example: medium
         type: string
         enumValues:
           - small
@@ -146,7 +146,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: inactive
+        example: active
         type: string
         enumValues:
           - active
@@ -159,10 +159,10 @@ endpoints:
       logo_url: 'http://bailey.com/'
       website: 'http://rempel.com/sunt-nihil-accusantium-harum-mollitia'
       industry: k
-      size: enterprise
+      size: medium
       description: 'Eius et animi quos velit et.'
       location: v
-      status: inactive
+      status: active
     fileParameters: []
     responses: []
     responseFields: []
