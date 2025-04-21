@@ -94,12 +94,8 @@ class TechSkillSeeder extends Seeder
             'Docker',
             'Kubernetes',
             'Jenkins',
-            'AWS',
-            'Azure',
-            'GCP',
             'Terraform',
             'Ansible',
-            'Nginx',
             'Apache',
         ];
 
