@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
- * 
- *
  * @property int $id
  * @property string $first_name
  * @property string $last_name
@@ -31,6 +29,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read int|null $applications_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\CandidateSkill> $skills
  * @property-read int|null $skills_count
+ *
  * @method static \Database\Factories\CandidateFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Candidate newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Candidate newQuery()
@@ -53,6 +52,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Candidate whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Candidate whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Candidate whereYearsExperience($value)
+ *
  * @mixin \Eloquent
  */
 class Candidate extends Model

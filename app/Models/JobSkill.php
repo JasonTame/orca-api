@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
- * 
- *
  * @property int $id
  * @property int $job_opening_id
  * @property int $skill_id
@@ -18,6 +16,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\JobOpening $jobOpening
  * @property-read \App\Models\TechSkill $skill
+ *
  * @method static \Database\Factories\JobSkillFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill newQuery()
@@ -29,6 +28,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill whereJobOpeningId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill whereSkillId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class JobSkill extends Model
