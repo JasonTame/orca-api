@@ -15,7 +15,16 @@ class JobOpeningFactory extends Factory
     {
         return [
             'company_id' => Company::factory(),
-            'title' => fake()->jobTitle(),
+            'title' => fake()->randomElement([
+                'Frontend Developer',
+                'Backend Developer',
+                'Fullstack Developer',
+                'Mobile Developer',
+                'DevOps Engineer',
+                'Data Scientist',
+                'Database Administrator',
+                'QA Engineer'
+            ]),
             'description' => fake()->paragraphs(3, true),
             'team' => fake()->word(),
             'location' => fake()->city(),
