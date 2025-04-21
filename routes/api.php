@@ -39,7 +39,11 @@ Route::middleware([
     Route::get('company-members/{companyMember}/job-openings', [CompanyMemberController::class, 'jobOpenings']);
     Route::get('company-members/{companyMember}/interviews', [CompanyMemberController::class, 'interviews']);
 
+    // Candidates
     Route::apiResource('candidates', CandidateController::class);
+    Route::get('candidates/{candidate}/skills', [CandidateController::class, 'skills']);
+    Route::get('candidates/{candidate}/applications', [CandidateController::class, 'applications']);
+
     Route::apiResource('job-openings', JobOpeningController::class);
     Route::apiResource('applications', ApplicationController::class);
     Route::apiResource('interviews', InterviewController::class);

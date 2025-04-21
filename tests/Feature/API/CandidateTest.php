@@ -1,6 +1,10 @@
 <?php
 
+use App\Models\Application;
 use App\Models\Candidate;
+use App\Models\CandidateSkill;
+use App\Models\JobOpening;
+use App\Models\TechSkill;
 use App\Models\User;
 
 beforeEach(function () {
@@ -140,4 +144,67 @@ test('validates enum fields', function () {
 
     $response->assertStatus(422)
         ->assertJsonValidationErrors(['source', 'status']);
+});
+
+test('can view candidate skills', function () {
+    $candidate = Candidate::factory()->create();
+    $skill = TechSkill::factory()->create(['name' => 'PHP']);
+
+    CandidateSkill::factory()->create([
+        'candidate_id' => $candidate->id,
+        'skill_id' => $skill->id,
+        'proficiency' => 'expert',
+        'years_experience' => 5,
+    ]);
+
+    $response = $this->getJson("/api/candidates/{$candidate->id}/skills");
+
+    $response->assertStatus(200)
+        ->assertJsonCount(1)
+        ->assertJsonStructure([
+            '*' => [
+                'id',
+                'candidate_id',
+                'skill_id',
+                'proficiency',
+                'years_experience',
+                'created_at',
+                'updated_at',
+                'skill' => [
+                    'id',
+                    'name',
+                ],
+            ],
+        ]);
+});
+
+test('can view candidate applications', function () {
+    $candidate = Candidate::factory()->create();
+    $jobOpening = JobOpening::factory()->create(['title' => 'Senior Developer']);
+
+    Application::factory()->create([
+        'candidate_id' => $candidate->id,
+        'job_opening_id' => $jobOpening->id,
+        'status' => 'pending',
+    ]);
+
+    $response = $this->getJson("/api/candidates/{$candidate->id}/applications");
+
+    $response->assertStatus(200)
+        ->assertJsonCount(1)
+        ->assertJsonStructure([
+            '*' => [
+                'id',
+                'candidate_id',
+                'job_opening_id',
+                'status',
+                'applied_at',
+                'created_at',
+                'updated_at',
+                'job_opening' => [
+                    'id',
+                    'title',
+                ],
+            ],
+        ]);
 });

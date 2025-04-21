@@ -110,7 +110,7 @@ endpoints:
         name: completed_at
         description: 'Must be a valid date. Must be a date after <code>scheduled_at</code>.'
         required: false
-        example: '2055-09-23'
+        example: '2062-08-28'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -140,7 +140,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: scheduled
+        example: cancelled
         type: string
         enumValues:
           - scheduled
@@ -184,7 +184,7 @@ endpoints:
         name: decision
         description: ''
         required: false
-        example: proceed
+        example: hold
         type: string
         enumValues:
           - proceed
@@ -208,14 +208,14 @@ endpoints:
       stage_id: 16
       interviewer_id: 16
       scheduled_at: '2051-05-16'
-      completed_at: '2055-09-23'
+      completed_at: '2062-08-28'
       location: g
       meeting_url: 'http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html'
-      status: scheduled
+      status: cancelled
       technical_score: 3
       cultural_score: 4
       feedback: architecto
-      decision: proceed
+      decision: hold
       notes: architecto
     fileParameters: []
     responses: []
@@ -360,7 +360,7 @@ endpoints:
         name: completed_at
         description: 'Must be a valid date. Must be a date after <code>scheduled_at</code>.'
         required: false
-        example: '2055-09-23'
+        example: '2062-08-28'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -434,7 +434,7 @@ endpoints:
         name: decision
         description: ''
         required: false
-        example: hold
+        example: proceed
         type: string
         enumValues:
           - proceed
@@ -458,14 +458,14 @@ endpoints:
       stage_id: architecto
       interviewer_id: architecto
       scheduled_at: '2051-05-16'
-      completed_at: '2055-09-23'
+      completed_at: '2062-08-28'
       location: g
       meeting_url: 'http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html'
       status: completed
       technical_score: 3
       cultural_score: 4
       feedback: architecto
-      decision: hold
+      decision: proceed
       notes: architecto
     fileParameters: []
     responses: []

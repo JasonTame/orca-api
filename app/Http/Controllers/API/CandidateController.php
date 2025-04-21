@@ -89,4 +89,24 @@ class CandidateController extends Controller
 
         return response()->json(null, 204);
     }
+
+    /**
+     * Get skills for a candidate
+     */
+    public function skills(Candidate $candidate): JsonResponse
+    {
+        $skills = $candidate->skills()->with('skill')->get();
+
+        return response()->json($skills);
+    }
+
+    /**
+     * Get applications for a candidate
+     */
+    public function applications(Candidate $candidate): JsonResponse
+    {
+        $applications = $candidate->applications()->with('jobOpening')->get();
+
+        return response()->json($applications);
+    }
 }

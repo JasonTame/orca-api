@@ -192,7 +192,7 @@ endpoints:
         name: source
         description: ''
         required: false
-        example: indeed
+        example: other
         type: string
         enumValues:
           - linkedin
@@ -217,7 +217,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: inactive
+        example: rejected
         type: string
         enumValues:
           - active
@@ -240,9 +240,9 @@ endpoints:
       current_position: p
       current_company: w
       desired_salary: 16
-      source: indeed
+      source: other
       notes: architecto
-      status: inactive
+      status: rejected
     fileParameters: []
     responses: []
     responseFields: []
@@ -466,7 +466,7 @@ endpoints:
         name: source
         description: ''
         required: false
-        example: referral
+        example: indeed
         type: string
         enumValues:
           - linkedin
@@ -491,7 +491,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: rejected
+        example: inactive
         type: string
         enumValues:
           - active
@@ -513,9 +513,9 @@ endpoints:
       current_position: u
       current_company: j
       desired_salary: 87
-      source: referral
+      source: indeed
       notes: architecto
-      status: rejected
+      status: inactive
     fileParameters: []
     responses: []
     responseFields: []
@@ -563,6 +563,114 @@ endpoints:
     cleanBodyParameters: []
     fileParameters: []
     responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/candidates/{candidate_id}/skills'
+    metadata:
+      groupName: Candidates
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get skills for a candidate'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      candidate_id:
+        name: candidate_id
+        description: 'The ID of the candidate.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      candidate_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/candidates/{candidate_id}/applications'
+    metadata:
+      groupName: Candidates
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get applications for a candidate'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      candidate_id:
+        name: candidate_id
+        description: 'The ID of the candidate.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      candidate_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers

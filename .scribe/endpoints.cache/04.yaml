@@ -146,7 +146,7 @@ endpoints:
         name: level
         description: ''
         required: true
-        example: entry
+        example: mid
         type: string
         enumValues:
           - entry
@@ -202,7 +202,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: draft
+        example: published
         type: string
         enumValues:
           - draft
@@ -226,7 +226,7 @@ endpoints:
         name: published_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-04-21T12:38:20'
+        example: '2025-04-21T12:50:22'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -236,7 +236,7 @@ endpoints:
         name: closing_date
         description: 'Must be a valid date. Must be a date after <code>published_at</code>.'
         required: false
-        example: '2055-09-23'
+        example: '2062-08-28'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -250,15 +250,15 @@ endpoints:
       team: v
       location: d
       type: internship
-      level: entry
+      level: mid
       salary_min: 37
       salary_max: 9
       requirements: architecto
       benefits: architecto
-      status: draft
+      status: published
       is_remote: false
-      published_at: '2025-04-21T12:38:20'
-      closing_date: '2055-09-23'
+      published_at: '2025-04-21T12:50:22'
+      closing_date: '2062-08-28'
     fileParameters: []
     responses: []
     responseFields: []
@@ -422,7 +422,7 @@ endpoints:
         name: type
         description: ''
         required: true
-        example: part_time
+        example: full_time
         type: string
         enumValues:
           - full_time
@@ -436,7 +436,7 @@ endpoints:
         name: level
         description: ''
         required: true
-        example: lead
+        example: principal
         type: string
         enumValues:
           - entry
@@ -516,7 +516,7 @@ endpoints:
         name: published_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-04-21T12:38:20'
+        example: '2025-04-21T12:50:22'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -526,7 +526,7 @@ endpoints:
         name: closing_date
         description: 'Must be a valid date. Must be a date after <code>published_at</code>.'
         required: false
-        example: '2055-09-23'
+        example: '2062-08-28'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -539,16 +539,16 @@ endpoints:
       description: 'Eius et animi quos velit et.'
       team: v
       location: d
-      type: part_time
-      level: lead
+      type: full_time
+      level: principal
       salary_min: 37
       salary_max: 9
       requirements: architecto
       benefits: architecto
       status: archived
       is_remote: false
-      published_at: '2025-04-21T12:38:20'
-      closing_date: '2055-09-23'
+      published_at: '2025-04-21T12:50:22'
+      closing_date: '2062-08-28'
     fileParameters: []
     responses: []
     responseFields: []
