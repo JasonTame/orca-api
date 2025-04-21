@@ -21,7 +21,7 @@ return new class extends Migration
             $table->decimal('salary_max', 10, 2)->nullable();
             $table->text('requirements')->nullable();
             $table->text('benefits')->nullable();
-            $table->foreignId('hiring_manager_id')->nullable()->constrained('users')->onDelete('set null');
+            $table->foreignId('hiring_manager_id')->nullable()->constrained('company_members')->onDelete('set null');
             $table->enum('status', ['draft', 'published', 'closed', 'archived']);
             $table->boolean('is_remote')->default(false);
             $table->timestamp('published_at')->nullable();

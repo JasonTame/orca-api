@@ -1,13 +1,14 @@
 <?php
 
 use App\Models\Company;
+use App\Models\CompanyMember;
 use App\Models\JobOpening;
 use App\Models\User;
 
 beforeEach(function () {
     $this->user = User::factory()->create();
     $this->company = Company::factory()->create();
-    $this->hiringManager = User::factory()->create();
+    $this->hiringManager = CompanyMember::factory()->create();
 });
 
 test('can list all job openings', function () {
@@ -23,6 +24,7 @@ test('can list all job openings', function () {
 test('can create a job opening', function () {
     $jobOpeningData = [
         'company_id' => $this->company->id,
+        'hiring_manager_id' => $this->hiringManager->id,
         'title' => 'Senior Software Engineer',
         'description' => 'We are looking for a senior software engineer...',
         'type' => 'full_time',

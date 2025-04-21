@@ -12,7 +12,17 @@ GET    /api/companies/:id                   # Get company details
 PUT    /api/companies/:id                   # Update company
 DELETE /api/companies/:id                   # Delete/deactivate company
 GET    /api/companies/:id/job-openings      # Get all job openings for a company
-GET    /api/companies/:id/users             # Get all users for a company
+GET    /api/companies/:id/hiring-managers   # Get hiring managers for a company
+GET    /api/companies/:id/interviewers      # Get interviewers for a company
+
+# Company Members Endpoints
+GET    /api/company-members                 # List all company members
+POST   /api/company-members                 # Create company member
+GET    /api/company-members/:id             # Get company member details
+PUT    /api/company-members/:id             # Update company member
+DELETE /api/company-members/:id             # Delete company member
+GET    /api/company-members/:id/job-openings # Get job openings managed by member
+GET    /api/company-members/:id/interviews  # Get interviews conducted by member
 
 # Job Openings Endpoints
 GET    /api/job-openings                    # List all job openings

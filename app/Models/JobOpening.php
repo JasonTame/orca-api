@@ -45,7 +45,7 @@ class JobOpening extends Model
 
     public function hiringManager(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'hiring_manager_id');
+        return $this->belongsTo(CompanyMember::class, 'hiring_manager_id');
     }
 
     public function applications(): HasMany

@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Application;
+use App\Models\CompanyMember;
 use App\Models\Interview;
 use App\Models\InterviewStage;
 use App\Models\JobOpening;
@@ -8,7 +9,7 @@ use App\Models\User;
 
 test('can list interviews', function () {
     $user = User::factory()->create();
-    $interviews = Interview::factory()->count(3)->create();
+    Interview::factory()->count(3)->create();
 
     $response = $this->actingAs($user)->getJson('/api/interviews');
 
@@ -33,7 +34,7 @@ test('can create interview', function () {
     $jobOpening = JobOpening::factory()->create();
     $application = Application::factory()->create(['job_opening_id' => $jobOpening->id]);
     $stage = InterviewStage::factory()->create(['job_opening_id' => $jobOpening->id]);
-    $interviewer = User::factory()->create();
+    $interviewer = CompanyMember::factory()->create();
 
     $scheduledAt = now()->addDays(1);
     $data = [
@@ -140,7 +141,7 @@ test('validates status enum values', function () {
     $user = User::factory()->create();
     $application = Application::factory()->create();
     $stage = InterviewStage::factory()->create();
-    $interviewer = User::factory()->create();
+    $interviewer = CompanyMember::factory()->create();
 
     $data = [
         'application_id' => $application->id,
@@ -160,7 +161,7 @@ test('validates scores are within range', function () {
     $user = User::factory()->create();
     $application = Application::factory()->create();
     $stage = InterviewStage::factory()->create();
-    $interviewer = User::factory()->create();
+    $interviewer = CompanyMember::factory()->create();
 
     $data = [
         'application_id' => $application->id,

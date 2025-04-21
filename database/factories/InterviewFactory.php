@@ -3,9 +3,9 @@
 namespace Database\Factories;
 
 use App\Models\Application;
+use App\Models\CompanyMember;
 use App\Models\Interview;
 use App\Models\InterviewStage;
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class InterviewFactory extends Factory
@@ -17,7 +17,7 @@ class InterviewFactory extends Factory
         return [
             'application_id' => Application::factory(),
             'stage_id' => InterviewStage::factory(),
-            'interviewer_id' => User::factory(),
+            'interviewer_id' => CompanyMember::factory(),
             'scheduled_at' => $this->faker->dateTimeBetween('now', '+1 month'),
             'completed_at' => $this->faker->optional()->dateTimeBetween('-1 month', 'now'),
             'location' => $this->faker->optional()->city(),

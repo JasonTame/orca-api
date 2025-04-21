@@ -7,7 +7,7 @@ When building within this repo, use the following entity diagram to understand t
 
 ```mermaid
 erDiagram
-    COMPANIES ||--o{ USERS : "employs"
+    COMPANIES ||--o{ COMPANY_MEMBERS : "employs"
     COMPANIES ||--o{ JOB_OPENINGS : "posts"
     COMPANIES {
         id integer PK
@@ -23,16 +23,30 @@ erDiagram
         updated_at timestamp
     }
 
-    USERS ||--o{ JOB_OPENINGS : "creates/manages"
-    USERS ||--o{ INTERVIEWS : "conducts"
     USERS {
+        id integer PK
+        name varchar
+        email varchar
+        role enum
+        is_admin boolean
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    COMPANY_MEMBERS ||--o{ JOB_OPENINGS : "creates/manages"
+    COMPANY_MEMBERS ||--o{ INTERVIEWS : "conducts"
+    COMPANY_MEMBERS {
         id integer PK
         company_id integer FK
         name varchar
         email varchar
-        role enum
+        position varchar
         department varchar
-        is_admin boolean
+        phone varchar
+        is_hiring_manager boolean
+        is_recruiter boolean
+        is_interviewer boolean
+        status enum
         created_at timestamp
         updated_at timestamp
     }

@@ -15,7 +15,7 @@ class JobOpeningController extends Controller
 {
     public function index(): JsonResponse
     {
-        $jobOpenings = JobOpening::all();
+        $jobOpenings = JobOpening::with(['company', 'hiringManager', 'applications'])->get();
 
         return response()->json($jobOpenings);
     }
@@ -24,6 +24,7 @@ class JobOpeningController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'company_id' => 'required|exists:companies,id',
+            'hiring_manager_id' => 'required|exists:company_members,id',
             'title' => 'required|string|max:255',
             'description' => 'required|string',
             'team' => 'nullable|string|max:255',
@@ -34,7 +35,6 @@ class JobOpeningController extends Controller
             'salary_max' => 'nullable|numeric|min:0|gte:salary_min',
             'requirements' => 'nullable|string',
             'benefits' => 'nullable|string',
-            'hiring_manager_id' => 'nullable|exists:users,id',
             'status' => 'required|in:draft,published,closed,archived',
             'is_remote' => 'boolean',
             'published_at' => 'nullable|date',
@@ -52,6 +52,8 @@ class JobOpeningController extends Controller
 
     public function show(JobOpening $jobOpening): JsonResponse
     {
+        $jobOpening->load(['company', 'hiringManager', 'applications']);
+
         return response()->json($jobOpening);
     }
 
@@ -59,6 +61,7 @@ class JobOpeningController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'company_id' => 'sometimes|required|exists:companies,id',
+            'hiring_manager_id' => 'sometimes|required|exists:company_members,id',
             'title' => 'sometimes|required|string|max:255',
             'description' => 'sometimes|required|string',
             'team' => 'nullable|string|max:255',
@@ -69,7 +72,6 @@ class JobOpeningController extends Controller
             'salary_max' => 'nullable|numeric|min:0|gte:salary_min',
             'requirements' => 'nullable|string',
             'benefits' => 'nullable|string',
-            'hiring_manager_id' => 'nullable|exists:users,id',
             'status' => 'sometimes|required|in:draft,published,closed,archived',
             'is_remote' => 'boolean',
             'published_at' => 'nullable|date',

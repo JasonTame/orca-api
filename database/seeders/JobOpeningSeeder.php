@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Company;
+use App\Models\CompanyMember;
 use App\Models\JobOpening;
 use App\Models\JobSkill;
 use App\Models\TechSkill;
@@ -19,12 +20,16 @@ class JobOpeningSeeder extends Seeder
         $techSkills = TechSkill::all();
 
         foreach ($companies as $company) {
+            $hiringManager = CompanyMember::factory()->create([
+                'company_id' => $company->id,
+            ]);
             $numberOfJobs = rand(0, 2);
 
             JobOpening::factory()
                 ->count($numberOfJobs)
                 ->create([
                     'company_id' => $company->id,
+                    'hiring_manager_id' => $hiringManager->id,
                 ])
                 ->each(function ($jobOpening) use ($techSkills) {
                     $numberOfSkills = rand(1, 3);

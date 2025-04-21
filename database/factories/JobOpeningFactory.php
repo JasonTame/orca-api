@@ -3,8 +3,8 @@
 namespace Database\Factories;
 
 use App\Models\Company;
+use App\Models\CompanyMember;
 use App\Models\JobOpening;
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class JobOpeningFactory extends Factory
@@ -13,8 +13,13 @@ class JobOpeningFactory extends Factory
 
     public function definition(): array
     {
+        $company = Company::factory()->create();
+        $companyMember = CompanyMember::factory()->create([
+            'company_id' => $company->id,
+        ]);
+
         return [
-            'company_id' => Company::factory(),
+            'company_id' => $company->id,
             'title' => fake()->randomElement([
                 'Frontend Developer',
                 'Backend Developer',
@@ -34,7 +39,7 @@ class JobOpeningFactory extends Factory
             'salary_max' => fake()->numberBetween(100000, 200000),
             'requirements' => fake()->paragraphs(2, true),
             'benefits' => fake()->paragraphs(2, true),
-            'hiring_manager_id' => User::factory(),
+            'hiring_manager_id' => $companyMember->id,
             'status' => fake()->randomElement(['draft', 'published', 'closed', 'archived']),
             'is_remote' => fake()->boolean(),
             'published_at' => fake()->optional()->dateTime(),

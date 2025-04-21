@@ -45,6 +45,6 @@ class Interview extends Model
 
     public function interviewer(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'interviewer_id');
+        return $this->belongsTo(CompanyMember::class, 'interviewer_id');
     }
 }

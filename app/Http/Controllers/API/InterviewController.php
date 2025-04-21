@@ -25,7 +25,7 @@ class InterviewController extends Controller
         $validator = Validator::make($request->all(), [
             'application_id' => 'required|exists:applications,id',
             'stage_id' => 'required|exists:interview_stages,id',
-            'interviewer_id' => 'required|exists:users,id',
+            'interviewer_id' => 'required|exists:company_members,id',
             'scheduled_at' => 'required|date|after:now',
             'completed_at' => 'nullable|date|after:scheduled_at',
             'location' => 'nullable|string|max:255',
@@ -59,7 +59,7 @@ class InterviewController extends Controller
         $validator = Validator::make($request->all(), [
             'application_id' => 'sometimes|required|exists:applications,id',
             'stage_id' => 'sometimes|required|exists:interview_stages,id',
-            'interviewer_id' => 'sometimes|required|exists:users,id',
+            'interviewer_id' => 'sometimes|required|exists:company_members,id',
             'scheduled_at' => 'sometimes|required|date|after:now',
             'completed_at' => 'nullable|date|after:scheduled_at',
             'location' => 'nullable|string|max:255',

@@ -26,13 +26,13 @@ class Company extends Model
         'updated_at' => 'datetime',
     ];
 
-    public function users(): HasMany
+    public function members(): HasMany
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(CompanyMember::class);
     }
 
     public function jobs(): HasMany
     {
-        return $this->hasMany(Job::class);
+        return $this->hasMany(JobOpening::class);
     }
 }

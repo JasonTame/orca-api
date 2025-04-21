@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('application_id')->constrained()->cascadeOnDelete();
             $table->foreignId('stage_id')->constrained('interview_stages')->cascadeOnDelete();
-            $table->foreignId('interviewer_id')->constrained('users')->nullOnDelete();
+            $table->foreignId('interviewer_id')->constrained('company_members')->nullOnDelete();
             $table->timestamp('scheduled_at');
             $table->timestamp('completed_at')->nullable();
             $table->string('location')->nullable();
