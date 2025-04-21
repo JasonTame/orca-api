@@ -192,7 +192,7 @@ endpoints:
         name: source
         description: ''
         required: false
-        example: referral
+        example: indeed
         type: string
         enumValues:
           - linkedin
@@ -217,7 +217,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: hired
+        example: rejected
         type: string
         enumValues:
           - active
@@ -240,9 +240,9 @@ endpoints:
       current_position: p
       current_company: w
       desired_salary: 16
-      source: referral
+      source: indeed
       notes: architecto
-      status: hired
+      status: rejected
     fileParameters: []
     responses: []
     responseFields: []
@@ -491,7 +491,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: active
+        example: inactive
         type: string
         enumValues:
           - active
@@ -515,7 +515,7 @@ endpoints:
       desired_salary: 87
       source: linkedin
       notes: architecto
-      status: active
+      status: inactive
     fileParameters: []
     responses: []
     responseFields: []

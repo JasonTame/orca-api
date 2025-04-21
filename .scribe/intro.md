@@ -3,7 +3,7 @@
 
 
 <aside>
-    <strong>Base URL</strong>: <code>http://orca-api.test</code>
+    <strong>Base URL</strong>: <code>https://orca-api.laravel.cloud</code>
 </aside>
 
     This documentation aims to provide all the information you need to work with our API.

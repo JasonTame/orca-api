@@ -132,7 +132,7 @@ endpoints:
         name: difficulty
         description: ''
         required: true
-        example: easy
+        example: hard
         type: string
         enumValues:
           - easy
@@ -148,7 +148,7 @@ endpoints:
       instructions: architecto
       repository_url: 'http://bailey.com/'
       time_limit: 27
-      difficulty: easy
+      difficulty: hard
     fileParameters: []
     responses: []
     responseFields: []

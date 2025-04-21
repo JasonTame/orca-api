@@ -152,7 +152,7 @@ endpoints:
         name: is_interviewer
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -162,7 +162,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: active
+        example: inactive
         type: string
         enumValues:
           - active
@@ -179,8 +179,8 @@ endpoints:
       phone: l
       is_hiring_manager: true
       is_recruiter: false
-      is_interviewer: true
-      status: active
+      is_interviewer: false
+      status: inactive
     fileParameters: []
     responses: []
     responseFields: []
@@ -354,7 +354,7 @@ endpoints:
         name: is_recruiter
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -374,7 +374,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: inactive
+        example: active
         type: string
         enumValues:
           - active
@@ -389,9 +389,9 @@ endpoints:
       department: z
       phone: m
       is_hiring_manager: true
-      is_recruiter: false
+      is_recruiter: true
       is_interviewer: false
-      status: inactive
+      status: active
     fileParameters: []
     responses: []
     responseFields: []

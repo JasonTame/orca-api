@@ -100,7 +100,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: rejected
+        example: reviewing
         type: string
         enumValues:
           - pending
@@ -156,7 +156,7 @@ endpoints:
         name: applied_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-04-21T08:57:21'
+        example: '2025-04-21T09:18:22'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -166,11 +166,11 @@ endpoints:
       job_opening_id: 16
       candidate_id: 16
       code_sample_url: 'http://bailey.com/'
-      status: rejected
+      status: reviewing
       rejection_reason: m
       notes: architecto
       referral_source: 'n'
-      applied_at: '2025-04-21T08:57:21'
+      applied_at: '2025-04-21T09:18:22'
     fileParameters: []
     responses: []
     responseFields: []
@@ -304,7 +304,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: interviewing
+        example: offered
         type: string
         enumValues:
           - pending
@@ -360,7 +360,7 @@ endpoints:
         name: applied_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-04-21T08:57:21'
+        example: '2025-04-21T09:18:22'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -370,11 +370,11 @@ endpoints:
       job_opening_id: architecto
       candidate_id: architecto
       code_sample_url: 'http://bailey.com/'
-      status: interviewing
+      status: offered
       rejection_reason: m
       notes: architecto
       referral_source: 'n'
-      applied_at: '2025-04-21T08:57:21'
+      applied_at: '2025-04-21T09:18:22'
     fileParameters: []
     responses: []
     responseFields: []
