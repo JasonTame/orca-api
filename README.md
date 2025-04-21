@@ -2,9 +2,9 @@
 
 A Laravel-based API server for managing the recruitment process, built for an OfferZen dev workshop. This API provides endpoints for managing companies, job openings, candidates, applications, interviews, and more.
 
-## Live Demo
+## Docs
 
-The application is hosted at [orca-api.laravel.cloud](https://orca-api.laravel.cloud)
+The API docs are hosted at [orca-api.laravel.cloud](https://orca-api.laravel.cloud/docs)
 
 ## Features
 
