@@ -16,6 +16,200 @@ The API docs are hosted at [orca-api.laravel.cloud](https://orca-api.laravel.clo
 - Technical skills management
 - Coding challenge management
 
+## Entity diagram
+
+```mermaid
+erDiagram
+    COMPANIES ||--o{ COMPANY_MEMBERS : "employs"
+    COMPANIES ||--o{ JOB_OPENINGS : "posts"
+    COMPANIES {
+        id integer PK
+        name varchar
+        logo_url varchar
+        website varchar
+        industry varchar
+        size enum
+        description text
+        location varchar
+        status enum
+        created_at timestamp
+        updated_at timestamp
+    }
+
+    USERS {
+        id integer PK
+        name varchar
+        email varchar
+        role enum
+        is_admin boolean
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    COMPANY_MEMBERS ||--o{ JOB_OPENINGS : "creates/manages"
+    COMPANY_MEMBERS ||--o{ INTERVIEWS : "conducts"
+    COMPANY_MEMBERS {
+        id integer PK
+        company_id integer FK
+        name varchar
+        email varchar
+        position varchar
+        department varchar
+        phone varchar
+        is_hiring_manager boolean
+        is_recruiter boolean
+        is_interviewer boolean
+        status enum
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    CANDIDATES ||--o{ APPLICATIONS : "submits"
+    CANDIDATES ||--o{ CANDIDATE_SKILLS : "has"
+    CANDIDATES {
+        id integer PK
+        first_name varchar
+        last_name varchar
+        email varchar
+        phone varchar
+        location varchar
+        resume_url varchar
+        github_url varchar
+        portfolio_url varchar
+        linkedin_url varchar
+        years_experience integer
+        current_position varchar
+        current_company varchar
+        desired_salary decimal
+        source enum
+        notes text
+        status enum
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    JOB_OPENINGS ||--o{ APPLICATIONS : "receives"
+    JOB_OPENINGS ||--o{ JOB_OPENING_SKILLS : "requires"
+    JOB_OPENINGS ||--o{ INTERVIEW_STAGES : "has"
+    JOB_OPENINGS {
+        id integer PK
+        company_id integer FK
+        title varchar
+        description text
+        team varchar
+        location varchar
+        type enum
+        level enum
+        salary_min decimal
+        salary_max decimal
+        requirements text
+        benefits text
+        hiring_manager_id integer FK
+        status enum
+        is_remote boolean
+        published_at timestamp
+        closing_date timestamp
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    TECH_SKILLS ||--o{ JOB_OPENING_SKILLS : "used in"
+    TECH_SKILLS ||--o{ CANDIDATE_SKILLS : "possessed by"
+    TECH_SKILLS {
+        id integer PK
+        name varchar
+        category enum
+        is_language boolean
+        is_framework boolean
+        is_tool boolean
+        parent_skill_id integer FK
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    JOB_OPENING_SKILLS {
+        id integer PK
+        job_opening_id integer FK
+        skill_id integer FK
+        is_required boolean
+        importance enum
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    CANDIDATE_SKILLS {
+        id integer PK
+        candidate_id integer FK
+        skill_id integer FK
+        proficiency enum
+        years_experience integer
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    APPLICATIONS ||--o{ INTERVIEWS : "progresses through"
+    APPLICATIONS {
+        id integer PK
+        job_opening_id integer FK
+        candidate_id integer FK
+        code_sample_url varchar
+        status enum
+        current_stage_id integer FK
+        rejection_reason varchar
+        notes text
+        referral_source varchar
+        applied_at timestamp
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    INTERVIEW_STAGES {
+        id integer PK
+        job_opening_id integer FK
+        name varchar
+        description text
+        sequence integer
+        duration integer
+        format enum
+        is_technical boolean
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    INTERVIEWS {
+        id integer PK
+        application_id integer FK
+        stage_id integer FK
+        interviewer_id integer FK
+        scheduled_at timestamp
+        completed_at timestamp
+        location varchar
+        meeting_url varchar
+        status enum
+        technical_score integer
+        cultural_score integer
+        feedback text
+        decision enum
+        notes text
+        created_at timestamp
+        updated_at timestamp
+    }
+    
+    CODING_CHALLENGES ||--o{ APPLICATIONS : "completed by"
+    CODING_CHALLENGES {
+        id integer PK
+        job_opening_id integer FK
+        title varchar
+        description text
+        instructions text
+        repository_url varchar
+        time_limit integer
+        difficulty enum
+        created_at timestamp
+        updated_at timestamp
+    }
+```
+
 ## Tech Stack
 
 - **Backend**: Laravel 12
