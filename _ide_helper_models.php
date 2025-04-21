@@ -15,16 +15,40 @@ namespace App\Models{
 /**
  * 
  *
- * @property-read \App\Models\Candidate|null $candidate
+ * @property int $id
+ * @property int $job_opening_id
+ * @property int $candidate_id
+ * @property string|null $code_sample_url
+ * @property string $status
+ * @property int|null $current_stage_id
+ * @property string|null $rejection_reason
+ * @property string|null $notes
+ * @property string|null $referral_source
+ * @property \Illuminate\Support\Carbon $applied_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Candidate $candidate
  * @property-read \App\Models\CodingChallenge|null $codingChallenge
  * @property-read \App\Models\InterviewStage|null $currentStage
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Interview> $interviews
  * @property-read int|null $interviews_count
- * @property-read \App\Models\JobOpening|null $jobOpening
+ * @property-read \App\Models\JobOpening $jobOpening
  * @method static \Database\Factories\ApplicationFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Application newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Application newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Application query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereAppliedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereCandidateId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereCodeSampleUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereCurrentStageId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereJobOpeningId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereNotes($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereReferralSource($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereRejectionReason($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Application whereUpdatedAt($value)
  */
 	class Application extends \Eloquent {}
 }
@@ -85,12 +109,26 @@ namespace App\Models{
 /**
  * 
  *
- * @property-read \App\Models\Candidate|null $candidate
- * @property-read \App\Models\TechSkill|null $skill
+ * @property int $id
+ * @property int $candidate_id
+ * @property int $skill_id
+ * @property string $proficiency
+ * @property int $years_experience
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Candidate $candidate
+ * @property-read \App\Models\TechSkill $skill
  * @method static \Database\Factories\CandidateSkillFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill whereCandidateId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill whereProficiency($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill whereSkillId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill whereYearsExperience($value)
  */
 	class CandidateSkill extends \Eloquent {}
 }
@@ -99,13 +137,33 @@ namespace App\Models{
 /**
  * 
  *
+ * @property int $id
+ * @property int $job_opening_id
+ * @property string $title
+ * @property string $description
+ * @property string $instructions
+ * @property string $repository_url
+ * @property int $time_limit
+ * @property string $difficulty
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Application> $applications
  * @property-read int|null $applications_count
- * @property-read \App\Models\JobOpening|null $jobOpening
+ * @property-read \App\Models\JobOpening $jobOpening
  * @method static \Database\Factories\CodingChallengeFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge whereDifficulty($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge whereInstructions($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge whereJobOpeningId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge whereRepositoryUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge whereTimeLimit($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge whereUpdatedAt($value)
  */
 	class CodingChallenge extends \Eloquent {}
 }
@@ -125,8 +183,10 @@ namespace App\Models{
  * @property string $status
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\User> $users
- * @property-read int|null $users_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\JobOpening> $jobs
+ * @property-read int|null $jobs_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\CompanyMember> $members
+ * @property-read int|null $members_count
  * @method static \Database\Factories\CompanyFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Company newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Company newQuery()
@@ -150,13 +210,88 @@ namespace App\Models{
 /**
  * 
  *
- * @property-read \App\Models\Application|null $application
- * @property-read \App\Models\User|null $interviewer
- * @property-read \App\Models\InterviewStage|null $stage
+ * @property int $id
+ * @property int $company_id
+ * @property string $name
+ * @property string $email
+ * @property string|null $position
+ * @property string|null $department
+ * @property string|null $phone
+ * @property bool $is_hiring_manager
+ * @property bool $is_recruiter
+ * @property bool $is_interviewer
+ * @property string $status
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Company $company
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Interview> $interviews
+ * @property-read int|null $interviews_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\JobOpening> $jobOpenings
+ * @property-read int|null $job_openings_count
+ * @method static \Database\Factories\CompanyMemberFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember whereCompanyId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember whereDepartment($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember whereIsHiringManager($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember whereIsInterviewer($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember whereIsRecruiter($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember wherePosition($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember whereUpdatedAt($value)
+ */
+	class CompanyMember extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
+ * @property int $application_id
+ * @property int $stage_id
+ * @property int $interviewer_id
+ * @property \Illuminate\Support\Carbon $scheduled_at
+ * @property \Illuminate\Support\Carbon|null $completed_at
+ * @property string|null $location
+ * @property string|null $meeting_url
+ * @property string $status
+ * @property int|null $technical_score
+ * @property int|null $cultural_score
+ * @property string|null $feedback
+ * @property string|null $decision
+ * @property string|null $notes
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Application $application
+ * @property-read \App\Models\CompanyMember $interviewer
+ * @property-read \App\Models\InterviewStage $stage
  * @method static \Database\Factories\InterviewFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereApplicationId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereCompletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereCulturalScore($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereDecision($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereFeedback($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereInterviewerId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereLocation($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereMeetingUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereNotes($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereScheduledAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereStageId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereTechnicalScore($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereUpdatedAt($value)
  */
 	class Interview extends \Eloquent {}
 }
@@ -165,13 +300,33 @@ namespace App\Models{
 /**
  * 
  *
+ * @property int $id
+ * @property int $job_opening_id
+ * @property string $name
+ * @property string|null $description
+ * @property int $sequence
+ * @property int $duration
+ * @property string $format
+ * @property bool $is_technical
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Interview> $interviews
  * @property-read int|null $interviews_count
- * @property-read \App\Models\JobOpening|null $jobOpening
+ * @property-read \App\Models\JobOpening $jobOpening
  * @method static \Database\Factories\InterviewStageFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage whereDuration($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage whereFormat($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage whereIsTechnical($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage whereJobOpeningId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage whereSequence($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage whereUpdatedAt($value)
  */
 	class InterviewStage extends \Eloquent {}
 }
@@ -204,7 +359,7 @@ namespace App\Models{
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\CodingChallenge> $codingChallenges
  * @property-read int|null $coding_challenges_count
  * @property-read \App\Models\Company $company
- * @property-read \App\Models\User|null $hiringManager
+ * @property-read \App\Models\CompanyMember|null $hiringManager
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\InterviewStage> $interviewStages
  * @property-read int|null $interview_stages_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\JobSkill> $jobSkills
@@ -240,12 +395,26 @@ namespace App\Models{
 /**
  * 
  *
- * @property-read \App\Models\JobOpening|null $jobOpening
- * @property-read \App\Models\TechSkill|null $skill
+ * @property int $id
+ * @property int $job_opening_id
+ * @property int $skill_id
+ * @property bool $is_required
+ * @property string $importance
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\JobOpening $jobOpening
+ * @property-read \App\Models\TechSkill $skill
  * @method static \Database\Factories\JobSkillFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill whereImportance($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill whereIsRequired($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill whereJobOpeningId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill whereSkillId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|JobSkill whereUpdatedAt($value)
  */
 	class JobSkill extends \Eloquent {}
 }
@@ -254,6 +423,15 @@ namespace App\Models{
 /**
  * 
  *
+ * @property int $id
+ * @property string $name
+ * @property string $category
+ * @property bool $is_language
+ * @property bool $is_framework
+ * @property bool $is_tool
+ * @property int|null $parent_skill_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\CandidateSkill> $candidateSkills
  * @property-read int|null $candidate_skills_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, TechSkill> $children
@@ -265,6 +443,15 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill whereCategory($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill whereIsFramework($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill whereIsLanguage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill whereIsTool($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill whereParentSkillId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill whereUpdatedAt($value)
  */
 	class TechSkill extends \Eloquent {}
 }
