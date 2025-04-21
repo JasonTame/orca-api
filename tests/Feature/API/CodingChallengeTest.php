@@ -3,7 +3,6 @@
 use App\Models\CodingChallenge;
 use App\Models\JobOpening;
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 beforeEach(function () {
     $this->user = User::factory()->create();

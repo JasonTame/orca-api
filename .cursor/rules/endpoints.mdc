@@ -12,6 +12,7 @@ GET    /api/companies/:id                   # Get company details
 PUT    /api/companies/:id                   # Update company
 DELETE /api/companies/:id                   # Delete/deactivate company
 GET    /api/companies/:id/job-openings      # Get all job openings for a company
+GET    /api/companies/:id/members           # Get all members for a company
 GET    /api/companies/:id/hiring-managers   # Get hiring managers for a company
 GET    /api/companies/:id/interviewers      # Get interviewers for a company
 

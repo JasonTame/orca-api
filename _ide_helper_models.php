@@ -183,8 +183,8 @@ namespace App\Models{
  * @property string $status
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\JobOpening> $jobs
- * @property-read int|null $jobs_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\JobOpening> $jobOpenings
+ * @property-read int|null $job_openings_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\CompanyMember> $members
  * @property-read int|null $members_count
  * @method static \Database\Factories\CompanyFactory factory($count = null, $state = [])

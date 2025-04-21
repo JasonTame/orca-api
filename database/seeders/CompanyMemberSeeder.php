@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\Company;
 use App\Models\CompanyMember;
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class CompanyMemberSeeder extends Seeder
 {
@@ -21,7 +20,7 @@ class CompanyMemberSeeder extends Seeder
 
             CompanyMember::factory()->count($numberOfMembers)->create([
                 'company_id' => $company->id,
-                'is_hiring_manager' => true
+                'is_hiring_manager' => true,
             ]);
         }
     }

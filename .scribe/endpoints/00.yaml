@@ -168,8 +168,8 @@ endpoints:
         name: parent_skill_id
         description: 'The <code>id</code> of an existing record in the tech_skills table.'
         required: false
-        example: null
-        type: string
+        example: 16
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: true
@@ -180,6 +180,7 @@ endpoints:
       is_language: true
       is_framework: false
       is_tool: true
+      parent_skill_id: 16
     fileParameters: []
     responses: []
     responseFields: []
@@ -308,7 +309,7 @@ endpoints:
         name: is_language
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -318,7 +319,7 @@ endpoints:
         name: is_framework
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -338,17 +339,18 @@ endpoints:
         name: parent_skill_id
         description: 'The <code>id</code> of an existing record in the tech_skills table.'
         required: false
-        example: null
-        type: string
+        example: 16
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
       category: tool
-      is_language: true
-      is_framework: true
+      is_language: false
+      is_framework: false
       is_tool: false
+      parent_skill_id: 16
     fileParameters: []
     responses: []
     responseFields: []

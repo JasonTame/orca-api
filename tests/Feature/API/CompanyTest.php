@@ -1,8 +1,9 @@
 <?php
 
 use App\Models\Company;
+use App\Models\CompanyMember;
+use App\Models\JobOpening;
 use App\Models\User;
-use Laravel\Sanctum\Sanctum;
 
 beforeEach(function () {
     $this->user = User::factory()->create();
@@ -113,4 +114,119 @@ test('validates enum fields', function () {
 
     $response->assertStatus(422)
         ->assertJsonValidationErrors(['size', 'status']);
+});
+
+test('can get company job openings', function () {
+    $company = Company::factory()->create();
+    JobOpening::factory()->count(3)->create(['company_id' => $company->id]);
+
+    $response = $this->getJson("/api/companies/{$company->id}/job-openings");
+
+    $response->assertStatus(200)
+        ->assertJsonCount(3)
+        ->assertJsonStructure([
+            '*' => [
+                'id',
+                'title',
+                'description',
+                'company_id',
+                'created_at',
+                'updated_at',
+            ],
+        ]);
+});
+
+test('can get company members', function () {
+    $company = Company::factory()->create();
+    CompanyMember::factory()->count(3)->create(['company_id' => $company->id]);
+
+    $response = $this->getJson("/api/companies/{$company->id}/members");
+
+    $response->assertStatus(200)
+        ->assertJsonCount(3)
+        ->assertJsonStructure([
+            '*' => [
+                'id',
+                'name',
+                'email',
+                'position',
+                'department',
+                'phone',
+                'is_hiring_manager',
+                'is_recruiter',
+                'is_interviewer',
+                'status',
+                'company_id',
+                'created_at',
+                'updated_at',
+            ],
+        ]);
+});
+
+test('can get company hiring managers', function () {
+    $company = Company::factory()->create();
+    CompanyMember::factory()->count(2)->create([
+        'company_id' => $company->id,
+        'is_hiring_manager' => true,
+    ]);
+    CompanyMember::factory()->count(2)->create([
+        'company_id' => $company->id,
+        'is_hiring_manager' => false,
+    ]);
+
+    $response = $this->getJson("/api/companies/{$company->id}/hiring-managers");
+
+    $response->assertStatus(200)
+        ->assertJsonCount(2)
+        ->assertJsonStructure([
+            '*' => [
+                'id',
+                'name',
+                'email',
+                'position',
+                'department',
+                'phone',
+                'is_hiring_manager',
+                'is_recruiter',
+                'is_interviewer',
+                'status',
+                'company_id',
+                'created_at',
+                'updated_at',
+            ],
+        ]);
+});
+
+test('can get company interviewers', function () {
+    $company = Company::factory()->create();
+    CompanyMember::factory()->count(2)->create([
+        'company_id' => $company->id,
+        'is_interviewer' => true,
+    ]);
+    CompanyMember::factory()->count(2)->create([
+        'company_id' => $company->id,
+        'is_interviewer' => false,
+    ]);
+
+    $response = $this->getJson("/api/companies/{$company->id}/interviewers");
+
+    $response->assertStatus(200)
+        ->assertJsonCount(2)
+        ->assertJsonStructure([
+            '*' => [
+                'id',
+                'name',
+                'email',
+                'position',
+                'department',
+                'phone',
+                'is_hiring_manager',
+                'is_recruiter',
+                'is_interviewer',
+                'status',
+                'company_id',
+                'created_at',
+                'updated_at',
+            ],
+        ]);
 });

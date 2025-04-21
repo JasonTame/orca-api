@@ -23,7 +23,7 @@ class CompanyMemberController extends Controller
     public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
-            'company_id' => 'required|exists:companies,id',
+            'company_id' => 'required|integer|exists:companies,id',
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:company_members,email',
             'position' => 'required|string|max:255',
@@ -56,7 +56,7 @@ class CompanyMemberController extends Controller
         $validator = Validator::make($request->all(), [
             'company_id' => 'sometimes|required|exists:companies,id',
             'name' => 'sometimes|required|string|max:255',
-            'email' => 'sometimes|required|email|unique:company_members,email,' . $companyMember->id,
+            'email' => 'sometimes|required|email|unique:company_members,email,'.$companyMember->id,
             'position' => 'sometimes|required|string|max:255',
             'department' => 'sometimes|required|string|max:255',
             'phone' => 'sometimes|required|string|max:255',

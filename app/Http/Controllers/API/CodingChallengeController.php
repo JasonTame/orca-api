@@ -23,7 +23,7 @@ class CodingChallengeController extends Controller
     public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
-            'job_opening_id' => 'required|exists:job_openings,id',
+            'job_opening_id' => 'required|integer|exists:job_openings,id',
             'title' => 'required|string|max:255',
             'description' => 'required|string',
             'instructions' => 'required|string',

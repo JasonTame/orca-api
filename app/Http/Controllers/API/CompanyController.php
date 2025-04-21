@@ -75,4 +75,32 @@ class CompanyController extends Controller
 
         return response()->json(null, 204);
     }
+
+    public function jobOpenings(Company $company): JsonResponse
+    {
+        $jobOpenings = $company->jobOpenings;
+
+        return response()->json($jobOpenings);
+    }
+
+    public function members(Company $company): JsonResponse
+    {
+        $members = $company->members;
+
+        return response()->json($members);
+    }
+
+    public function hiringManagers(Company $company): JsonResponse
+    {
+        $hiringManagers = $company->members()->where('is_hiring_manager', true)->get();
+
+        return response()->json($hiringManagers);
+    }
+
+    public function interviewers(Company $company): JsonResponse
+    {
+        $interviewers = $company->members()->where('is_interviewer', true)->get();
+
+        return response()->json($interviewers);
+    }
 }

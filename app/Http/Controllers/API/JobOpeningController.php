@@ -60,8 +60,8 @@ class JobOpeningController extends Controller
     public function update(Request $request, JobOpening $jobOpening): JsonResponse
     {
         $validator = Validator::make($request->all(), [
-            'company_id' => 'sometimes|required|exists:companies,id',
-            'hiring_manager_id' => 'sometimes|required|exists:company_members,id',
+            'company_id' => 'sometimes|required|integer|exists:companies,id',
+            'hiring_manager_id' => 'sometimes|required|integer|exists:company_members,id',
             'title' => 'sometimes|required|string|max:255',
             'description' => 'sometimes|required|string',
             'team' => 'nullable|string|max:255',

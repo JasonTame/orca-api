@@ -23,8 +23,8 @@ class ApplicationController extends Controller
     public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
-            'job_opening_id' => 'required|exists:job_openings,id',
-            'candidate_id' => 'required|exists:candidates,id',
+            'job_opening_id' => 'required|integer|exists:job_openings,id',
+            'candidate_id' => 'required|integer|exists:candidates,id',
             'code_sample_url' => 'nullable|url',
             'status' => 'required|in:pending,reviewing,interviewing,offered,accepted,rejected',
             'current_stage_id' => 'nullable|exists:interview_stages,id',

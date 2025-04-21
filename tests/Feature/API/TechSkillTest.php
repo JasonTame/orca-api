@@ -2,7 +2,6 @@
 
 use App\Models\TechSkill;
 use App\Models\User;
-use Laravel\Sanctum\Sanctum;
 
 beforeEach(function () {
     $this->user = User::factory()->create();

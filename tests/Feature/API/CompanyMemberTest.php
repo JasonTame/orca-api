@@ -1,12 +1,12 @@
 <?php
 
-use App\Models\User;
-use App\Models\Company;
-use App\Models\Interview;
-use App\Models\JobOpening;
 use App\Models\Application;
+use App\Models\Company;
 use App\Models\CompanyMember;
+use App\Models\Interview;
 use App\Models\InterviewStage;
+use App\Models\JobOpening;
+use App\Models\User;
 
 beforeEach(function () {
     $this->user = User::factory()->create();
@@ -36,8 +36,8 @@ test('can list all company members', function () {
                 'updated_at',
                 'company',
                 'job_openings',
-                'interviews'
-            ]
+                'interviews',
+            ],
         ]);
 });
 
@@ -53,7 +53,7 @@ test('can create company member', function () {
         'is_hiring_manager' => true,
         'is_recruiter' => false,
         'is_interviewer' => true,
-        'status' => 'active'
+        'status' => 'active',
     ];
 
     $response = $this->postJson('/api/company-members', $data);
@@ -72,7 +72,7 @@ test('can create company member', function () {
             'is_interviewer',
             'status',
             'created_at',
-            'updated_at'
+            'updated_at',
         ]);
 
     $this->assertDatabaseHas('company_members', $data);
@@ -100,7 +100,7 @@ test('can show company member', function () {
             'updated_at',
             'company',
             'job_openings',
-            'interviews'
+            'interviews',
         ]);
 });
 
@@ -109,7 +109,7 @@ test('can update company member', function () {
     $data = [
         'name' => 'Updated Name',
         'position' => 'Updated Position',
-        'department' => 'Updated Department'
+        'department' => 'Updated Department',
     ];
 
     $response = $this->putJson("/api/company-members/{$companyMember->id}", $data);
@@ -158,8 +158,8 @@ test('can get job openings for company member', function () {
                 'created_at',
                 'updated_at',
                 'company',
-                'applications'
-            ]
+                'applications',
+            ],
         ]);
 });
 
@@ -172,7 +172,7 @@ test('can get interviews for company member', function () {
         Interview::factory()->create([
             'interviewer_id' => $companyMember->id,
             'application_id' => $application->id,
-            'stage_id' => $stage->id
+            'stage_id' => $stage->id,
         ]);
     }
 
@@ -198,8 +198,8 @@ test('can get interviews for company member', function () {
                 'created_at',
                 'updated_at',
                 'application',
-                'stage'
-            ]
+                'stage',
+            ],
         ]);
 });
 
@@ -214,7 +214,7 @@ test('validation errors on create', function () {
             'position',
             'department',
             'phone',
-            'status'
+            'status',
         ]);
 });
 
@@ -222,12 +222,12 @@ test('validation errors on update', function () {
     $companyMember = CompanyMember::factory()->create();
     $response = $this->putJson("/api/company-members/{$companyMember->id}", [
         'email' => 'invalid-email',
-        'status' => 'invalid-status'
+        'status' => 'invalid-status',
     ]);
 
     $response->assertStatus(422)
         ->assertJsonValidationErrors([
             'email',
-            'status'
+            'status',
         ]);
 });

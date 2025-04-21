@@ -28,7 +28,7 @@ class TechSkillController extends Controller
             'is_language' => 'boolean',
             'is_framework' => 'boolean',
             'is_tool' => 'boolean',
-            'parent_skill_id' => 'nullable|exists:tech_skills,id',
+            'parent_skill_id' => 'nullable|integer|exists:tech_skills,id',
         ]);
 
         if ($validator->fails()) {
@@ -53,7 +53,7 @@ class TechSkillController extends Controller
             'is_language' => 'boolean',
             'is_framework' => 'boolean',
             'is_tool' => 'boolean',
-            'parent_skill_id' => 'nullable|exists:tech_skills,id',
+            'parent_skill_id' => 'nullable|integer|exists:tech_skills,id',
         ]);
 
         if ($validator->fails()) {

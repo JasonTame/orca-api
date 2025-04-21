@@ -8,7 +8,6 @@ beforeEach(function () {
     $this->actingAs($this->user);
 });
 
-
 test('can list all candidates', function () {
     Candidate::factory()->count(3)->create();
 

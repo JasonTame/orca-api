@@ -23,9 +23,9 @@ class InterviewController extends Controller
     public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
-            'application_id' => 'required|exists:applications,id',
-            'stage_id' => 'required|exists:interview_stages,id',
-            'interviewer_id' => 'required|exists:company_members,id',
+            'application_id' => 'required|integer|exists:applications,id',
+            'stage_id' => 'required|integer|exists:interview_stages,id',
+            'interviewer_id' => 'required|integer|exists:company_members,id',
             'scheduled_at' => 'required|date|after:now',
             'completed_at' => 'nullable|date|after:scheduled_at',
             'location' => 'nullable|string|max:255',
