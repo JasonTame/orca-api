@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Company;
+use App\Models\CompanyMember;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -10,6 +11,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class CompanyMemberFactory extends Factory
 {
+    protected $model = CompanyMember::class;
+
     /**
      * Define the model's default state.
      *
@@ -19,15 +22,15 @@ class CompanyMemberFactory extends Factory
     {
         return [
             'company_id' => Company::factory(),
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'position' => fake()->jobTitle(),
-            'department' => fake()->randomElement(['Engineering', 'HR', 'Product', 'Marketing', 'Sales']),
-            'phone' => fake()->phoneNumber(),
-            'is_hiring_manager' => fake()->boolean(),
-            'is_recruiter' => fake()->boolean(),
-            'is_interviewer' => fake()->boolean(),
-            'status' => fake()->randomElement(['active', 'inactive']),
+            'name' => $this->faker->name(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'position' => $this->faker->jobTitle(),
+            'department' => $this->faker->word(),
+            'phone' => $this->faker->phoneNumber(),
+            'is_hiring_manager' => $this->faker->boolean(),
+            'is_recruiter' => $this->faker->boolean(),
+            'is_interviewer' => $this->faker->boolean(),
+            'status' => $this->faker->randomElement(['active', 'inactive']),
         ];
     }
 }

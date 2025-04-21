@@ -6,11 +6,15 @@ use App\Models\InterviewStage;
 use App\Models\JobOpening;
 use App\Models\User;
 
-test('can list applications', function () {
-    $user = User::factory()->create();
-    $applications = Application::factory()->count(3)->create();
+beforeEach(function () {
+    $this->user = User::factory()->create();
+    $this->actingAs($this->user);
+});
 
-    $response = $this->actingAs($user)->getJson('/api/applications');
+test('can list applications', function () {
+    Application::factory()->count(3)->create();
+
+    $response = $this->getJson('/api/applications');
 
     $response->assertStatus(200)
         ->assertJsonCount(3)
@@ -27,7 +31,6 @@ test('can list applications', function () {
 });
 
 test('can create application', function () {
-    $user = User::factory()->create();
     $jobOpening = JobOpening::factory()->create();
     $candidate = Candidate::factory()->create();
     $stage = InterviewStage::factory()->create(['job_opening_id' => $jobOpening->id]);
@@ -40,7 +43,7 @@ test('can create application', function () {
         'notes' => 'Test application',
     ];
 
-    $response = $this->actingAs($user)->postJson('/api/applications', $data);
+    $response = $this->postJson('/api/applications', $data);
 
     $response->assertStatus(201)
         ->assertJson($data);
@@ -49,10 +52,9 @@ test('can create application', function () {
 });
 
 test('can show application', function () {
-    $user = User::factory()->create();
     $application = Application::factory()->create();
 
-    $response = $this->actingAs($user)->getJson("/api/applications/{$application->id}");
+    $response = $this->getJson("/api/applications/{$application->id}");
 
     $response->assertStatus(200)
         ->assertJson([
@@ -63,7 +65,6 @@ test('can show application', function () {
 });
 
 test('can update application', function () {
-    $user = User::factory()->create();
     $application = Application::factory()->create();
     $newStage = InterviewStage::factory()->create(['job_opening_id' => $application->job_opening_id]);
 
@@ -73,7 +74,7 @@ test('can update application', function () {
         'notes' => 'Updated notes',
     ];
 
-    $response = $this->actingAs($user)->putJson("/api/applications/{$application->id}", $data);
+    $response = $this->putJson("/api/applications/{$application->id}", $data);
 
     $response->assertStatus(200)
         ->assertJson($data);
@@ -82,26 +83,22 @@ test('can update application', function () {
 });
 
 test('can delete application', function () {
-    $user = User::factory()->create();
     $application = Application::factory()->create();
 
-    $response = $this->actingAs($user)->deleteJson("/api/applications/{$application->id}");
+    $response = $this->deleteJson("/api/applications/{$application->id}");
 
     $response->assertStatus(204);
     $this->assertDatabaseMissing('applications', ['id' => $application->id]);
 });
 
 test('validates required fields when creating application', function () {
-    $user = User::factory()->create();
-
-    $response = $this->actingAs($user)->postJson('/api/applications', []);
+    $response = $this->postJson('/api/applications', []);
 
     $response->assertStatus(422)
         ->assertJsonValidationErrors(['job_opening_id', 'candidate_id', 'status']);
 });
 
 test('validates status enum values', function () {
-    $user = User::factory()->create();
     $jobOpening = JobOpening::factory()->create();
     $candidate = Candidate::factory()->create();
 
@@ -111,7 +108,7 @@ test('validates status enum values', function () {
         'status' => 'invalid_status',
     ];
 
-    $response = $this->actingAs($user)->postJson('/api/applications', $data);
+    $response = $this->postJson('/api/applications', $data);
 
     $response->assertStatus(422)
         ->assertJsonValidationErrors(['status']);

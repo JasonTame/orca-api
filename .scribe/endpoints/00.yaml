@@ -123,7 +123,7 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: language
+        example: platform
         type: string
         enumValues:
           - language
@@ -176,7 +176,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       name: b
-      category: language
+      category: platform
       is_language: true
       is_framework: false
       is_tool: true
@@ -213,14 +213,14 @@ endpoints:
         name: id
         description: 'The ID of the tech skill.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -268,14 +268,14 @@ endpoints:
         name: id
         description: 'The ID of the tech skill.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -293,7 +293,7 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: database
+        example: tool
         type: string
         enumValues:
           - language
@@ -318,7 +318,7 @@ endpoints:
         name: is_framework
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -328,7 +328,7 @@ endpoints:
         name: is_tool
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -345,10 +345,10 @@ endpoints:
         nullable: true
         custom: []
     cleanBodyParameters:
-      category: database
+      category: tool
       is_language: true
-      is_framework: false
-      is_tool: true
+      is_framework: true
+      is_tool: false
     fileParameters: []
     responses: []
     responseFields: []
@@ -382,14 +382,14 @@ endpoints:
         name: id
         description: 'The ID of the tech skill.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

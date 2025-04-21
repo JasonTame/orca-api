@@ -112,7 +112,7 @@ endpoints:
         name: size
         description: ''
         required: false
-        example: medium
+        example: small
         type: string
         enumValues:
           - small
@@ -146,7 +146,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: inactive
+        example: active
         type: string
         enumValues:
           - active
@@ -159,10 +159,10 @@ endpoints:
       logo_url: 'http://bailey.com/'
       website: 'http://rempel.com/sunt-nihil-accusantium-harum-mollitia'
       industry: k
-      size: medium
+      size: small
       description: 'Eius et animi quos velit et.'
       location: v
-      status: inactive
+      status: active
     fileParameters: []
     responses: []
     responseFields: []
@@ -196,14 +196,14 @@ endpoints:
         name: id
         description: 'The ID of the company.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -251,14 +251,14 @@ endpoints:
         name: id
         description: 'The ID of the company.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -390,14 +390,14 @@ endpoints:
         name: id
         description: 'The ID of the company.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

@@ -1,12 +1,12 @@
-name: 'Job Openings'
+name: 'Company Members'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/job-openings
+    uri: api/company-members
     metadata:
-      groupName: 'Job Openings'
+      groupName: 'Company Members'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -47,9 +47,9 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/job-openings
+    uri: api/company-members
     metadata:
-      groupName: 'Job Openings'
+      groupName: 'Company Members'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -76,18 +76,8 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
-      hiring_manager_id:
-        name: hiring_manager_id
-        description: 'The <code>id</code> of an existing record in the company_members table.'
-        required: true
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      title:
-        name: title
+      name:
+        name: name
         description: 'Must not be greater than 255 characters.'
         required: true
         example: 'n'
@@ -96,122 +86,58 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
-      description:
-        name: description
-        description: ''
+      email:
+        name: email
+        description: 'Must be a valid email address.'
         required: true
-        example: 'Eius et animi quos velit et.'
+        example: ashly64@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
-      team:
-        name: team
+      position:
+        name: position
         description: 'Must not be greater than 255 characters.'
-        required: false
+        required: true
         example: v
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
-      location:
-        name: location
+      department:
+        name: department
         description: 'Must not be greater than 255 characters.'
-        required: false
+        required: true
         example: d
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
-      type:
-        name: type
-        description: ''
+      phone:
+        name: phone
+        description: 'Must not be greater than 255 characters.'
         required: true
-        example: contract
+        example: l
         type: string
-        enumValues:
-          - full_time
-          - part_time
-          - contract
-          - internship
+        enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
-      level:
-        name: level
+      is_hiring_manager:
+        name: is_hiring_manager
         description: ''
-        required: true
-        example: junior
-        type: string
-        enumValues:
-          - entry
-          - junior
-          - mid
-          - senior
-          - lead
-          - principal
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
-      salary_min:
-        name: salary_min
-        description: 'Must be at least 0.'
-        required: false
-        example: 37
-        type: number
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      salary_max:
-        name: salary_max
-        description: 'Must be at least 0.'
-        required: false
-        example: 9
-        type: number
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      requirements:
-        name: requirements
-        description: ''
-        required: false
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      benefits:
-        name: benefits
-        description: ''
-        required: false
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      status:
-        name: status
-        description: ''
-        required: true
-        example: closed
-        type: string
-        enumValues:
-          - draft
-          - published
-          - closed
-          - archived
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      is_remote:
-        name: is_remote
+      is_recruiter:
+        name: is_recruiter
         description: ''
         required: false
         example: false
@@ -220,43 +146,39 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
-      published_at:
-        name: published_at
-        description: 'Must be a valid date.'
+      is_interviewer:
+        name: is_interviewer
+        description: ''
         required: false
-        example: '2025-04-21T08:38:34'
-        type: string
+        example: true
+        type: boolean
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
-      closing_date:
-        name: closing_date
-        description: 'Must be a valid date. Must be a date after <code>published_at</code>.'
-        required: false
-        example: '1975-10-08'
+      status:
+        name: status
+        description: ''
+        required: true
+        example: inactive
         type: string
-        enumValues: []
+        enumValues:
+          - active
+          - inactive
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
       company_id: architecto
-      hiring_manager_id: architecto
-      title: 'n'
-      description: 'Eius et animi quos velit et.'
-      team: v
-      location: d
-      type: contract
-      level: junior
-      salary_min: 37
-      salary_max: 9
-      requirements: architecto
-      benefits: architecto
-      status: closed
-      is_remote: false
-      published_at: '2025-04-21T08:38:34'
-      closing_date: '1975-10-08'
+      name: 'n'
+      email: ashly64@example.com
+      position: v
+      department: d
+      phone: l
+      is_hiring_manager: true
+      is_recruiter: false
+      is_interviewer: true
+      status: inactive
     fileParameters: []
     responses: []
     responseFields: []
@@ -271,9 +193,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/job-openings/{id}'
+    uri: 'api/company-members/{id}'
     metadata:
-      groupName: 'Job Openings'
+      groupName: 'Company Members'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -288,7 +210,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the job opening.'
+        description: 'The ID of the company member.'
         required: true
         example: 1
         type: integer
@@ -326,9 +248,9 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'api/job-openings/{id}'
+    uri: 'api/company-members/{id}'
     metadata:
-      groupName: 'Job Openings'
+      groupName: 'Company Members'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -343,7 +265,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the job opening.'
+        description: 'The ID of the company member.'
         required: true
         example: 1
         type: integer
@@ -366,18 +288,8 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
-      hiring_manager_id:
-        name: hiring_manager_id
-        description: 'The <code>id</code> of an existing record in the company_members table.'
-        required: true
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      title:
-        name: title
+      name:
+        name: name
         description: 'Must not be greater than 255 characters.'
         required: true
         example: 'n'
@@ -386,122 +298,68 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
-      description:
-        name: description
+      email:
+        name: email
         description: ''
-        required: true
-        example: 'Eius et animi quos velit et.'
+        required: false
+        example: null
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
-      team:
-        name: team
+      position:
+        name: position
         description: 'Must not be greater than 255 characters.'
-        required: false
-        example: v
+        required: true
+        example: g
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
-      location:
-        name: location
+      department:
+        name: department
         description: 'Must not be greater than 255 characters.'
-        required: false
-        example: d
+        required: true
+        example: z
         type: string
         enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      type:
-        name: type
-        description: ''
-        required: true
-        example: full_time
-        type: string
-        enumValues:
-          - full_time
-          - part_time
-          - contract
-          - internship
         exampleWasSpecified: false
         nullable: false
         custom: []
-      level:
-        name: level
-        description: ''
+      phone:
+        name: phone
+        description: 'Must not be greater than 255 characters.'
         required: true
-        example: lead
+        example: m
         type: string
-        enumValues:
-          - entry
-          - junior
-          - mid
-          - senior
-          - lead
-          - principal
+        enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
-      salary_min:
-        name: salary_min
-        description: 'Must be at least 0.'
-        required: false
-        example: 37
-        type: number
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      salary_max:
-        name: salary_max
-        description: 'Must be at least 0.'
-        required: false
-        example: 9
-        type: number
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      requirements:
-        name: requirements
+      is_hiring_manager:
+        name: is_hiring_manager
         description: ''
         required: false
-        example: architecto
-        type: string
+        example: true
+        type: boolean
         enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      benefits:
-        name: benefits
-        description: ''
-        required: false
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      status:
-        name: status
-        description: ''
-        required: true
-        example: archived
-        type: string
-        enumValues:
-          - draft
-          - published
-          - closed
-          - archived
         exampleWasSpecified: false
         nullable: false
         custom: []
-      is_remote:
-        name: is_remote
+      is_recruiter:
+        name: is_recruiter
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      is_interviewer:
+        name: is_interviewer
         description: ''
         required: false
         example: false
@@ -510,43 +368,28 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
-      published_at:
-        name: published_at
-        description: 'Must be a valid date.'
-        required: false
-        example: '2025-04-21T08:38:34'
+      status:
+        name: status
+        description: ''
+        required: true
+        example: inactive
         type: string
-        enumValues: []
+        enumValues:
+          - active
+          - inactive
         exampleWasSpecified: false
-        nullable: true
-        custom: []
-      closing_date:
-        name: closing_date
-        description: 'Must be a valid date. Must be a date after <code>published_at</code>.'
-        required: false
-        example: '1975-10-08'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
       company_id: architecto
-      hiring_manager_id: architecto
-      title: 'n'
-      description: 'Eius et animi quos velit et.'
-      team: v
-      location: d
-      type: full_time
-      level: lead
-      salary_min: 37
-      salary_max: 9
-      requirements: architecto
-      benefits: architecto
-      status: archived
-      is_remote: false
-      published_at: '2025-04-21T08:38:34'
-      closing_date: '1975-10-08'
+      name: 'n'
+      position: g
+      department: z
+      phone: m
+      is_hiring_manager: true
+      is_recruiter: true
+      is_interviewer: false
+      status: inactive
     fileParameters: []
     responses: []
     responseFields: []
@@ -561,9 +404,9 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/job-openings/{id}'
+    uri: 'api/company-members/{id}'
     metadata:
-      groupName: 'Job Openings'
+      groupName: 'Company Members'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -578,7 +421,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the job opening.'
+        description: 'The ID of the company member.'
         required: true
         example: 1
         type: integer
@@ -594,6 +437,114 @@ endpoints:
     cleanBodyParameters: []
     fileParameters: []
     responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/company-members/{companyMember_id}/job-openings'
+    metadata:
+      groupName: 'Company Members'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      companyMember_id:
+        name: companyMember_id
+        description: 'The ID of the companyMember.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      companyMember_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/company-members/{companyMember_id}/interviews'
+    metadata:
+      groupName: 'Company Members'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      companyMember_id:
+        name: companyMember_id
+        description: 'The ID of the companyMember.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      companyMember_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
     responseFields: []
     auth:
       - headers

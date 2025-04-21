@@ -190,7 +190,7 @@ endpoints:
         name: source
         description: ''
         required: false
-        example: other
+        example: career_site
         type: string
         enumValues:
           - linkedin
@@ -215,7 +215,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: inactive
+        example: hired
         type: string
         enumValues:
           - active
@@ -238,9 +238,9 @@ endpoints:
       current_position: p
       current_company: w
       desired_salary: 16
-      source: other
+      source: career_site
       notes: architecto
-      status: inactive
+      status: hired
     fileParameters: []
     responses: []
     responseFields: []
@@ -274,14 +274,14 @@ endpoints:
         name: id
         description: 'The ID of the candidate.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -329,14 +329,14 @@ endpoints:
         name: id
         description: 'The ID of the candidate.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -464,7 +464,7 @@ endpoints:
         name: source
         description: ''
         required: false
-        example: referral
+        example: indeed
         type: string
         enumValues:
           - linkedin
@@ -489,7 +489,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: rejected
+        example: inactive
         type: string
         enumValues:
           - active
@@ -511,9 +511,9 @@ endpoints:
       current_position: u
       current_company: j
       desired_salary: 87
-      source: referral
+      source: indeed
       notes: architecto
-      status: rejected
+      status: inactive
     fileParameters: []
     responses: []
     responseFields: []
@@ -547,14 +547,14 @@ endpoints:
         name: id
         description: 'The ID of the candidate.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

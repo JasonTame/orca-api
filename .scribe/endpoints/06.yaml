@@ -130,7 +130,7 @@ endpoints:
         name: difficulty
         description: ''
         required: true
-        example: medium
+        example: hard
         type: string
         enumValues:
           - easy
@@ -146,7 +146,7 @@ endpoints:
       instructions: architecto
       repository_url: 'http://bailey.com/'
       time_limit: 27
-      difficulty: medium
+      difficulty: hard
     fileParameters: []
     responses: []
     responseFields: []
@@ -180,14 +180,14 @@ endpoints:
         name: id
         description: 'The ID of the coding challenge.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -235,14 +235,14 @@ endpoints:
         name: id
         description: 'The ID of the coding challenge.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -310,7 +310,7 @@ endpoints:
         name: difficulty
         description: ''
         required: true
-        example: easy
+        example: hard
         type: string
         enumValues:
           - easy
@@ -326,7 +326,7 @@ endpoints:
       instructions: architecto
       repository_url: 'http://bailey.com/'
       time_limit: 27
-      difficulty: easy
+      difficulty: hard
     fileParameters: []
     responses: []
     responseFields: []
@@ -360,14 +360,14 @@ endpoints:
         name: id
         description: 'The ID of the coding challenge.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

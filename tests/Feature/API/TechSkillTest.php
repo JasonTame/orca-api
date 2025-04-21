@@ -5,10 +5,8 @@ use App\Models\User;
 use Laravel\Sanctum\Sanctum;
 
 beforeEach(function () {
-    Sanctum::actingAs(
-        User::factory()->create(),
-        ['*']
-    );
+    $this->user = User::factory()->create();
+    $this->actingAs($this->user);
 });
 
 test('can list all tech skills', function () {

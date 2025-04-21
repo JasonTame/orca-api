@@ -7,11 +7,15 @@ use App\Models\InterviewStage;
 use App\Models\JobOpening;
 use App\Models\User;
 
+beforeEach(function () {
+    $this->user = User::factory()->create();
+    $this->actingAs($this->user);
+});
+
 test('can list interviews', function () {
-    $user = User::factory()->create();
     Interview::factory()->count(3)->create();
 
-    $response = $this->actingAs($user)->getJson('/api/interviews');
+    $response = $this->getJson('/api/interviews');
 
     $response->assertStatus(200)
         ->assertJsonCount(3)
@@ -30,7 +34,6 @@ test('can list interviews', function () {
 });
 
 test('can create interview', function () {
-    $user = User::factory()->create();
     $jobOpening = JobOpening::factory()->create();
     $application = Application::factory()->create(['job_opening_id' => $jobOpening->id]);
     $stage = InterviewStage::factory()->create(['job_opening_id' => $jobOpening->id]);
@@ -47,7 +50,7 @@ test('can create interview', function () {
         'notes' => 'Technical interview focusing on backend skills',
     ];
 
-    $response = $this->actingAs($user)->postJson('/api/interviews', $data);
+    $response = $this->postJson('/api/interviews', $data);
 
     $response->assertStatus(201)
         ->assertJson([
@@ -70,10 +73,9 @@ test('can create interview', function () {
 });
 
 test('can show interview', function () {
-    $user = User::factory()->create();
     $interview = Interview::factory()->create();
 
-    $response = $this->actingAs($user)->getJson("/api/interviews/{$interview->id}");
+    $response = $this->getJson("/api/interviews/{$interview->id}");
 
     $response->assertStatus(200)
         ->assertJson([
@@ -85,7 +87,6 @@ test('can show interview', function () {
 });
 
 test('can update interview', function () {
-    $user = User::factory()->create();
     $interview = Interview::factory()->create();
 
     $completedAt = now();
@@ -98,7 +99,7 @@ test('can update interview', function () {
         'decision' => 'proceed',
     ];
 
-    $response = $this->actingAs($user)->putJson("/api/interviews/{$interview->id}", $data);
+    $response = $this->putJson("/api/interviews/{$interview->id}", $data);
 
     $response->assertStatus(200)
         ->assertJson([
@@ -119,26 +120,22 @@ test('can update interview', function () {
 });
 
 test('can delete interview', function () {
-    $user = User::factory()->create();
     $interview = Interview::factory()->create();
 
-    $response = $this->actingAs($user)->deleteJson("/api/interviews/{$interview->id}");
+    $response = $this->deleteJson("/api/interviews/{$interview->id}");
 
     $response->assertStatus(204);
     $this->assertDatabaseMissing('interviews', ['id' => $interview->id]);
 });
 
 test('validates required fields when creating interview', function () {
-    $user = User::factory()->create();
-
-    $response = $this->actingAs($user)->postJson('/api/interviews', []);
+    $response = $this->postJson('/api/interviews', []);
 
     $response->assertStatus(422)
         ->assertJsonValidationErrors(['application_id', 'stage_id', 'interviewer_id', 'scheduled_at', 'status']);
 });
 
 test('validates status enum values', function () {
-    $user = User::factory()->create();
     $application = Application::factory()->create();
     $stage = InterviewStage::factory()->create();
     $interviewer = CompanyMember::factory()->create();
@@ -151,14 +148,13 @@ test('validates status enum values', function () {
         'status' => 'invalid_status',
     ];
 
-    $response = $this->actingAs($user)->postJson('/api/interviews', $data);
+    $response = $this->postJson('/api/interviews', $data);
 
     $response->assertStatus(422)
         ->assertJsonValidationErrors(['status']);
 });
 
 test('validates scores are within range', function () {
-    $user = User::factory()->create();
     $application = Application::factory()->create();
     $stage = InterviewStage::factory()->create();
     $interviewer = CompanyMember::factory()->create();
@@ -173,7 +169,7 @@ test('validates scores are within range', function () {
         'cultural_score' => 0,
     ];
 
-    $response = $this->actingAs($user)->postJson('/api/interviews', $data);
+    $response = $this->postJson('/api/interviews', $data);
 
     $response->assertStatus(422)
         ->assertJsonValidationErrors(['technical_score', 'cultural_score']);

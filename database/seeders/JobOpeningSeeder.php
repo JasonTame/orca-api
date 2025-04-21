@@ -20,9 +20,9 @@ class JobOpeningSeeder extends Seeder
         $techSkills = TechSkill::all();
 
         foreach ($companies as $company) {
-            $hiringManager = CompanyMember::factory()->create([
-                'company_id' => $company->id,
-            ]);
+            $hiringManager = CompanyMember::where('company_id', $company->id)
+                ->where('is_hiring_manager', true)
+                ->first();
             $numberOfJobs = rand(0, 2);
 
             JobOpening::factory()

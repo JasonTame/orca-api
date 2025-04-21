@@ -78,6 +78,16 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
+      hiring_manager_id:
+        name: hiring_manager_id
+        description: 'The <code>id</code> of an existing record in the company_members table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
       title:
         name: title
         description: 'Must not be greater than 255 characters.'
@@ -136,7 +146,7 @@ endpoints:
         name: level
         description: ''
         required: true
-        example: mid
+        example: junior
         type: string
         enumValues:
           - entry
@@ -188,21 +198,11 @@ endpoints:
         exampleWasSpecified: false
         nullable: true
         custom: []
-      hiring_manager_id:
-        name: hiring_manager_id
-        description: 'The <code>id</code> of an existing record in the users table.'
-        required: false
-        example: null
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
       status:
         name: status
         description: ''
         required: true
-        example: draft
+        example: closed
         type: string
         enumValues:
           - draft
@@ -226,7 +226,7 @@ endpoints:
         name: published_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-04-19T16:57:12'
+        example: '2025-04-21T08:38:34'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -236,7 +236,7 @@ endpoints:
         name: closing_date
         description: 'Must be a valid date. Must be a date after <code>published_at</code>.'
         required: false
-        example: '2100-04-02'
+        example: '1975-10-08'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -244,20 +244,21 @@ endpoints:
         custom: []
     cleanBodyParameters:
       company_id: architecto
+      hiring_manager_id: architecto
       title: 'n'
       description: 'Eius et animi quos velit et.'
       team: v
       location: d
       type: contract
-      level: mid
+      level: junior
       salary_min: 37
       salary_max: 9
       requirements: architecto
       benefits: architecto
-      status: draft
+      status: closed
       is_remote: false
-      published_at: '2025-04-19T16:57:12'
-      closing_date: '2100-04-02'
+      published_at: '2025-04-21T08:38:34'
+      closing_date: '1975-10-08'
     fileParameters: []
     responses: []
     responseFields: []
@@ -291,14 +292,14 @@ endpoints:
         name: id
         description: 'The ID of the job opening.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -346,20 +347,30 @@ endpoints:
         name: id
         description: 'The ID of the job opening.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
       company_id:
         name: company_id
         description: 'The <code>id</code> of an existing record in the companies table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      hiring_manager_id:
+        name: hiring_manager_id
+        description: 'The <code>id</code> of an existing record in the company_members table.'
         required: true
         example: architecto
         type: string
@@ -411,7 +422,7 @@ endpoints:
         name: type
         description: ''
         required: true
-        example: contract
+        example: full_time
         type: string
         enumValues:
           - full_time
@@ -425,7 +436,7 @@ endpoints:
         name: level
         description: ''
         required: true
-        example: principal
+        example: lead
         type: string
         enumValues:
           - entry
@@ -477,21 +488,11 @@ endpoints:
         exampleWasSpecified: false
         nullable: true
         custom: []
-      hiring_manager_id:
-        name: hiring_manager_id
-        description: 'The <code>id</code> of an existing record in the users table.'
-        required: false
-        example: null
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
       status:
         name: status
         description: ''
         required: true
-        example: closed
+        example: archived
         type: string
         enumValues:
           - draft
@@ -505,7 +506,7 @@ endpoints:
         name: is_remote
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -515,7 +516,7 @@ endpoints:
         name: published_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-04-19T16:57:12'
+        example: '2025-04-21T08:38:34'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -525,7 +526,7 @@ endpoints:
         name: closing_date
         description: 'Must be a valid date. Must be a date after <code>published_at</code>.'
         required: false
-        example: '2100-04-02'
+        example: '1975-10-08'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -533,20 +534,21 @@ endpoints:
         custom: []
     cleanBodyParameters:
       company_id: architecto
+      hiring_manager_id: architecto
       title: 'n'
       description: 'Eius et animi quos velit et.'
       team: v
       location: d
-      type: contract
-      level: principal
+      type: full_time
+      level: lead
       salary_min: 37
       salary_max: 9
       requirements: architecto
       benefits: architecto
-      status: closed
-      is_remote: true
-      published_at: '2025-04-19T16:57:12'
-      closing_date: '2100-04-02'
+      status: archived
+      is_remote: false
+      published_at: '2025-04-21T08:38:34'
+      closing_date: '1975-10-08'
     fileParameters: []
     responses: []
     responseFields: []
@@ -580,14 +582,14 @@ endpoints:
         name: id
         description: 'The ID of the job opening.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

@@ -2,17 +2,12 @@
 
 use App\Models\Candidate;
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Laravel\Sanctum\Sanctum;
-
-uses(RefreshDatabase::class);
 
 beforeEach(function () {
-    Sanctum::actingAs(
-        User::factory()->create(),
-        ['*']
-    );
+    $this->user = User::factory()->create();
+    $this->actingAs($this->user);
 });
+
 
 test('can list all candidates', function () {
     Candidate::factory()->count(3)->create();

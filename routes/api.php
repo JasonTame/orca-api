@@ -7,6 +7,7 @@ use App\Http\Controllers\API\CompanyController;
 use App\Http\Controllers\API\InterviewController;
 use App\Http\Controllers\API\JobOpeningController;
 use App\Http\Controllers\API\TechSkillController;
+use App\Http\Controllers\API\CompanyMemberController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,4 +32,7 @@ Route::middleware([
     Route::apiResource('applications', ApplicationController::class);
     Route::apiResource('interviews', InterviewController::class);
     Route::apiResource('coding-challenges', CodingChallengeController::class);
+    Route::apiResource('company-members', CompanyMemberController::class);
+    Route::get('company-members/{companyMember}/job-openings', [CompanyMemberController::class, 'jobOpenings']);
+    Route::get('company-members/{companyMember}/interviews', [CompanyMemberController::class, 'interviews']);
 });
