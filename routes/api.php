@@ -1,14 +1,15 @@
 <?php
 
-use App\Http\Controllers\API\ApplicationController;
-use App\Http\Controllers\API\CandidateController;
-use App\Http\Controllers\API\CodingChallengeController;
-use App\Http\Controllers\API\CompanyController;
-use App\Http\Controllers\API\CompanyMemberController;
-use App\Http\Controllers\API\InterviewController;
-use App\Http\Controllers\API\JobOpeningController;
-use App\Http\Controllers\API\TechSkillController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\CompanyController;
+use App\Http\Controllers\API\CandidateController;
+use App\Http\Controllers\API\InterviewController;
+use App\Http\Controllers\API\TechSkillController;
+use App\Http\Controllers\API\JobOpeningController;
+use App\Http\Controllers\API\ApplicationController;
+use App\Http\Controllers\API\CompanyMemberController;
+use App\Http\Controllers\API\AuthenticationController;
+use App\Http\Controllers\API\CodingChallengeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+Route::post('login', [AuthenticationController::class, 'login']);
+Route::post('logout', [AuthenticationController::class, 'logout']);
+Route::get('user', [AuthenticationController::class, 'user']);
 
 Route::middleware([
     'auth:sanctum',
