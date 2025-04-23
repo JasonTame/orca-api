@@ -25,7 +25,7 @@ return [
         'http://admin.orca.test:5173',
         'https://admin.orca.test:5173',
         'http://orca.test',
-        'https://orca.test'
+        'https://orca.test',
     ],
 
     'allowed_origins_patterns' => [],

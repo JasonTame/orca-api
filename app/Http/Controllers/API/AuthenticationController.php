@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\API;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
 
 class AuthenticationController extends Controller
 {
@@ -17,7 +16,6 @@ class AuthenticationController extends Controller
         ]);
 
         $credentials = $request->only('email', 'password');
-
 
         if (Auth::attempt($credentials)) {
             return response()->json([
