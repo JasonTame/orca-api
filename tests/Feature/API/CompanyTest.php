@@ -34,6 +34,20 @@ test('can list all companies', function () {
         ]);
 });
 
+test('can search companies by name', function () {
+    Company::factory()->create(['name' => 'Acme Corporation']);
+    Company::factory()->create(['name' => 'Beta Industries']);
+    Company::factory()->create(['name' => 'Acme Solutions']);
+
+    $response = $this->getJson('/api/companies?search=Acme');
+
+    $response->assertStatus(200)
+        ->assertJsonCount(2)
+        ->assertJsonFragment(['name' => 'Acme Corporation'])
+        ->assertJsonFragment(['name' => 'Acme Solutions'])
+        ->assertJsonMissing(['name' => 'Beta Industries']);
+});
+
 test('can create a company', function () {
     $companyData = [
         'name' => 'Test Company',

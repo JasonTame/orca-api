@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Validator;
  */
 class CompanyController extends Controller
 {
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
-        $companies = Company::all();
+        if ($request->has('search')) {
+            $companies = Company::search($request->input('search'))->get();
+        } else {
+            $companies = Company::all();
+        }
 
         return response()->json($companies);
     }
