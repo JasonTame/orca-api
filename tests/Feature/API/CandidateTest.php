@@ -43,6 +43,17 @@ test('can list all candidates', function () {
         ]);
 });
 
+test('can search candidates by name', function () {
+    Candidate::factory()->create(['first_name' => 'John', 'last_name' => 'Doe']);
+    Candidate::factory()->create(['first_name' => 'Jane', 'last_name' => 'Smith']);
+
+    $response = $this->getJson('/api/candidates?search=John');
+
+    $response->assertStatus(200)
+        ->assertJsonCount(1)
+        ->assertJsonFragment(['first_name' => 'John', 'last_name' => 'Doe']);
+});
+
 test('can create a candidate', function () {
     $candidateData = [
         'first_name' => 'John',

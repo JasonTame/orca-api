@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Validator;
  */
 class CandidateController extends Controller
 {
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
-        $candidates = Candidate::all();
+        if ($request->has('search')) {
+            $candidates = Candidate::search($request->input('search'))->get();
+        } else {
+            $candidates = Candidate::all();
+        }
 
         return response()->json($candidates);
     }
@@ -59,7 +63,7 @@ class CandidateController extends Controller
         $validator = Validator::make($request->all(), [
             'first_name' => 'sometimes|required|string|max:255',
             'last_name' => 'sometimes|required|string|max:255',
-            'email' => 'sometimes|required|email|unique:candidates,email,'.$candidate->id,
+            'email' => 'sometimes|required|email|unique:candidates,email,' . $candidate->id,
             'phone' => 'nullable|string|max:20',
             'location' => 'nullable|string|max:255',
             'resume_url' => 'nullable|url',

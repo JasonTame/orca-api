@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use Laravel\Scout\Searchable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Scout\Searchable;
 
 /**
  * @property int $id
@@ -44,8 +44,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  */
 class Company extends Model
 {
-    use HasFactory;
-    use Searchable;
+    use HasFactory, Searchable;
 
     protected $fillable = [
         'name',
