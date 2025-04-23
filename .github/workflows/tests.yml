@@ -17,6 +17,7 @@ jobs:
       DB_DATABASE: laravel
       DB_USERNAME: postgres
       DB_PASSWORD: postgres
+      SCOUT_DRIVER: database
 
     services:
       postgres:
