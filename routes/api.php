@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware([
     'auth:sanctum',
-    'throttle:api'
+    'throttle:api',
 ])->group(function () {
     Route::get('tech-skills/categories', [TechSkillController::class, 'categories']);
     Route::apiResource('tech-skills', TechSkillController::class);
