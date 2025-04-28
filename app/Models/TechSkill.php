@@ -60,6 +60,24 @@ class TechSkill extends Model
         'is_tool' => 'boolean',
     ];
 
+    protected static function booted(): void
+    {
+        static::saving(function (TechSkill $techSkill) {
+            // Reset all boolean flags
+            $techSkill->is_language = false;
+            $techSkill->is_framework = false;
+            $techSkill->is_tool = false;
+
+            // Set the appropriate flag based on category
+            match ($techSkill->category) {
+                'language' => $techSkill->is_language = true,
+                'framework' => $techSkill->is_framework = true,
+                'tool' => $techSkill->is_tool = true,
+                default => null,
+            };
+        });
+    }
+
     public function parent(): BelongsTo
     {
         return $this->belongsTo(TechSkill::class, 'parent_skill_id');

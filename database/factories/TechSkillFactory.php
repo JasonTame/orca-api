@@ -14,15 +14,6 @@ class TechSkillFactory extends Factory
         return [
             'name' => $this->faker->unique()->word(),
             'category' => $this->faker->randomElement(['language', 'framework', 'database', 'tool', 'platform']),
-            'is_language' => function (array $attributes) {
-                return $attributes['category'] === 'language';
-            },
-            'is_framework' => function (array $attributes) {
-                return $attributes['category'] === 'framework';
-            },
-            'is_tool' => function (array $attributes) {
-                return $attributes['category'] === 'tool';
-            },
             'parent_skill_id' => null, // Can be set manually when needed
         ];
     }
@@ -32,9 +23,6 @@ class TechSkillFactory extends Factory
         return $this->state(function () {
             return [
                 'category' => 'language',
-                'is_language' => true,
-                'is_framework' => false,
-                'is_tool' => false,
             ];
         });
     }
@@ -44,9 +32,6 @@ class TechSkillFactory extends Factory
         return $this->state(function () {
             return [
                 'category' => 'framework',
-                'is_language' => false,
-                'is_framework' => true,
-                'is_tool' => false,
             ];
         });
     }
@@ -56,9 +41,6 @@ class TechSkillFactory extends Factory
         return $this->state(function () {
             return [
                 'category' => 'tool',
-                'is_language' => false,
-                'is_framework' => false,
-                'is_tool' => true,
             ];
         });
     }

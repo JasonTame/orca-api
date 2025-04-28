@@ -25,9 +25,6 @@ class TechSkillController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255|unique:tech_skills,name',
             'category' => 'required|in:language,framework,database,tool,platform',
-            'is_language' => 'boolean',
-            'is_framework' => 'boolean',
-            'is_tool' => 'boolean',
             'parent_skill_id' => 'nullable|integer|exists:tech_skills,id',
         ]);
 
@@ -48,11 +45,8 @@ class TechSkillController extends Controller
     public function update(Request $request, TechSkill $techSkill): JsonResponse
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'sometimes|required|string|max:255|unique:tech_skills,name,'.$techSkill->id,
+            'name' => 'sometimes|required|string|max:255|unique:tech_skills,name,' . $techSkill->id,
             'category' => 'sometimes|required|in:language,framework,database,tool,platform',
-            'is_language' => 'boolean',
-            'is_framework' => 'boolean',
-            'is_tool' => 'boolean',
             'parent_skill_id' => 'nullable|integer|exists:tech_skills,id',
         ]);
 

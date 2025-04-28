@@ -34,17 +34,26 @@ test('can create a tech skill', function () {
     $techSkillData = [
         'name' => 'PHP',
         'category' => 'language',
-        'is_language' => true,
-        'is_framework' => false,
-        'is_tool' => false,
     ];
 
     $response = $this->postJson('/api/tech-skills', $techSkillData);
 
     $response->assertStatus(201)
-        ->assertJson($techSkillData);
+        ->assertJson([
+            'name' => 'PHP',
+            'category' => 'language',
+            'is_language' => true,
+            'is_framework' => false,
+            'is_tool' => false,
+        ]);
 
-    $this->assertDatabaseHas('tech_skills', $techSkillData);
+    $this->assertDatabaseHas('tech_skills', [
+        'name' => 'PHP',
+        'category' => 'language',
+        'is_language' => true,
+        'is_framework' => false,
+        'is_tool' => false,
+    ]);
 });
 
 test('can show a tech skill', function () {
@@ -61,17 +70,27 @@ test('can update a tech skill', function () {
     $updateData = [
         'name' => 'Updated Skill',
         'category' => 'framework',
-        'is_language' => false,
-        'is_framework' => true,
-        'is_tool' => false,
     ];
 
     $response = $this->putJson("/api/tech-skills/{$techSkill->id}", $updateData);
 
     $response->assertStatus(200)
-        ->assertJson($updateData);
+        ->assertJson([
+            'name' => 'Updated Skill',
+            'category' => 'framework',
+            'is_language' => false,
+            'is_framework' => true,
+            'is_tool' => false,
+        ]);
 
-    $this->assertDatabaseHas('tech_skills', $updateData);
+    $this->assertDatabaseHas('tech_skills', [
+        'id' => $techSkill->id,
+        'name' => 'Updated Skill',
+        'category' => 'framework',
+        'is_language' => false,
+        'is_framework' => true,
+        'is_tool' => false,
+    ]);
 });
 
 test('can delete a tech skill', function () {
