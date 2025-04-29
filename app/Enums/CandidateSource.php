@@ -2,22 +2,15 @@
 
 namespace App\Enums;
 
+use App\Traits\EnumHelpers;
+
 enum CandidateSource: string
 {
+    use EnumHelpers;
+
     case LINKEDIN = 'linkedin';
     case INDEED = 'indeed';
     case REFERRAL = 'referral';
     case CAREER_SITE = 'career_site';
     case OTHER = 'other';
-
-    public static function values(): array
-    {
-        return array_column(self::cases(), 'value');
-    }
-
-    public static function random(): string
-    {
-        $values = self::values();
-        return $values[array_rand($values)];
-    }
 }

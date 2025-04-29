@@ -2,21 +2,14 @@
 
 namespace App\Enums;
 
+use App\Traits\EnumHelpers;
+
 enum JobStatus: string
 {
+    use EnumHelpers;
+
     case DRAFT = 'draft';
     case PUBLISHED = 'published';
     case CLOSED = 'closed';
     case ARCHIVED = 'archived';
-
-    public static function values(): array
-    {
-        return array_column(self::cases(), 'value');
-    }
-
-    public static function random(): string
-    {
-        $values = self::values();
-        return $values[array_rand($values)];
-    }
 }
