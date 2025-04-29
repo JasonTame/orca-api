@@ -99,7 +99,7 @@ endpoints:
       phone:
         name: phone
         description: 'Phone number of the candidate'
-        required: true
+        required: false
         example: '+1234567890'
         type: string
         enumValues: []
@@ -109,7 +109,7 @@ endpoints:
       location:
         name: location
         description: 'Location of the candidate'
-        required: true
+        required: false
         example: 'San Francisco, CA'
         type: string
         enumValues: []
@@ -119,7 +119,7 @@ endpoints:
       resume_url:
         name: resume_url
         description: "URL to the candidate's resume"
-        required: true
+        required: false
         example: 'https://example.com/resume.pdf'
         type: string
         enumValues: []
@@ -129,7 +129,7 @@ endpoints:
       portfolio_url:
         name: portfolio_url
         description: "URL to the candidate's portfolio"
-        required: true
+        required: false
         example: 'https://portfolio.johnde.com'
         type: string
         enumValues: []
@@ -139,7 +139,7 @@ endpoints:
       linkedin_url:
         name: linkedin_url
         description: "URL to the candidate's LinkedIn profile"
-        required: true
+        required: false
         example: 'https://linkedin.com/in/johndoe'
         type: string
         enumValues: []
@@ -149,7 +149,7 @@ endpoints:
       years_experience:
         name: years_experience
         description: 'Years of professional experience'
-        required: true
+        required: false
         example: 5
         type: integer
         enumValues: []
@@ -159,7 +159,7 @@ endpoints:
       current_position:
         name: current_position
         description: 'Current job position'
-        required: true
+        required: false
         example: 'Senior Developer'
         type: string
         enumValues: []
@@ -169,7 +169,7 @@ endpoints:
       current_company:
         name: current_company
         description: 'Current employer'
-        required: true
+        required: false
         example: 'Tech Corp'
         type: string
         enumValues: []
@@ -179,7 +179,7 @@ endpoints:
       desired_salary:
         name: desired_salary
         description: 'Desired salary'
-        required: true
+        required: false
         example: 120000
         type: number
         enumValues: []
@@ -189,7 +189,7 @@ endpoints:
       source:
         name: source
         description: 'Source of the candidate'
-        required: true
+        required: false
         example: linkedin
         type: string
         enumValues:
@@ -204,7 +204,7 @@ endpoints:
       notes:
         name: notes
         description: 'Additional notes about the candidate'
-        required: true
+        required: false
         example: 'Great communication skills'
         type: string
         enumValues: []
@@ -214,7 +214,7 @@ endpoints:
       status:
         name: status
         description: 'Status of the candidate'
-        required: true
+        required: false
         example: new
         type: string
         enumValues:
@@ -343,7 +343,7 @@ endpoints:
       first_name:
         name: first_name
         description: 'First name of the candidate'
-        required: true
+        required: false
         example: John
         type: string
         enumValues: []
@@ -353,7 +353,7 @@ endpoints:
       last_name:
         name: last_name
         description: 'Last name of the candidate'
-        required: true
+        required: false
         example: Doe
         type: string
         enumValues: []
@@ -363,7 +363,7 @@ endpoints:
       email:
         name: email
         description: 'Email address of the candidate'
-        required: true
+        required: false
         example: john.doe@example.com
         type: string
         enumValues: []
@@ -373,7 +373,7 @@ endpoints:
       phone:
         name: phone
         description: 'Phone number of the candidate'
-        required: true
+        required: false
         example: '+1234567890'
         type: string
         enumValues: []
@@ -383,7 +383,7 @@ endpoints:
       location:
         name: location
         description: 'Location of the candidate'
-        required: true
+        required: false
         example: 'San Francisco, CA'
         type: string
         enumValues: []
@@ -393,7 +393,7 @@ endpoints:
       resume_url:
         name: resume_url
         description: "URL to the candidate's resume"
-        required: true
+        required: false
         example: 'https://example.com/resume.pdf'
         type: string
         enumValues: []
@@ -403,7 +403,7 @@ endpoints:
       portfolio_url:
         name: portfolio_url
         description: "URL to the candidate's portfolio"
-        required: true
+        required: false
         example: 'https://portfolio.johnde.com'
         type: string
         enumValues: []
@@ -413,7 +413,7 @@ endpoints:
       linkedin_url:
         name: linkedin_url
         description: "URL to the candidate's LinkedIn profile"
-        required: true
+        required: false
         example: 'https://linkedin.com/in/johndoe'
         type: string
         enumValues: []
@@ -423,7 +423,7 @@ endpoints:
       years_experience:
         name: years_experience
         description: 'Years of professional experience'
-        required: true
+        required: false
         example: 5
         type: integer
         enumValues: []
@@ -433,7 +433,7 @@ endpoints:
       current_position:
         name: current_position
         description: 'Current job position'
-        required: true
+        required: false
         example: 'Senior Developer'
         type: string
         enumValues: []
@@ -443,7 +443,7 @@ endpoints:
       current_company:
         name: current_company
         description: 'Current employer'
-        required: true
+        required: false
         example: 'Tech Corp'
         type: string
         enumValues: []
@@ -453,7 +453,7 @@ endpoints:
       desired_salary:
         name: desired_salary
         description: 'Desired salary'
-        required: true
+        required: false
         example: 120000
         type: number
         enumValues: []
@@ -463,7 +463,7 @@ endpoints:
       source:
         name: source
         description: 'Source of the candidate'
-        required: true
+        required: false
         example: linkedin
         type: string
         enumValues:
@@ -478,7 +478,7 @@ endpoints:
       notes:
         name: notes
         description: 'Additional notes about the candidate'
-        required: true
+        required: false
         example: 'Great communication skills'
         type: string
         enumValues: []
@@ -488,7 +488,7 @@ endpoints:
       status:
         name: status
         description: 'Status of the candidate'
-        required: true
+        required: false
         example: interviewing
         type: string
         enumValues:

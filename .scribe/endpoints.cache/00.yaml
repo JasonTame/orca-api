@@ -139,7 +139,7 @@ endpoints:
       parent_skill_id:
         name: parent_skill_id
         description: 'ID of the parent skill (if this is a sub-skill)'
-        required: true
+        required: false
         example: 1
         type: integer
         enumValues: []
@@ -252,7 +252,7 @@ endpoints:
       name:
         name: name
         description: 'Name of the tech skill'
-        required: true
+        required: false
         example: 'React Native'
         type: string
         enumValues: []
@@ -262,7 +262,7 @@ endpoints:
       category:
         name: category
         description: 'Category of the tech skill'
-        required: true
+        required: false
         example: framework
         type: string
         enumValues:
@@ -277,7 +277,7 @@ endpoints:
       parent_skill_id:
         name: parent_skill_id
         description: 'ID of the parent skill (if this is a sub-skill)'
-        required: true
+        required: false
         example: 2
         type: integer
         enumValues: []

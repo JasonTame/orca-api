@@ -31,13 +31,13 @@ class CompanyController extends Controller
 
     #[Endpoint('Create a new company')]
     #[BodyParam('name', 'string', 'Name of the company', required: true, example: 'Acme Corporation')]
-    #[BodyParam('logo_url', 'string', "URL to the company's logo", example: 'https://example.com/logo.png')]
-    #[BodyParam('website', 'string', 'Company website URL', example: 'https://acme.example.com')]
-    #[BodyParam('industry', 'string', 'Industry the company operates in', example: 'Technology')]
-    #[BodyParam('size', 'string', 'Size of the company', enum: CompanySize::class, example: 'medium')]
-    #[BodyParam('description', 'string', 'Company description', example: 'A leading provider of innovative solutions')]
-    #[BodyParam('location', 'string', 'Main location of the company', example: 'San Francisco, CA')]
-    #[BodyParam('status', 'string', 'Status of the company', enum: EntityStatus::class, example: 'active')]
+    #[BodyParam('logo_url', 'string', "URL to the company's logo", required: false, example: 'https://example.com/logo.png')]
+    #[BodyParam('website', 'string', 'Company website URL', required: false, example: 'https://acme.example.com')]
+    #[BodyParam('industry', 'string', 'Industry the company operates in', required: false, example: 'Technology')]
+    #[BodyParam('size', 'string', 'Size of the company', required: false, enum: CompanySize::class, example: 'medium')]
+    #[BodyParam('description', 'string', 'Company description', required: false, example: 'A leading provider of innovative solutions')]
+    #[BodyParam('location', 'string', 'Main location of the company', required: false, example: 'San Francisco, CA')]
+    #[BodyParam('status', 'string', 'Status of the company', required: false, enum: EntityStatus::class, example: 'active')]
     public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -67,14 +67,14 @@ class CompanyController extends Controller
     }
 
     #[Endpoint('Update a company')]
-    #[BodyParam('name', 'string', 'Name of the company', example: 'Acme Corporation Updated')]
-    #[BodyParam('logo_url', 'string', "URL to the company's logo", example: 'https://example.com/new-logo.png')]
-    #[BodyParam('website', 'string', 'Company website URL', example: 'https://acme-updated.example.com')]
-    #[BodyParam('industry', 'string', 'Industry the company operates in', example: 'Software')]
-    #[BodyParam('size', 'string', 'Size of the company', enum: CompanySize::class, example: 'large')]
-    #[BodyParam('description', 'string', 'Company description', example: 'A global leader in software solutions')]
-    #[BodyParam('location', 'string', 'Main location of the company', example: 'New York, NY')]
-    #[BodyParam('status', 'string', 'Status of the company', enum: EntityStatus::class, example: 'active')]
+    #[BodyParam('name', 'string', 'Name of the company', required: false, example: 'Acme Corporation Updated')]
+    #[BodyParam('logo_url', 'string', "URL to the company's logo", required: false, example: 'https://example.com/new-logo.png')]
+    #[BodyParam('website', 'string', 'Company website URL', required: false, example: 'https://acme-updated.example.com')]
+    #[BodyParam('industry', 'string', 'Industry the company operates in', required: false, example: 'Software')]
+    #[BodyParam('size', 'string', 'Size of the company', required: false, enum: CompanySize::class, example: 'large')]
+    #[BodyParam('description', 'string', 'Company description', required: false, example: 'A global leader in software solutions')]
+    #[BodyParam('location', 'string', 'Main location of the company', required: false, example: 'New York, NY')]
+    #[BodyParam('status', 'string', 'Status of the company', required: false, enum: EntityStatus::class, example: 'active')]
     public function update(Request $request, Company $company): JsonResponse
     {
         $validator = Validator::make($request->all(), [

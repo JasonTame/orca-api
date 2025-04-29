@@ -251,7 +251,7 @@ endpoints:
       job_opening_id:
         name: job_opening_id
         description: 'The ID of the job opening'
-        required: true
+        required: false
         example: 1
         type: integer
         enumValues: []
@@ -261,7 +261,7 @@ endpoints:
       title:
         name: title
         description: 'Title of the coding challenge'
-        required: true
+        required: false
         example: 'Updated API Challenge'
         type: string
         enumValues: []
@@ -271,7 +271,7 @@ endpoints:
       description:
         name: description
         description: 'Description of the challenge'
-        required: true
+        required: false
         example: 'Build a REST API integration with authentication'
         type: string
         enumValues: []
@@ -281,7 +281,7 @@ endpoints:
       instructions:
         name: instructions
         description: 'Detailed instructions for completing the challenge'
-        required: true
+        required: false
         example: 'Clone the repository and implement the missing endpoints following OAuth2 spec'
         type: string
         enumValues: []
@@ -291,7 +291,7 @@ endpoints:
       repository_url:
         name: repository_url
         description: 'URL to the challenge repository'
-        required: true
+        required: false
         example: 'https://github.com/company/updated-coding-challenge'
         type: string
         enumValues: []
@@ -301,7 +301,7 @@ endpoints:
       time_limit:
         name: time_limit
         description: 'Time limit in hours'
-        required: true
+        required: false
         example: 48
         type: integer
         enumValues: []
@@ -311,7 +311,7 @@ endpoints:
       difficulty:
         name: difficulty
         description: 'Difficulty level of the challenge'
-        required: true
+        required: false
         example: hard
         type: string
         enumValues:

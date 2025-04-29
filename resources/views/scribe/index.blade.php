@@ -633,7 +633,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>code_sample_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="code_sample_url"                data-endpoint="POSTapi-applications"
                value="https://github.com/username/repo"
@@ -657,7 +657,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>current_stage_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="current_stage_id"                data-endpoint="POSTapi-applications"
                value="1"
@@ -668,7 +668,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>rejection_reason</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="rejection_reason"                data-endpoint="POSTapi-applications"
                value="Position filled"
@@ -679,7 +679,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="notes"                data-endpoint="POSTapi-applications"
                value="Candidate seems promising"
@@ -690,7 +690,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>referral_source</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="referral_source"                data-endpoint="POSTapi-applications"
                value="linkedin"
@@ -703,7 +703,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>applied_at</code></b>&nbsp;&nbsp;
 <small>date</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="applied_at"                data-endpoint="POSTapi-applications"
                value="2023-05-15"
@@ -1028,7 +1028,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>job_opening_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="job_opening_id"                data-endpoint="PUTapi-applications--id-"
                value="1"
@@ -1039,7 +1039,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>candidate_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="candidate_id"                data-endpoint="PUTapi-applications--id-"
                value="1"
@@ -1050,7 +1050,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>code_sample_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="code_sample_url"                data-endpoint="PUTapi-applications--id-"
                value="https://github.com/username/repo"
@@ -1061,7 +1061,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-applications--id-"
                value="applied"
@@ -1074,7 +1074,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>current_stage_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="current_stage_id"                data-endpoint="PUTapi-applications--id-"
                value="1"
@@ -1085,7 +1085,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>rejection_reason</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="rejection_reason"                data-endpoint="PUTapi-applications--id-"
                value="Position filled"
@@ -1096,7 +1096,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="notes"                data-endpoint="PUTapi-applications--id-"
                value="Candidate seems promising"
@@ -1107,7 +1107,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>referral_source</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="referral_source"                data-endpoint="PUTapi-applications--id-"
                value="linkedin"
@@ -1120,7 +1120,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>applied_at</code></b>&nbsp;&nbsp;
 <small>date</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="applied_at"                data-endpoint="PUTapi-applications--id-"
                value="2023-05-15"
@@ -1600,7 +1600,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="POSTapi-candidates"
                value="+1234567890"
@@ -1611,7 +1611,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="POSTapi-candidates"
                value="San Francisco, CA"
@@ -1622,7 +1622,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>resume_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="resume_url"                data-endpoint="POSTapi-candidates"
                value="https://example.com/resume.pdf"
@@ -1633,7 +1633,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>portfolio_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="portfolio_url"                data-endpoint="POSTapi-candidates"
                value="https://portfolio.johnde.com"
@@ -1644,7 +1644,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>linkedin_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="linkedin_url"                data-endpoint="POSTapi-candidates"
                value="https://linkedin.com/in/johndoe"
@@ -1655,7 +1655,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>years_experience</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="years_experience"                data-endpoint="POSTapi-candidates"
                value="5"
@@ -1666,7 +1666,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>current_position</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="current_position"                data-endpoint="POSTapi-candidates"
                value="Senior Developer"
@@ -1677,7 +1677,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>current_company</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="current_company"                data-endpoint="POSTapi-candidates"
                value="Tech Corp"
@@ -1688,7 +1688,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>desired_salary</code></b>&nbsp;&nbsp;
 <small>number</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="desired_salary"                data-endpoint="POSTapi-candidates"
                value="120000"
@@ -1699,7 +1699,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>source</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="source"                data-endpoint="POSTapi-candidates"
                value="linkedin"
@@ -1712,7 +1712,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="notes"                data-endpoint="POSTapi-candidates"
                value="Great communication skills"
@@ -1723,7 +1723,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-candidates"
                value="new"
@@ -2062,7 +2062,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>first_name</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="first_name"                data-endpoint="PUTapi-candidates--id-"
                value="John"
@@ -2073,7 +2073,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="PUTapi-candidates--id-"
                value="Doe"
@@ -2084,7 +2084,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTapi-candidates--id-"
                value="john.doe@example.com"
@@ -2095,7 +2095,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="PUTapi-candidates--id-"
                value="+1234567890"
@@ -2106,7 +2106,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="PUTapi-candidates--id-"
                value="San Francisco, CA"
@@ -2117,7 +2117,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>resume_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="resume_url"                data-endpoint="PUTapi-candidates--id-"
                value="https://example.com/resume.pdf"
@@ -2128,7 +2128,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>portfolio_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="portfolio_url"                data-endpoint="PUTapi-candidates--id-"
                value="https://portfolio.johnde.com"
@@ -2139,7 +2139,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>linkedin_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="linkedin_url"                data-endpoint="PUTapi-candidates--id-"
                value="https://linkedin.com/in/johndoe"
@@ -2150,7 +2150,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>years_experience</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="years_experience"                data-endpoint="PUTapi-candidates--id-"
                value="5"
@@ -2161,7 +2161,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>current_position</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="current_position"                data-endpoint="PUTapi-candidates--id-"
                value="Senior Developer"
@@ -2172,7 +2172,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>current_company</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="current_company"                data-endpoint="PUTapi-candidates--id-"
                value="Tech Corp"
@@ -2183,7 +2183,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>desired_salary</code></b>&nbsp;&nbsp;
 <small>number</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="desired_salary"                data-endpoint="PUTapi-candidates--id-"
                value="120000"
@@ -2194,7 +2194,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>source</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="source"                data-endpoint="PUTapi-candidates--id-"
                value="linkedin"
@@ -2207,7 +2207,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="notes"                data-endpoint="PUTapi-candidates--id-"
                value="Great communication skills"
@@ -2218,7 +2218,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-candidates--id-"
                value="interviewing"
@@ -3340,7 +3340,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>job_opening_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="job_opening_id"                data-endpoint="PUTapi-coding-challenges--id-"
                value="1"
@@ -3351,7 +3351,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>title</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-coding-challenges--id-"
                value="Updated API Challenge"
@@ -3362,7 +3362,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-coding-challenges--id-"
                value="Build a REST API integration with authentication"
@@ -3373,7 +3373,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>instructions</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="instructions"                data-endpoint="PUTapi-coding-challenges--id-"
                value="Clone the repository and implement the missing endpoints following OAuth2 spec"
@@ -3384,7 +3384,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>repository_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="repository_url"                data-endpoint="PUTapi-coding-challenges--id-"
                value="https://github.com/company/updated-coding-challenge"
@@ -3395,7 +3395,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>time_limit</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="time_limit"                data-endpoint="PUTapi-coding-challenges--id-"
                value="48"
@@ -3406,7 +3406,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>difficulty</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="difficulty"                data-endpoint="PUTapi-coding-challenges--id-"
                value="hard"
@@ -3852,7 +3852,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="logo_url"                data-endpoint="POSTapi-companies"
                value="https://example.com/logo.png"
@@ -3863,7 +3863,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>website</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="website"                data-endpoint="POSTapi-companies"
                value="https://acme.example.com"
@@ -3874,7 +3874,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>industry</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="industry"                data-endpoint="POSTapi-companies"
                value="Technology"
@@ -3885,7 +3885,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>size</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="size"                data-endpoint="POSTapi-companies"
                value="medium"
@@ -3898,7 +3898,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-companies"
                value="A leading provider of innovative solutions"
@@ -3909,7 +3909,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="POSTapi-companies"
                value="San Francisco, CA"
@@ -3920,7 +3920,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-companies"
                value="active"
@@ -4245,7 +4245,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-companies--id-"
                value="Acme Corporation Updated"
@@ -4256,7 +4256,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="logo_url"                data-endpoint="PUTapi-companies--id-"
                value="https://example.com/new-logo.png"
@@ -4267,7 +4267,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>website</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="website"                data-endpoint="PUTapi-companies--id-"
                value="https://acme-updated.example.com"
@@ -4278,7 +4278,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>industry</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="industry"                data-endpoint="PUTapi-companies--id-"
                value="Software"
@@ -4289,7 +4289,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>size</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="size"                data-endpoint="PUTapi-companies--id-"
                value="large"
@@ -4302,7 +4302,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-companies--id-"
                value="A global leader in software solutions"
@@ -4313,7 +4313,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="PUTapi-companies--id-"
                value="New York, NY"
@@ -4324,7 +4324,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-companies--id-"
                value="active"
@@ -5429,7 +5429,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_hiring_manager</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <label data-endpoint="POSTapi-company-members" style="display: none">
             <input type="radio" name="is_hiring_manager"
                    value="true"
@@ -5450,7 +5450,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_recruiter</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <label data-endpoint="POSTapi-company-members" style="display: none">
             <input type="radio" name="is_recruiter"
                    value="true"
@@ -5471,7 +5471,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_interviewer</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <label data-endpoint="POSTapi-company-members" style="display: none">
             <input type="radio" name="is_interviewer"
                    value="true"
@@ -5821,7 +5821,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>company_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="company_id"                data-endpoint="PUTapi-company-members--id-"
                value="1"
@@ -5832,7 +5832,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-company-members--id-"
                value="Jane Smith Updated"
@@ -5843,7 +5843,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTapi-company-members--id-"
                value="jane.updated@company.com"
@@ -5854,7 +5854,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>position</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="position"                data-endpoint="PUTapi-company-members--id-"
                value="Lead Recruiter"
@@ -5865,7 +5865,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>department</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="department"                data-endpoint="PUTapi-company-members--id-"
                value="Talent Acquisition"
@@ -5876,7 +5876,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="PUTapi-company-members--id-"
                value="+1 (555) 987-6543"
@@ -5887,7 +5887,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_hiring_manager</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <label data-endpoint="PUTapi-company-members--id-" style="display: none">
             <input type="radio" name="is_hiring_manager"
                    value="true"
@@ -5908,7 +5908,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_recruiter</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <label data-endpoint="PUTapi-company-members--id-" style="display: none">
             <input type="radio" name="is_recruiter"
                    value="true"
@@ -5929,7 +5929,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_interviewer</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <label data-endpoint="PUTapi-company-members--id-" style="display: none">
             <input type="radio" name="is_interviewer"
                    value="true"
@@ -5950,7 +5950,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-company-members--id-"
                value="active"
@@ -6705,7 +6705,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-interview-stages"
                value="In-depth technical assessment with the development team"
@@ -6751,7 +6751,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_technical</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <label data-endpoint="POSTapi-interview-stages" style="display: none">
             <input type="radio" name="is_technical"
                    value="true"
@@ -7082,7 +7082,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>job_opening_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="job_opening_id"                data-endpoint="PUTapi-interview-stages--id-"
                value="1"
@@ -7093,7 +7093,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-interview-stages--id-"
                value="System Design Interview"
@@ -7104,7 +7104,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-interview-stages--id-"
                value="Evaluation of system design and architecture skills"
@@ -7115,7 +7115,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>sequence</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="sequence"                data-endpoint="PUTapi-interview-stages--id-"
                value="3"
@@ -7126,7 +7126,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>duration</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="duration"                data-endpoint="PUTapi-interview-stages--id-"
                value="90"
@@ -7137,7 +7137,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>format</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="format"                data-endpoint="PUTapi-interview-stages--id-"
                value="in_person"
@@ -7150,7 +7150,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_technical</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <label data-endpoint="PUTapi-interview-stages--id-" style="display: none">
             <input type="radio" name="is_technical"
                    value="true"
@@ -7647,7 +7647,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>completed_at</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="completed_at"                data-endpoint="POSTapi-interviews"
                value="2023-05-15T11:00:00Z"
@@ -7658,7 +7658,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="POSTapi-interviews"
                value="Conference Room 3A"
@@ -7669,7 +7669,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>meeting_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="meeting_url"                data-endpoint="POSTapi-interviews"
                value="https://zoom.us/j/123456789"
@@ -7693,7 +7693,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>technical_score</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="technical_score"                data-endpoint="POSTapi-interviews"
                value="4"
@@ -7704,7 +7704,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>cultural_score</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="cultural_score"                data-endpoint="POSTapi-interviews"
                value="5"
@@ -7715,7 +7715,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>feedback</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="feedback"                data-endpoint="POSTapi-interviews"
                value="Strong technical skills, especially in database design. Good communication."
@@ -7726,7 +7726,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>decision</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="decision"                data-endpoint="POSTapi-interviews"
                value="proceed"
@@ -7739,7 +7739,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="notes"                data-endpoint="POSTapi-interviews"
                value="Candidate was very well prepared."
@@ -8072,7 +8072,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>application_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="application_id"                data-endpoint="PUTapi-interviews--id-"
                value="1"
@@ -8083,7 +8083,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>stage_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="stage_id"                data-endpoint="PUTapi-interviews--id-"
                value="2"
@@ -8094,7 +8094,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>interviewer_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="interviewer_id"                data-endpoint="PUTapi-interviews--id-"
                value="3"
@@ -8105,7 +8105,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>scheduled_at</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="scheduled_at"                data-endpoint="PUTapi-interviews--id-"
                value="2023-05-20T14:00:00Z"
@@ -8116,7 +8116,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>completed_at</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="completed_at"                data-endpoint="PUTapi-interviews--id-"
                value="2023-05-20T15:30:00Z"
@@ -8127,7 +8127,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="PUTapi-interviews--id-"
                value="Meeting Room B"
@@ -8138,7 +8138,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>meeting_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="meeting_url"                data-endpoint="PUTapi-interviews--id-"
                value="https://teams.microsoft.com/l/123456"
@@ -8149,7 +8149,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-interviews--id-"
                value="completed"
@@ -8162,7 +8162,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>technical_score</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="technical_score"                data-endpoint="PUTapi-interviews--id-"
                value="4"
@@ -8173,7 +8173,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>cultural_score</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="cultural_score"                data-endpoint="PUTapi-interviews--id-"
                value="4"
@@ -8184,7 +8184,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>feedback</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="feedback"                data-endpoint="PUTapi-interviews--id-"
                value="Excellent problem-solving skills. Good culture fit."
@@ -8195,7 +8195,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>decision</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="decision"                data-endpoint="PUTapi-interviews--id-"
                value="hire"
@@ -8208,7 +8208,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="notes"                data-endpoint="PUTapi-interviews--id-"
                value="Would be a great fit for the team."
@@ -8701,7 +8701,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>team</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="team"                data-endpoint="POSTapi-job-openings"
                value="Engineering"
@@ -8712,7 +8712,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="POSTapi-job-openings"
                value="San Francisco, CA"
@@ -8749,7 +8749,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>salary_min</code></b>&nbsp;&nbsp;
 <small>number</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="salary_min"                data-endpoint="POSTapi-job-openings"
                value="120000"
@@ -8760,7 +8760,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>salary_max</code></b>&nbsp;&nbsp;
 <small>number</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="salary_max"                data-endpoint="POSTapi-job-openings"
                value="160000"
@@ -8771,7 +8771,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>requirements</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="requirements"                data-endpoint="POSTapi-job-openings"
                value="- 5+ years of experience with web development
@@ -8788,7 +8788,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>benefits</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="benefits"                data-endpoint="POSTapi-job-openings"
                value="- Health, dental, and vision insurance
@@ -8818,7 +8818,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_remote</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <label data-endpoint="POSTapi-job-openings" style="display: none">
             <input type="radio" name="is_remote"
                    value="true"
@@ -8839,7 +8839,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>published_at</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="published_at"                data-endpoint="POSTapi-job-openings"
                value="2023-05-01T00:00:00Z"
@@ -8850,7 +8850,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>closing_date</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="closing_date"                data-endpoint="POSTapi-job-openings"
                value="2023-06-01T00:00:00Z"
@@ -9189,7 +9189,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>company_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="company_id"                data-endpoint="PUTapi-job-openings--id-"
                value="1"
@@ -9200,7 +9200,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>hiring_manager_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="hiring_manager_id"                data-endpoint="PUTapi-job-openings--id-"
                value="2"
@@ -9211,7 +9211,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>title</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-job-openings--id-"
                value="Lead Software Engineer"
@@ -9222,7 +9222,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-job-openings--id-"
                value="Updated job description with additional responsibilities..."
@@ -9233,7 +9233,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>team</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="team"                data-endpoint="PUTapi-job-openings--id-"
                value="Platform Engineering"
@@ -9244,7 +9244,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="PUTapi-job-openings--id-"
                value="Remote"
@@ -9255,7 +9255,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>type</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="type"                data-endpoint="PUTapi-job-openings--id-"
                value="full_time"
@@ -9268,7 +9268,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>level</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="level"                data-endpoint="PUTapi-job-openings--id-"
                value="lead"
@@ -9281,7 +9281,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>salary_min</code></b>&nbsp;&nbsp;
 <small>number</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="salary_min"                data-endpoint="PUTapi-job-openings--id-"
                value="150000"
@@ -9292,7 +9292,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>salary_max</code></b>&nbsp;&nbsp;
 <small>number</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="salary_max"                data-endpoint="PUTapi-job-openings--id-"
                value="180000"
@@ -9303,7 +9303,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>requirements</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="requirements"                data-endpoint="PUTapi-job-openings--id-"
                value="- 8+ years of experience with web development
@@ -9320,7 +9320,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>benefits</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="benefits"                data-endpoint="PUTapi-job-openings--id-"
                value="- Updated benefits package
@@ -9337,7 +9337,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-job-openings--id-"
                value="published"
@@ -9350,7 +9350,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_remote</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <label data-endpoint="PUTapi-job-openings--id-" style="display: none">
             <input type="radio" name="is_remote"
                    value="true"
@@ -9371,7 +9371,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>published_at</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="published_at"                data-endpoint="PUTapi-job-openings--id-"
                value="2023-05-10T00:00:00Z"
@@ -9382,7 +9382,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>closing_date</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="closing_date"                data-endpoint="PUTapi-job-openings--id-"
                value="2023-06-15T00:00:00Z"
@@ -9967,7 +9967,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>parent_skill_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="parent_skill_id"                data-endpoint="POSTapi-tech-skills"
                value="1"
@@ -10280,7 +10280,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-tech-skills--id-"
                value="React Native"
@@ -10291,7 +10291,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>category</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="category"                data-endpoint="PUTapi-tech-skills--id-"
                value="framework"
@@ -10304,7 +10304,7 @@ Must be one of:
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>parent_skill_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
- &nbsp;
+<i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="parent_skill_id"                data-endpoint="PUTapi-tech-skills--id-"
                value="2"

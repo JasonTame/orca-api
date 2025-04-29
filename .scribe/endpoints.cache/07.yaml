@@ -91,7 +91,7 @@ endpoints:
       description:
         name: description
         description: 'Description of the interview stage'
-        required: true
+        required: false
         example: 'In-depth technical assessment with the development team'
         type: string
         enumValues: []
@@ -135,7 +135,7 @@ endpoints:
       is_technical:
         name: is_technical
         description: 'Whether this is a technical interview stage'
-        required: true
+        required: false
         example: true
         type: boolean
         enumValues: []
@@ -252,7 +252,7 @@ endpoints:
       job_opening_id:
         name: job_opening_id
         description: 'The ID of the job opening'
-        required: true
+        required: false
         example: 1
         type: integer
         enumValues: []
@@ -262,7 +262,7 @@ endpoints:
       name:
         name: name
         description: 'Name of the interview stage'
-        required: true
+        required: false
         example: 'System Design Interview'
         type: string
         enumValues: []
@@ -272,7 +272,7 @@ endpoints:
       description:
         name: description
         description: 'Description of the interview stage'
-        required: true
+        required: false
         example: 'Evaluation of system design and architecture skills'
         type: string
         enumValues: []
@@ -282,7 +282,7 @@ endpoints:
       sequence:
         name: sequence
         description: 'Order of the stage in the interview process'
-        required: true
+        required: false
         example: 3
         type: integer
         enumValues: []
@@ -292,7 +292,7 @@ endpoints:
       duration:
         name: duration
         description: 'Duration of the interview stage in minutes'
-        required: true
+        required: false
         example: 90
         type: integer
         enumValues: []
@@ -302,7 +302,7 @@ endpoints:
       format:
         name: format
         description: 'Format of the interview'
-        required: true
+        required: false
         example: in_person
         type: string
         enumValues:
@@ -316,7 +316,7 @@ endpoints:
       is_technical:
         name: is_technical
         description: 'Whether this is a technical interview stage'
-        required: true
+        required: false
         example: true
         type: boolean
         enumValues: []

@@ -109,7 +109,7 @@ endpoints:
       team:
         name: team
         description: 'Team or department'
-        required: true
+        required: false
         example: Engineering
         type: string
         enumValues: []
@@ -119,7 +119,7 @@ endpoints:
       location:
         name: location
         description: 'Job location'
-        required: true
+        required: false
         example: 'San Francisco, CA'
         type: string
         enumValues: []
@@ -159,7 +159,7 @@ endpoints:
       salary_min:
         name: salary_min
         description: 'Minimum salary'
-        required: true
+        required: false
         example: 120000
         type: number
         enumValues: []
@@ -169,7 +169,7 @@ endpoints:
       salary_max:
         name: salary_max
         description: 'Maximum salary'
-        required: true
+        required: false
         example: 160000
         type: number
         enumValues: []
@@ -179,7 +179,7 @@ endpoints:
       requirements:
         name: requirements
         description: 'Job requirements'
-        required: true
+        required: false
         example: |-
           - 5+ years of experience with web development
           - Strong knowledge of JavaScript and React
@@ -192,7 +192,7 @@ endpoints:
       benefits:
         name: benefits
         description: 'Job benefits'
-        required: true
+        required: false
         example: |-
           - Health, dental, and vision insurance
           - 401(k) matching
@@ -219,7 +219,7 @@ endpoints:
       is_remote:
         name: is_remote
         description: 'Whether the job is remote'
-        required: true
+        required: false
         example: true
         type: boolean
         enumValues: []
@@ -229,7 +229,7 @@ endpoints:
       published_at:
         name: published_at
         description: 'When the job was published'
-        required: true
+        required: false
         example: '2023-05-01T00:00:00Z'
         type: string
         enumValues: []
@@ -239,7 +239,7 @@ endpoints:
       closing_date:
         name: closing_date
         description: 'When the job posting closes'
-        required: true
+        required: false
         example: '2023-06-01T00:00:00Z'
         type: string
         enumValues: []
@@ -371,7 +371,7 @@ endpoints:
       company_id:
         name: company_id
         description: 'The ID of the company'
-        required: true
+        required: false
         example: 1
         type: integer
         enumValues: []
@@ -381,7 +381,7 @@ endpoints:
       hiring_manager_id:
         name: hiring_manager_id
         description: 'The ID of the hiring manager'
-        required: true
+        required: false
         example: 2
         type: integer
         enumValues: []
@@ -391,7 +391,7 @@ endpoints:
       title:
         name: title
         description: 'Job title'
-        required: true
+        required: false
         example: 'Lead Software Engineer'
         type: string
         enumValues: []
@@ -401,7 +401,7 @@ endpoints:
       description:
         name: description
         description: 'Detailed job description'
-        required: true
+        required: false
         example: 'Updated job description with additional responsibilities...'
         type: string
         enumValues: []
@@ -411,7 +411,7 @@ endpoints:
       team:
         name: team
         description: 'Team or department'
-        required: true
+        required: false
         example: 'Platform Engineering'
         type: string
         enumValues: []
@@ -421,7 +421,7 @@ endpoints:
       location:
         name: location
         description: 'Job location'
-        required: true
+        required: false
         example: Remote
         type: string
         enumValues: []
@@ -431,7 +431,7 @@ endpoints:
       type:
         name: type
         description: 'Employment type'
-        required: true
+        required: false
         example: full_time
         type: string
         enumValues:
@@ -445,7 +445,7 @@ endpoints:
       level:
         name: level
         description: 'Experience level'
-        required: true
+        required: false
         example: lead
         type: string
         enumValues:
@@ -461,7 +461,7 @@ endpoints:
       salary_min:
         name: salary_min
         description: 'Minimum salary'
-        required: true
+        required: false
         example: 150000
         type: number
         enumValues: []
@@ -471,7 +471,7 @@ endpoints:
       salary_max:
         name: salary_max
         description: 'Maximum salary'
-        required: true
+        required: false
         example: 180000
         type: number
         enumValues: []
@@ -481,7 +481,7 @@ endpoints:
       requirements:
         name: requirements
         description: 'Job requirements'
-        required: true
+        required: false
         example: |-
           - 8+ years of experience with web development
           - Strong knowledge of system architecture
@@ -494,7 +494,7 @@ endpoints:
       benefits:
         name: benefits
         description: 'Job benefits'
-        required: true
+        required: false
         example: |-
           - Updated benefits package
           - Home office stipend
@@ -507,7 +507,7 @@ endpoints:
       status:
         name: status
         description: 'Job posting status'
-        required: true
+        required: false
         example: published
         type: string
         enumValues:
@@ -521,7 +521,7 @@ endpoints:
       is_remote:
         name: is_remote
         description: 'Whether the job is remote'
-        required: true
+        required: false
         example: true
         type: boolean
         enumValues: []
@@ -531,7 +531,7 @@ endpoints:
       published_at:
         name: published_at
         description: 'When the job was published'
-        required: true
+        required: false
         example: '2023-05-10T00:00:00Z'
         type: string
         enumValues: []
@@ -541,7 +541,7 @@ endpoints:
       closing_date:
         name: closing_date
         description: 'When the job posting closes'
-        required: true
+        required: false
         example: '2023-06-15T00:00:00Z'
         type: string
         enumValues: []

@@ -28,13 +28,13 @@ class ApplicationController extends Controller
     #[Endpoint('Store a new application')]
     #[BodyParam('job_opening_id', 'integer', 'The ID of the job opening', required: true, example: 1)]
     #[BodyParam('candidate_id', 'integer', 'The ID of the candidate', required: true, example: 1)]
-    #[BodyParam('code_sample_url', 'string', "URL to the candidate's code sample", example: 'https://github.com/username/repo')]
+    #[BodyParam('code_sample_url', 'string', "URL to the candidate's code sample", required: false, example: 'https://github.com/username/repo')]
     #[BodyParam('status', 'string', 'The status of the application', required: true, enum: ApplicationStatus::class, example: 'applied')]
-    #[BodyParam('current_stage_id', 'integer', 'The ID of the current interview stage', example: 1)]
-    #[BodyParam('rejection_reason', 'string', 'Reason for rejection', example: 'Position filled')]
-    #[BodyParam('notes', 'string', 'Additional notes about the application', example: 'Candidate seems promising')]
-    #[BodyParam('referral_source', 'string', 'Source of the referral', enum: ReferralSource::class, example: 'linkedin')]
-    #[BodyParam('applied_at', 'date', 'The date when the candidate applied', example: '2023-05-15')]
+    #[BodyParam('current_stage_id', 'integer', 'The ID of the current interview stage', required: false, example: 1)]
+    #[BodyParam('rejection_reason', 'string', 'Reason for rejection', required: false, example: 'Position filled')]
+    #[BodyParam('notes', 'string', 'Additional notes about the application', required: false, example: 'Candidate seems promising')]
+    #[BodyParam('referral_source', 'string', 'Source of the referral', required: false, enum: ReferralSource::class, example: 'linkedin')]
+    #[BodyParam('applied_at', 'date', 'The date when the candidate applied', required: false, example: '2023-05-15')]
     public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -67,15 +67,15 @@ class ApplicationController extends Controller
     }
 
     #[Endpoint('Update an existing application')]
-    #[BodyParam('job_opening_id', 'integer', 'The ID of the job opening', example: 1)]
-    #[BodyParam('candidate_id', 'integer', 'The ID of the candidate', example: 1)]
-    #[BodyParam('code_sample_url', 'string', "URL to the candidate's code sample", example: 'https://github.com/username/repo')]
-    #[BodyParam('status', 'string', 'The status of the application', enum: ApplicationStatus::class, example: 'applied')]
-    #[BodyParam('current_stage_id', 'integer', 'The ID of the current interview stage', example: 1)]
-    #[BodyParam('rejection_reason', 'string', 'Reason for rejection', example: 'Position filled')]
-    #[BodyParam('notes', 'string', 'Additional notes about the application', example: 'Candidate seems promising')]
-    #[BodyParam('referral_source', 'string', 'Source of the referral', enum: ReferralSource::class, example: 'linkedin')]
-    #[BodyParam('applied_at', 'date', 'The date when the candidate applied', example: '2023-05-15')]
+    #[BodyParam('job_opening_id', 'integer', 'The ID of the job opening', required: false, example: 1)]
+    #[BodyParam('candidate_id', 'integer', 'The ID of the candidate', required: false, example: 1)]
+    #[BodyParam('code_sample_url', 'string', "URL to the candidate's code sample", required: false, example: 'https://github.com/username/repo')]
+    #[BodyParam('status', 'string', 'The status of the application', required: false, enum: ApplicationStatus::class, example: 'applied')]
+    #[BodyParam('current_stage_id', 'integer', 'The ID of the current interview stage', required: false, example: 1)]
+    #[BodyParam('rejection_reason', 'string', 'Reason for rejection', required: false, example: 'Position filled')]
+    #[BodyParam('notes', 'string', 'Additional notes about the application', required: false, example: 'Candidate seems promising')]
+    #[BodyParam('referral_source', 'string', 'Source of the referral', required: false, enum: ReferralSource::class, example: 'linkedin')]
+    #[BodyParam('applied_at', 'date', 'The date when the candidate applied', required: false, example: '2023-05-15')]
     public function update(Request $request, Application $application): JsonResponse
     {
         $validator = Validator::make($request->all(), [

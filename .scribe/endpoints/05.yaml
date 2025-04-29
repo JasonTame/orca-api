@@ -89,7 +89,7 @@ endpoints:
       code_sample_url:
         name: code_sample_url
         description: "URL to the candidate's code sample"
-        required: true
+        required: false
         example: 'https://github.com/username/repo'
         type: string
         enumValues: []
@@ -115,7 +115,7 @@ endpoints:
       current_stage_id:
         name: current_stage_id
         description: 'The ID of the current interview stage'
-        required: true
+        required: false
         example: 1
         type: integer
         enumValues: []
@@ -125,7 +125,7 @@ endpoints:
       rejection_reason:
         name: rejection_reason
         description: 'Reason for rejection'
-        required: true
+        required: false
         example: 'Position filled'
         type: string
         enumValues: []
@@ -135,7 +135,7 @@ endpoints:
       notes:
         name: notes
         description: 'Additional notes about the application'
-        required: true
+        required: false
         example: 'Candidate seems promising'
         type: string
         enumValues: []
@@ -145,7 +145,7 @@ endpoints:
       referral_source:
         name: referral_source
         description: 'Source of the referral'
-        required: true
+        required: false
         example: linkedin
         type: string
         enumValues:
@@ -160,7 +160,7 @@ endpoints:
       applied_at:
         name: applied_at
         description: 'The date when the candidate applied'
-        required: true
+        required: false
         example: '2023-05-15'
         type: date
         enumValues: []
@@ -279,7 +279,7 @@ endpoints:
       job_opening_id:
         name: job_opening_id
         description: 'The ID of the job opening'
-        required: true
+        required: false
         example: 1
         type: integer
         enumValues: []
@@ -289,7 +289,7 @@ endpoints:
       candidate_id:
         name: candidate_id
         description: 'The ID of the candidate'
-        required: true
+        required: false
         example: 1
         type: integer
         enumValues: []
@@ -299,7 +299,7 @@ endpoints:
       code_sample_url:
         name: code_sample_url
         description: "URL to the candidate's code sample"
-        required: true
+        required: false
         example: 'https://github.com/username/repo'
         type: string
         enumValues: []
@@ -309,7 +309,7 @@ endpoints:
       status:
         name: status
         description: 'The status of the application'
-        required: true
+        required: false
         example: applied
         type: string
         enumValues:
@@ -325,7 +325,7 @@ endpoints:
       current_stage_id:
         name: current_stage_id
         description: 'The ID of the current interview stage'
-        required: true
+        required: false
         example: 1
         type: integer
         enumValues: []
@@ -335,7 +335,7 @@ endpoints:
       rejection_reason:
         name: rejection_reason
         description: 'Reason for rejection'
-        required: true
+        required: false
         example: 'Position filled'
         type: string
         enumValues: []
@@ -345,7 +345,7 @@ endpoints:
       notes:
         name: notes
         description: 'Additional notes about the application'
-        required: true
+        required: false
         example: 'Candidate seems promising'
         type: string
         enumValues: []
@@ -355,7 +355,7 @@ endpoints:
       referral_source:
         name: referral_source
         description: 'Source of the referral'
-        required: true
+        required: false
         example: linkedin
         type: string
         enumValues:
@@ -370,7 +370,7 @@ endpoints:
       applied_at:
         name: applied_at
         description: 'The date when the candidate applied'
-        required: true
+        required: false
         example: '2023-05-15'
         type: date
         enumValues: []

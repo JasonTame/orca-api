@@ -79,7 +79,7 @@ endpoints:
       logo_url:
         name: logo_url
         description: "URL to the company's logo"
-        required: true
+        required: false
         example: 'https://example.com/logo.png'
         type: string
         enumValues: []
@@ -89,7 +89,7 @@ endpoints:
       website:
         name: website
         description: 'Company website URL'
-        required: true
+        required: false
         example: 'https://acme.example.com'
         type: string
         enumValues: []
@@ -99,7 +99,7 @@ endpoints:
       industry:
         name: industry
         description: 'Industry the company operates in'
-        required: true
+        required: false
         example: Technology
         type: string
         enumValues: []
@@ -109,7 +109,7 @@ endpoints:
       size:
         name: size
         description: 'Size of the company'
-        required: true
+        required: false
         example: medium
         type: string
         enumValues:
@@ -123,7 +123,7 @@ endpoints:
       description:
         name: description
         description: 'Company description'
-        required: true
+        required: false
         example: 'A leading provider of innovative solutions'
         type: string
         enumValues: []
@@ -133,7 +133,7 @@ endpoints:
       location:
         name: location
         description: 'Main location of the company'
-        required: true
+        required: false
         example: 'San Francisco, CA'
         type: string
         enumValues: []
@@ -143,7 +143,7 @@ endpoints:
       status:
         name: status
         description: 'Status of the company'
-        required: true
+        required: false
         example: active
         type: string
         enumValues:
@@ -263,7 +263,7 @@ endpoints:
       name:
         name: name
         description: 'Name of the company'
-        required: true
+        required: false
         example: 'Acme Corporation Updated'
         type: string
         enumValues: []
@@ -273,7 +273,7 @@ endpoints:
       logo_url:
         name: logo_url
         description: "URL to the company's logo"
-        required: true
+        required: false
         example: 'https://example.com/new-logo.png'
         type: string
         enumValues: []
@@ -283,7 +283,7 @@ endpoints:
       website:
         name: website
         description: 'Company website URL'
-        required: true
+        required: false
         example: 'https://acme-updated.example.com'
         type: string
         enumValues: []
@@ -293,7 +293,7 @@ endpoints:
       industry:
         name: industry
         description: 'Industry the company operates in'
-        required: true
+        required: false
         example: Software
         type: string
         enumValues: []
@@ -303,7 +303,7 @@ endpoints:
       size:
         name: size
         description: 'Size of the company'
-        required: true
+        required: false
         example: large
         type: string
         enumValues:
@@ -317,7 +317,7 @@ endpoints:
       description:
         name: description
         description: 'Company description'
-        required: true
+        required: false
         example: 'A global leader in software solutions'
         type: string
         enumValues: []
@@ -327,7 +327,7 @@ endpoints:
       location:
         name: location
         description: 'Main location of the company'
-        required: true
+        required: false
         example: 'New York, NY'
         type: string
         enumValues: []
@@ -337,7 +337,7 @@ endpoints:
       status:
         name: status
         description: 'Status of the company'
-        required: true
+        required: false
         example: active
         type: string
         enumValues:

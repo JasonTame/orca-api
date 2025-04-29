@@ -27,7 +27,7 @@ class TechSkillController extends Controller
     #[Endpoint('Create a new tech skill')]
     #[BodyParam('name', 'string', 'Name of the tech skill', required: true, example: 'React')]
     #[BodyParam('category', 'string', 'Category of the tech skill', required: true, enum: TechSkillCategory::class, example: 'framework')]
-    #[BodyParam('parent_skill_id', 'integer', 'ID of the parent skill (if this is a sub-skill)', example: 1)]
+    #[BodyParam('parent_skill_id', 'integer', 'ID of the parent skill (if this is a sub-skill)', required: false, example: 1)]
     public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -52,9 +52,9 @@ class TechSkillController extends Controller
     }
 
     #[Endpoint('Update a tech skill')]
-    #[BodyParam('name', 'string', 'Name of the tech skill', example: 'React Native')]
-    #[BodyParam('category', 'string', 'Category of the tech skill', enum: TechSkillCategory::class, example: 'framework')]
-    #[BodyParam('parent_skill_id', 'integer', 'ID of the parent skill (if this is a sub-skill)', example: 2)]
+    #[BodyParam('name', 'string', 'Name of the tech skill', required: false, example: 'React Native')]
+    #[BodyParam('category', 'string', 'Category of the tech skill', required: false, enum: TechSkillCategory::class, example: 'framework')]
+    #[BodyParam('parent_skill_id', 'integer', 'ID of the parent skill (if this is a sub-skill)', required: false, example: 2)]
     public function update(Request $request, TechSkill $techSkill): JsonResponse
     {
         $validator = Validator::make($request->all(), [

@@ -37,9 +37,9 @@ class CompanyMemberController extends Controller
     #[BodyParam('position', 'string', 'Job position within the company', required: true, example: 'Senior Recruiter')]
     #[BodyParam('department', 'string', 'Department within the company', required: true, example: 'Human Resources')]
     #[BodyParam('phone', 'string', 'Contact phone number', required: true, example: '+1 (555) 123-4567')]
-    #[BodyParam('is_hiring_manager', 'boolean', 'Whether this member is a hiring manager', example: true)]
-    #[BodyParam('is_recruiter', 'boolean', 'Whether this member is a recruiter', example: true)]
-    #[BodyParam('is_interviewer', 'boolean', 'Whether this member conducts interviews', example: false)]
+    #[BodyParam('is_hiring_manager', 'boolean', 'Whether this member is a hiring manager', required: false, example: true)]
+    #[BodyParam('is_recruiter', 'boolean', 'Whether this member is a recruiter', required: false, example: true)]
+    #[BodyParam('is_interviewer', 'boolean', 'Whether this member conducts interviews', required: false, example: false)]
     #[BodyParam('status', 'string', 'Status of the company member', required: true, enum: EntityStatus::class, example: 'active')]
     public function store(Request $request): JsonResponse
     {
@@ -74,16 +74,16 @@ class CompanyMemberController extends Controller
     }
 
     #[Endpoint('Update a company member')]
-    #[BodyParam('company_id', 'integer', 'The ID of the company', example: 1)]
-    #[BodyParam('name', 'string', 'Full name of the company member', example: 'Jane Smith Updated')]
-    #[BodyParam('email', 'string', 'Email address of the company member', example: 'jane.updated@company.com')]
-    #[BodyParam('position', 'string', 'Job position within the company', example: 'Lead Recruiter')]
-    #[BodyParam('department', 'string', 'Department within the company', example: 'Talent Acquisition')]
-    #[BodyParam('phone', 'string', 'Contact phone number', example: '+1 (555) 987-6543')]
-    #[BodyParam('is_hiring_manager', 'boolean', 'Whether this member is a hiring manager', example: true)]
-    #[BodyParam('is_recruiter', 'boolean', 'Whether this member is a recruiter', example: true)]
-    #[BodyParam('is_interviewer', 'boolean', 'Whether this member conducts interviews', example: true)]
-    #[BodyParam('status', 'string', 'Status of the company member', enum: EntityStatus::class, example: 'active')]
+    #[BodyParam('company_id', 'integer', 'The ID of the company', required: false, example: 1)]
+    #[BodyParam('name', 'string', 'Full name of the company member', required: false, example: 'Jane Smith Updated')]
+    #[BodyParam('email', 'string', 'Email address of the company member', required: false, example: 'jane.updated@company.com')]
+    #[BodyParam('position', 'string', 'Job position within the company', required: false, example: 'Lead Recruiter')]
+    #[BodyParam('department', 'string', 'Department within the company', required: false, example: 'Talent Acquisition')]
+    #[BodyParam('phone', 'string', 'Contact phone number', required: false, example: '+1 (555) 987-6543')]
+    #[BodyParam('is_hiring_manager', 'boolean', 'Whether this member is a hiring manager', required: false, example: true)]
+    #[BodyParam('is_recruiter', 'boolean', 'Whether this member is a recruiter', required: false, example: true)]
+    #[BodyParam('is_interviewer', 'boolean', 'Whether this member conducts interviews', required: false, example: true)]
+    #[BodyParam('status', 'string', 'Status of the company member', required: false, enum: EntityStatus::class, example: 'active')]
     public function update(Request $request, CompanyMember $companyMember): JsonResponse
     {
         $validator = Validator::make($request->all(), [

@@ -62,13 +62,13 @@ class CodingChallengeController extends Controller
     }
 
     #[Endpoint('Update a coding challenge')]
-    #[BodyParam('job_opening_id', 'integer', 'The ID of the job opening', example: 1)]
-    #[BodyParam('title', 'string', 'Title of the coding challenge', example: 'Updated API Challenge')]
-    #[BodyParam('description', 'string', 'Description of the challenge', example: 'Build a REST API integration with authentication')]
-    #[BodyParam('instructions', 'string', 'Detailed instructions for completing the challenge', example: 'Clone the repository and implement the missing endpoints following OAuth2 spec')]
-    #[BodyParam('repository_url', 'string', 'URL to the challenge repository', example: 'https://github.com/company/updated-coding-challenge')]
-    #[BodyParam('time_limit', 'integer', 'Time limit in hours', example: 48)]
-    #[BodyParam('difficulty', 'string', 'Difficulty level of the challenge', enum: ChallengeDifficulty::class, example: 'hard')]
+    #[BodyParam('job_opening_id', 'integer', 'The ID of the job opening', required: false, example: 1)]
+    #[BodyParam('title', 'string', 'Title of the coding challenge', required: false, example: 'Updated API Challenge')]
+    #[BodyParam('description', 'string', 'Description of the challenge', required: false, example: 'Build a REST API integration with authentication')]
+    #[BodyParam('instructions', 'string', 'Detailed instructions for completing the challenge', required: false, example: 'Clone the repository and implement the missing endpoints following OAuth2 spec')]
+    #[BodyParam('repository_url', 'string', 'URL to the challenge repository', required: false, example: 'https://github.com/company/updated-coding-challenge')]
+    #[BodyParam('time_limit', 'integer', 'Time limit in hours', required: false, example: 48)]
+    #[BodyParam('difficulty', 'string', 'Difficulty level of the challenge', required: false, enum: ChallengeDifficulty::class, example: 'hard')]
     public function update(Request $request, CodingChallenge $codingChallenge): JsonResponse
     {
         $validator = Validator::make($request->all(), [

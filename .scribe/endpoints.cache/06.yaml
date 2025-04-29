@@ -111,7 +111,7 @@ endpoints:
       completed_at:
         name: completed_at
         description: 'When the interview was completed'
-        required: true
+        required: false
         example: '2023-05-15T11:00:00Z'
         type: string
         enumValues: []
@@ -121,7 +121,7 @@ endpoints:
       location:
         name: location
         description: 'Physical location of the interview'
-        required: true
+        required: false
         example: 'Conference Room 3A'
         type: string
         enumValues: []
@@ -131,7 +131,7 @@ endpoints:
       meeting_url:
         name: meeting_url
         description: 'URL for virtual meetings'
-        required: true
+        required: false
         example: 'https://zoom.us/j/123456789'
         type: string
         enumValues: []
@@ -155,7 +155,7 @@ endpoints:
       technical_score:
         name: technical_score
         description: 'Technical assessment score (1-5)'
-        required: true
+        required: false
         example: 4
         type: integer
         enumValues: []
@@ -165,7 +165,7 @@ endpoints:
       cultural_score:
         name: cultural_score
         description: 'Cultural fit score (1-5)'
-        required: true
+        required: false
         example: 5
         type: integer
         enumValues: []
@@ -175,7 +175,7 @@ endpoints:
       feedback:
         name: feedback
         description: 'Detailed feedback from the interviewer'
-        required: true
+        required: false
         example: 'Strong technical skills, especially in database design. Good communication.'
         type: string
         enumValues: []
@@ -185,7 +185,7 @@ endpoints:
       decision:
         name: decision
         description: 'Interview decision'
-        required: true
+        required: false
         example: proceed
         type: string
         enumValues:
@@ -198,7 +198,7 @@ endpoints:
       notes:
         name: notes
         description: 'Additional notes about the interview'
-        required: true
+        required: false
         example: 'Candidate was very well prepared.'
         type: string
         enumValues: []
@@ -321,7 +321,7 @@ endpoints:
       application_id:
         name: application_id
         description: 'The ID of the application'
-        required: true
+        required: false
         example: 1
         type: integer
         enumValues: []
@@ -331,7 +331,7 @@ endpoints:
       stage_id:
         name: stage_id
         description: 'The ID of the interview stage'
-        required: true
+        required: false
         example: 2
         type: integer
         enumValues: []
@@ -341,7 +341,7 @@ endpoints:
       interviewer_id:
         name: interviewer_id
         description: 'The ID of the interviewer'
-        required: true
+        required: false
         example: 3
         type: integer
         enumValues: []
@@ -351,7 +351,7 @@ endpoints:
       scheduled_at:
         name: scheduled_at
         description: 'When the interview is scheduled'
-        required: true
+        required: false
         example: '2023-05-20T14:00:00Z'
         type: string
         enumValues: []
@@ -361,7 +361,7 @@ endpoints:
       completed_at:
         name: completed_at
         description: 'When the interview was completed'
-        required: true
+        required: false
         example: '2023-05-20T15:30:00Z'
         type: string
         enumValues: []
@@ -371,7 +371,7 @@ endpoints:
       location:
         name: location
         description: 'Physical location of the interview'
-        required: true
+        required: false
         example: 'Meeting Room B'
         type: string
         enumValues: []
@@ -381,7 +381,7 @@ endpoints:
       meeting_url:
         name: meeting_url
         description: 'URL for virtual meetings'
-        required: true
+        required: false
         example: 'https://teams.microsoft.com/l/123456'
         type: string
         enumValues: []
@@ -391,7 +391,7 @@ endpoints:
       status:
         name: status
         description: 'Status of the interview'
-        required: true
+        required: false
         example: completed
         type: string
         enumValues:
@@ -405,7 +405,7 @@ endpoints:
       technical_score:
         name: technical_score
         description: 'Technical assessment score (1-5)'
-        required: true
+        required: false
         example: 4
         type: integer
         enumValues: []
@@ -415,7 +415,7 @@ endpoints:
       cultural_score:
         name: cultural_score
         description: 'Cultural fit score (1-5)'
-        required: true
+        required: false
         example: 4
         type: integer
         enumValues: []
@@ -425,7 +425,7 @@ endpoints:
       feedback:
         name: feedback
         description: 'Detailed feedback from the interviewer'
-        required: true
+        required: false
         example: 'Excellent problem-solving skills. Good culture fit.'
         type: string
         enumValues: []
@@ -435,7 +435,7 @@ endpoints:
       decision:
         name: decision
         description: 'Interview decision'
-        required: true
+        required: false
         example: hire
         type: string
         enumValues:
@@ -448,7 +448,7 @@ endpoints:
       notes:
         name: notes
         description: 'Additional notes about the interview'
-        required: true
+        required: false
         example: 'Would be a great fit for the team.'
         type: string
         enumValues: []
