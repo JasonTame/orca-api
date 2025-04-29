@@ -2,10 +2,12 @@
 
 namespace Database\Factories;
 
+use App\Models\Interview;
 use App\Models\Application;
 use App\Models\CompanyMember;
-use App\Models\Interview;
+use App\Enums\InterviewStatus;
 use App\Models\InterviewStage;
+use App\Enums\InterviewDecision;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class InterviewFactory extends Factory
@@ -22,11 +24,11 @@ class InterviewFactory extends Factory
             'completed_at' => $this->faker->optional()->dateTimeBetween('-1 month', 'now'),
             'location' => $this->faker->optional()->city(),
             'meeting_url' => $this->faker->optional()->url(),
-            'status' => $this->faker->randomElement(['scheduled', 'completed', 'cancelled', 'rescheduled']),
+            'status' => InterviewStatus::random(),
             'technical_score' => $this->faker->optional()->numberBetween(1, 5),
             'cultural_score' => $this->faker->optional()->numberBetween(1, 5),
             'feedback' => $this->faker->optional()->paragraph(),
-            'decision' => $this->faker->optional()->randomElement(['proceed', 'reject', 'hold']),
+            'decision' => $this->faker->optional()->randomElement([InterviewDecision::PROCEED, InterviewDecision::REJECT, InterviewDecision::HOLD]),
             'notes' => $this->faker->optional()->paragraph(),
         ];
     }

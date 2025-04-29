@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\CodingChallenge;
 use App\Models\JobOpening;
+use App\Models\CodingChallenge;
 use Illuminate\Database\Seeder;
+use App\Enums\CodingChallengeDifficulty;
 
 class CodingChallengeSeeder extends Seeder
 {
@@ -37,7 +38,7 @@ Requirements:
 - Document the API',
                 'repository_url' => 'https://github.com/example/task-api',
                 'time_limit' => 120,
-                'difficulty' => 'medium',
+                'difficulty' => CodingChallengeDifficulty::MEDIUM,
             ],
             [
                 'title' => 'Frontend Dashboard',
@@ -57,7 +58,7 @@ Requirements:
 - Optimize performance',
                 'repository_url' => 'https://github.com/example/dashboard',
                 'time_limit' => 180,
-                'difficulty' => 'hard',
+                'difficulty' => CodingChallengeDifficulty::HARD,
             ],
             [
                 'title' => 'Database Optimization',
@@ -77,7 +78,7 @@ Requirements:
 - Ensure data consistency',
                 'repository_url' => 'https://github.com/example/db-optimization',
                 'time_limit' => 90,
-                'difficulty' => 'medium',
+                'difficulty' => CodingChallengeDifficulty::MEDIUM,
             ],
         ];
 

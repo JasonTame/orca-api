@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Enums\JobSkillImportance;
 use App\Models\Company;
 use App\Models\CompanyMember;
 use App\Models\JobOpening;
@@ -40,7 +41,7 @@ class JobOpeningSeeder extends Seeder
                             'job_opening_id' => $jobOpening->id,
                             'skill_id' => $skill->id,
                             'is_required' => rand(0, 1) === 1,
-                            'importance' => fake()->randomElement(['low', 'medium', 'high', 'critical']),
+                            'importance' => JobSkillImportance::random(),
                         ]);
                     }
                 });

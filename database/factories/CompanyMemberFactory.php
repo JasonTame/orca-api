@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Company;
 use App\Models\CompanyMember;
+use App\Enums\CompanyMemberStatus;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -30,7 +31,7 @@ class CompanyMemberFactory extends Factory
             'is_hiring_manager' => $this->faker->boolean(),
             'is_recruiter' => $this->faker->boolean(),
             'is_interviewer' => $this->faker->boolean(),
-            'status' => $this->faker->randomElement(['active', 'inactive']),
+            'status' => CompanyMemberStatus::random(),
         ];
     }
 }

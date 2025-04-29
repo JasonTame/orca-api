@@ -2,8 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\CodingChallenge;
 use App\Models\JobOpening;
+use App\Models\CodingChallenge;
+use App\Enums\CodingChallengeDifficulty;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CodingChallengeFactory extends Factory
@@ -19,7 +20,7 @@ class CodingChallengeFactory extends Factory
             'instructions' => $this->faker->paragraphs(3, true),
             'repository_url' => $this->faker->url(),
             'time_limit' => $this->faker->numberBetween(30, 180),
-            'difficulty' => $this->faker->randomElement(['easy', 'medium', 'hard']),
+            'difficulty' => CodingChallengeDifficulty::random(),
         ];
     }
 }

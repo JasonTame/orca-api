@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Enums\CandidateSkillProficiency;
 use App\Models\Candidate;
 use App\Models\CandidateSkill;
 use App\Models\TechSkill;
@@ -27,7 +28,7 @@ class CandidateSeeder extends Seeder
                     CandidateSkill::factory()->create([
                         'candidate_id' => $candidate->id,
                         'skill_id' => $skill->id,
-                        'proficiency' => fake()->randomElement(['beginner', 'intermediate', 'advanced', 'expert']),
+                        'proficiency' => CandidateSkillProficiency::random(),
                         'years_experience' => fake()->numberBetween(0, 20),
                     ]);
                 }

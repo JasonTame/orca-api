@@ -3,6 +3,9 @@
 namespace Database\Factories;
 
 use App\Models\Candidate;
+use App\Enums\ReferralSource;
+use App\Enums\CandidateSource;
+use App\Enums\CandidateStatus;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CandidateFactory extends Factory
@@ -33,9 +36,9 @@ class CandidateFactory extends Factory
             ]),
             'current_company' => $this->faker->company(),
             'desired_salary' => $this->faker->numberBetween(50000, 200000),
-            'source' => $this->faker->randomElement(['linkedin', 'indeed', 'referral', 'career_site', 'other']),
+            'source' => CandidateSource::random(),
             'notes' => $this->faker->paragraph(),
-            'status' => $this->faker->randomElement(['active', 'inactive', 'hired', 'rejected']),
+            'status' => CandidateStatus::random(),
         ];
     }
 }

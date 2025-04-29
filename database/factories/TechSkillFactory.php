@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\TechSkill;
+use App\Enums\TechSkillCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TechSkillFactory extends Factory
@@ -13,8 +14,8 @@ class TechSkillFactory extends Factory
     {
         return [
             'name' => $this->faker->unique()->word(),
-            'category' => $this->faker->randomElement(['language', 'framework', 'database', 'tool', 'platform']),
-            'parent_skill_id' => null, // Can be set manually when needed
+            'category' => TechSkillCategory::random(),
+            'parent_skill_id' => null,
         ];
     }
 

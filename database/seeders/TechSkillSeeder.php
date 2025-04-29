@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\TechSkill;
 use Illuminate\Database\Seeder;
+use App\Enums\TechSkillCategory;
 
 class TechSkillSeeder extends Seeder
 {
@@ -34,7 +35,7 @@ class TechSkillSeeder extends Seeder
         foreach ($languages as $language) {
             TechSkill::create([
                 'name' => $language,
-                'category' => 'language',
+                'category' => TechSkillCategory::LANGUAGE,
                 'is_language' => true,
                 'is_framework' => false,
                 'is_tool' => false,
@@ -58,7 +59,7 @@ class TechSkillSeeder extends Seeder
         foreach ($frameworks as $framework) {
             TechSkill::create([
                 'name' => $framework,
-                'category' => 'framework',
+                'category' => TechSkillCategory::FRAMEWORK,
                 'is_language' => false,
                 'is_framework' => true,
                 'is_tool' => false,
@@ -81,7 +82,7 @@ class TechSkillSeeder extends Seeder
         foreach ($databases as $database) {
             TechSkill::create([
                 'name' => $database,
-                'category' => 'database',
+                'category' => TechSkillCategory::DATABASE,
                 'is_language' => false,
                 'is_framework' => false,
                 'is_tool' => false,
@@ -102,7 +103,7 @@ class TechSkillSeeder extends Seeder
         foreach ($tools as $tool) {
             TechSkill::create([
                 'name' => $tool,
-                'category' => 'tool',
+                'category' => TechSkillCategory::TOOL,
                 'is_language' => false,
                 'is_framework' => false,
                 'is_tool' => true,
@@ -126,7 +127,7 @@ class TechSkillSeeder extends Seeder
         foreach ($platforms as $platform) {
             TechSkill::create([
                 'name' => $platform,
-                'category' => 'platform',
+                'category' => TechSkillCategory::PLATFORM,
                 'is_language' => false,
                 'is_framework' => false,
                 'is_tool' => false,

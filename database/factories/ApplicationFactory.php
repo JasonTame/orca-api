@@ -2,10 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\Application;
 use App\Models\Candidate;
-use App\Models\InterviewStage;
 use App\Models\JobOpening;
+use App\Models\Application;
+use App\Enums\ReferralSource;
+use App\Models\InterviewStage;
+use App\Enums\ApplicationStatus;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ApplicationFactory extends Factory
@@ -18,11 +20,11 @@ class ApplicationFactory extends Factory
             'job_opening_id' => JobOpening::factory(),
             'candidate_id' => Candidate::factory(),
             'code_sample_url' => $this->faker->optional()->url(),
-            'status' => $this->faker->randomElement(['pending', 'reviewing', 'interviewing', 'offered', 'accepted', 'rejected']),
+            'status' => ApplicationStatus::random(),
             'current_stage_id' => InterviewStage::factory(),
             'rejection_reason' => $this->faker->optional()->sentence(),
             'notes' => $this->faker->optional()->paragraph(),
-            'referral_source' => $this->faker->optional()->word(),
+            'referral_source' => ReferralSource::random(),
             'applied_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
         ];
     }

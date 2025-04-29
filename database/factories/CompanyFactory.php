@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use App\Models\Company;
+use App\Enums\CompanySize;
+use App\Enums\CompanyStatus;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CompanyFactory extends Factory
@@ -16,10 +18,10 @@ class CompanyFactory extends Factory
             'logo_url' => $this->faker->imageUrl(),
             'website' => $this->faker->url(),
             'industry' => $this->faker->word(),
-            'size' => $this->faker->randomElement(['small', 'medium', 'large', 'enterprise']),
+            'size' => CompanySize::random(),
             'description' => $this->faker->paragraph(),
             'location' => $this->faker->city(),
-            'status' => $this->faker->randomElement(['active', 'inactive']),
+            'status' => CompanyStatus::random(),
         ];
     }
 }

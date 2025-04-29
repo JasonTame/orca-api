@@ -3,8 +3,9 @@
 namespace Database\Factories;
 
 use App\Models\Candidate;
-use App\Models\CandidateSkill;
 use App\Models\TechSkill;
+use App\Models\CandidateSkill;
+use App\Enums\CandidateSkillProficiency;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CandidateSkillFactory extends Factory
@@ -16,7 +17,7 @@ class CandidateSkillFactory extends Factory
         return [
             'candidate_id' => Candidate::factory(),
             'skill_id' => TechSkill::factory(),
-            'proficiency' => $this->faker->randomElement(['beginner', 'intermediate', 'advanced', 'expert']),
+            'proficiency' => CandidateSkillProficiency::random(),
             'years_experience' => $this->faker->numberBetween(0, 20),
         ];
     }
