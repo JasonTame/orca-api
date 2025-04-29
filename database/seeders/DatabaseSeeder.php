@@ -18,7 +18,10 @@ class DatabaseSeeder extends Seeder
             CompanyMemberSeeder::class,
             CandidateSeeder::class,
             JobOpeningSeeder::class,
+            InterviewStageSeeder::class,
             CodingChallengeSeeder::class,
+            ApplicationSeeder::class,
+            InterviewSeeder::class,
         ]);
     }
 }

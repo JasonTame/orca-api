@@ -17,7 +17,7 @@ class CandidateSeeder extends Seeder
         $techSkills = TechSkill::all();
 
         Candidate::factory()
-            ->count(10)
+            ->count(20)
             ->create()
             ->each(function ($candidate) use ($techSkills) {
                 $numberOfSkills = rand(1, 3);
