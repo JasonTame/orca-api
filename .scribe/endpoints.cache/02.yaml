@@ -12,7 +12,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'List all company members'
       description: ''
       authenticated: true
       custom: []
@@ -55,7 +55,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Create a new company member'
       description: ''
       authenticated: true
       custom: []
@@ -70,9 +70,9 @@ endpoints:
     bodyParameters:
       company_id:
         name: company_id
-        description: 'The <code>id</code> of an existing record in the companies table.'
+        description: 'The ID of the company'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -80,9 +80,9 @@ endpoints:
         custom: []
       name:
         name: name
-        description: 'Must not be greater than 255 characters.'
+        description: 'Full name of the company member'
         required: true
-        example: 'n'
+        example: 'Jane Smith'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -90,9 +90,9 @@ endpoints:
         custom: []
       email:
         name: email
-        description: 'Must be a valid email address.'
+        description: 'Email address of the company member'
         required: true
-        example: ashly64@example.com
+        example: jane.smith@company.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -100,9 +100,9 @@ endpoints:
         custom: []
       position:
         name: position
-        description: 'Must not be greater than 255 characters.'
+        description: 'Job position within the company'
         required: true
-        example: v
+        example: 'Senior Recruiter'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -110,9 +110,9 @@ endpoints:
         custom: []
       department:
         name: department
-        description: 'Must not be greater than 255 characters.'
+        description: 'Department within the company'
         required: true
-        example: d
+        example: 'Human Resources'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -120,9 +120,9 @@ endpoints:
         custom: []
       phone:
         name: phone
-        description: 'Must not be greater than 255 characters.'
+        description: 'Contact phone number'
         required: true
-        example: l
+        example: '+1 (555) 123-4567'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -130,8 +130,8 @@ endpoints:
         custom: []
       is_hiring_manager:
         name: is_hiring_manager
-        description: ''
-        required: false
+        description: 'Whether this member is a hiring manager'
+        required: true
         example: true
         type: boolean
         enumValues: []
@@ -140,8 +140,8 @@ endpoints:
         custom: []
       is_recruiter:
         name: is_recruiter
-        description: ''
-        required: false
+        description: 'Whether this member is a recruiter'
+        required: true
         example: true
         type: boolean
         enumValues: []
@@ -150,9 +150,9 @@ endpoints:
         custom: []
       is_interviewer:
         name: is_interviewer
-        description: ''
-        required: false
-        example: true
+        description: 'Whether this member conducts interviews'
+        required: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -160,24 +160,27 @@ endpoints:
         custom: []
       status:
         name: status
-        description: ''
-        required: false
-        example: null
+        description: 'Status of the company member'
+        required: true
+        example: active
         type: string
-        enumValues: []
+        enumValues:
+          - active
+          - inactive
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      company_id: 16
-      name: 'n'
-      email: ashly64@example.com
-      position: v
-      department: d
-      phone: l
+      company_id: 1
+      name: 'Jane Smith'
+      email: jane.smith@company.com
+      position: 'Senior Recruiter'
+      department: 'Human Resources'
+      phone: '+1 (555) 123-4567'
       is_hiring_manager: true
       is_recruiter: true
-      is_interviewer: true
+      is_interviewer: false
+      status: active
     fileParameters: []
     responses: []
     responseFields: []
@@ -198,7 +201,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get a single company member'
       description: ''
       authenticated: true
       custom: []
@@ -253,7 +256,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Update a company member'
       description: ''
       authenticated: true
       custom: []
@@ -279,19 +282,19 @@ endpoints:
     bodyParameters:
       company_id:
         name: company_id
-        description: 'The <code>id</code> of an existing record in the companies table.'
+        description: 'The ID of the company'
         required: true
-        example: architecto
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
       name:
         name: name
-        description: 'Must not be greater than 255 characters.'
+        description: 'Full name of the company member'
         required: true
-        example: 'n'
+        example: 'Jane Smith Updated'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -299,9 +302,9 @@ endpoints:
         custom: []
       email:
         name: email
-        description: ''
-        required: false
-        example: null
+        description: 'Email address of the company member'
+        required: true
+        example: jane.updated@company.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -309,9 +312,9 @@ endpoints:
         custom: []
       position:
         name: position
-        description: 'Must not be greater than 255 characters.'
+        description: 'Job position within the company'
         required: true
-        example: g
+        example: 'Lead Recruiter'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -319,9 +322,9 @@ endpoints:
         custom: []
       department:
         name: department
-        description: 'Must not be greater than 255 characters.'
+        description: 'Department within the company'
         required: true
-        example: z
+        example: 'Talent Acquisition'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -329,9 +332,9 @@ endpoints:
         custom: []
       phone:
         name: phone
-        description: 'Must not be greater than 255 characters.'
+        description: 'Contact phone number'
         required: true
-        example: m
+        example: '+1 (555) 987-6543'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -339,9 +342,9 @@ endpoints:
         custom: []
       is_hiring_manager:
         name: is_hiring_manager
-        description: ''
-        required: false
-        example: false
+        description: 'Whether this member is a hiring manager'
+        required: true
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -349,8 +352,8 @@ endpoints:
         custom: []
       is_recruiter:
         name: is_recruiter
-        description: ''
-        required: false
+        description: 'Whether this member is a recruiter'
+        required: true
         example: true
         type: boolean
         enumValues: []
@@ -359,9 +362,9 @@ endpoints:
         custom: []
       is_interviewer:
         name: is_interviewer
-        description: ''
-        required: false
-        example: false
+        description: 'Whether this member conducts interviews'
+        required: true
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -369,23 +372,27 @@ endpoints:
         custom: []
       status:
         name: status
-        description: ''
-        required: false
-        example: null
+        description: 'Status of the company member'
+        required: true
+        example: active
         type: string
-        enumValues: []
+        enumValues:
+          - active
+          - inactive
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      company_id: architecto
-      name: 'n'
-      position: g
-      department: z
-      phone: m
-      is_hiring_manager: false
+      company_id: 1
+      name: 'Jane Smith Updated'
+      email: jane.updated@company.com
+      position: 'Lead Recruiter'
+      department: 'Talent Acquisition'
+      phone: '+1 (555) 987-6543'
+      is_hiring_manager: true
       is_recruiter: true
-      is_interviewer: false
+      is_interviewer: true
+      status: active
     fileParameters: []
     responses: []
     responseFields: []
@@ -406,7 +413,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Delete a company member'
       description: ''
       authenticated: true
       custom: []
@@ -451,7 +458,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get all job openings for a company member'
       description: ''
       authenticated: true
       custom: []
@@ -505,7 +512,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get all interviews for a company member'
       description: ''
       authenticated: true
       custom: []

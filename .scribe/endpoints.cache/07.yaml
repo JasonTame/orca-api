@@ -12,7 +12,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'List all coding challenges'
       description: ''
       authenticated: true
       custom: []
@@ -55,7 +55,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Create a new coding challenge'
       description: ''
       authenticated: true
       custom: []
@@ -70,9 +70,9 @@ endpoints:
     bodyParameters:
       job_opening_id:
         name: job_opening_id
-        description: 'The <code>id</code> of an existing record in the job_openings table.'
+        description: 'The ID of the job opening'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -80,9 +80,9 @@ endpoints:
         custom: []
       title:
         name: title
-        description: 'Must not be greater than 255 characters.'
+        description: 'Title of the coding challenge'
         required: true
-        example: 'n'
+        example: 'API Integration Challenge'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -90,9 +90,9 @@ endpoints:
         custom: []
       description:
         name: description
-        description: ''
+        description: 'Description of the challenge'
         required: true
-        example: 'Eius et animi quos velit et.'
+        example: 'Build a REST API integration with third-party service'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -100,9 +100,9 @@ endpoints:
         custom: []
       instructions:
         name: instructions
-        description: ''
+        description: 'Detailed instructions for completing the challenge'
         required: true
-        example: architecto
+        example: 'Clone the repository and implement the missing endpoints according to the specification'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -110,9 +110,9 @@ endpoints:
         custom: []
       repository_url:
         name: repository_url
-        description: 'Must be a valid URL.'
+        description: 'URL to the challenge repository'
         required: true
-        example: 'http://bailey.com/'
+        example: 'https://github.com/company/coding-challenge'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -120,9 +120,9 @@ endpoints:
         custom: []
       time_limit:
         name: time_limit
-        description: 'Must be at least 1.'
+        description: 'Time limit in hours'
         required: true
-        example: 27
+        example: 24
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -130,21 +130,25 @@ endpoints:
         custom: []
       difficulty:
         name: difficulty
-        description: ''
-        required: false
-        example: null
+        description: 'Difficulty level of the challenge'
+        required: true
+        example: medium
         type: string
-        enumValues: []
+        enumValues:
+          - easy
+          - medium
+          - hard
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      job_opening_id: 16
-      title: 'n'
-      description: 'Eius et animi quos velit et.'
-      instructions: architecto
-      repository_url: 'http://bailey.com/'
-      time_limit: 27
+      job_opening_id: 1
+      title: 'API Integration Challenge'
+      description: 'Build a REST API integration with third-party service'
+      instructions: 'Clone the repository and implement the missing endpoints according to the specification'
+      repository_url: 'https://github.com/company/coding-challenge'
+      time_limit: 24
+      difficulty: medium
     fileParameters: []
     responses: []
     responseFields: []
@@ -165,7 +169,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get a single coding challenge'
       description: ''
       authenticated: true
       custom: []
@@ -220,7 +224,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Update a coding challenge'
       description: ''
       authenticated: true
       custom: []
@@ -246,19 +250,19 @@ endpoints:
     bodyParameters:
       job_opening_id:
         name: job_opening_id
-        description: 'The <code>id</code> of an existing record in the job_openings table.'
+        description: 'The ID of the job opening'
         required: true
-        example: architecto
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
       title:
         name: title
-        description: 'Must not be greater than 255 characters.'
+        description: 'Title of the coding challenge'
         required: true
-        example: 'n'
+        example: 'Updated API Challenge'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -266,9 +270,9 @@ endpoints:
         custom: []
       description:
         name: description
-        description: ''
+        description: 'Description of the challenge'
         required: true
-        example: 'Eius et animi quos velit et.'
+        example: 'Build a REST API integration with authentication'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -276,9 +280,9 @@ endpoints:
         custom: []
       instructions:
         name: instructions
-        description: ''
+        description: 'Detailed instructions for completing the challenge'
         required: true
-        example: architecto
+        example: 'Clone the repository and implement the missing endpoints following OAuth2 spec'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -286,9 +290,9 @@ endpoints:
         custom: []
       repository_url:
         name: repository_url
-        description: 'Must be a valid URL.'
+        description: 'URL to the challenge repository'
         required: true
-        example: 'http://bailey.com/'
+        example: 'https://github.com/company/updated-coding-challenge'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -296,9 +300,9 @@ endpoints:
         custom: []
       time_limit:
         name: time_limit
-        description: 'Must be at least 1.'
+        description: 'Time limit in hours'
         required: true
-        example: 27
+        example: 48
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -306,21 +310,25 @@ endpoints:
         custom: []
       difficulty:
         name: difficulty
-        description: ''
-        required: false
-        example: null
+        description: 'Difficulty level of the challenge'
+        required: true
+        example: hard
         type: string
-        enumValues: []
+        enumValues:
+          - easy
+          - medium
+          - hard
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      job_opening_id: architecto
-      title: 'n'
-      description: 'Eius et animi quos velit et.'
-      instructions: architecto
-      repository_url: 'http://bailey.com/'
-      time_limit: 27
+      job_opening_id: 1
+      title: 'Updated API Challenge'
+      description: 'Build a REST API integration with authentication'
+      instructions: 'Clone the repository and implement the missing endpoints following OAuth2 spec'
+      repository_url: 'https://github.com/company/updated-coding-challenge'
+      time_limit: 48
+      difficulty: hard
     fileParameters: []
     responses: []
     responseFields: []
@@ -341,7 +349,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Delete a coding challenge'
       description: ''
       authenticated: true
       custom: []

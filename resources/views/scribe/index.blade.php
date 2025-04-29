@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var tryItOutBaseUrl = "http://orca.test";
+        var tryItOutBaseUrl = "https://orca-api.laravel.cloud";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -94,25 +94,25 @@
                 </li>
                                     <ul id="tocify-subheader-candidates" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="candidates-GETapi-candidates">
-                                <a href="#candidates-GETapi-candidates">GET api/candidates</a>
+                                <a href="#candidates-GETapi-candidates">List all candidates</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="candidates-POSTapi-candidates">
-                                <a href="#candidates-POSTapi-candidates">POST api/candidates</a>
+                                <a href="#candidates-POSTapi-candidates">Store a new candidate</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="candidates-GETapi-candidates--id-">
-                                <a href="#candidates-GETapi-candidates--id-">GET api/candidates/{id}</a>
+                                <a href="#candidates-GETapi-candidates--id-">Get a single candidate</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="candidates-PUTapi-candidates--id-">
-                                <a href="#candidates-PUTapi-candidates--id-">PUT api/candidates/{id}</a>
+                                <a href="#candidates-PUTapi-candidates--id-">Update an existing candidate</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="candidates-DELETEapi-candidates--id-">
-                                <a href="#candidates-DELETEapi-candidates--id-">DELETE api/candidates/{id}</a>
+                                <a href="#candidates-DELETEapi-candidates--id-">Delete a candidate</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="candidates-GETapi-candidates--candidate_id--skills">
-                                <a href="#candidates-GETapi-candidates--candidate_id--skills">Get skills for a candidate</a>
+                                <a href="#candidates-GETapi-candidates--candidate_id--skills">Get candidate skills</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="candidates-GETapi-candidates--candidate_id--applications">
-                                <a href="#candidates-GETapi-candidates--candidate_id--applications">Get applications for a candidate</a>
+                                <a href="#candidates-GETapi-candidates--candidate_id--applications">Get candidate applications</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -122,19 +122,19 @@
                 </li>
                                     <ul id="tocify-subheader-coding-challenges" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="coding-challenges-GETapi-coding-challenges">
-                                <a href="#coding-challenges-GETapi-coding-challenges">GET api/coding-challenges</a>
+                                <a href="#coding-challenges-GETapi-coding-challenges">List all coding challenges</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="coding-challenges-POSTapi-coding-challenges">
-                                <a href="#coding-challenges-POSTapi-coding-challenges">POST api/coding-challenges</a>
+                                <a href="#coding-challenges-POSTapi-coding-challenges">Create a new coding challenge</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="coding-challenges-GETapi-coding-challenges--id-">
-                                <a href="#coding-challenges-GETapi-coding-challenges--id-">GET api/coding-challenges/{id}</a>
+                                <a href="#coding-challenges-GETapi-coding-challenges--id-">Get a single coding challenge</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="coding-challenges-PUTapi-coding-challenges--id-">
-                                <a href="#coding-challenges-PUTapi-coding-challenges--id-">PUT api/coding-challenges/{id}</a>
+                                <a href="#coding-challenges-PUTapi-coding-challenges--id-">Update a coding challenge</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="coding-challenges-DELETEapi-coding-challenges--id-">
-                                <a href="#coding-challenges-DELETEapi-coding-challenges--id-">DELETE api/coding-challenges/{id}</a>
+                                <a href="#coding-challenges-DELETEapi-coding-challenges--id-">Delete a coding challenge</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -144,31 +144,31 @@
                 </li>
                                     <ul id="tocify-subheader-companies" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="companies-GETapi-companies">
-                                <a href="#companies-GETapi-companies">GET api/companies</a>
+                                <a href="#companies-GETapi-companies">List all companies</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="companies-POSTapi-companies">
-                                <a href="#companies-POSTapi-companies">POST api/companies</a>
+                                <a href="#companies-POSTapi-companies">Create a new company</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="companies-GETapi-companies--id-">
-                                <a href="#companies-GETapi-companies--id-">GET api/companies/{id}</a>
+                                <a href="#companies-GETapi-companies--id-">Get a single company</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="companies-PUTapi-companies--id-">
-                                <a href="#companies-PUTapi-companies--id-">PUT api/companies/{id}</a>
+                                <a href="#companies-PUTapi-companies--id-">Update a company</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="companies-DELETEapi-companies--id-">
-                                <a href="#companies-DELETEapi-companies--id-">DELETE api/companies/{id}</a>
+                                <a href="#companies-DELETEapi-companies--id-">Delete a company</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="companies-GETapi-companies--company_id--job-openings">
-                                <a href="#companies-GETapi-companies--company_id--job-openings">GET api/companies/{company_id}/job-openings</a>
+                                <a href="#companies-GETapi-companies--company_id--job-openings">Get all job openings for a company</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="companies-GETapi-companies--company_id--members">
-                                <a href="#companies-GETapi-companies--company_id--members">GET api/companies/{company_id}/members</a>
+                                <a href="#companies-GETapi-companies--company_id--members">Get all members for a company</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="companies-GETapi-companies--company_id--hiring-managers">
-                                <a href="#companies-GETapi-companies--company_id--hiring-managers">GET api/companies/{company_id}/hiring-managers</a>
+                                <a href="#companies-GETapi-companies--company_id--hiring-managers">Get all hiring managers for a company</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="companies-GETapi-companies--company_id--interviewers">
-                                <a href="#companies-GETapi-companies--company_id--interviewers">GET api/companies/{company_id}/interviewers</a>
+                                <a href="#companies-GETapi-companies--company_id--interviewers">Get all interviewers for a company</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -178,25 +178,25 @@
                 </li>
                                     <ul id="tocify-subheader-company-members" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="company-members-GETapi-company-members">
-                                <a href="#company-members-GETapi-company-members">GET api/company-members</a>
+                                <a href="#company-members-GETapi-company-members">List all company members</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="company-members-POSTapi-company-members">
-                                <a href="#company-members-POSTapi-company-members">POST api/company-members</a>
+                                <a href="#company-members-POSTapi-company-members">Create a new company member</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="company-members-GETapi-company-members--id-">
-                                <a href="#company-members-GETapi-company-members--id-">GET api/company-members/{id}</a>
+                                <a href="#company-members-GETapi-company-members--id-">Get a single company member</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="company-members-PUTapi-company-members--id-">
-                                <a href="#company-members-PUTapi-company-members--id-">PUT api/company-members/{id}</a>
+                                <a href="#company-members-PUTapi-company-members--id-">Update a company member</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="company-members-DELETEapi-company-members--id-">
-                                <a href="#company-members-DELETEapi-company-members--id-">DELETE api/company-members/{id}</a>
+                                <a href="#company-members-DELETEapi-company-members--id-">Delete a company member</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="company-members-GETapi-company-members--companyMember_id--job-openings">
-                                <a href="#company-members-GETapi-company-members--companyMember_id--job-openings">GET api/company-members/{companyMember_id}/job-openings</a>
+                                <a href="#company-members-GETapi-company-members--companyMember_id--job-openings">Get all job openings for a company member</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="company-members-GETapi-company-members--companyMember_id--interviews">
-                                <a href="#company-members-GETapi-company-members--companyMember_id--interviews">GET api/company-members/{companyMember_id}/interviews</a>
+                                <a href="#company-members-GETapi-company-members--companyMember_id--interviews">Get all interviews for a company member</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -206,19 +206,19 @@
                 </li>
                                     <ul id="tocify-subheader-interviews" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="interviews-GETapi-interviews">
-                                <a href="#interviews-GETapi-interviews">GET api/interviews</a>
+                                <a href="#interviews-GETapi-interviews">List all interviews</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="interviews-POSTapi-interviews">
-                                <a href="#interviews-POSTapi-interviews">POST api/interviews</a>
+                                <a href="#interviews-POSTapi-interviews">Create a new interview</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="interviews-GETapi-interviews--id-">
-                                <a href="#interviews-GETapi-interviews--id-">GET api/interviews/{id}</a>
+                                <a href="#interviews-GETapi-interviews--id-">Get a single interview</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="interviews-PUTapi-interviews--id-">
-                                <a href="#interviews-PUTapi-interviews--id-">PUT api/interviews/{id}</a>
+                                <a href="#interviews-PUTapi-interviews--id-">Update an interview</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="interviews-DELETEapi-interviews--id-">
-                                <a href="#interviews-DELETEapi-interviews--id-">DELETE api/interviews/{id}</a>
+                                <a href="#interviews-DELETEapi-interviews--id-">Delete an interview</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -228,19 +228,19 @@
                 </li>
                                     <ul id="tocify-subheader-job-openings" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="job-openings-GETapi-job-openings">
-                                <a href="#job-openings-GETapi-job-openings">GET api/job-openings</a>
+                                <a href="#job-openings-GETapi-job-openings">List all job openings</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="job-openings-POSTapi-job-openings">
-                                <a href="#job-openings-POSTapi-job-openings">POST api/job-openings</a>
+                                <a href="#job-openings-POSTapi-job-openings">Create a new job opening</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="job-openings-GETapi-job-openings--id-">
-                                <a href="#job-openings-GETapi-job-openings--id-">GET api/job-openings/{id}</a>
+                                <a href="#job-openings-GETapi-job-openings--id-">Get a single job opening</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="job-openings-PUTapi-job-openings--id-">
-                                <a href="#job-openings-PUTapi-job-openings--id-">PUT api/job-openings/{id}</a>
+                                <a href="#job-openings-PUTapi-job-openings--id-">Update a job opening</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="job-openings-DELETEapi-job-openings--id-">
-                                <a href="#job-openings-DELETEapi-job-openings--id-">DELETE api/job-openings/{id}</a>
+                                <a href="#job-openings-DELETEapi-job-openings--id-">Delete a job opening</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -250,22 +250,22 @@
                 </li>
                                     <ul id="tocify-subheader-tech-skills" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="tech-skills-GETapi-tech-skills-categories">
-                                <a href="#tech-skills-GETapi-tech-skills-categories">GET api/tech-skills/categories</a>
+                                <a href="#tech-skills-GETapi-tech-skills-categories">Get all tech skill categories</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="tech-skills-GETapi-tech-skills">
-                                <a href="#tech-skills-GETapi-tech-skills">GET api/tech-skills</a>
+                                <a href="#tech-skills-GETapi-tech-skills">List all tech skills</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="tech-skills-POSTapi-tech-skills">
-                                <a href="#tech-skills-POSTapi-tech-skills">POST api/tech-skills</a>
+                                <a href="#tech-skills-POSTapi-tech-skills">Create a new tech skill</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="tech-skills-GETapi-tech-skills--id-">
-                                <a href="#tech-skills-GETapi-tech-skills--id-">GET api/tech-skills/{id}</a>
+                                <a href="#tech-skills-GETapi-tech-skills--id-">Get a single tech skill</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="tech-skills-PUTapi-tech-skills--id-">
-                                <a href="#tech-skills-PUTapi-tech-skills--id-">PUT api/tech-skills/{id}</a>
+                                <a href="#tech-skills-PUTapi-tech-skills--id-">Update a tech skill</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="tech-skills-DELETEapi-tech-skills--id-">
-                                <a href="#tech-skills-DELETEapi-tech-skills--id-">DELETE api/tech-skills/{id}</a>
+                                <a href="#tech-skills-DELETEapi-tech-skills--id-">Delete a tech skill</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -287,7 +287,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://orca.test</code>
+    <strong>Base URL</strong>: <code>https://orca-api.laravel.cloud</code>
 </aside>
 <pre><code>This documentation aims to provide all the information you need to work with our API.
 
@@ -316,7 +316,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/applications" \
+    --get "https://orca-api.laravel.cloud/api/applications" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -324,7 +324,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/applications"
+    "https://orca-api.laravel.cloud/api/applications"
 );
 
 const headers = {
@@ -454,7 +454,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://orca.test/api/applications" \
+    "https://orca-api.laravel.cloud/api/applications" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -474,7 +474,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/applications"
+    "https://orca-api.laravel.cloud/api/applications"
 );
 
 const headers = {
@@ -705,7 +705,7 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/applications/1" \
+    --get "https://orca-api.laravel.cloud/api/applications/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -713,7 +713,7 @@ Must be one of:
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/applications/1"
+    "https://orca-api.laravel.cloud/api/applications/1"
 );
 
 const headers = {
@@ -855,7 +855,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://orca.test/api/applications/1" \
+    "https://orca-api.laravel.cloud/api/applications/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -875,7 +875,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/applications/1"
+    "https://orca-api.laravel.cloud/api/applications/1"
 );
 
 const headers = {
@@ -1122,7 +1122,7 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://orca.test/api/applications/1" \
+    "https://orca-api.laravel.cloud/api/applications/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1130,7 +1130,7 @@ Must be one of:
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/applications/1"
+    "https://orca-api.laravel.cloud/api/applications/1"
 );
 
 const headers = {
@@ -1246,7 +1246,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     
 
-                                <h2 id="candidates-GETapi-candidates">GET api/candidates</h2>
+                                <h2 id="candidates-GETapi-candidates">List all candidates</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -1260,7 +1260,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/candidates" \
+    --get "https://orca-api.laravel.cloud/api/candidates" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1268,7 +1268,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/candidates"
+    "https://orca-api.laravel.cloud/api/candidates"
 );
 
 const headers = {
@@ -1384,7 +1384,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="candidates-POSTapi-candidates">POST api/candidates</h2>
+                    <h2 id="candidates-POSTapi-candidates">Store a new candidate</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -1398,31 +1398,33 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://orca.test/api/candidates" \
+    "https://orca-api.laravel.cloud/api/candidates" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"first_name\": \"b\",
-    \"last_name\": \"n\",
-    \"email\": \"ashly64@example.com\",
-    \"phone\": \"vdljnikhwaykcmyu\",
-    \"location\": \"w\",
-    \"resume_url\": \"https:\\/\\/cronin.com\\/incidunt-iure-odit-et-et-modi-ipsum.html\",
-    \"portfolio_url\": \"http:\\/\\/www.predovic.biz\\/consequatur-aut-dolores-enim-non-facere-tempora.html\",
-    \"linkedin_url\": \"http:\\/\\/www.leffler.info\\/quis-adipisci-molestias-fugit-deleniti-distinctio-eum\",
-    \"years_experience\": 15,
-    \"current_position\": \"p\",
-    \"current_company\": \"w\",
-    \"desired_salary\": 16,
-    \"notes\": \"architecto\"
+    \"first_name\": \"John\",
+    \"last_name\": \"Doe\",
+    \"email\": \"john.doe@example.com\",
+    \"phone\": \"+1234567890\",
+    \"location\": \"San Francisco, CA\",
+    \"resume_url\": \"https:\\/\\/example.com\\/resume.pdf\",
+    \"portfolio_url\": \"https:\\/\\/portfolio.johnde.com\",
+    \"linkedin_url\": \"https:\\/\\/linkedin.com\\/in\\/johndoe\",
+    \"years_experience\": 5,
+    \"current_position\": \"Senior Developer\",
+    \"current_company\": \"Tech Corp\",
+    \"desired_salary\": 120000,
+    \"source\": \"linkedin\",
+    \"notes\": \"Great communication skills\",
+    \"status\": \"new\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/candidates"
+    "https://orca-api.laravel.cloud/api/candidates"
 );
 
 const headers = {
@@ -1432,19 +1434,21 @@ const headers = {
 };
 
 let body = {
-    "first_name": "b",
-    "last_name": "n",
-    "email": "ashly64@example.com",
-    "phone": "vdljnikhwaykcmyu",
-    "location": "w",
-    "resume_url": "https:\/\/cronin.com\/incidunt-iure-odit-et-et-modi-ipsum.html",
-    "portfolio_url": "http:\/\/www.predovic.biz\/consequatur-aut-dolores-enim-non-facere-tempora.html",
-    "linkedin_url": "http:\/\/www.leffler.info\/quis-adipisci-molestias-fugit-deleniti-distinctio-eum",
-    "years_experience": 15,
-    "current_position": "p",
-    "current_company": "w",
-    "desired_salary": 16,
-    "notes": "architecto"
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john.doe@example.com",
+    "phone": "+1234567890",
+    "location": "San Francisco, CA",
+    "resume_url": "https:\/\/example.com\/resume.pdf",
+    "portfolio_url": "https:\/\/portfolio.johnde.com",
+    "linkedin_url": "https:\/\/linkedin.com\/in\/johndoe",
+    "years_experience": 5,
+    "current_position": "Senior Developer",
+    "current_company": "Tech Corp",
+    "desired_salary": 120000,
+    "source": "linkedin",
+    "notes": "Great communication skills",
+    "status": "new"
 };
 
 fetch(url, {
@@ -1544,10 +1548,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="first_name"                data-endpoint="POSTapi-candidates"
-               value="b"
+               value="John"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+<p>First name of the candidate Example: <code>John</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -1555,10 +1559,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="POSTapi-candidates"
-               value="n"
+               value="Doe"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+<p>Last name of the candidate Example: <code>Doe</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -1566,146 +1570,150 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-candidates"
-               value="ashly64@example.com"
+               value="john.doe@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>ashly64@example.com</code></p>
+<p>Email address of the candidate Example: <code>john.doe@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="POSTapi-candidates"
-               value="vdljnikhwaykcmyu"
+               value="+1234567890"
                data-component="body">
     <br>
-<p>Must not be greater than 20 characters. Example: <code>vdljnikhwaykcmyu</code></p>
+<p>Phone number of the candidate Example: <code>+1234567890</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="POSTapi-candidates"
-               value="w"
+               value="San Francisco, CA"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>w</code></p>
+<p>Location of the candidate Example: <code>San Francisco, CA</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>resume_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="resume_url"                data-endpoint="POSTapi-candidates"
-               value="https://cronin.com/incidunt-iure-odit-et-et-modi-ipsum.html"
+               value="https://example.com/resume.pdf"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>https://cronin.com/incidunt-iure-odit-et-et-modi-ipsum.html</code></p>
+<p>URL to the candidate's resume Example: <code>https://example.com/resume.pdf</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>portfolio_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="portfolio_url"                data-endpoint="POSTapi-candidates"
-               value="http://www.predovic.biz/consequatur-aut-dolores-enim-non-facere-tempora.html"
+               value="https://portfolio.johnde.com"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://www.predovic.biz/consequatur-aut-dolores-enim-non-facere-tempora.html</code></p>
+<p>URL to the candidate's portfolio Example: <code>https://portfolio.johnde.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>linkedin_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="linkedin_url"                data-endpoint="POSTapi-candidates"
-               value="http://www.leffler.info/quis-adipisci-molestias-fugit-deleniti-distinctio-eum"
+               value="https://linkedin.com/in/johndoe"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://www.leffler.info/quis-adipisci-molestias-fugit-deleniti-distinctio-eum</code></p>
+<p>URL to the candidate's LinkedIn profile Example: <code>https://linkedin.com/in/johndoe</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>years_experience</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="years_experience"                data-endpoint="POSTapi-candidates"
-               value="15"
+               value="5"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>15</code></p>
+<p>Years of professional experience Example: <code>5</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>current_position</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="current_position"                data-endpoint="POSTapi-candidates"
-               value="p"
+               value="Senior Developer"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>p</code></p>
+<p>Current job position Example: <code>Senior Developer</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>current_company</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="current_company"                data-endpoint="POSTapi-candidates"
-               value="w"
+               value="Tech Corp"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>w</code></p>
+<p>Current employer Example: <code>Tech Corp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>desired_salary</code></b>&nbsp;&nbsp;
 <small>number</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="desired_salary"                data-endpoint="POSTapi-candidates"
-               value="16"
+               value="120000"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>16</code></p>
+<p>Desired salary Example: <code>120000</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>source</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="source"                data-endpoint="POSTapi-candidates"
-               value=""
+               value="linkedin"
                data-component="body">
     <br>
-
+<p>Source of the candidate Example: <code>linkedin</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>linkedin</code></li> <li><code>indeed</code></li> <li><code>referral</code></li> <li><code>career_site</code></li> <li><code>other</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="notes"                data-endpoint="POSTapi-candidates"
-               value="architecto"
+               value="Great communication skills"
                data-component="body">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Additional notes about the candidate Example: <code>Great communication skills</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-candidates"
-               value=""
+               value="new"
                data-component="body">
     <br>
-
+<p>Status of the candidate Example: <code>new</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>active</code></li> <li><code>inactive</code></li> <li><code>hired</code></li> <li><code>rejected</code></li></ul>
         </div>
         </form>
 
-                    <h2 id="candidates-GETapi-candidates--id-">GET api/candidates/{id}</h2>
+                    <h2 id="candidates-GETapi-candidates--id-">Get a single candidate</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -1719,7 +1727,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/candidates/1" \
+    --get "https://orca-api.laravel.cloud/api/candidates/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1727,7 +1735,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/candidates/1"
+    "https://orca-api.laravel.cloud/api/candidates/1"
 );
 
 const headers = {
@@ -1855,7 +1863,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="candidates-PUTapi-candidates--id-">PUT api/candidates/{id}</h2>
+                    <h2 id="candidates-PUTapi-candidates--id-">Update an existing candidate</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -1869,30 +1877,33 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://orca.test/api/candidates/1" \
+    "https://orca-api.laravel.cloud/api/candidates/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"first_name\": \"b\",
-    \"last_name\": \"n\",
-    \"phone\": \"gzmiyvdljnikhway\",
-    \"location\": \"k\",
-    \"resume_url\": \"http:\\/\\/www.cruickshank.com\\/adipisci-quidem-nostrum-qui-commodi-incidunt-iure\",
-    \"portfolio_url\": \"https:\\/\\/mclaughlin.com\\/ipsum-nostrum-omnis-autem-et-consequatur-aut-dolores-enim.html\",
-    \"linkedin_url\": \"http:\\/\\/vonrueden.com\\/\",
-    \"years_experience\": 84,
-    \"current_position\": \"u\",
-    \"current_company\": \"j\",
-    \"desired_salary\": 87,
-    \"notes\": \"architecto\"
+    \"first_name\": \"John\",
+    \"last_name\": \"Doe\",
+    \"email\": \"john.doe@example.com\",
+    \"phone\": \"+1234567890\",
+    \"location\": \"San Francisco, CA\",
+    \"resume_url\": \"https:\\/\\/example.com\\/resume.pdf\",
+    \"portfolio_url\": \"https:\\/\\/portfolio.johnde.com\",
+    \"linkedin_url\": \"https:\\/\\/linkedin.com\\/in\\/johndoe\",
+    \"years_experience\": 5,
+    \"current_position\": \"Senior Developer\",
+    \"current_company\": \"Tech Corp\",
+    \"desired_salary\": 120000,
+    \"source\": \"linkedin\",
+    \"notes\": \"Great communication skills\",
+    \"status\": \"interviewing\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/candidates/1"
+    "https://orca-api.laravel.cloud/api/candidates/1"
 );
 
 const headers = {
@@ -1902,18 +1913,21 @@ const headers = {
 };
 
 let body = {
-    "first_name": "b",
-    "last_name": "n",
-    "phone": "gzmiyvdljnikhway",
-    "location": "k",
-    "resume_url": "http:\/\/www.cruickshank.com\/adipisci-quidem-nostrum-qui-commodi-incidunt-iure",
-    "portfolio_url": "https:\/\/mclaughlin.com\/ipsum-nostrum-omnis-autem-et-consequatur-aut-dolores-enim.html",
-    "linkedin_url": "http:\/\/vonrueden.com\/",
-    "years_experience": 84,
-    "current_position": "u",
-    "current_company": "j",
-    "desired_salary": 87,
-    "notes": "architecto"
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john.doe@example.com",
+    "phone": "+1234567890",
+    "location": "San Francisco, CA",
+    "resume_url": "https:\/\/example.com\/resume.pdf",
+    "portfolio_url": "https:\/\/portfolio.johnde.com",
+    "linkedin_url": "https:\/\/linkedin.com\/in\/johndoe",
+    "years_experience": 5,
+    "current_position": "Senior Developer",
+    "current_company": "Tech Corp",
+    "desired_salary": 120000,
+    "source": "linkedin",
+    "notes": "Great communication skills",
+    "status": "interviewing"
 };
 
 fetch(url, {
@@ -2029,10 +2043,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="first_name"                data-endpoint="PUTapi-candidates--id-"
-               value="b"
+               value="John"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+<p>First name of the candidate Example: <code>John</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -2040,157 +2054,161 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="PUTapi-candidates--id-"
-               value="n"
+               value="Doe"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+<p>Last name of the candidate Example: <code>Doe</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTapi-candidates--id-"
-               value=""
+               value="john.doe@example.com"
                data-component="body">
     <br>
-
+<p>Email address of the candidate Example: <code>john.doe@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="PUTapi-candidates--id-"
-               value="gzmiyvdljnikhway"
+               value="+1234567890"
                data-component="body">
     <br>
-<p>Must not be greater than 20 characters. Example: <code>gzmiyvdljnikhway</code></p>
+<p>Phone number of the candidate Example: <code>+1234567890</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="PUTapi-candidates--id-"
-               value="k"
+               value="San Francisco, CA"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>k</code></p>
+<p>Location of the candidate Example: <code>San Francisco, CA</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>resume_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="resume_url"                data-endpoint="PUTapi-candidates--id-"
-               value="http://www.cruickshank.com/adipisci-quidem-nostrum-qui-commodi-incidunt-iure"
+               value="https://example.com/resume.pdf"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://www.cruickshank.com/adipisci-quidem-nostrum-qui-commodi-incidunt-iure</code></p>
+<p>URL to the candidate's resume Example: <code>https://example.com/resume.pdf</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>portfolio_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="portfolio_url"                data-endpoint="PUTapi-candidates--id-"
-               value="https://mclaughlin.com/ipsum-nostrum-omnis-autem-et-consequatur-aut-dolores-enim.html"
+               value="https://portfolio.johnde.com"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>https://mclaughlin.com/ipsum-nostrum-omnis-autem-et-consequatur-aut-dolores-enim.html</code></p>
+<p>URL to the candidate's portfolio Example: <code>https://portfolio.johnde.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>linkedin_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="linkedin_url"                data-endpoint="PUTapi-candidates--id-"
-               value="http://vonrueden.com/"
+               value="https://linkedin.com/in/johndoe"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://vonrueden.com/</code></p>
+<p>URL to the candidate's LinkedIn profile Example: <code>https://linkedin.com/in/johndoe</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>years_experience</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="years_experience"                data-endpoint="PUTapi-candidates--id-"
-               value="84"
+               value="5"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>84</code></p>
+<p>Years of professional experience Example: <code>5</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>current_position</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="current_position"                data-endpoint="PUTapi-candidates--id-"
-               value="u"
+               value="Senior Developer"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>u</code></p>
+<p>Current job position Example: <code>Senior Developer</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>current_company</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="current_company"                data-endpoint="PUTapi-candidates--id-"
-               value="j"
+               value="Tech Corp"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>j</code></p>
+<p>Current employer Example: <code>Tech Corp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>desired_salary</code></b>&nbsp;&nbsp;
 <small>number</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="desired_salary"                data-endpoint="PUTapi-candidates--id-"
-               value="87"
+               value="120000"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>87</code></p>
+<p>Desired salary Example: <code>120000</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>source</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="source"                data-endpoint="PUTapi-candidates--id-"
-               value=""
+               value="linkedin"
                data-component="body">
     <br>
-
+<p>Source of the candidate Example: <code>linkedin</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>linkedin</code></li> <li><code>indeed</code></li> <li><code>referral</code></li> <li><code>career_site</code></li> <li><code>other</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="notes"                data-endpoint="PUTapi-candidates--id-"
-               value="architecto"
+               value="Great communication skills"
                data-component="body">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Additional notes about the candidate Example: <code>Great communication skills</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-candidates--id-"
-               value=""
+               value="interviewing"
                data-component="body">
     <br>
-
+<p>Status of the candidate Example: <code>interviewing</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>active</code></li> <li><code>inactive</code></li> <li><code>hired</code></li> <li><code>rejected</code></li></ul>
         </div>
         </form>
 
-                    <h2 id="candidates-DELETEapi-candidates--id-">DELETE api/candidates/{id}</h2>
+                    <h2 id="candidates-DELETEapi-candidates--id-">Delete a candidate</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -2204,7 +2222,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://orca.test/api/candidates/1" \
+    "https://orca-api.laravel.cloud/api/candidates/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2212,7 +2230,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/candidates/1"
+    "https://orca-api.laravel.cloud/api/candidates/1"
 );
 
 const headers = {
@@ -2324,7 +2342,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="candidates-GETapi-candidates--candidate_id--skills">Get skills for a candidate</h2>
+                    <h2 id="candidates-GETapi-candidates--candidate_id--skills">Get candidate skills</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -2338,7 +2356,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/candidates/1/skills" \
+    --get "https://orca-api.laravel.cloud/api/candidates/1/skills" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2346,7 +2364,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/candidates/1/skills"
+    "https://orca-api.laravel.cloud/api/candidates/1/skills"
 );
 
 const headers = {
@@ -2474,7 +2492,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="candidates-GETapi-candidates--candidate_id--applications">Get applications for a candidate</h2>
+                    <h2 id="candidates-GETapi-candidates--candidate_id--applications">Get candidate applications</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -2488,7 +2506,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/candidates/1/applications" \
+    --get "https://orca-api.laravel.cloud/api/candidates/1/applications" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2496,7 +2514,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/candidates/1/applications"
+    "https://orca-api.laravel.cloud/api/candidates/1/applications"
 );
 
 const headers = {
@@ -2628,7 +2646,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     
 
-                                <h2 id="coding-challenges-GETapi-coding-challenges">GET api/coding-challenges</h2>
+                                <h2 id="coding-challenges-GETapi-coding-challenges">List all coding challenges</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -2642,7 +2660,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/coding-challenges" \
+    --get "https://orca-api.laravel.cloud/api/coding-challenges" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2650,7 +2668,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/coding-challenges"
+    "https://orca-api.laravel.cloud/api/coding-challenges"
 );
 
 const headers = {
@@ -2766,7 +2784,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="coding-challenges-POSTapi-coding-challenges">POST api/coding-challenges</h2>
+                    <h2 id="coding-challenges-POSTapi-coding-challenges">Create a new coding challenge</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -2780,24 +2798,25 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://orca.test/api/coding-challenges" \
+    "https://orca-api.laravel.cloud/api/coding-challenges" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"job_opening_id\": 16,
-    \"title\": \"n\",
-    \"description\": \"Eius et animi quos velit et.\",
-    \"instructions\": \"architecto\",
-    \"repository_url\": \"http:\\/\\/bailey.com\\/\",
-    \"time_limit\": 27
+    \"job_opening_id\": 1,
+    \"title\": \"API Integration Challenge\",
+    \"description\": \"Build a REST API integration with third-party service\",
+    \"instructions\": \"Clone the repository and implement the missing endpoints according to the specification\",
+    \"repository_url\": \"https:\\/\\/github.com\\/company\\/coding-challenge\",
+    \"time_limit\": 24,
+    \"difficulty\": \"medium\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/coding-challenges"
+    "https://orca-api.laravel.cloud/api/coding-challenges"
 );
 
 const headers = {
@@ -2807,12 +2826,13 @@ const headers = {
 };
 
 let body = {
-    "job_opening_id": 16,
-    "title": "n",
-    "description": "Eius et animi quos velit et.",
-    "instructions": "architecto",
-    "repository_url": "http:\/\/bailey.com\/",
-    "time_limit": 27
+    "job_opening_id": 1,
+    "title": "API Integration Challenge",
+    "description": "Build a REST API integration with third-party service",
+    "instructions": "Clone the repository and implement the missing endpoints according to the specification",
+    "repository_url": "https:\/\/github.com\/company\/coding-challenge",
+    "time_limit": 24,
+    "difficulty": "medium"
 };
 
 fetch(url, {
@@ -2912,10 +2932,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="job_opening_id"                data-endpoint="POSTapi-coding-challenges"
-               value="16"
+               value="1"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the job_openings table. Example: <code>16</code></p>
+<p>The ID of the job opening Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>title</code></b>&nbsp;&nbsp;
@@ -2923,10 +2943,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="POSTapi-coding-challenges"
-               value="n"
+               value="API Integration Challenge"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+<p>Title of the coding challenge Example: <code>API Integration Challenge</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -2934,10 +2954,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-coding-challenges"
-               value="Eius et animi quos velit et."
+               value="Build a REST API integration with third-party service"
                data-component="body">
     <br>
-<p>Example: <code>Eius et animi quos velit et.</code></p>
+<p>Description of the challenge Example: <code>Build a REST API integration with third-party service</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>instructions</code></b>&nbsp;&nbsp;
@@ -2945,10 +2965,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="instructions"                data-endpoint="POSTapi-coding-challenges"
-               value="architecto"
+               value="Clone the repository and implement the missing endpoints according to the specification"
                data-component="body">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Detailed instructions for completing the challenge Example: <code>Clone the repository and implement the missing endpoints according to the specification</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>repository_url</code></b>&nbsp;&nbsp;
@@ -2956,10 +2976,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="repository_url"                data-endpoint="POSTapi-coding-challenges"
-               value="http://bailey.com/"
+               value="https://github.com/company/coding-challenge"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://bailey.com/</code></p>
+<p>URL to the challenge repository Example: <code>https://github.com/company/coding-challenge</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>time_limit</code></b>&nbsp;&nbsp;
@@ -2967,25 +2987,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="time_limit"                data-endpoint="POSTapi-coding-challenges"
-               value="27"
+               value="24"
                data-component="body">
     <br>
-<p>Must be at least 1. Example: <code>27</code></p>
+<p>Time limit in hours Example: <code>24</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>difficulty</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="difficulty"                data-endpoint="POSTapi-coding-challenges"
-               value=""
+               value="medium"
                data-component="body">
     <br>
-
+<p>Difficulty level of the challenge Example: <code>medium</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>easy</code></li> <li><code>medium</code></li> <li><code>hard</code></li></ul>
         </div>
         </form>
 
-                    <h2 id="coding-challenges-GETapi-coding-challenges--id-">GET api/coding-challenges/{id}</h2>
+                    <h2 id="coding-challenges-GETapi-coding-challenges--id-">Get a single coding challenge</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -2999,7 +3021,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/coding-challenges/1" \
+    --get "https://orca-api.laravel.cloud/api/coding-challenges/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3007,7 +3029,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/coding-challenges/1"
+    "https://orca-api.laravel.cloud/api/coding-challenges/1"
 );
 
 const headers = {
@@ -3135,7 +3157,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="coding-challenges-PUTapi-coding-challenges--id-">PUT api/coding-challenges/{id}</h2>
+                    <h2 id="coding-challenges-PUTapi-coding-challenges--id-">Update a coding challenge</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -3149,24 +3171,25 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://orca.test/api/coding-challenges/1" \
+    "https://orca-api.laravel.cloud/api/coding-challenges/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"job_opening_id\": \"architecto\",
-    \"title\": \"n\",
-    \"description\": \"Eius et animi quos velit et.\",
-    \"instructions\": \"architecto\",
-    \"repository_url\": \"http:\\/\\/bailey.com\\/\",
-    \"time_limit\": 27
+    \"job_opening_id\": 1,
+    \"title\": \"Updated API Challenge\",
+    \"description\": \"Build a REST API integration with authentication\",
+    \"instructions\": \"Clone the repository and implement the missing endpoints following OAuth2 spec\",
+    \"repository_url\": \"https:\\/\\/github.com\\/company\\/updated-coding-challenge\",
+    \"time_limit\": 48,
+    \"difficulty\": \"hard\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/coding-challenges/1"
+    "https://orca-api.laravel.cloud/api/coding-challenges/1"
 );
 
 const headers = {
@@ -3176,12 +3199,13 @@ const headers = {
 };
 
 let body = {
-    "job_opening_id": "architecto",
-    "title": "n",
-    "description": "Eius et animi quos velit et.",
-    "instructions": "architecto",
-    "repository_url": "http:\/\/bailey.com\/",
-    "time_limit": 27
+    "job_opening_id": 1,
+    "title": "Updated API Challenge",
+    "description": "Build a REST API integration with authentication",
+    "instructions": "Clone the repository and implement the missing endpoints following OAuth2 spec",
+    "repository_url": "https:\/\/github.com\/company\/updated-coding-challenge",
+    "time_limit": 48,
+    "difficulty": "hard"
 };
 
 fetch(url, {
@@ -3293,14 +3317,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>job_opening_id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="job_opening_id"                data-endpoint="PUTapi-coding-challenges--id-"
-               value="architecto"
+                <input type="number" style="display: none"
+               step="any"               name="job_opening_id"                data-endpoint="PUTapi-coding-challenges--id-"
+               value="1"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the job_openings table. Example: <code>architecto</code></p>
+<p>The ID of the job opening Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>title</code></b>&nbsp;&nbsp;
@@ -3308,10 +3332,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-coding-challenges--id-"
-               value="n"
+               value="Updated API Challenge"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+<p>Title of the coding challenge Example: <code>Updated API Challenge</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -3319,10 +3343,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-coding-challenges--id-"
-               value="Eius et animi quos velit et."
+               value="Build a REST API integration with authentication"
                data-component="body">
     <br>
-<p>Example: <code>Eius et animi quos velit et.</code></p>
+<p>Description of the challenge Example: <code>Build a REST API integration with authentication</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>instructions</code></b>&nbsp;&nbsp;
@@ -3330,10 +3354,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="instructions"                data-endpoint="PUTapi-coding-challenges--id-"
-               value="architecto"
+               value="Clone the repository and implement the missing endpoints following OAuth2 spec"
                data-component="body">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Detailed instructions for completing the challenge Example: <code>Clone the repository and implement the missing endpoints following OAuth2 spec</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>repository_url</code></b>&nbsp;&nbsp;
@@ -3341,10 +3365,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="repository_url"                data-endpoint="PUTapi-coding-challenges--id-"
-               value="http://bailey.com/"
+               value="https://github.com/company/updated-coding-challenge"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://bailey.com/</code></p>
+<p>URL to the challenge repository Example: <code>https://github.com/company/updated-coding-challenge</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>time_limit</code></b>&nbsp;&nbsp;
@@ -3352,25 +3376,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="time_limit"                data-endpoint="PUTapi-coding-challenges--id-"
-               value="27"
+               value="48"
                data-component="body">
     <br>
-<p>Must be at least 1. Example: <code>27</code></p>
+<p>Time limit in hours Example: <code>48</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>difficulty</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="difficulty"                data-endpoint="PUTapi-coding-challenges--id-"
-               value=""
+               value="hard"
                data-component="body">
     <br>
-
+<p>Difficulty level of the challenge Example: <code>hard</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>easy</code></li> <li><code>medium</code></li> <li><code>hard</code></li></ul>
         </div>
         </form>
 
-                    <h2 id="coding-challenges-DELETEapi-coding-challenges--id-">DELETE api/coding-challenges/{id}</h2>
+                    <h2 id="coding-challenges-DELETEapi-coding-challenges--id-">Delete a coding challenge</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -3384,7 +3410,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://orca.test/api/coding-challenges/1" \
+    "https://orca-api.laravel.cloud/api/coding-challenges/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3392,7 +3418,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/coding-challenges/1"
+    "https://orca-api.laravel.cloud/api/coding-challenges/1"
 );
 
 const headers = {
@@ -3508,7 +3534,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     
 
-                                <h2 id="companies-GETapi-companies">GET api/companies</h2>
+                                <h2 id="companies-GETapi-companies">List all companies</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -3522,7 +3548,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/companies" \
+    --get "https://orca-api.laravel.cloud/api/companies" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3530,7 +3556,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/companies"
+    "https://orca-api.laravel.cloud/api/companies"
 );
 
 const headers = {
@@ -3646,7 +3672,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="companies-POSTapi-companies">POST api/companies</h2>
+                    <h2 id="companies-POSTapi-companies">Create a new company</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -3660,24 +3686,26 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://orca.test/api/companies" \
+    "https://orca-api.laravel.cloud/api/companies" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"b\",
-    \"logo_url\": \"http:\\/\\/bailey.com\\/\",
-    \"website\": \"http:\\/\\/rempel.com\\/sunt-nihil-accusantium-harum-mollitia\",
-    \"industry\": \"k\",
-    \"description\": \"Eius et animi quos velit et.\",
-    \"location\": \"v\"
+    \"name\": \"Acme Corporation\",
+    \"logo_url\": \"https:\\/\\/example.com\\/logo.png\",
+    \"website\": \"https:\\/\\/acme.example.com\",
+    \"industry\": \"Technology\",
+    \"size\": \"medium\",
+    \"description\": \"A leading provider of innovative solutions\",
+    \"location\": \"San Francisco, CA\",
+    \"status\": \"active\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/companies"
+    "https://orca-api.laravel.cloud/api/companies"
 );
 
 const headers = {
@@ -3687,12 +3715,14 @@ const headers = {
 };
 
 let body = {
-    "name": "b",
-    "logo_url": "http:\/\/bailey.com\/",
-    "website": "http:\/\/rempel.com\/sunt-nihil-accusantium-harum-mollitia",
-    "industry": "k",
-    "description": "Eius et animi quos velit et.",
-    "location": "v"
+    "name": "Acme Corporation",
+    "logo_url": "https:\/\/example.com\/logo.png",
+    "website": "https:\/\/acme.example.com",
+    "industry": "Technology",
+    "size": "medium",
+    "description": "A leading provider of innovative solutions",
+    "location": "San Francisco, CA",
+    "status": "active"
 };
 
 fetch(url, {
@@ -3792,91 +3822,95 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-companies"
-               value="b"
+               value="Acme Corporation"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+<p>Name of the company Example: <code>Acme Corporation</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="logo_url"                data-endpoint="POSTapi-companies"
-               value="http://bailey.com/"
+               value="https://example.com/logo.png"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://bailey.com/</code></p>
+<p>URL to the company's logo Example: <code>https://example.com/logo.png</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>website</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="website"                data-endpoint="POSTapi-companies"
-               value="http://rempel.com/sunt-nihil-accusantium-harum-mollitia"
+               value="https://acme.example.com"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://rempel.com/sunt-nihil-accusantium-harum-mollitia</code></p>
+<p>Company website URL Example: <code>https://acme.example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>industry</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="industry"                data-endpoint="POSTapi-companies"
-               value="k"
+               value="Technology"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>k</code></p>
+<p>Industry the company operates in Example: <code>Technology</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>size</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="size"                data-endpoint="POSTapi-companies"
-               value=""
+               value="medium"
                data-component="body">
     <br>
-
+<p>Size of the company Example: <code>medium</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>small</code></li> <li><code>medium</code></li> <li><code>large</code></li> <li><code>enterprise</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-companies"
-               value="Eius et animi quos velit et."
+               value="A leading provider of innovative solutions"
                data-component="body">
     <br>
-<p>Example: <code>Eius et animi quos velit et.</code></p>
+<p>Company description Example: <code>A leading provider of innovative solutions</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="POSTapi-companies"
-               value="v"
+               value="San Francisco, CA"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>v</code></p>
+<p>Main location of the company Example: <code>San Francisco, CA</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-companies"
-               value=""
+               value="active"
                data-component="body">
     <br>
-
+<p>Status of the company Example: <code>active</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>active</code></li> <li><code>inactive</code></li></ul>
         </div>
         </form>
 
-                    <h2 id="companies-GETapi-companies--id-">GET api/companies/{id}</h2>
+                    <h2 id="companies-GETapi-companies--id-">Get a single company</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -3890,7 +3924,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/companies/1" \
+    --get "https://orca-api.laravel.cloud/api/companies/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3898,7 +3932,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/companies/1"
+    "https://orca-api.laravel.cloud/api/companies/1"
 );
 
 const headers = {
@@ -4026,7 +4060,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="companies-PUTapi-companies--id-">PUT api/companies/{id}</h2>
+                    <h2 id="companies-PUTapi-companies--id-">Update a company</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -4040,24 +4074,26 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://orca.test/api/companies/1" \
+    "https://orca-api.laravel.cloud/api/companies/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"b\",
-    \"logo_url\": \"http:\\/\\/bailey.com\\/\",
-    \"website\": \"http:\\/\\/rempel.com\\/sunt-nihil-accusantium-harum-mollitia\",
-    \"industry\": \"k\",
-    \"description\": \"Eius et animi quos velit et.\",
-    \"location\": \"v\"
+    \"name\": \"Acme Corporation Updated\",
+    \"logo_url\": \"https:\\/\\/example.com\\/new-logo.png\",
+    \"website\": \"https:\\/\\/acme-updated.example.com\",
+    \"industry\": \"Software\",
+    \"size\": \"large\",
+    \"description\": \"A global leader in software solutions\",
+    \"location\": \"New York, NY\",
+    \"status\": \"active\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/companies/1"
+    "https://orca-api.laravel.cloud/api/companies/1"
 );
 
 const headers = {
@@ -4067,12 +4103,14 @@ const headers = {
 };
 
 let body = {
-    "name": "b",
-    "logo_url": "http:\/\/bailey.com\/",
-    "website": "http:\/\/rempel.com\/sunt-nihil-accusantium-harum-mollitia",
-    "industry": "k",
-    "description": "Eius et animi quos velit et.",
-    "location": "v"
+    "name": "Acme Corporation Updated",
+    "logo_url": "https:\/\/example.com\/new-logo.png",
+    "website": "https:\/\/acme-updated.example.com",
+    "industry": "Software",
+    "size": "large",
+    "description": "A global leader in software solutions",
+    "location": "New York, NY",
+    "status": "active"
 };
 
 fetch(url, {
@@ -4188,91 +4226,95 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-companies--id-"
-               value="b"
+               value="Acme Corporation Updated"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+<p>Name of the company Example: <code>Acme Corporation Updated</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="logo_url"                data-endpoint="PUTapi-companies--id-"
-               value="http://bailey.com/"
+               value="https://example.com/new-logo.png"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://bailey.com/</code></p>
+<p>URL to the company's logo Example: <code>https://example.com/new-logo.png</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>website</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="website"                data-endpoint="PUTapi-companies--id-"
-               value="http://rempel.com/sunt-nihil-accusantium-harum-mollitia"
+               value="https://acme-updated.example.com"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://rempel.com/sunt-nihil-accusantium-harum-mollitia</code></p>
+<p>Company website URL Example: <code>https://acme-updated.example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>industry</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="industry"                data-endpoint="PUTapi-companies--id-"
-               value="k"
+               value="Software"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>k</code></p>
+<p>Industry the company operates in Example: <code>Software</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>size</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="size"                data-endpoint="PUTapi-companies--id-"
-               value=""
+               value="large"
                data-component="body">
     <br>
-
+<p>Size of the company Example: <code>large</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>small</code></li> <li><code>medium</code></li> <li><code>large</code></li> <li><code>enterprise</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-companies--id-"
-               value="Eius et animi quos velit et."
+               value="A global leader in software solutions"
                data-component="body">
     <br>
-<p>Example: <code>Eius et animi quos velit et.</code></p>
+<p>Company description Example: <code>A global leader in software solutions</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="PUTapi-companies--id-"
-               value="v"
+               value="New York, NY"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>v</code></p>
+<p>Main location of the company Example: <code>New York, NY</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-companies--id-"
-               value=""
+               value="active"
                data-component="body">
     <br>
-
+<p>Status of the company Example: <code>active</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>active</code></li> <li><code>inactive</code></li></ul>
         </div>
         </form>
 
-                    <h2 id="companies-DELETEapi-companies--id-">DELETE api/companies/{id}</h2>
+                    <h2 id="companies-DELETEapi-companies--id-">Delete a company</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -4286,7 +4328,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://orca.test/api/companies/1" \
+    "https://orca-api.laravel.cloud/api/companies/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -4294,7 +4336,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/companies/1"
+    "https://orca-api.laravel.cloud/api/companies/1"
 );
 
 const headers = {
@@ -4406,7 +4448,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="companies-GETapi-companies--company_id--job-openings">GET api/companies/{company_id}/job-openings</h2>
+                    <h2 id="companies-GETapi-companies--company_id--job-openings">Get all job openings for a company</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -4420,7 +4462,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/companies/1/job-openings" \
+    --get "https://orca-api.laravel.cloud/api/companies/1/job-openings" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -4428,7 +4470,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/companies/1/job-openings"
+    "https://orca-api.laravel.cloud/api/companies/1/job-openings"
 );
 
 const headers = {
@@ -4556,7 +4598,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="companies-GETapi-companies--company_id--members">GET api/companies/{company_id}/members</h2>
+                    <h2 id="companies-GETapi-companies--company_id--members">Get all members for a company</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -4570,7 +4612,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/companies/1/members" \
+    --get "https://orca-api.laravel.cloud/api/companies/1/members" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -4578,7 +4620,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/companies/1/members"
+    "https://orca-api.laravel.cloud/api/companies/1/members"
 );
 
 const headers = {
@@ -4706,7 +4748,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="companies-GETapi-companies--company_id--hiring-managers">GET api/companies/{company_id}/hiring-managers</h2>
+                    <h2 id="companies-GETapi-companies--company_id--hiring-managers">Get all hiring managers for a company</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -4720,7 +4762,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/companies/1/hiring-managers" \
+    --get "https://orca-api.laravel.cloud/api/companies/1/hiring-managers" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -4728,7 +4770,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/companies/1/hiring-managers"
+    "https://orca-api.laravel.cloud/api/companies/1/hiring-managers"
 );
 
 const headers = {
@@ -4856,7 +4898,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="companies-GETapi-companies--company_id--interviewers">GET api/companies/{company_id}/interviewers</h2>
+                    <h2 id="companies-GETapi-companies--company_id--interviewers">Get all interviewers for a company</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -4870,7 +4912,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/companies/1/interviewers" \
+    --get "https://orca-api.laravel.cloud/api/companies/1/interviewers" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -4878,7 +4920,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/companies/1/interviewers"
+    "https://orca-api.laravel.cloud/api/companies/1/interviewers"
 );
 
 const headers = {
@@ -5010,7 +5052,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     
 
-                                <h2 id="company-members-GETapi-company-members">GET api/company-members</h2>
+                                <h2 id="company-members-GETapi-company-members">List all company members</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -5024,7 +5066,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/company-members" \
+    --get "https://orca-api.laravel.cloud/api/company-members" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -5032,7 +5074,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/company-members"
+    "https://orca-api.laravel.cloud/api/company-members"
 );
 
 const headers = {
@@ -5148,7 +5190,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="company-members-POSTapi-company-members">POST api/company-members</h2>
+                    <h2 id="company-members-POSTapi-company-members">Create a new company member</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -5162,27 +5204,28 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://orca.test/api/company-members" \
+    "https://orca-api.laravel.cloud/api/company-members" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"company_id\": 16,
-    \"name\": \"n\",
-    \"email\": \"ashly64@example.com\",
-    \"position\": \"v\",
-    \"department\": \"d\",
-    \"phone\": \"l\",
+    \"company_id\": 1,
+    \"name\": \"Jane Smith\",
+    \"email\": \"jane.smith@company.com\",
+    \"position\": \"Senior Recruiter\",
+    \"department\": \"Human Resources\",
+    \"phone\": \"+1 (555) 123-4567\",
     \"is_hiring_manager\": true,
     \"is_recruiter\": true,
-    \"is_interviewer\": true
+    \"is_interviewer\": false,
+    \"status\": \"active\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/company-members"
+    "https://orca-api.laravel.cloud/api/company-members"
 );
 
 const headers = {
@@ -5192,15 +5235,16 @@ const headers = {
 };
 
 let body = {
-    "company_id": 16,
-    "name": "n",
-    "email": "ashly64@example.com",
-    "position": "v",
-    "department": "d",
-    "phone": "l",
+    "company_id": 1,
+    "name": "Jane Smith",
+    "email": "jane.smith@company.com",
+    "position": "Senior Recruiter",
+    "department": "Human Resources",
+    "phone": "+1 (555) 123-4567",
     "is_hiring_manager": true,
     "is_recruiter": true,
-    "is_interviewer": true
+    "is_interviewer": false,
+    "status": "active"
 };
 
 fetch(url, {
@@ -5300,10 +5344,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="company_id"                data-endpoint="POSTapi-company-members"
-               value="16"
+               value="1"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the companies table. Example: <code>16</code></p>
+<p>The ID of the company Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -5311,10 +5355,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-company-members"
-               value="n"
+               value="Jane Smith"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+<p>Full name of the company member Example: <code>Jane Smith</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -5322,10 +5366,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-company-members"
-               value="ashly64@example.com"
+               value="jane.smith@company.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>ashly64@example.com</code></p>
+<p>Email address of the company member Example: <code>jane.smith@company.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>position</code></b>&nbsp;&nbsp;
@@ -5333,10 +5377,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="position"                data-endpoint="POSTapi-company-members"
-               value="v"
+               value="Senior Recruiter"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>v</code></p>
+<p>Job position within the company Example: <code>Senior Recruiter</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>department</code></b>&nbsp;&nbsp;
@@ -5344,10 +5388,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="department"                data-endpoint="POSTapi-company-members"
-               value="d"
+               value="Human Resources"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>d</code></p>
+<p>Department within the company Example: <code>Human Resources</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -5355,15 +5399,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="POSTapi-company-members"
-               value="l"
+               value="+1 (555) 123-4567"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>l</code></p>
+<p>Contact phone number Example: <code>+1 (555) 123-4567</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_hiring_manager</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <label data-endpoint="POSTapi-company-members" style="display: none">
             <input type="radio" name="is_hiring_manager"
                    value="true"
@@ -5379,12 +5423,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Whether this member is a hiring manager Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_recruiter</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <label data-endpoint="POSTapi-company-members" style="display: none">
             <input type="radio" name="is_recruiter"
                    value="true"
@@ -5400,12 +5444,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Whether this member is a recruiter Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_interviewer</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <label data-endpoint="POSTapi-company-members" style="display: none">
             <input type="radio" name="is_interviewer"
                    value="true"
@@ -5421,22 +5465,24 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Whether this member conducts interviews Example: <code>false</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-company-members"
-               value=""
+               value="active"
                data-component="body">
     <br>
-
+<p>Status of the company member Example: <code>active</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>active</code></li> <li><code>inactive</code></li></ul>
         </div>
         </form>
 
-                    <h2 id="company-members-GETapi-company-members--id-">GET api/company-members/{id}</h2>
+                    <h2 id="company-members-GETapi-company-members--id-">Get a single company member</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -5450,7 +5496,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/company-members/1" \
+    --get "https://orca-api.laravel.cloud/api/company-members/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -5458,7 +5504,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/company-members/1"
+    "https://orca-api.laravel.cloud/api/company-members/1"
 );
 
 const headers = {
@@ -5586,7 +5632,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="company-members-PUTapi-company-members--id-">PUT api/company-members/{id}</h2>
+                    <h2 id="company-members-PUTapi-company-members--id-">Update a company member</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -5600,26 +5646,28 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://orca.test/api/company-members/1" \
+    "https://orca-api.laravel.cloud/api/company-members/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"company_id\": \"architecto\",
-    \"name\": \"n\",
-    \"position\": \"g\",
-    \"department\": \"z\",
-    \"phone\": \"m\",
-    \"is_hiring_manager\": false,
+    \"company_id\": 1,
+    \"name\": \"Jane Smith Updated\",
+    \"email\": \"jane.updated@company.com\",
+    \"position\": \"Lead Recruiter\",
+    \"department\": \"Talent Acquisition\",
+    \"phone\": \"+1 (555) 987-6543\",
+    \"is_hiring_manager\": true,
     \"is_recruiter\": true,
-    \"is_interviewer\": false
+    \"is_interviewer\": true,
+    \"status\": \"active\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/company-members/1"
+    "https://orca-api.laravel.cloud/api/company-members/1"
 );
 
 const headers = {
@@ -5629,14 +5677,16 @@ const headers = {
 };
 
 let body = {
-    "company_id": "architecto",
-    "name": "n",
-    "position": "g",
-    "department": "z",
-    "phone": "m",
-    "is_hiring_manager": false,
+    "company_id": 1,
+    "name": "Jane Smith Updated",
+    "email": "jane.updated@company.com",
+    "position": "Lead Recruiter",
+    "department": "Talent Acquisition",
+    "phone": "+1 (555) 987-6543",
+    "is_hiring_manager": true,
     "is_recruiter": true,
-    "is_interviewer": false
+    "is_interviewer": true,
+    "status": "active"
 };
 
 fetch(url, {
@@ -5748,14 +5798,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>company_id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="company_id"                data-endpoint="PUTapi-company-members--id-"
-               value="architecto"
+                <input type="number" style="display: none"
+               step="any"               name="company_id"                data-endpoint="PUTapi-company-members--id-"
+               value="1"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the companies table. Example: <code>architecto</code></p>
+<p>The ID of the company Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
@@ -5763,21 +5813,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-company-members--id-"
-               value="n"
+               value="Jane Smith Updated"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+<p>Full name of the company member Example: <code>Jane Smith Updated</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTapi-company-members--id-"
-               value=""
+               value="jane.updated@company.com"
                data-component="body">
     <br>
-
+<p>Email address of the company member Example: <code>jane.updated@company.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>position</code></b>&nbsp;&nbsp;
@@ -5785,10 +5835,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="position"                data-endpoint="PUTapi-company-members--id-"
-               value="g"
+               value="Lead Recruiter"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>g</code></p>
+<p>Job position within the company Example: <code>Lead Recruiter</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>department</code></b>&nbsp;&nbsp;
@@ -5796,10 +5846,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="department"                data-endpoint="PUTapi-company-members--id-"
-               value="z"
+               value="Talent Acquisition"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>z</code></p>
+<p>Department within the company Example: <code>Talent Acquisition</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -5807,15 +5857,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="PUTapi-company-members--id-"
-               value="m"
+               value="+1 (555) 987-6543"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>m</code></p>
+<p>Contact phone number Example: <code>+1 (555) 987-6543</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_hiring_manager</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <label data-endpoint="PUTapi-company-members--id-" style="display: none">
             <input type="radio" name="is_hiring_manager"
                    value="true"
@@ -5831,12 +5881,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Whether this member is a hiring manager Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_recruiter</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <label data-endpoint="PUTapi-company-members--id-" style="display: none">
             <input type="radio" name="is_recruiter"
                    value="true"
@@ -5852,12 +5902,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Whether this member is a recruiter Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_interviewer</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <label data-endpoint="PUTapi-company-members--id-" style="display: none">
             <input type="radio" name="is_interviewer"
                    value="true"
@@ -5873,22 +5923,24 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Whether this member conducts interviews Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-company-members--id-"
-               value=""
+               value="active"
                data-component="body">
     <br>
-
+<p>Status of the company member Example: <code>active</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>active</code></li> <li><code>inactive</code></li></ul>
         </div>
         </form>
 
-                    <h2 id="company-members-DELETEapi-company-members--id-">DELETE api/company-members/{id}</h2>
+                    <h2 id="company-members-DELETEapi-company-members--id-">Delete a company member</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -5902,7 +5954,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://orca.test/api/company-members/1" \
+    "https://orca-api.laravel.cloud/api/company-members/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -5910,7 +5962,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/company-members/1"
+    "https://orca-api.laravel.cloud/api/company-members/1"
 );
 
 const headers = {
@@ -6022,7 +6074,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="company-members-GETapi-company-members--companyMember_id--job-openings">GET api/company-members/{companyMember_id}/job-openings</h2>
+                    <h2 id="company-members-GETapi-company-members--companyMember_id--job-openings">Get all job openings for a company member</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -6036,7 +6088,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/company-members/1/job-openings" \
+    --get "https://orca-api.laravel.cloud/api/company-members/1/job-openings" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -6044,7 +6096,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/company-members/1/job-openings"
+    "https://orca-api.laravel.cloud/api/company-members/1/job-openings"
 );
 
 const headers = {
@@ -6172,7 +6224,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="company-members-GETapi-company-members--companyMember_id--interviews">GET api/company-members/{companyMember_id}/interviews</h2>
+                    <h2 id="company-members-GETapi-company-members--companyMember_id--interviews">Get all interviews for a company member</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -6186,7 +6238,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/company-members/1/interviews" \
+    --get "https://orca-api.laravel.cloud/api/company-members/1/interviews" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -6194,7 +6246,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/company-members/1/interviews"
+    "https://orca-api.laravel.cloud/api/company-members/1/interviews"
 );
 
 const headers = {
@@ -6326,7 +6378,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     
 
-                                <h2 id="interviews-GETapi-interviews">GET api/interviews</h2>
+                                <h2 id="interviews-GETapi-interviews">List all interviews</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -6340,7 +6392,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/interviews" \
+    --get "https://orca-api.laravel.cloud/api/interviews" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -6348,7 +6400,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/interviews"
+    "https://orca-api.laravel.cloud/api/interviews"
 );
 
 const headers = {
@@ -6464,7 +6516,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="interviews-POSTapi-interviews">POST api/interviews</h2>
+                    <h2 id="interviews-POSTapi-interviews">Create a new interview</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -6478,29 +6530,31 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://orca.test/api/interviews" \
+    "https://orca-api.laravel.cloud/api/interviews" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"application_id\": 16,
-    \"stage_id\": 16,
-    \"interviewer_id\": 16,
-    \"scheduled_at\": \"2051-05-23\",
-    \"completed_at\": \"2124-04-07\",
-    \"location\": \"g\",
-    \"meeting_url\": \"http:\\/\\/www.okuneva.com\\/fugiat-sunt-nihil-accusantium-harum-mollitia.html\",
-    \"technical_score\": 3,
-    \"cultural_score\": 4,
-    \"feedback\": \"architecto\",
-    \"notes\": \"architecto\"
+    \"application_id\": 1,
+    \"stage_id\": 1,
+    \"interviewer_id\": 1,
+    \"scheduled_at\": \"2023-05-15T10:00:00Z\",
+    \"completed_at\": \"2023-05-15T11:00:00Z\",
+    \"location\": \"Conference Room 3A\",
+    \"meeting_url\": \"https:\\/\\/zoom.us\\/j\\/123456789\",
+    \"status\": \"scheduled\",
+    \"technical_score\": 4,
+    \"cultural_score\": 5,
+    \"feedback\": \"Strong technical skills, especially in database design. Good communication.\",
+    \"decision\": \"proceed\",
+    \"notes\": \"Candidate was very well prepared.\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/interviews"
+    "https://orca-api.laravel.cloud/api/interviews"
 );
 
 const headers = {
@@ -6510,17 +6564,19 @@ const headers = {
 };
 
 let body = {
-    "application_id": 16,
-    "stage_id": 16,
-    "interviewer_id": 16,
-    "scheduled_at": "2051-05-23",
-    "completed_at": "2124-04-07",
-    "location": "g",
-    "meeting_url": "http:\/\/www.okuneva.com\/fugiat-sunt-nihil-accusantium-harum-mollitia.html",
-    "technical_score": 3,
-    "cultural_score": 4,
-    "feedback": "architecto",
-    "notes": "architecto"
+    "application_id": 1,
+    "stage_id": 1,
+    "interviewer_id": 1,
+    "scheduled_at": "2023-05-15T10:00:00Z",
+    "completed_at": "2023-05-15T11:00:00Z",
+    "location": "Conference Room 3A",
+    "meeting_url": "https:\/\/zoom.us\/j\/123456789",
+    "status": "scheduled",
+    "technical_score": 4,
+    "cultural_score": 5,
+    "feedback": "Strong technical skills, especially in database design. Good communication.",
+    "decision": "proceed",
+    "notes": "Candidate was very well prepared."
 };
 
 fetch(url, {
@@ -6620,10 +6676,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="application_id"                data-endpoint="POSTapi-interviews"
-               value="16"
+               value="1"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the applications table. Example: <code>16</code></p>
+<p>The ID of the application Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>stage_id</code></b>&nbsp;&nbsp;
@@ -6631,10 +6687,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="stage_id"                data-endpoint="POSTapi-interviews"
-               value="16"
+               value="1"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the interview_stages table. Example: <code>16</code></p>
+<p>The ID of the interview stage Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>interviewer_id</code></b>&nbsp;&nbsp;
@@ -6642,10 +6698,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="interviewer_id"                data-endpoint="POSTapi-interviews"
-               value="16"
+               value="1"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the company_members table. Example: <code>16</code></p>
+<p>The ID of the interviewer Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>scheduled_at</code></b>&nbsp;&nbsp;
@@ -6653,113 +6709,117 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="scheduled_at"                data-endpoint="POSTapi-interviews"
-               value="2051-05-23"
+               value="2023-05-15T10:00:00Z"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>now</code>. Example: <code>2051-05-23</code></p>
+<p>When the interview is scheduled Example: <code>2023-05-15T10:00:00Z</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>completed_at</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="completed_at"                data-endpoint="POSTapi-interviews"
-               value="2124-04-07"
+               value="2023-05-15T11:00:00Z"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>scheduled_at</code>. Example: <code>2124-04-07</code></p>
+<p>When the interview was completed Example: <code>2023-05-15T11:00:00Z</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="POSTapi-interviews"
-               value="g"
+               value="Conference Room 3A"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>g</code></p>
+<p>Physical location of the interview Example: <code>Conference Room 3A</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>meeting_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="meeting_url"                data-endpoint="POSTapi-interviews"
-               value="http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html"
+               value="https://zoom.us/j/123456789"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html</code></p>
+<p>URL for virtual meetings Example: <code>https://zoom.us/j/123456789</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-interviews"
-               value=""
+               value="scheduled"
                data-component="body">
     <br>
-
+<p>Status of the interview Example: <code>scheduled</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>scheduled</code></li> <li><code>completed</code></li> <li><code>cancelled</code></li> <li><code>rescheduled</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>technical_score</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="technical_score"                data-endpoint="POSTapi-interviews"
-               value="3"
+               value="4"
                data-component="body">
     <br>
-<p>Must be at least 1. Must not be greater than 5. Example: <code>3</code></p>
+<p>Technical assessment score (1-5) Example: <code>4</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>cultural_score</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="cultural_score"                data-endpoint="POSTapi-interviews"
-               value="4"
+               value="5"
                data-component="body">
     <br>
-<p>Must be at least 1. Must not be greater than 5. Example: <code>4</code></p>
+<p>Cultural fit score (1-5) Example: <code>5</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>feedback</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="feedback"                data-endpoint="POSTapi-interviews"
-               value="architecto"
+               value="Strong technical skills, especially in database design. Good communication."
                data-component="body">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Detailed feedback from the interviewer Example: <code>Strong technical skills, especially in database design. Good communication.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>decision</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="decision"                data-endpoint="POSTapi-interviews"
-               value=""
+               value="proceed"
                data-component="body">
     <br>
-
+<p>Interview decision Example: <code>proceed</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>proceed</code></li> <li><code>reject</code></li> <li><code>hold</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="notes"                data-endpoint="POSTapi-interviews"
-               value="architecto"
+               value="Candidate was very well prepared."
                data-component="body">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Additional notes about the interview Example: <code>Candidate was very well prepared.</code></p>
         </div>
         </form>
 
-                    <h2 id="interviews-GETapi-interviews--id-">GET api/interviews/{id}</h2>
+                    <h2 id="interviews-GETapi-interviews--id-">Get a single interview</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -6773,7 +6833,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/interviews/1" \
+    --get "https://orca-api.laravel.cloud/api/interviews/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -6781,7 +6841,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/interviews/1"
+    "https://orca-api.laravel.cloud/api/interviews/1"
 );
 
 const headers = {
@@ -6909,7 +6969,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="interviews-PUTapi-interviews--id-">PUT api/interviews/{id}</h2>
+                    <h2 id="interviews-PUTapi-interviews--id-">Update an interview</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -6923,29 +6983,31 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://orca.test/api/interviews/1" \
+    "https://orca-api.laravel.cloud/api/interviews/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"application_id\": \"architecto\",
-    \"stage_id\": \"architecto\",
-    \"interviewer_id\": \"architecto\",
-    \"scheduled_at\": \"2051-05-23\",
-    \"completed_at\": \"2124-04-07\",
-    \"location\": \"g\",
-    \"meeting_url\": \"http:\\/\\/www.okuneva.com\\/fugiat-sunt-nihil-accusantium-harum-mollitia.html\",
-    \"technical_score\": 3,
+    \"application_id\": 1,
+    \"stage_id\": 2,
+    \"interviewer_id\": 3,
+    \"scheduled_at\": \"2023-05-20T14:00:00Z\",
+    \"completed_at\": \"2023-05-20T15:30:00Z\",
+    \"location\": \"Meeting Room B\",
+    \"meeting_url\": \"https:\\/\\/teams.microsoft.com\\/l\\/123456\",
+    \"status\": \"completed\",
+    \"technical_score\": 4,
     \"cultural_score\": 4,
-    \"feedback\": \"architecto\",
-    \"notes\": \"architecto\"
+    \"feedback\": \"Excellent problem-solving skills. Good culture fit.\",
+    \"decision\": \"hire\",
+    \"notes\": \"Would be a great fit for the team.\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/interviews/1"
+    "https://orca-api.laravel.cloud/api/interviews/1"
 );
 
 const headers = {
@@ -6955,17 +7017,19 @@ const headers = {
 };
 
 let body = {
-    "application_id": "architecto",
-    "stage_id": "architecto",
-    "interviewer_id": "architecto",
-    "scheduled_at": "2051-05-23",
-    "completed_at": "2124-04-07",
-    "location": "g",
-    "meeting_url": "http:\/\/www.okuneva.com\/fugiat-sunt-nihil-accusantium-harum-mollitia.html",
-    "technical_score": 3,
+    "application_id": 1,
+    "stage_id": 2,
+    "interviewer_id": 3,
+    "scheduled_at": "2023-05-20T14:00:00Z",
+    "completed_at": "2023-05-20T15:30:00Z",
+    "location": "Meeting Room B",
+    "meeting_url": "https:\/\/teams.microsoft.com\/l\/123456",
+    "status": "completed",
+    "technical_score": 4,
     "cultural_score": 4,
-    "feedback": "architecto",
-    "notes": "architecto"
+    "feedback": "Excellent problem-solving skills. Good culture fit.",
+    "decision": "hire",
+    "notes": "Would be a great fit for the team."
 };
 
 fetch(url, {
@@ -7077,36 +7141,36 @@ You can check the Dev Tools console for debugging information.</code></pre>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>application_id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="application_id"                data-endpoint="PUTapi-interviews--id-"
-               value="architecto"
+                <input type="number" style="display: none"
+               step="any"               name="application_id"                data-endpoint="PUTapi-interviews--id-"
+               value="1"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the applications table. Example: <code>architecto</code></p>
+<p>The ID of the application Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>stage_id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="stage_id"                data-endpoint="PUTapi-interviews--id-"
-               value="architecto"
+                <input type="number" style="display: none"
+               step="any"               name="stage_id"                data-endpoint="PUTapi-interviews--id-"
+               value="2"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the interview_stages table. Example: <code>architecto</code></p>
+<p>The ID of the interview stage Example: <code>2</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>interviewer_id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="interviewer_id"                data-endpoint="PUTapi-interviews--id-"
-               value="architecto"
+                <input type="number" style="display: none"
+               step="any"               name="interviewer_id"                data-endpoint="PUTapi-interviews--id-"
+               value="3"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the company_members table. Example: <code>architecto</code></p>
+<p>The ID of the interviewer Example: <code>3</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>scheduled_at</code></b>&nbsp;&nbsp;
@@ -7114,113 +7178,117 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="scheduled_at"                data-endpoint="PUTapi-interviews--id-"
-               value="2051-05-23"
+               value="2023-05-20T14:00:00Z"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>now</code>. Example: <code>2051-05-23</code></p>
+<p>When the interview is scheduled Example: <code>2023-05-20T14:00:00Z</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>completed_at</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="completed_at"                data-endpoint="PUTapi-interviews--id-"
-               value="2124-04-07"
+               value="2023-05-20T15:30:00Z"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>scheduled_at</code>. Example: <code>2124-04-07</code></p>
+<p>When the interview was completed Example: <code>2023-05-20T15:30:00Z</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="PUTapi-interviews--id-"
-               value="g"
+               value="Meeting Room B"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>g</code></p>
+<p>Physical location of the interview Example: <code>Meeting Room B</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>meeting_url</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="meeting_url"                data-endpoint="PUTapi-interviews--id-"
-               value="http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html"
+               value="https://teams.microsoft.com/l/123456"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html</code></p>
+<p>URL for virtual meetings Example: <code>https://teams.microsoft.com/l/123456</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-interviews--id-"
-               value=""
+               value="completed"
                data-component="body">
     <br>
-
+<p>Status of the interview Example: <code>completed</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>scheduled</code></li> <li><code>completed</code></li> <li><code>cancelled</code></li> <li><code>rescheduled</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>technical_score</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="technical_score"                data-endpoint="PUTapi-interviews--id-"
-               value="3"
+               value="4"
                data-component="body">
     <br>
-<p>Must be at least 1. Must not be greater than 5. Example: <code>3</code></p>
+<p>Technical assessment score (1-5) Example: <code>4</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>cultural_score</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="cultural_score"                data-endpoint="PUTapi-interviews--id-"
                value="4"
                data-component="body">
     <br>
-<p>Must be at least 1. Must not be greater than 5. Example: <code>4</code></p>
+<p>Cultural fit score (1-5) Example: <code>4</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>feedback</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="feedback"                data-endpoint="PUTapi-interviews--id-"
-               value="architecto"
+               value="Excellent problem-solving skills. Good culture fit."
                data-component="body">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Detailed feedback from the interviewer Example: <code>Excellent problem-solving skills. Good culture fit.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>decision</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="decision"                data-endpoint="PUTapi-interviews--id-"
-               value=""
+               value="hire"
                data-component="body">
     <br>
-
+<p>Interview decision Example: <code>hire</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>proceed</code></li> <li><code>reject</code></li> <li><code>hold</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="notes"                data-endpoint="PUTapi-interviews--id-"
-               value="architecto"
+               value="Would be a great fit for the team."
                data-component="body">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Additional notes about the interview Example: <code>Would be a great fit for the team.</code></p>
         </div>
         </form>
 
-                    <h2 id="interviews-DELETEapi-interviews--id-">DELETE api/interviews/{id}</h2>
+                    <h2 id="interviews-DELETEapi-interviews--id-">Delete an interview</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -7234,7 +7302,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://orca.test/api/interviews/1" \
+    "https://orca-api.laravel.cloud/api/interviews/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -7242,7 +7310,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/interviews/1"
+    "https://orca-api.laravel.cloud/api/interviews/1"
 );
 
 const headers = {
@@ -7358,7 +7426,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     
 
-                                <h2 id="job-openings-GETapi-job-openings">GET api/job-openings</h2>
+                                <h2 id="job-openings-GETapi-job-openings">List all job openings</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -7372,7 +7440,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/job-openings" \
+    --get "https://orca-api.laravel.cloud/api/job-openings" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -7380,7 +7448,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/job-openings"
+    "https://orca-api.laravel.cloud/api/job-openings"
 );
 
 const headers = {
@@ -7496,7 +7564,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="job-openings-POSTapi-job-openings">POST api/job-openings</h2>
+                    <h2 id="job-openings-POSTapi-job-openings">Create a new job opening</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -7510,31 +7578,34 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://orca.test/api/job-openings" \
+    "https://orca-api.laravel.cloud/api/job-openings" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"company_id\": \"architecto\",
-    \"hiring_manager_id\": \"architecto\",
-    \"title\": \"n\",
-    \"description\": \"Eius et animi quos velit et.\",
-    \"team\": \"v\",
-    \"location\": \"d\",
-    \"salary_min\": 37,
-    \"salary_max\": 9,
-    \"requirements\": \"architecto\",
-    \"benefits\": \"architecto\",
+    \"company_id\": 1,
+    \"hiring_manager_id\": 1,
+    \"title\": \"Senior Software Engineer\",
+    \"description\": \"We are looking for an experienced software engineer to join our team...\",
+    \"team\": \"Engineering\",
+    \"location\": \"San Francisco, CA\",
+    \"type\": \"full_time\",
+    \"level\": \"senior\",
+    \"salary_min\": 120000,
+    \"salary_max\": 160000,
+    \"requirements\": \"- 5+ years of experience with web development\\n- Strong knowledge of JavaScript and React\\n- Experience with Node.js\",
+    \"benefits\": \"- Health, dental, and vision insurance\\n- 401(k) matching\\n- Generous PTO\",
+    \"status\": \"published\",
     \"is_remote\": true,
-    \"published_at\": \"2025-04-29T07:54:37\",
-    \"closing_date\": \"2124-04-07\"
+    \"published_at\": \"2023-05-01T00:00:00Z\",
+    \"closing_date\": \"2023-06-01T00:00:00Z\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/job-openings"
+    "https://orca-api.laravel.cloud/api/job-openings"
 );
 
 const headers = {
@@ -7544,19 +7615,22 @@ const headers = {
 };
 
 let body = {
-    "company_id": "architecto",
-    "hiring_manager_id": "architecto",
-    "title": "n",
-    "description": "Eius et animi quos velit et.",
-    "team": "v",
-    "location": "d",
-    "salary_min": 37,
-    "salary_max": 9,
-    "requirements": "architecto",
-    "benefits": "architecto",
+    "company_id": 1,
+    "hiring_manager_id": 1,
+    "title": "Senior Software Engineer",
+    "description": "We are looking for an experienced software engineer to join our team...",
+    "team": "Engineering",
+    "location": "San Francisco, CA",
+    "type": "full_time",
+    "level": "senior",
+    "salary_min": 120000,
+    "salary_max": 160000,
+    "requirements": "- 5+ years of experience with web development\n- Strong knowledge of JavaScript and React\n- Experience with Node.js",
+    "benefits": "- Health, dental, and vision insurance\n- 401(k) matching\n- Generous PTO",
+    "status": "published",
     "is_remote": true,
-    "published_at": "2025-04-29T07:54:37",
-    "closing_date": "2124-04-07"
+    "published_at": "2023-05-01T00:00:00Z",
+    "closing_date": "2023-06-01T00:00:00Z"
 };
 
 fetch(url, {
@@ -7652,25 +7726,25 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>company_id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="company_id"                data-endpoint="POSTapi-job-openings"
-               value="architecto"
+                <input type="number" style="display: none"
+               step="any"               name="company_id"                data-endpoint="POSTapi-job-openings"
+               value="1"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the companies table. Example: <code>architecto</code></p>
+<p>The ID of the company Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>hiring_manager_id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="hiring_manager_id"                data-endpoint="POSTapi-job-openings"
-               value="architecto"
+                <input type="number" style="display: none"
+               step="any"               name="hiring_manager_id"                data-endpoint="POSTapi-job-openings"
+               value="1"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the company_members table. Example: <code>architecto</code></p>
+<p>The ID of the hiring manager Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>title</code></b>&nbsp;&nbsp;
@@ -7678,10 +7752,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="POSTapi-job-openings"
-               value="n"
+               value="Senior Software Engineer"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+<p>Job title Example: <code>Senior Software Engineer</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -7689,114 +7763,132 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-job-openings"
-               value="Eius et animi quos velit et."
+               value="We are looking for an experienced software engineer to join our team..."
                data-component="body">
     <br>
-<p>Example: <code>Eius et animi quos velit et.</code></p>
+<p>Detailed job description Example: <code>We are looking for an experienced software engineer to join our team...</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>team</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="team"                data-endpoint="POSTapi-job-openings"
-               value="v"
+               value="Engineering"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>v</code></p>
+<p>Team or department Example: <code>Engineering</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="POSTapi-job-openings"
-               value="d"
+               value="San Francisco, CA"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>d</code></p>
+<p>Job location Example: <code>San Francisco, CA</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>type</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="type"                data-endpoint="POSTapi-job-openings"
-               value=""
+               value="full_time"
                data-component="body">
     <br>
-
+<p>Employment type Example: <code>full_time</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>full_time</code></li> <li><code>part_time</code></li> <li><code>contract</code></li> <li><code>internship</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>level</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="level"                data-endpoint="POSTapi-job-openings"
-               value=""
+               value="senior"
                data-component="body">
     <br>
-
+<p>Experience level Example: <code>senior</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>entry</code></li> <li><code>junior</code></li> <li><code>mid</code></li> <li><code>senior</code></li> <li><code>lead</code></li> <li><code>principal</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>salary_min</code></b>&nbsp;&nbsp;
 <small>number</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="salary_min"                data-endpoint="POSTapi-job-openings"
-               value="37"
+               value="120000"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>37</code></p>
+<p>Minimum salary Example: <code>120000</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>salary_max</code></b>&nbsp;&nbsp;
 <small>number</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="salary_max"                data-endpoint="POSTapi-job-openings"
-               value="9"
+               value="160000"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>9</code></p>
+<p>Maximum salary Example: <code>160000</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>requirements</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="requirements"                data-endpoint="POSTapi-job-openings"
-               value="architecto"
+               value="- 5+ years of experience with web development
+- Strong knowledge of JavaScript and React
+- Experience with Node.js"
                data-component="body">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Job requirements Example: `- 5+ years of experience with web development</p>
+<ul>
+<li>Strong knowledge of JavaScript and React</li>
+<li>Experience with Node.js`</li>
+</ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>benefits</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="benefits"                data-endpoint="POSTapi-job-openings"
-               value="architecto"
+               value="- Health, dental, and vision insurance
+- 401(k) matching
+- Generous PTO"
                data-component="body">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Job benefits Example: `- Health, dental, and vision insurance</p>
+<ul>
+<li>401(k) matching</li>
+<li>Generous PTO`</li>
+</ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-job-openings"
-               value=""
+               value="published"
                data-component="body">
     <br>
-
+<p>Job posting status Example: <code>published</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>draft</code></li> <li><code>published</code></li> <li><code>closed</code></li> <li><code>archived</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_remote</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <label data-endpoint="POSTapi-job-openings" style="display: none">
             <input type="radio" name="is_remote"
                    value="true"
@@ -7812,33 +7904,33 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Whether the job is remote Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>published_at</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="published_at"                data-endpoint="POSTapi-job-openings"
-               value="2025-04-29T07:54:37"
+               value="2023-05-01T00:00:00Z"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-04-29T07:54:37</code></p>
+<p>When the job was published Example: <code>2023-05-01T00:00:00Z</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>closing_date</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="closing_date"                data-endpoint="POSTapi-job-openings"
-               value="2124-04-07"
+               value="2023-06-01T00:00:00Z"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>published_at</code>. Example: <code>2124-04-07</code></p>
+<p>When the job posting closes Example: <code>2023-06-01T00:00:00Z</code></p>
         </div>
         </form>
 
-                    <h2 id="job-openings-GETapi-job-openings--id-">GET api/job-openings/{id}</h2>
+                    <h2 id="job-openings-GETapi-job-openings--id-">Get a single job opening</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -7852,7 +7944,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/job-openings/1" \
+    --get "https://orca-api.laravel.cloud/api/job-openings/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -7860,7 +7952,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/job-openings/1"
+    "https://orca-api.laravel.cloud/api/job-openings/1"
 );
 
 const headers = {
@@ -7988,7 +8080,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="job-openings-PUTapi-job-openings--id-">PUT api/job-openings/{id}</h2>
+                    <h2 id="job-openings-PUTapi-job-openings--id-">Update a job opening</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -8002,34 +8094,34 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://orca.test/api/job-openings/1" \
+    "https://orca-api.laravel.cloud/api/job-openings/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"company_id\": 16,
-    \"hiring_manager_id\": 16,
-    \"title\": \"n\",
-    \"description\": \"Eius et animi quos velit et.\",
-    \"team\": \"v\",
-    \"location\": \"d\",
-    \"type\": \"contract\",
-    \"level\": \"junior\",
-    \"salary_min\": 37,
-    \"salary_max\": 9,
-    \"requirements\": \"architecto\",
-    \"benefits\": \"architecto\",
-    \"status\": \"archived\",
+    \"company_id\": 1,
+    \"hiring_manager_id\": 2,
+    \"title\": \"Lead Software Engineer\",
+    \"description\": \"Updated job description with additional responsibilities...\",
+    \"team\": \"Platform Engineering\",
+    \"location\": \"Remote\",
+    \"type\": \"full_time\",
+    \"level\": \"lead\",
+    \"salary_min\": 150000,
+    \"salary_max\": 180000,
+    \"requirements\": \"- 8+ years of experience with web development\\n- Strong knowledge of system architecture\\n- Team leadership experience\",
+    \"benefits\": \"- Updated benefits package\\n- Home office stipend\\n- Learning budget\",
+    \"status\": \"published\",
     \"is_remote\": true,
-    \"published_at\": \"2025-04-29T07:54:37\",
-    \"closing_date\": \"2124-04-07\"
+    \"published_at\": \"2023-05-10T00:00:00Z\",
+    \"closing_date\": \"2023-06-15T00:00:00Z\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/job-openings/1"
+    "https://orca-api.laravel.cloud/api/job-openings/1"
 );
 
 const headers = {
@@ -8039,22 +8131,22 @@ const headers = {
 };
 
 let body = {
-    "company_id": 16,
-    "hiring_manager_id": 16,
-    "title": "n",
-    "description": "Eius et animi quos velit et.",
-    "team": "v",
-    "location": "d",
-    "type": "contract",
-    "level": "junior",
-    "salary_min": 37,
-    "salary_max": 9,
-    "requirements": "architecto",
-    "benefits": "architecto",
-    "status": "archived",
+    "company_id": 1,
+    "hiring_manager_id": 2,
+    "title": "Lead Software Engineer",
+    "description": "Updated job description with additional responsibilities...",
+    "team": "Platform Engineering",
+    "location": "Remote",
+    "type": "full_time",
+    "level": "lead",
+    "salary_min": 150000,
+    "salary_max": 180000,
+    "requirements": "- 8+ years of experience with web development\n- Strong knowledge of system architecture\n- Team leadership experience",
+    "benefits": "- Updated benefits package\n- Home office stipend\n- Learning budget",
+    "status": "published",
     "is_remote": true,
-    "published_at": "2025-04-29T07:54:37",
-    "closing_date": "2124-04-07"
+    "published_at": "2023-05-10T00:00:00Z",
+    "closing_date": "2023-06-15T00:00:00Z"
 };
 
 fetch(url, {
@@ -8170,10 +8262,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="company_id"                data-endpoint="PUTapi-job-openings--id-"
-               value="16"
+               value="1"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the companies table. Example: <code>16</code></p>
+<p>The ID of the company Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>hiring_manager_id</code></b>&nbsp;&nbsp;
@@ -8181,10 +8273,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="hiring_manager_id"                data-endpoint="PUTapi-job-openings--id-"
-               value="16"
+               value="2"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the company_members table. Example: <code>16</code></p>
+<p>The ID of the hiring manager Example: <code>2</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>title</code></b>&nbsp;&nbsp;
@@ -8192,10 +8284,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-job-openings--id-"
-               value="n"
+               value="Lead Software Engineer"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+<p>Job title Example: <code>Lead Software Engineer</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -8203,32 +8295,32 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-job-openings--id-"
-               value="Eius et animi quos velit et."
+               value="Updated job description with additional responsibilities..."
                data-component="body">
     <br>
-<p>Example: <code>Eius et animi quos velit et.</code></p>
+<p>Detailed job description Example: <code>Updated job description with additional responsibilities...</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>team</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="team"                data-endpoint="PUTapi-job-openings--id-"
-               value="v"
+               value="Platform Engineering"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>v</code></p>
+<p>Team or department Example: <code>Platform Engineering</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="PUTapi-job-openings--id-"
-               value="d"
+               value="Remote"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>d</code></p>
+<p>Job location Example: <code>Remote</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>type</code></b>&nbsp;&nbsp;
@@ -8236,10 +8328,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="type"                data-endpoint="PUTapi-job-openings--id-"
-               value="contract"
+               value="full_time"
                data-component="body">
     <br>
-<p>Example: <code>contract</code></p>
+<p>Employment type Example: <code>full_time</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>full_time</code></li> <li><code>part_time</code></li> <li><code>contract</code></li> <li><code>internship</code></li></ul>
         </div>
@@ -8249,56 +8341,68 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="level"                data-endpoint="PUTapi-job-openings--id-"
-               value="junior"
+               value="lead"
                data-component="body">
     <br>
-<p>Example: <code>junior</code></p>
+<p>Experience level Example: <code>lead</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>entry</code></li> <li><code>junior</code></li> <li><code>mid</code></li> <li><code>senior</code></li> <li><code>lead</code></li> <li><code>principal</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>salary_min</code></b>&nbsp;&nbsp;
 <small>number</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="salary_min"                data-endpoint="PUTapi-job-openings--id-"
-               value="37"
+               value="150000"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>37</code></p>
+<p>Minimum salary Example: <code>150000</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>salary_max</code></b>&nbsp;&nbsp;
 <small>number</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="salary_max"                data-endpoint="PUTapi-job-openings--id-"
-               value="9"
+               value="180000"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>9</code></p>
+<p>Maximum salary Example: <code>180000</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>requirements</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="requirements"                data-endpoint="PUTapi-job-openings--id-"
-               value="architecto"
+               value="- 8+ years of experience with web development
+- Strong knowledge of system architecture
+- Team leadership experience"
                data-component="body">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Job requirements Example: `- 8+ years of experience with web development</p>
+<ul>
+<li>Strong knowledge of system architecture</li>
+<li>Team leadership experience`</li>
+</ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>benefits</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="benefits"                data-endpoint="PUTapi-job-openings--id-"
-               value="architecto"
+               value="- Updated benefits package
+- Home office stipend
+- Learning budget"
                data-component="body">
     <br>
-<p>Example: <code>architecto</code></p>
+<p>Job benefits Example: `- Updated benefits package</p>
+<ul>
+<li>Home office stipend</li>
+<li>Learning budget`</li>
+</ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
@@ -8306,17 +8410,17 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-job-openings--id-"
-               value="archived"
+               value="published"
                data-component="body">
     <br>
-<p>Example: <code>archived</code></p>
+<p>Job posting status Example: <code>published</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>draft</code></li> <li><code>published</code></li> <li><code>closed</code></li> <li><code>archived</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_remote</code></b>&nbsp;&nbsp;
 <small>boolean</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <label data-endpoint="PUTapi-job-openings--id-" style="display: none">
             <input type="radio" name="is_remote"
                    value="true"
@@ -8332,33 +8436,33 @@ Must be one of:
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Whether the job is remote Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>published_at</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="published_at"                data-endpoint="PUTapi-job-openings--id-"
-               value="2025-04-29T07:54:37"
+               value="2023-05-10T00:00:00Z"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-04-29T07:54:37</code></p>
+<p>When the job was published Example: <code>2023-05-10T00:00:00Z</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>closing_date</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="closing_date"                data-endpoint="PUTapi-job-openings--id-"
-               value="2124-04-07"
+               value="2023-06-15T00:00:00Z"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>published_at</code>. Example: <code>2124-04-07</code></p>
+<p>When the job posting closes Example: <code>2023-06-15T00:00:00Z</code></p>
         </div>
         </form>
 
-                    <h2 id="job-openings-DELETEapi-job-openings--id-">DELETE api/job-openings/{id}</h2>
+                    <h2 id="job-openings-DELETEapi-job-openings--id-">Delete a job opening</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -8372,7 +8476,7 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://orca.test/api/job-openings/1" \
+    "https://orca-api.laravel.cloud/api/job-openings/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -8380,7 +8484,7 @@ Must be one of:
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/job-openings/1"
+    "https://orca-api.laravel.cloud/api/job-openings/1"
 );
 
 const headers = {
@@ -8496,7 +8600,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     
 
-                                <h2 id="tech-skills-GETapi-tech-skills-categories">GET api/tech-skills/categories</h2>
+                                <h2 id="tech-skills-GETapi-tech-skills-categories">Get all tech skill categories</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -8510,7 +8614,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/tech-skills/categories" \
+    --get "https://orca-api.laravel.cloud/api/tech-skills/categories" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -8518,7 +8622,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/tech-skills/categories"
+    "https://orca-api.laravel.cloud/api/tech-skills/categories"
 );
 
 const headers = {
@@ -8634,7 +8738,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="tech-skills-GETapi-tech-skills">GET api/tech-skills</h2>
+                    <h2 id="tech-skills-GETapi-tech-skills">List all tech skills</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -8648,7 +8752,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/tech-skills" \
+    --get "https://orca-api.laravel.cloud/api/tech-skills" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -8656,7 +8760,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/tech-skills"
+    "https://orca-api.laravel.cloud/api/tech-skills"
 );
 
 const headers = {
@@ -8772,7 +8876,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="tech-skills-POSTapi-tech-skills">POST api/tech-skills</h2>
+                    <h2 id="tech-skills-POSTapi-tech-skills">Create a new tech skill</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -8786,20 +8890,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://orca.test/api/tech-skills" \
+    "https://orca-api.laravel.cloud/api/tech-skills" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"b\",
-    \"parent_skill_id\": 16
+    \"name\": \"React\",
+    \"category\": \"framework\",
+    \"parent_skill_id\": 1
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/tech-skills"
+    "https://orca-api.laravel.cloud/api/tech-skills"
 );
 
 const headers = {
@@ -8809,8 +8914,9 @@ const headers = {
 };
 
 let body = {
-    "name": "b",
-    "parent_skill_id": 16
+    "name": "React",
+    "category": "framework",
+    "parent_skill_id": 1
 };
 
 fetch(url, {
@@ -8910,36 +9016,38 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-tech-skills"
-               value="b"
+               value="React"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+<p>Name of the tech skill Example: <code>React</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>category</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="category"                data-endpoint="POSTapi-tech-skills"
-               value=""
+               value="framework"
                data-component="body">
     <br>
-
+<p>Category of the tech skill Example: <code>framework</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>language</code></li> <li><code>framework</code></li> <li><code>database</code></li> <li><code>tool</code></li> <li><code>platform</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>parent_skill_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="parent_skill_id"                data-endpoint="POSTapi-tech-skills"
-               value="16"
+               value="1"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the tech_skills table. Example: <code>16</code></p>
+<p>ID of the parent skill (if this is a sub-skill) Example: <code>1</code></p>
         </div>
         </form>
 
-                    <h2 id="tech-skills-GETapi-tech-skills--id-">GET api/tech-skills/{id}</h2>
+                    <h2 id="tech-skills-GETapi-tech-skills--id-">Get a single tech skill</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -8953,7 +9061,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://orca.test/api/tech-skills/1" \
+    --get "https://orca-api.laravel.cloud/api/tech-skills/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -8961,7 +9069,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/tech-skills/1"
+    "https://orca-api.laravel.cloud/api/tech-skills/1"
 );
 
 const headers = {
@@ -9089,7 +9197,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="tech-skills-PUTapi-tech-skills--id-">PUT api/tech-skills/{id}</h2>
+                    <h2 id="tech-skills-PUTapi-tech-skills--id-">Update a tech skill</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -9103,20 +9211,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://orca.test/api/tech-skills/1" \
+    "https://orca-api.laravel.cloud/api/tech-skills/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"category\": \"platform\",
-    \"parent_skill_id\": 16
+    \"name\": \"React Native\",
+    \"category\": \"framework\",
+    \"parent_skill_id\": 2
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/tech-skills/1"
+    "https://orca-api.laravel.cloud/api/tech-skills/1"
 );
 
 const headers = {
@@ -9126,8 +9235,9 @@ const headers = {
 };
 
 let body = {
-    "category": "platform",
-    "parent_skill_id": 16
+    "name": "React Native",
+    "category": "framework",
+    "parent_skill_id": 2
 };
 
 fetch(url, {
@@ -9240,13 +9350,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-tech-skills--id-"
-               value=""
+               value="React Native"
                data-component="body">
     <br>
-
+<p>Name of the tech skill Example: <code>React Native</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>category</code></b>&nbsp;&nbsp;
@@ -9254,27 +9364,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="category"                data-endpoint="PUTapi-tech-skills--id-"
-               value="platform"
+               value="framework"
                data-component="body">
     <br>
-<p>Example: <code>platform</code></p>
+<p>Category of the tech skill Example: <code>framework</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>language</code></li> <li><code>framework</code></li> <li><code>database</code></li> <li><code>tool</code></li> <li><code>platform</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>parent_skill_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
-<i>optional</i> &nbsp;
+ &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="parent_skill_id"                data-endpoint="PUTapi-tech-skills--id-"
-               value="16"
+               value="2"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the tech_skills table. Example: <code>16</code></p>
+<p>ID of the parent skill (if this is a sub-skill) Example: <code>2</code></p>
         </div>
         </form>
 
-                    <h2 id="tech-skills-DELETEapi-tech-skills--id-">DELETE api/tech-skills/{id}</h2>
+                    <h2 id="tech-skills-DELETEapi-tech-skills--id-">Delete a tech skill</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -9288,7 +9398,7 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://orca.test/api/tech-skills/1" \
+    "https://orca-api.laravel.cloud/api/tech-skills/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -9296,7 +9406,7 @@ Must be one of:
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://orca.test/api/tech-skills/1"
+    "https://orca-api.laravel.cloud/api/tech-skills/1"
 );
 
 const headers = {

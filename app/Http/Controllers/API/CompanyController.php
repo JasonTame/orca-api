@@ -9,12 +9,15 @@ use App\Models\Company;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Knuckles\Scribe\Attributes\BodyParam;
+use Knuckles\Scribe\Attributes\Endpoint;
 
 /**
  * @group Companies
  */
 class CompanyController extends Controller
 {
+    #[Endpoint("List all companies")]
     public function index(Request $request): JsonResponse
     {
         if ($request->has('search')) {
@@ -26,6 +29,15 @@ class CompanyController extends Controller
         return response()->json($companies);
     }
 
+    #[Endpoint("Create a new company")]
+    #[BodyParam("name", "string", "Name of the company", required: true, example: "Acme Corporation")]
+    #[BodyParam("logo_url", "string", "URL to the company's logo", example: "https://example.com/logo.png")]
+    #[BodyParam("website", "string", "Company website URL", example: "https://acme.example.com")]
+    #[BodyParam("industry", "string", "Industry the company operates in", example: "Technology")]
+    #[BodyParam("size", "string", "Size of the company", enum: CompanySize::class, example: "medium")]
+    #[BodyParam("description", "string", "Company description", example: "A leading provider of innovative solutions")]
+    #[BodyParam("location", "string", "Main location of the company", example: "San Francisco, CA")]
+    #[BodyParam("status", "string", "Status of the company", enum: EntityStatus::class, example: "active")]
     public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -33,10 +45,10 @@ class CompanyController extends Controller
             'logo_url' => 'nullable|url',
             'website' => 'nullable|url',
             'industry' => 'nullable|string|max:255',
-            'size' => 'nullable|in:'.implode(',', CompanySize::values()),
+            'size' => 'nullable|in:' . implode(',', CompanySize::values()),
             'description' => 'nullable|string',
             'location' => 'nullable|string|max:255',
-            'status' => 'nullable|in:'.implode(',', EntityStatus::values()),
+            'status' => 'nullable|in:' . implode(',', EntityStatus::values()),
         ]);
 
         if ($validator->fails()) {
@@ -48,11 +60,21 @@ class CompanyController extends Controller
         return response()->json($company, 201);
     }
 
+    #[Endpoint("Get a single company")]
     public function show(Company $company): JsonResponse
     {
         return response()->json($company);
     }
 
+    #[Endpoint("Update a company")]
+    #[BodyParam("name", "string", "Name of the company", example: "Acme Corporation Updated")]
+    #[BodyParam("logo_url", "string", "URL to the company's logo", example: "https://example.com/new-logo.png")]
+    #[BodyParam("website", "string", "Company website URL", example: "https://acme-updated.example.com")]
+    #[BodyParam("industry", "string", "Industry the company operates in", example: "Software")]
+    #[BodyParam("size", "string", "Size of the company", enum: CompanySize::class, example: "large")]
+    #[BodyParam("description", "string", "Company description", example: "A global leader in software solutions")]
+    #[BodyParam("location", "string", "Main location of the company", example: "New York, NY")]
+    #[BodyParam("status", "string", "Status of the company", enum: EntityStatus::class, example: "active")]
     public function update(Request $request, Company $company): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -60,10 +82,10 @@ class CompanyController extends Controller
             'logo_url' => 'nullable|url',
             'website' => 'nullable|url',
             'industry' => 'nullable|string|max:255',
-            'size' => 'nullable|in:'.implode(',', CompanySize::values()),
+            'size' => 'nullable|in:' . implode(',', CompanySize::values()),
             'description' => 'nullable|string',
             'location' => 'nullable|string|max:255',
-            'status' => 'nullable|in:'.implode(',', EntityStatus::values()),
+            'status' => 'nullable|in:' . implode(',', EntityStatus::values()),
         ]);
 
         if ($validator->fails()) {
@@ -75,6 +97,7 @@ class CompanyController extends Controller
         return response()->json($company);
     }
 
+    #[Endpoint("Delete a company")]
     public function destroy(Company $company): JsonResponse
     {
         $company->delete();
@@ -82,6 +105,7 @@ class CompanyController extends Controller
         return response()->json(null, 204);
     }
 
+    #[Endpoint("Get all job openings for a company")]
     public function jobOpenings(Company $company): JsonResponse
     {
         $jobOpenings = $company->jobOpenings;
@@ -89,6 +113,7 @@ class CompanyController extends Controller
         return response()->json($jobOpenings);
     }
 
+    #[Endpoint("Get all members for a company")]
     public function members(Company $company): JsonResponse
     {
         $members = $company->members;
@@ -96,6 +121,7 @@ class CompanyController extends Controller
         return response()->json($members);
     }
 
+    #[Endpoint("Get all hiring managers for a company")]
     public function hiringManagers(Company $company): JsonResponse
     {
         $hiringManagers = $company->members()->where('is_hiring_manager', true)->get();
@@ -103,6 +129,7 @@ class CompanyController extends Controller
         return response()->json($hiringManagers);
     }
 
+    #[Endpoint("Get all interviewers for a company")]
     public function interviewers(Company $company): JsonResponse
     {
         $interviewers = $company->members()->where('is_interviewer', true)->get();

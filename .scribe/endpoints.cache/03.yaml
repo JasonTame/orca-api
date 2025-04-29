@@ -12,7 +12,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'List all candidates'
       description: ''
       authenticated: true
       custom: []
@@ -55,7 +55,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Store a new candidate'
       description: ''
       authenticated: true
       custom: []
@@ -70,9 +70,9 @@ endpoints:
     bodyParameters:
       first_name:
         name: first_name
-        description: 'Must not be greater than 255 characters.'
+        description: 'First name of the candidate'
         required: true
-        example: b
+        example: John
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -80,9 +80,9 @@ endpoints:
         custom: []
       last_name:
         name: last_name
-        description: 'Must not be greater than 255 characters.'
+        description: 'Last name of the candidate'
         required: true
-        example: 'n'
+        example: Doe
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -90,9 +90,9 @@ endpoints:
         custom: []
       email:
         name: email
-        description: 'Must be a valid email address.'
+        description: 'Email address of the candidate'
         required: true
-        example: ashly64@example.com
+        example: john.doe@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -100,138 +100,149 @@ endpoints:
         custom: []
       phone:
         name: phone
-        description: 'Must not be greater than 20 characters.'
-        required: false
-        example: vdljnikhwaykcmyu
+        description: 'Phone number of the candidate'
+        required: true
+        example: '+1234567890'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       location:
         name: location
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: w
+        description: 'Location of the candidate'
+        required: true
+        example: 'San Francisco, CA'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       resume_url:
         name: resume_url
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'https://cronin.com/incidunt-iure-odit-et-et-modi-ipsum.html'
+        description: "URL to the candidate's resume"
+        required: true
+        example: 'https://example.com/resume.pdf'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       portfolio_url:
         name: portfolio_url
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'http://www.predovic.biz/consequatur-aut-dolores-enim-non-facere-tempora.html'
+        description: "URL to the candidate's portfolio"
+        required: true
+        example: 'https://portfolio.johnde.com'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       linkedin_url:
         name: linkedin_url
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'http://www.leffler.info/quis-adipisci-molestias-fugit-deleniti-distinctio-eum'
+        description: "URL to the candidate's LinkedIn profile"
+        required: true
+        example: 'https://linkedin.com/in/johndoe'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       years_experience:
         name: years_experience
-        description: 'Must be at least 0.'
-        required: false
-        example: 15
+        description: 'Years of professional experience'
+        required: true
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       current_position:
         name: current_position
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: p
+        description: 'Current job position'
+        required: true
+        example: 'Senior Developer'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       current_company:
         name: current_company
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: w
+        description: 'Current employer'
+        required: true
+        example: 'Tech Corp'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       desired_salary:
         name: desired_salary
-        description: 'Must be at least 0.'
-        required: false
-        example: 16
+        description: 'Desired salary'
+        required: true
+        example: 120000
         type: number
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       source:
         name: source
-        description: ''
-        required: false
-        example: null
+        description: 'Source of the candidate'
+        required: true
+        example: linkedin
         type: string
-        enumValues: []
+        enumValues:
+          - linkedin
+          - indeed
+          - referral
+          - career_site
+          - other
         exampleWasSpecified: false
         nullable: false
         custom: []
       notes:
         name: notes
-        description: ''
-        required: false
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      status:
-        name: status
-        description: ''
-        required: false
-        example: null
+        description: 'Additional notes about the candidate'
+        required: true
+        example: 'Great communication skills'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
+      status:
+        name: status
+        description: 'Status of the candidate'
+        required: true
+        example: new
+        type: string
+        enumValues:
+          - active
+          - inactive
+          - hired
+          - rejected
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
     cleanBodyParameters:
-      first_name: b
-      last_name: 'n'
-      email: ashly64@example.com
-      phone: vdljnikhwaykcmyu
-      location: w
-      resume_url: 'https://cronin.com/incidunt-iure-odit-et-et-modi-ipsum.html'
-      portfolio_url: 'http://www.predovic.biz/consequatur-aut-dolores-enim-non-facere-tempora.html'
-      linkedin_url: 'http://www.leffler.info/quis-adipisci-molestias-fugit-deleniti-distinctio-eum'
-      years_experience: 15
-      current_position: p
-      current_company: w
-      desired_salary: 16
-      notes: architecto
+      first_name: John
+      last_name: Doe
+      email: john.doe@example.com
+      phone: '+1234567890'
+      location: 'San Francisco, CA'
+      resume_url: 'https://example.com/resume.pdf'
+      portfolio_url: 'https://portfolio.johnde.com'
+      linkedin_url: 'https://linkedin.com/in/johndoe'
+      years_experience: 5
+      current_position: 'Senior Developer'
+      current_company: 'Tech Corp'
+      desired_salary: 120000
+      source: linkedin
+      notes: 'Great communication skills'
+      status: new
     fileParameters: []
     responses: []
     responseFields: []
@@ -252,7 +263,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get a single candidate'
       description: ''
       authenticated: true
       custom: []
@@ -307,7 +318,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Update an existing candidate'
       description: ''
       authenticated: true
       custom: []
@@ -333,9 +344,9 @@ endpoints:
     bodyParameters:
       first_name:
         name: first_name
-        description: 'Must not be greater than 255 characters.'
+        description: 'First name of the candidate'
         required: true
-        example: b
+        example: John
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -343,9 +354,9 @@ endpoints:
         custom: []
       last_name:
         name: last_name
-        description: 'Must not be greater than 255 characters.'
+        description: 'Last name of the candidate'
         required: true
-        example: 'n'
+        example: Doe
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -353,9 +364,9 @@ endpoints:
         custom: []
       email:
         name: email
-        description: ''
-        required: false
-        example: null
+        description: 'Email address of the candidate'
+        required: true
+        example: john.doe@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -363,137 +374,149 @@ endpoints:
         custom: []
       phone:
         name: phone
-        description: 'Must not be greater than 20 characters.'
-        required: false
-        example: gzmiyvdljnikhway
+        description: 'Phone number of the candidate'
+        required: true
+        example: '+1234567890'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       location:
         name: location
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: k
+        description: 'Location of the candidate'
+        required: true
+        example: 'San Francisco, CA'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       resume_url:
         name: resume_url
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'http://www.cruickshank.com/adipisci-quidem-nostrum-qui-commodi-incidunt-iure'
+        description: "URL to the candidate's resume"
+        required: true
+        example: 'https://example.com/resume.pdf'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       portfolio_url:
         name: portfolio_url
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'https://mclaughlin.com/ipsum-nostrum-omnis-autem-et-consequatur-aut-dolores-enim.html'
+        description: "URL to the candidate's portfolio"
+        required: true
+        example: 'https://portfolio.johnde.com'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       linkedin_url:
         name: linkedin_url
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'http://vonrueden.com/'
+        description: "URL to the candidate's LinkedIn profile"
+        required: true
+        example: 'https://linkedin.com/in/johndoe'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       years_experience:
         name: years_experience
-        description: 'Must be at least 0.'
-        required: false
-        example: 84
+        description: 'Years of professional experience'
+        required: true
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       current_position:
         name: current_position
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: u
+        description: 'Current job position'
+        required: true
+        example: 'Senior Developer'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       current_company:
         name: current_company
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: j
+        description: 'Current employer'
+        required: true
+        example: 'Tech Corp'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       desired_salary:
         name: desired_salary
-        description: 'Must be at least 0.'
-        required: false
-        example: 87
+        description: 'Desired salary'
+        required: true
+        example: 120000
         type: number
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       source:
         name: source
-        description: ''
-        required: false
-        example: null
+        description: 'Source of the candidate'
+        required: true
+        example: linkedin
         type: string
-        enumValues: []
+        enumValues:
+          - linkedin
+          - indeed
+          - referral
+          - career_site
+          - other
         exampleWasSpecified: false
         nullable: false
         custom: []
       notes:
         name: notes
-        description: ''
-        required: false
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      status:
-        name: status
-        description: ''
-        required: false
-        example: null
+        description: 'Additional notes about the candidate'
+        required: true
+        example: 'Great communication skills'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
+      status:
+        name: status
+        description: 'Status of the candidate'
+        required: true
+        example: interviewing
+        type: string
+        enumValues:
+          - active
+          - inactive
+          - hired
+          - rejected
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
     cleanBodyParameters:
-      first_name: b
-      last_name: 'n'
-      phone: gzmiyvdljnikhway
-      location: k
-      resume_url: 'http://www.cruickshank.com/adipisci-quidem-nostrum-qui-commodi-incidunt-iure'
-      portfolio_url: 'https://mclaughlin.com/ipsum-nostrum-omnis-autem-et-consequatur-aut-dolores-enim.html'
-      linkedin_url: 'http://vonrueden.com/'
-      years_experience: 84
-      current_position: u
-      current_company: j
-      desired_salary: 87
-      notes: architecto
+      first_name: John
+      last_name: Doe
+      email: john.doe@example.com
+      phone: '+1234567890'
+      location: 'San Francisco, CA'
+      resume_url: 'https://example.com/resume.pdf'
+      portfolio_url: 'https://portfolio.johnde.com'
+      linkedin_url: 'https://linkedin.com/in/johndoe'
+      years_experience: 5
+      current_position: 'Senior Developer'
+      current_company: 'Tech Corp'
+      desired_salary: 120000
+      source: linkedin
+      notes: 'Great communication skills'
+      status: interviewing
     fileParameters: []
     responses: []
     responseFields: []
@@ -514,7 +537,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Delete a candidate'
       description: ''
       authenticated: true
       custom: []
@@ -559,7 +582,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Get skills for a candidate'
+      title: 'Get candidate skills'
       description: ''
       authenticated: true
       custom: []
@@ -613,7 +636,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Get applications for a candidate'
+      title: 'Get candidate applications'
       description: ''
       authenticated: true
       custom: []

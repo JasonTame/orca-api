@@ -10,7 +10,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'List all companies'
       description: ''
       authenticated: true
       custom: []
@@ -53,7 +53,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Create a new company'
       description: ''
       authenticated: true
       custom: []
@@ -68,9 +68,9 @@ endpoints:
     bodyParameters:
       name:
         name: name
-        description: 'Must not be greater than 255 characters.'
+        description: 'Name of the company'
         required: true
-        example: b
+        example: 'Acme Corporation'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -78,81 +78,89 @@ endpoints:
         custom: []
       logo_url:
         name: logo_url
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'http://bailey.com/'
+        description: "URL to the company's logo"
+        required: true
+        example: 'https://example.com/logo.png'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       website:
         name: website
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'http://rempel.com/sunt-nihil-accusantium-harum-mollitia'
+        description: 'Company website URL'
+        required: true
+        example: 'https://acme.example.com'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       industry:
         name: industry
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: k
+        description: 'Industry the company operates in'
+        required: true
+        example: Technology
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       size:
         name: size
-        description: ''
-        required: false
-        example: null
+        description: 'Size of the company'
+        required: true
+        example: medium
         type: string
-        enumValues: []
+        enumValues:
+          - small
+          - medium
+          - large
+          - enterprise
         exampleWasSpecified: false
         nullable: false
         custom: []
       description:
         name: description
-        description: ''
-        required: false
-        example: 'Eius et animi quos velit et.'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      location:
-        name: location
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: v
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      status:
-        name: status
-        description: ''
-        required: false
-        example: null
+        description: 'Company description'
+        required: true
+        example: 'A leading provider of innovative solutions'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
+      location:
+        name: location
+        description: 'Main location of the company'
+        required: true
+        example: 'San Francisco, CA'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      status:
+        name: status
+        description: 'Status of the company'
+        required: true
+        example: active
+        type: string
+        enumValues:
+          - active
+          - inactive
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
     cleanBodyParameters:
-      name: b
-      logo_url: 'http://bailey.com/'
-      website: 'http://rempel.com/sunt-nihil-accusantium-harum-mollitia'
-      industry: k
-      description: 'Eius et animi quos velit et.'
-      location: v
+      name: 'Acme Corporation'
+      logo_url: 'https://example.com/logo.png'
+      website: 'https://acme.example.com'
+      industry: Technology
+      size: medium
+      description: 'A leading provider of innovative solutions'
+      location: 'San Francisco, CA'
+      status: active
     fileParameters: []
     responses: []
     responseFields: []
@@ -173,7 +181,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get a single company'
       description: ''
       authenticated: true
       custom: []
@@ -228,7 +236,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Update a company'
       description: ''
       authenticated: true
       custom: []
@@ -254,9 +262,9 @@ endpoints:
     bodyParameters:
       name:
         name: name
-        description: 'Must not be greater than 255 characters.'
+        description: 'Name of the company'
         required: true
-        example: b
+        example: 'Acme Corporation Updated'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -264,81 +272,89 @@ endpoints:
         custom: []
       logo_url:
         name: logo_url
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'http://bailey.com/'
+        description: "URL to the company's logo"
+        required: true
+        example: 'https://example.com/new-logo.png'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       website:
         name: website
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'http://rempel.com/sunt-nihil-accusantium-harum-mollitia'
+        description: 'Company website URL'
+        required: true
+        example: 'https://acme-updated.example.com'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       industry:
         name: industry
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: k
+        description: 'Industry the company operates in'
+        required: true
+        example: Software
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       size:
         name: size
-        description: ''
-        required: false
-        example: null
+        description: 'Size of the company'
+        required: true
+        example: large
         type: string
-        enumValues: []
+        enumValues:
+          - small
+          - medium
+          - large
+          - enterprise
         exampleWasSpecified: false
         nullable: false
         custom: []
       description:
         name: description
-        description: ''
-        required: false
-        example: 'Eius et animi quos velit et.'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      location:
-        name: location
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: v
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      status:
-        name: status
-        description: ''
-        required: false
-        example: null
+        description: 'Company description'
+        required: true
+        example: 'A global leader in software solutions'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
+      location:
+        name: location
+        description: 'Main location of the company'
+        required: true
+        example: 'New York, NY'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      status:
+        name: status
+        description: 'Status of the company'
+        required: true
+        example: active
+        type: string
+        enumValues:
+          - active
+          - inactive
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
     cleanBodyParameters:
-      name: b
-      logo_url: 'http://bailey.com/'
-      website: 'http://rempel.com/sunt-nihil-accusantium-harum-mollitia'
-      industry: k
-      description: 'Eius et animi quos velit et.'
-      location: v
+      name: 'Acme Corporation Updated'
+      logo_url: 'https://example.com/new-logo.png'
+      website: 'https://acme-updated.example.com'
+      industry: Software
+      size: large
+      description: 'A global leader in software solutions'
+      location: 'New York, NY'
+      status: active
     fileParameters: []
     responses: []
     responseFields: []
@@ -359,7 +375,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Delete a company'
       description: ''
       authenticated: true
       custom: []
@@ -404,7 +420,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get all job openings for a company'
       description: ''
       authenticated: true
       custom: []
@@ -458,7 +474,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get all members for a company'
       description: ''
       authenticated: true
       custom: []
@@ -512,7 +528,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get all hiring managers for a company'
       description: ''
       authenticated: true
       custom: []
@@ -566,7 +582,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get all interviewers for a company'
       description: ''
       authenticated: true
       custom: []

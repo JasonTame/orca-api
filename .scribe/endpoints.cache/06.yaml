@@ -12,7 +12,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'List all interviews'
       description: ''
       authenticated: true
       custom: []
@@ -55,7 +55,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Create a new interview'
       description: ''
       authenticated: true
       custom: []
@@ -70,9 +70,9 @@ endpoints:
     bodyParameters:
       application_id:
         name: application_id
-        description: 'The <code>id</code> of an existing record in the applications table.'
+        description: 'The ID of the application'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -80,9 +80,9 @@ endpoints:
         custom: []
       stage_id:
         name: stage_id
-        description: 'The <code>id</code> of an existing record in the interview_stages table.'
+        description: 'The ID of the interview stage'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -90,9 +90,9 @@ endpoints:
         custom: []
       interviewer_id:
         name: interviewer_id
-        description: 'The <code>id</code> of an existing record in the company_members table.'
+        description: 'The ID of the interviewer'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -100,9 +100,9 @@ endpoints:
         custom: []
       scheduled_at:
         name: scheduled_at
-        description: 'Must be a valid date. Must be a date after <code>now</code>.'
+        description: 'When the interview is scheduled'
         required: true
-        example: '2051-05-23'
+        example: '2023-05-15T10:00:00Z'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -110,106 +110,115 @@ endpoints:
         custom: []
       completed_at:
         name: completed_at
-        description: 'Must be a valid date. Must be a date after <code>scheduled_at</code>.'
-        required: false
-        example: '2124-04-07'
+        description: 'When the interview was completed'
+        required: true
+        example: '2023-05-15T11:00:00Z'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       location:
         name: location
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: g
+        description: 'Physical location of the interview'
+        required: true
+        example: 'Conference Room 3A'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       meeting_url:
         name: meeting_url
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html'
+        description: 'URL for virtual meetings'
+        required: true
+        example: 'https://zoom.us/j/123456789'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       status:
         name: status
-        description: ''
-        required: false
-        example: null
+        description: 'Status of the interview'
+        required: true
+        example: scheduled
         type: string
-        enumValues: []
+        enumValues:
+          - scheduled
+          - completed
+          - cancelled
+          - rescheduled
         exampleWasSpecified: false
         nullable: false
         custom: []
       technical_score:
         name: technical_score
-        description: 'Must be at least 1. Must not be greater than 5.'
-        required: false
-        example: 3
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      cultural_score:
-        name: cultural_score
-        description: 'Must be at least 1. Must not be greater than 5.'
-        required: false
+        description: 'Technical assessment score (1-5)'
+        required: true
         example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
+        custom: []
+      cultural_score:
+        name: cultural_score
+        description: 'Cultural fit score (1-5)'
+        required: true
+        example: 5
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
         custom: []
       feedback:
         name: feedback
-        description: ''
-        required: false
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      decision:
-        name: decision
-        description: ''
-        required: false
-        example: null
+        description: 'Detailed feedback from the interviewer'
+        required: true
+        example: 'Strong technical skills, especially in database design. Good communication.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
+      decision:
+        name: decision
+        description: 'Interview decision'
+        required: true
+        example: proceed
+        type: string
+        enumValues:
+          - proceed
+          - reject
+          - hold
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
       notes:
         name: notes
-        description: ''
-        required: false
-        example: architecto
+        description: 'Additional notes about the interview'
+        required: true
+        example: 'Candidate was very well prepared.'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
-      application_id: 16
-      stage_id: 16
-      interviewer_id: 16
-      scheduled_at: '2051-05-23'
-      completed_at: '2124-04-07'
-      location: g
-      meeting_url: 'http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html'
-      technical_score: 3
-      cultural_score: 4
-      feedback: architecto
-      notes: architecto
+      application_id: 1
+      stage_id: 1
+      interviewer_id: 1
+      scheduled_at: '2023-05-15T10:00:00Z'
+      completed_at: '2023-05-15T11:00:00Z'
+      location: 'Conference Room 3A'
+      meeting_url: 'https://zoom.us/j/123456789'
+      status: scheduled
+      technical_score: 4
+      cultural_score: 5
+      feedback: 'Strong technical skills, especially in database design. Good communication.'
+      decision: proceed
+      notes: 'Candidate was very well prepared.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -230,7 +239,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get a single interview'
       description: ''
       authenticated: true
       custom: []
@@ -285,7 +294,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Update an interview'
       description: ''
       authenticated: true
       custom: []
@@ -311,39 +320,39 @@ endpoints:
     bodyParameters:
       application_id:
         name: application_id
-        description: 'The <code>id</code> of an existing record in the applications table.'
+        description: 'The ID of the application'
         required: true
-        example: architecto
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
       stage_id:
         name: stage_id
-        description: 'The <code>id</code> of an existing record in the interview_stages table.'
+        description: 'The ID of the interview stage'
         required: true
-        example: architecto
-        type: string
+        example: 2
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
       interviewer_id:
         name: interviewer_id
-        description: 'The <code>id</code> of an existing record in the company_members table.'
+        description: 'The ID of the interviewer'
         required: true
-        example: architecto
-        type: string
+        example: 3
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
       scheduled_at:
         name: scheduled_at
-        description: 'Must be a valid date. Must be a date after <code>now</code>.'
+        description: 'When the interview is scheduled'
         required: true
-        example: '2051-05-23'
+        example: '2023-05-20T14:00:00Z'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -351,106 +360,115 @@ endpoints:
         custom: []
       completed_at:
         name: completed_at
-        description: 'Must be a valid date. Must be a date after <code>scheduled_at</code>.'
-        required: false
-        example: '2124-04-07'
+        description: 'When the interview was completed'
+        required: true
+        example: '2023-05-20T15:30:00Z'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       location:
         name: location
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: g
+        description: 'Physical location of the interview'
+        required: true
+        example: 'Meeting Room B'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       meeting_url:
         name: meeting_url
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html'
+        description: 'URL for virtual meetings'
+        required: true
+        example: 'https://teams.microsoft.com/l/123456'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       status:
         name: status
-        description: ''
-        required: false
-        example: null
+        description: 'Status of the interview'
+        required: true
+        example: completed
         type: string
-        enumValues: []
+        enumValues:
+          - scheduled
+          - completed
+          - cancelled
+          - rescheduled
         exampleWasSpecified: false
         nullable: false
         custom: []
       technical_score:
         name: technical_score
-        description: 'Must be at least 1. Must not be greater than 5.'
-        required: false
-        example: 3
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      cultural_score:
-        name: cultural_score
-        description: 'Must be at least 1. Must not be greater than 5.'
-        required: false
+        description: 'Technical assessment score (1-5)'
+        required: true
         example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
+        custom: []
+      cultural_score:
+        name: cultural_score
+        description: 'Cultural fit score (1-5)'
+        required: true
+        example: 4
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
         custom: []
       feedback:
         name: feedback
-        description: ''
-        required: false
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      decision:
-        name: decision
-        description: ''
-        required: false
-        example: null
+        description: 'Detailed feedback from the interviewer'
+        required: true
+        example: 'Excellent problem-solving skills. Good culture fit.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
+      decision:
+        name: decision
+        description: 'Interview decision'
+        required: true
+        example: hire
+        type: string
+        enumValues:
+          - proceed
+          - reject
+          - hold
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
       notes:
         name: notes
-        description: ''
-        required: false
-        example: architecto
+        description: 'Additional notes about the interview'
+        required: true
+        example: 'Would be a great fit for the team.'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
-      application_id: architecto
-      stage_id: architecto
-      interviewer_id: architecto
-      scheduled_at: '2051-05-23'
-      completed_at: '2124-04-07'
-      location: g
-      meeting_url: 'http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html'
-      technical_score: 3
+      application_id: 1
+      stage_id: 2
+      interviewer_id: 3
+      scheduled_at: '2023-05-20T14:00:00Z'
+      completed_at: '2023-05-20T15:30:00Z'
+      location: 'Meeting Room B'
+      meeting_url: 'https://teams.microsoft.com/l/123456'
+      status: completed
+      technical_score: 4
       cultural_score: 4
-      feedback: architecto
-      notes: architecto
+      feedback: 'Excellent problem-solving skills. Good culture fit.'
+      decision: hire
+      notes: 'Would be a great fit for the team.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -471,7 +489,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Delete an interview'
       description: ''
       authenticated: true
       custom: []

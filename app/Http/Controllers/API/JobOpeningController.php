@@ -10,12 +10,15 @@ use App\Models\JobOpening;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Knuckles\Scribe\Attributes\BodyParam;
+use Knuckles\Scribe\Attributes\Endpoint;
 
 /**
  * @group Job Openings
  */
 class JobOpeningController extends Controller
 {
+    #[Endpoint("List all job openings")]
     public function index(): JsonResponse
     {
         $jobOpenings = JobOpening::with(['company', 'hiringManager', 'applications'])->get();
@@ -23,6 +26,23 @@ class JobOpeningController extends Controller
         return response()->json($jobOpenings);
     }
 
+    #[Endpoint("Create a new job opening")]
+    #[BodyParam("company_id", "integer", "The ID of the company", required: true, example: 1)]
+    #[BodyParam("hiring_manager_id", "integer", "The ID of the hiring manager", required: true, example: 1)]
+    #[BodyParam("title", "string", "Job title", required: true, example: "Senior Software Engineer")]
+    #[BodyParam("description", "string", "Detailed job description", required: true, example: "We are looking for an experienced software engineer to join our team...")]
+    #[BodyParam("team", "string", "Team or department", example: "Engineering")]
+    #[BodyParam("location", "string", "Job location", example: "San Francisco, CA")]
+    #[BodyParam("type", "string", "Employment type", required: true, enum: JobType::class, example: "full_time")]
+    #[BodyParam("level", "string", "Experience level", required: true, enum: JobLevel::class, example: "senior")]
+    #[BodyParam("salary_min", "number", "Minimum salary", example: 120000)]
+    #[BodyParam("salary_max", "number", "Maximum salary", example: 160000)]
+    #[BodyParam("requirements", "string", "Job requirements", example: "- 5+ years of experience with web development\n- Strong knowledge of JavaScript and React\n- Experience with Node.js")]
+    #[BodyParam("benefits", "string", "Job benefits", example: "- Health, dental, and vision insurance\n- 401(k) matching\n- Generous PTO")]
+    #[BodyParam("status", "string", "Job posting status", required: true, enum: JobStatus::class, example: "published")]
+    #[BodyParam("is_remote", "boolean", "Whether the job is remote", example: true)]
+    #[BodyParam("published_at", "string", "When the job was published", example: "2023-05-01T00:00:00Z")]
+    #[BodyParam("closing_date", "string", "When the job posting closes", example: "2023-06-01T00:00:00Z")]
     public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -32,13 +52,13 @@ class JobOpeningController extends Controller
             'description' => 'required|string',
             'team' => 'nullable|string|max:255',
             'location' => 'nullable|string|max:255',
-            'type' => 'required|in:'.implode(',', JobType::values()),
-            'level' => 'required|in:'.implode(',', JobLevel::values()),
+            'type' => 'required|in:' . implode(',', JobType::values()),
+            'level' => 'required|in:' . implode(',', JobLevel::values()),
             'salary_min' => 'nullable|numeric|min:0',
             'salary_max' => 'nullable|numeric|min:0|gte:salary_min',
             'requirements' => 'nullable|string',
             'benefits' => 'nullable|string',
-            'status' => 'required|in:'.implode(',', JobStatus::values()),
+            'status' => 'required|in:' . implode(',', JobStatus::values()),
             'is_remote' => 'boolean',
             'published_at' => 'nullable|date',
             'closing_date' => 'nullable|date|after:published_at',
@@ -53,6 +73,7 @@ class JobOpeningController extends Controller
         return response()->json($jobOpening, 201);
     }
 
+    #[Endpoint("Get a single job opening")]
     public function show(JobOpening $jobOpening): JsonResponse
     {
         $jobOpening->load(['company', 'hiringManager', 'applications']);
@@ -60,6 +81,23 @@ class JobOpeningController extends Controller
         return response()->json($jobOpening);
     }
 
+    #[Endpoint("Update a job opening")]
+    #[BodyParam("company_id", "integer", "The ID of the company", example: 1)]
+    #[BodyParam("hiring_manager_id", "integer", "The ID of the hiring manager", example: 2)]
+    #[BodyParam("title", "string", "Job title", example: "Lead Software Engineer")]
+    #[BodyParam("description", "string", "Detailed job description", example: "Updated job description with additional responsibilities...")]
+    #[BodyParam("team", "string", "Team or department", example: "Platform Engineering")]
+    #[BodyParam("location", "string", "Job location", example: "Remote")]
+    #[BodyParam("type", "string", "Employment type", enum: JobType::class, example: "full_time")]
+    #[BodyParam("level", "string", "Experience level", enum: JobLevel::class, example: "lead")]
+    #[BodyParam("salary_min", "number", "Minimum salary", example: 150000)]
+    #[BodyParam("salary_max", "number", "Maximum salary", example: 180000)]
+    #[BodyParam("requirements", "string", "Job requirements", example: "- 8+ years of experience with web development\n- Strong knowledge of system architecture\n- Team leadership experience")]
+    #[BodyParam("benefits", "string", "Job benefits", example: "- Updated benefits package\n- Home office stipend\n- Learning budget")]
+    #[BodyParam("status", "string", "Job posting status", enum: JobStatus::class, example: "published")]
+    #[BodyParam("is_remote", "boolean", "Whether the job is remote", example: true)]
+    #[BodyParam("published_at", "string", "When the job was published", example: "2023-05-10T00:00:00Z")]
+    #[BodyParam("closing_date", "string", "When the job posting closes", example: "2023-06-15T00:00:00Z")]
     public function update(Request $request, JobOpening $jobOpening): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -90,6 +128,7 @@ class JobOpeningController extends Controller
         return response()->json($jobOpening);
     }
 
+    #[Endpoint("Delete a job opening")]
     public function destroy(JobOpening $jobOpening): JsonResponse
     {
         $jobOpening->delete();

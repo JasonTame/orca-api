@@ -10,7 +10,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'List all job openings'
       description: ''
       authenticated: true
       custom: []
@@ -53,7 +53,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Create a new job opening'
       description: ''
       authenticated: true
       custom: []
@@ -68,29 +68,29 @@ endpoints:
     bodyParameters:
       company_id:
         name: company_id
-        description: 'The <code>id</code> of an existing record in the companies table.'
+        description: 'The ID of the company'
         required: true
-        example: architecto
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
       hiring_manager_id:
         name: hiring_manager_id
-        description: 'The <code>id</code> of an existing record in the company_members table.'
+        description: 'The ID of the hiring manager'
         required: true
-        example: architecto
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
       title:
         name: title
-        description: 'Must not be greater than 255 characters.'
+        description: 'Job title'
         required: true
-        example: 'n'
+        example: 'Senior Software Engineer'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -98,9 +98,9 @@ endpoints:
         custom: []
       description:
         name: description
-        description: ''
+        description: 'Detailed job description'
         required: true
-        example: 'Eius et animi quos velit et.'
+        example: 'We are looking for an experienced software engineer to join our team...'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -108,98 +108,118 @@ endpoints:
         custom: []
       team:
         name: team
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: v
+        description: 'Team or department'
+        required: true
+        example: Engineering
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       location:
         name: location
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: d
+        description: 'Job location'
+        required: true
+        example: 'San Francisco, CA'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       type:
         name: type
-        description: ''
-        required: false
-        example: null
+        description: 'Employment type'
+        required: true
+        example: full_time
         type: string
-        enumValues: []
+        enumValues:
+          - full_time
+          - part_time
+          - contract
+          - internship
         exampleWasSpecified: false
         nullable: false
         custom: []
       level:
         name: level
-        description: ''
-        required: false
-        example: null
+        description: 'Experience level'
+        required: true
+        example: senior
         type: string
-        enumValues: []
+        enumValues:
+          - entry
+          - junior
+          - mid
+          - senior
+          - lead
+          - principal
         exampleWasSpecified: false
         nullable: false
         custom: []
       salary_min:
         name: salary_min
-        description: 'Must be at least 0.'
-        required: false
-        example: 37
+        description: 'Minimum salary'
+        required: true
+        example: 120000
         type: number
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       salary_max:
         name: salary_max
-        description: 'Must be at least 0.'
-        required: false
-        example: 9
+        description: 'Maximum salary'
+        required: true
+        example: 160000
         type: number
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       requirements:
         name: requirements
-        description: ''
-        required: false
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      benefits:
-        name: benefits
-        description: ''
-        required: false
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      status:
-        name: status
-        description: ''
-        required: false
-        example: null
+        description: 'Job requirements'
+        required: true
+        example: |-
+          - 5+ years of experience with web development
+          - Strong knowledge of JavaScript and React
+          - Experience with Node.js
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
+      benefits:
+        name: benefits
+        description: 'Job benefits'
+        required: true
+        example: |-
+          - Health, dental, and vision insurance
+          - 401(k) matching
+          - Generous PTO
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      status:
+        name: status
+        description: 'Job posting status'
+        required: true
+        example: published
+        type: string
+        enumValues:
+          - draft
+          - published
+          - closed
+          - archived
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
       is_remote:
         name: is_remote
-        description: ''
-        required: false
+        description: 'Whether the job is remote'
+        required: true
         example: true
         type: boolean
         enumValues: []
@@ -208,38 +228,47 @@ endpoints:
         custom: []
       published_at:
         name: published_at
-        description: 'Must be a valid date.'
-        required: false
-        example: '2025-04-29T07:54:37'
+        description: 'When the job was published'
+        required: true
+        example: '2023-05-01T00:00:00Z'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       closing_date:
         name: closing_date
-        description: 'Must be a valid date. Must be a date after <code>published_at</code>.'
-        required: false
-        example: '2124-04-07'
+        description: 'When the job posting closes'
+        required: true
+        example: '2023-06-01T00:00:00Z'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
-      company_id: architecto
-      hiring_manager_id: architecto
-      title: 'n'
-      description: 'Eius et animi quos velit et.'
-      team: v
-      location: d
-      salary_min: 37
-      salary_max: 9
-      requirements: architecto
-      benefits: architecto
+      company_id: 1
+      hiring_manager_id: 1
+      title: 'Senior Software Engineer'
+      description: 'We are looking for an experienced software engineer to join our team...'
+      team: Engineering
+      location: 'San Francisco, CA'
+      type: full_time
+      level: senior
+      salary_min: 120000
+      salary_max: 160000
+      requirements: |-
+        - 5+ years of experience with web development
+        - Strong knowledge of JavaScript and React
+        - Experience with Node.js
+      benefits: |-
+        - Health, dental, and vision insurance
+        - 401(k) matching
+        - Generous PTO
+      status: published
       is_remote: true
-      published_at: '2025-04-29T07:54:37'
-      closing_date: '2124-04-07'
+      published_at: '2023-05-01T00:00:00Z'
+      closing_date: '2023-06-01T00:00:00Z'
     fileParameters: []
     responses: []
     responseFields: []
@@ -260,7 +289,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get a single job opening'
       description: ''
       authenticated: true
       custom: []
@@ -315,7 +344,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Update a job opening'
       description: ''
       authenticated: true
       custom: []
@@ -341,9 +370,9 @@ endpoints:
     bodyParameters:
       company_id:
         name: company_id
-        description: 'The <code>id</code> of an existing record in the companies table.'
+        description: 'The ID of the company'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -351,9 +380,9 @@ endpoints:
         custom: []
       hiring_manager_id:
         name: hiring_manager_id
-        description: 'The <code>id</code> of an existing record in the company_members table.'
+        description: 'The ID of the hiring manager'
         required: true
-        example: 16
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -361,9 +390,9 @@ endpoints:
         custom: []
       title:
         name: title
-        description: 'Must not be greater than 255 characters.'
+        description: 'Job title'
         required: true
-        example: 'n'
+        example: 'Lead Software Engineer'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -371,9 +400,9 @@ endpoints:
         custom: []
       description:
         name: description
-        description: ''
+        description: 'Detailed job description'
         required: true
-        example: 'Eius et animi quos velit et.'
+        example: 'Updated job description with additional responsibilities...'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -381,29 +410,29 @@ endpoints:
         custom: []
       team:
         name: team
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: v
+        description: 'Team or department'
+        required: true
+        example: 'Platform Engineering'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       location:
         name: location
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: d
+        description: 'Job location'
+        required: true
+        example: Remote
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       type:
         name: type
-        description: ''
+        description: 'Employment type'
         required: true
-        example: contract
+        example: full_time
         type: string
         enumValues:
           - full_time
@@ -415,9 +444,9 @@ endpoints:
         custom: []
       level:
         name: level
-        description: ''
+        description: 'Experience level'
         required: true
-        example: junior
+        example: lead
         type: string
         enumValues:
           - entry
@@ -431,49 +460,55 @@ endpoints:
         custom: []
       salary_min:
         name: salary_min
-        description: 'Must be at least 0.'
-        required: false
-        example: 37
+        description: 'Minimum salary'
+        required: true
+        example: 150000
         type: number
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       salary_max:
         name: salary_max
-        description: 'Must be at least 0.'
-        required: false
-        example: 9
+        description: 'Maximum salary'
+        required: true
+        example: 180000
         type: number
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       requirements:
         name: requirements
-        description: ''
-        required: false
-        example: architecto
+        description: 'Job requirements'
+        required: true
+        example: |-
+          - 8+ years of experience with web development
+          - Strong knowledge of system architecture
+          - Team leadership experience
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       benefits:
         name: benefits
-        description: ''
-        required: false
-        example: architecto
+        description: 'Job benefits'
+        required: true
+        example: |-
+          - Updated benefits package
+          - Home office stipend
+          - Learning budget
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       status:
         name: status
-        description: ''
+        description: 'Job posting status'
         required: true
-        example: archived
+        example: published
         type: string
         enumValues:
           - draft
@@ -485,8 +520,8 @@ endpoints:
         custom: []
       is_remote:
         name: is_remote
-        description: ''
-        required: false
+        description: 'Whether the job is remote'
+        required: true
         example: true
         type: boolean
         enumValues: []
@@ -495,41 +530,47 @@ endpoints:
         custom: []
       published_at:
         name: published_at
-        description: 'Must be a valid date.'
-        required: false
-        example: '2025-04-29T07:54:37'
+        description: 'When the job was published'
+        required: true
+        example: '2023-05-10T00:00:00Z'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       closing_date:
         name: closing_date
-        description: 'Must be a valid date. Must be a date after <code>published_at</code>.'
-        required: false
-        example: '2124-04-07'
+        description: 'When the job posting closes'
+        required: true
+        example: '2023-06-15T00:00:00Z'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
-      company_id: 16
-      hiring_manager_id: 16
-      title: 'n'
-      description: 'Eius et animi quos velit et.'
-      team: v
-      location: d
-      type: contract
-      level: junior
-      salary_min: 37
-      salary_max: 9
-      requirements: architecto
-      benefits: architecto
-      status: archived
+      company_id: 1
+      hiring_manager_id: 2
+      title: 'Lead Software Engineer'
+      description: 'Updated job description with additional responsibilities...'
+      team: 'Platform Engineering'
+      location: Remote
+      type: full_time
+      level: lead
+      salary_min: 150000
+      salary_max: 180000
+      requirements: |-
+        - 8+ years of experience with web development
+        - Strong knowledge of system architecture
+        - Team leadership experience
+      benefits: |-
+        - Updated benefits package
+        - Home office stipend
+        - Learning budget
+      status: published
       is_remote: true
-      published_at: '2025-04-29T07:54:37'
-      closing_date: '2124-04-07'
+      published_at: '2023-05-10T00:00:00Z'
+      closing_date: '2023-06-15T00:00:00Z'
     fileParameters: []
     responses: []
     responseFields: []
@@ -550,7 +591,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Delete a job opening'
       description: ''
       authenticated: true
       custom: []

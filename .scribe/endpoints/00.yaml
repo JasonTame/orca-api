@@ -10,7 +10,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get all tech skill categories'
       description: ''
       authenticated: true
       custom: []
@@ -53,7 +53,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'List all tech skills'
       description: ''
       authenticated: true
       custom: []
@@ -96,7 +96,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Create a new tech skill'
       description: ''
       authenticated: true
       custom: []
@@ -111,9 +111,9 @@ endpoints:
     bodyParameters:
       name:
         name: name
-        description: 'Must not be greater than 255 characters.'
+        description: 'Name of the tech skill'
         required: true
-        example: b
+        example: React
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -121,27 +121,33 @@ endpoints:
         custom: []
       category:
         name: category
-        description: ''
-        required: false
-        example: null
+        description: 'Category of the tech skill'
+        required: true
+        example: framework
         type: string
-        enumValues: []
+        enumValues:
+          - language
+          - framework
+          - database
+          - tool
+          - platform
         exampleWasSpecified: false
         nullable: false
         custom: []
       parent_skill_id:
         name: parent_skill_id
-        description: 'The <code>id</code> of an existing record in the tech_skills table.'
-        required: false
-        example: 16
+        description: 'ID of the parent skill (if this is a sub-skill)'
+        required: true
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
-      name: b
-      parent_skill_id: 16
+      name: React
+      category: framework
+      parent_skill_id: 1
     fileParameters: []
     responses: []
     responseFields: []
@@ -162,7 +168,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get a single tech skill'
       description: ''
       authenticated: true
       custom: []
@@ -217,7 +223,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Update a tech skill'
       description: ''
       authenticated: true
       custom: []
@@ -243,9 +249,9 @@ endpoints:
     bodyParameters:
       name:
         name: name
-        description: ''
-        required: false
-        example: null
+        description: 'Name of the tech skill'
+        required: true
+        example: 'React Native'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -253,9 +259,9 @@ endpoints:
         custom: []
       category:
         name: category
-        description: ''
+        description: 'Category of the tech skill'
         required: true
-        example: platform
+        example: framework
         type: string
         enumValues:
           - language
@@ -268,17 +274,18 @@ endpoints:
         custom: []
       parent_skill_id:
         name: parent_skill_id
-        description: 'The <code>id</code> of an existing record in the tech_skills table.'
-        required: false
-        example: 16
+        description: 'ID of the parent skill (if this is a sub-skill)'
+        required: true
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
-      category: platform
-      parent_skill_id: 16
+      name: 'React Native'
+      category: framework
+      parent_skill_id: 2
     fileParameters: []
     responses: []
     responseFields: []
@@ -299,7 +306,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Delete a tech skill'
       description: ''
       authenticated: true
       custom: []
