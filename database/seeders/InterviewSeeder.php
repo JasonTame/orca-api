@@ -2,6 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Enums\ApplicationStatus;
+use App\Enums\InterviewDecision;
+use App\Enums\InterviewFormat;
+use App\Enums\InterviewStatus;
 use App\Models\Application;
 use App\Models\CompanyMember;
 use App\Models\Interview;
@@ -18,16 +22,19 @@ class InterviewSeeder extends Seeder
     public function run(): void
     {
         // Get only applications that are in interviewing status or further
-        $applications = Application::whereIn('status', ['screening', 'interviewing', 'offer', 'hired'])->get();
+        $applications = Application::whereIn('status', [
+            ApplicationStatus::REVIEWING->value,
+            ApplicationStatus::INTERVIEWING->value,
+            ApplicationStatus::OFFERED->value,
+            ApplicationStatus::ACCEPTED->value
+        ])->get();
+
         $interviewers = CompanyMember::where('is_interviewer', true)->get();
 
         if ($interviewers->isEmpty()) {
             echo "No interviewers found. Please make sure there are company members with is_interviewer set to true.\n";
             return;
         }
-
-        $statuses = ['scheduled', 'completed', 'cancelled', 'rescheduled'];
-        $decisions = ['proceed', 'reject', 'hold'];
 
         foreach ($applications as $application) {
             // Get all stages for this job opening
@@ -41,9 +48,9 @@ class InterviewSeeder extends Seeder
 
             // Determine how many interviews to create based on application status
             $maxStageIndex = match ($application->status) {
-                'screening' => 0, // Only first stage
-                'interviewing' => rand(1, count($stages) - 2), // Some middle stages
-                'offer', 'hired' => count($stages) - 1, // All stages
+                ApplicationStatus::REVIEWING->value => 0, // Only first stage
+                ApplicationStatus::INTERVIEWING->value => rand(1, count($stages) - 2), // Some middle stages
+                ApplicationStatus::OFFERED->value, ApplicationStatus::ACCEPTED->value => count($stages) - 1, // All stages
                 default => 0
             };
 
@@ -60,25 +67,32 @@ class InterviewSeeder extends Seeder
                 $scheduledDate = Carbon::now()->subDays(30 - $i * 5)->addHours(rand(9, 16));
 
                 // Determine status based on stage sequence
-                $status = $i < $maxStageIndex ? 'completed' : $statuses[array_rand($statuses)];
+                $status = $i < $maxStageIndex
+                    ? InterviewStatus::COMPLETED->value
+                    : InterviewStatus::random();
 
                 $interview = [
                     'application_id' => $application->id,
                     'stage_id' => $stage->id,
                     'interviewer_id' => $interviewer->id,
                     'scheduled_at' => $scheduledDate,
-                    'completed_at' => $status === 'completed' ? $scheduledDate->copy()->addHours(1) : null,
-                    'location' => $stage->format === 'in_person' ? 'Company HQ, Room ' . rand(100, 500) : null,
-                    'meeting_url' => $stage->format === 'video' ? 'https://meet.company.com/' . Str::random(10) : null,
+                    'completed_at' => $status === InterviewStatus::COMPLETED->value ? $scheduledDate->copy()->addHours(1) : null,
+                    'location' => $stage->format === InterviewFormat::IN_PERSON->value ? 'Company HQ, Room ' . rand(100, 500) : null,
+                    'meeting_url' => $stage->format === InterviewFormat::VIDEO->value ? 'https://meet.company.com/' . Str::random(10) : null,
                     'status' => $status,
-                    'technical_score' => $status === 'completed' && $stage->is_technical ? rand(1, 10) : null,
-                    'cultural_score' => $status === 'completed' && !$stage->is_technical ? rand(1, 10) : null,
-                    'feedback' => $status === 'completed' ? $this->getRandomFeedback($stage->is_technical) : null,
-                    'decision' => $status === 'completed' ? $decisions[array_rand($decisions)] : null,
+                    'technical_score' => $status === InterviewStatus::COMPLETED->value && $stage->is_technical ? rand(1, 10) : null,
+                    'cultural_score' => $status === InterviewStatus::COMPLETED->value && !$stage->is_technical ? rand(1, 10) : null,
+                    'feedback' => $status === InterviewStatus::COMPLETED->value ? $this->getRandomFeedback($stage->is_technical) : null,
+                    'decision' => $status === InterviewStatus::COMPLETED->value ? InterviewDecision::random() : null,
                     'notes' => $this->getRandomNotes(),
                 ];
 
-                Interview::create($interview);
+                try {
+                    Interview::create($interview);
+                } catch (\Exception $e) {
+                    // Skip if there's a unique constraint violation
+                    continue;
+                }
             }
         }
     }

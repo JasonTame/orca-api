@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Enums\InterviewFormat;
 use App\Models\InterviewStage;
 use App\Models\JobOpening;
 use Illuminate\Database\Seeder;
@@ -22,7 +23,7 @@ class InterviewStageSeeder extends Seeder
                     'description' => 'Brief phone call to assess basic qualifications and fit',
                     'sequence' => 1,
                     'duration' => 30,
-                    'format' => 'phone',
+                    'format' => InterviewFormat::PHONE->value,
                     'is_technical' => false,
                 ],
                 [
@@ -30,7 +31,7 @@ class InterviewStageSeeder extends Seeder
                     'description' => 'Assessment of technical skills through coding challenges or technical questions',
                     'sequence' => 2,
                     'duration' => 60,
-                    'format' => 'video',
+                    'format' => InterviewFormat::VIDEO->value,
                     'is_technical' => true,
                 ],
                 [
@@ -38,7 +39,7 @@ class InterviewStageSeeder extends Seeder
                     'description' => 'In-depth technical interview with team members',
                     'sequence' => 3,
                     'duration' => 90,
-                    'format' => 'video',
+                    'format' => InterviewFormat::VIDEO->value,
                     'is_technical' => true,
                 ],
                 [
@@ -46,7 +47,7 @@ class InterviewStageSeeder extends Seeder
                     'description' => 'Interview to assess cultural fit with the team and company',
                     'sequence' => 4,
                     'duration' => 60,
-                    'format' => 'video',
+                    'format' => InterviewFormat::VIDEO->value,
                     'is_technical' => false,
                 ],
                 [
@@ -54,7 +55,7 @@ class InterviewStageSeeder extends Seeder
                     'description' => 'Final interview with senior management or executives',
                     'sequence' => 5,
                     'duration' => 60,
-                    'format' => 'in_person',
+                    'format' => InterviewFormat::IN_PERSON->value,
                     'is_technical' => false,
                 ],
             ];

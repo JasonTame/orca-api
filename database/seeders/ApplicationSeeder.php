@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Enums\ApplicationStatus;
+use App\Enums\ReferralSource;
 use App\Models\Application;
 use App\Models\Candidate;
 use App\Models\InterviewStage;
@@ -18,9 +20,6 @@ class ApplicationSeeder extends Seeder
     {
         $jobOpenings = JobOpening::all();
         $candidates = Candidate::all();
-
-        $statuses = ['pending', 'reviewing', 'interviewing', 'offered', 'accepted', 'rejected'];
-        $sources = ['company_website', 'linkedin', 'indeed', 'referral', 'direct_email'];
 
         // Keep track of created combinations to avoid duplicates
         $usedCombinations = [];
@@ -49,8 +48,8 @@ class ApplicationSeeder extends Seeder
 
             $usedCombinations[] = $key;
 
-            $status = $statuses[array_rand($statuses)];
-            $source = $sources[array_rand($sources)];
+            $status = ApplicationStatus::random();
+            $source = ReferralSource::random();
 
             $appliedDate = Carbon::now()->subDays(rand(1, 60));
 
@@ -60,7 +59,7 @@ class ApplicationSeeder extends Seeder
                 'code_sample_url' => rand(0, 1) ? 'https://github.com/' . $candidate->first_name . $candidate->last_name . '/code-sample' : null,
                 'status' => $status,
                 'current_stage_id' => $firstStage->id,
-                'rejection_reason' => $status === 'rejected' ? $this->getRandomRejectionReason() : null,
+                'rejection_reason' => $status === ApplicationStatus::REJECTED->value ? $this->getRandomRejectionReason() : null,
                 'notes' => $this->getRandomNotes(),
                 'referral_source' => $source,
                 'applied_at' => $appliedDate,
