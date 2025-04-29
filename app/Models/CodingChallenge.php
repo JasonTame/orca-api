@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
+ * 
+ *
  * @property int $id
  * @property int $job_opening_id
  * @property string $title
@@ -21,7 +23,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Application> $applications
  * @property-read int|null $applications_count
  * @property-read \App\Models\JobOpening $jobOpening
- *
  * @method static \Database\Factories\CodingChallengeFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge newQuery()
@@ -36,7 +37,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge whereTimeLimit($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CodingChallenge whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class CodingChallenge extends Model

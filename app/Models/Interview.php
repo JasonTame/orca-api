@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
+ * 
+ *
  * @property int $id
  * @property int $application_id
  * @property int $stage_id
@@ -26,7 +28,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property-read \App\Models\Application $application
  * @property-read \App\Models\CompanyMember $interviewer
  * @property-read \App\Models\InterviewStage $stage
- *
  * @method static \Database\Factories\InterviewFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview newQuery()
@@ -47,7 +48,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereTechnicalScore($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Interview whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class Interview extends Model

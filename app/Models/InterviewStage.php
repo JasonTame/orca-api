@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
+ * 
+ *
  * @property int $id
  * @property int $job_opening_id
  * @property string $name
@@ -21,7 +23,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Interview> $interviews
  * @property-read int|null $interviews_count
  * @property-read \App\Models\JobOpening $jobOpening
- *
  * @method static \Database\Factories\InterviewStageFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage newQuery()
@@ -36,7 +37,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage whereSequence($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InterviewStage whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class InterviewStage extends Model

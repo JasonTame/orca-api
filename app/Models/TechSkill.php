@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
+ * 
+ *
  * @property int $id
  * @property string $name
  * @property string $category
@@ -24,7 +26,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\JobSkill> $jobSkills
  * @property-read int|null $job_skills_count
  * @property-read TechSkill|null $parent
- *
  * @method static \Database\Factories\TechSkillFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill newQuery()
@@ -38,7 +39,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill whereParentSkillId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TechSkill whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class TechSkill extends Model

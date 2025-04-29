@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
+ * 
+ *
  * @property int $id
  * @property int $company_id
  * @property string $title
@@ -37,7 +39,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read int|null $interview_stages_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\JobSkill> $jobSkills
  * @property-read int|null $job_skills_count
- *
  * @method static \Database\Factories\JobOpeningFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|JobOpening newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|JobOpening newQuery()
@@ -61,7 +62,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|JobOpening whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|JobOpening whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|JobOpening whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class JobOpening extends Model

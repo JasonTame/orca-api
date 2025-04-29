@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
+ * 
+ *
  * @property int $id
  * @property int $company_id
  * @property string $name
@@ -26,7 +28,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read int|null $interviews_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\JobOpening> $jobOpenings
  * @property-read int|null $job_openings_count
- *
  * @method static \Database\Factories\CompanyMemberFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember newQuery()
@@ -44,7 +45,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember wherePosition($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CompanyMember whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class CompanyMember extends Model
