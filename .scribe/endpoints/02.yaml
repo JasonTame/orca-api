@@ -130,7 +130,7 @@ endpoints:
         name: is_hiring_manager
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -140,7 +140,7 @@ endpoints:
         name: is_recruiter
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -150,7 +150,7 @@ endpoints:
         name: is_interviewer
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -159,12 +159,10 @@ endpoints:
       status:
         name: status
         description: ''
-        required: true
-        example: active
+        required: false
+        example: null
         type: string
-        enumValues:
-          - active
-          - inactive
+        enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
@@ -175,10 +173,9 @@ endpoints:
       position: v
       department: d
       phone: l
-      is_hiring_manager: false
-      is_recruiter: false
-      is_interviewer: false
-      status: active
+      is_hiring_manager: true
+      is_recruiter: true
+      is_interviewer: true
     fileParameters: []
     responses: []
     responseFields: []
@@ -342,7 +339,7 @@ endpoints:
         name: is_hiring_manager
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -362,7 +359,7 @@ endpoints:
         name: is_interviewer
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -371,12 +368,10 @@ endpoints:
       status:
         name: status
         description: ''
-        required: true
-        example: active
+        required: false
+        example: null
         type: string
-        enumValues:
-          - active
-          - inactive
+        enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
@@ -386,10 +381,9 @@ endpoints:
       position: g
       department: z
       phone: m
-      is_hiring_manager: true
+      is_hiring_manager: false
       is_recruiter: true
-      is_interviewer: true
-      status: active
+      is_interviewer: false
     fileParameters: []
     responses: []
     responseFields: []

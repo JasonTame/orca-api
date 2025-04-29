@@ -110,15 +110,11 @@ endpoints:
         name: size
         description: ''
         required: false
-        example: large
+        example: null
         type: string
-        enumValues:
-          - small
-          - medium
-          - large
-          - enterprise
+        enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       description:
         name: description
@@ -144,23 +140,19 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: active
+        example: null
         type: string
-        enumValues:
-          - active
-          - inactive
+        enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
       name: b
       logo_url: 'http://bailey.com/'
       website: 'http://rempel.com/sunt-nihil-accusantium-harum-mollitia'
       industry: k
-      size: large
       description: 'Eius et animi quos velit et.'
       location: v
-      status: active
     fileParameters: []
     responses: []
     responseFields: []
@@ -304,15 +296,11 @@ endpoints:
         name: size
         description: ''
         required: false
-        example: medium
+        example: null
         type: string
-        enumValues:
-          - small
-          - medium
-          - large
-          - enterprise
+        enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       description:
         name: description
@@ -338,23 +326,19 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: inactive
+        example: null
         type: string
-        enumValues:
-          - active
-          - inactive
+        enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
       name: b
       logo_url: 'http://bailey.com/'
       website: 'http://rempel.com/sunt-nihil-accusantium-harum-mollitia'
       industry: k
-      size: medium
       description: 'Eius et animi quos velit et.'
       location: v
-      status: inactive
     fileParameters: []
     responses: []
     responseFields: []

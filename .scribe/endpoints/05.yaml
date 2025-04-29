@@ -10,7 +10,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'List all applications'
       description: ''
       authenticated: true
       custom: []
@@ -53,7 +53,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Store a new application'
       description: ''
       authenticated: true
       custom: []
@@ -68,9 +68,9 @@ endpoints:
     bodyParameters:
       job_opening_id:
         name: job_opening_id
-        description: 'The <code>id</code> of an existing record in the job_openings table.'
+        description: 'The ID of the job opening'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -78,9 +78,9 @@ endpoints:
         custom: []
       candidate_id:
         name: candidate_id
-        description: 'The <code>id</code> of an existing record in the candidates table.'
+        description: 'The ID of the candidate'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -88,19 +88,19 @@ endpoints:
         custom: []
       code_sample_url:
         name: code_sample_url
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'http://bailey.com/'
+        description: "URL to the candidate's code sample"
+        required: true
+        example: 'https://github.com/username/repo'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       status:
         name: status
-        description: ''
+        description: 'The status of the application'
         required: true
-        example: pending
+        example: applied
         type: string
         enumValues:
           - pending
@@ -114,63 +114,69 @@ endpoints:
         custom: []
       current_stage_id:
         name: current_stage_id
-        description: 'The <code>id</code> of an existing record in the interview_stages table.'
-        required: false
-        example: null
-        type: string
+        description: 'The ID of the current interview stage'
+        required: true
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       rejection_reason:
         name: rejection_reason
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: m
+        description: 'Reason for rejection'
+        required: true
+        example: 'Position filled'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       notes:
         name: notes
-        description: ''
-        required: false
-        example: architecto
+        description: 'Additional notes about the application'
+        required: true
+        example: 'Candidate seems promising'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       referral_source:
         name: referral_source
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: 'n'
+        description: 'Source of the referral'
+        required: true
+        example: linkedin
         type: string
-        enumValues: []
+        enumValues:
+          - company_website
+          - linkedin
+          - indeed
+          - referral
+          - direct_email
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       applied_at:
         name: applied_at
-        description: 'Must be a valid date.'
-        required: false
-        example: '2025-04-21T12:50:22'
-        type: string
+        description: 'The date when the candidate applied'
+        required: true
+        example: '2023-05-15'
+        type: date
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
-      job_opening_id: 16
-      candidate_id: 16
-      code_sample_url: 'http://bailey.com/'
-      status: pending
-      rejection_reason: m
-      notes: architecto
-      referral_source: 'n'
-      applied_at: '2025-04-21T12:50:22'
+      job_opening_id: 1
+      candidate_id: 1
+      code_sample_url: 'https://github.com/username/repo'
+      status: applied
+      current_stage_id: 1
+      rejection_reason: 'Position filled'
+      notes: 'Candidate seems promising'
+      referral_source: linkedin
+      applied_at: '2023-05-15'
     fileParameters: []
     responses: []
     responseFields: []
@@ -191,7 +197,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get a single application'
       description: ''
       authenticated: true
       custom: []
@@ -204,14 +210,14 @@ endpoints:
         name: id
         description: 'The ID of the application.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -246,7 +252,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Update an existing application'
       description: ''
       authenticated: true
       custom: []
@@ -259,52 +265,52 @@ endpoints:
         name: id
         description: 'The ID of the application.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
       job_opening_id:
         name: job_opening_id
-        description: 'The <code>id</code> of an existing record in the job_openings table.'
+        description: 'The ID of the job opening'
         required: true
-        example: architecto
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
       candidate_id:
         name: candidate_id
-        description: 'The <code>id</code> of an existing record in the candidates table.'
+        description: 'The ID of the candidate'
         required: true
-        example: architecto
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
       code_sample_url:
         name: code_sample_url
-        description: 'Must be a valid URL.'
-        required: false
-        example: 'http://bailey.com/'
+        description: "URL to the candidate's code sample"
+        required: true
+        example: 'https://github.com/username/repo'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       status:
         name: status
-        description: ''
+        description: 'The status of the application'
         required: true
-        example: pending
+        example: applied
         type: string
         enumValues:
           - pending
@@ -318,63 +324,69 @@ endpoints:
         custom: []
       current_stage_id:
         name: current_stage_id
-        description: 'The <code>id</code> of an existing record in the interview_stages table.'
-        required: false
-        example: null
-        type: string
+        description: 'The ID of the current interview stage'
+        required: true
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       rejection_reason:
         name: rejection_reason
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: m
+        description: 'Reason for rejection'
+        required: true
+        example: 'Position filled'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       notes:
         name: notes
-        description: ''
-        required: false
-        example: architecto
+        description: 'Additional notes about the application'
+        required: true
+        example: 'Candidate seems promising'
         type: string
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       referral_source:
         name: referral_source
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: 'n'
+        description: 'Source of the referral'
+        required: true
+        example: linkedin
         type: string
-        enumValues: []
+        enumValues:
+          - company_website
+          - linkedin
+          - indeed
+          - referral
+          - direct_email
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       applied_at:
         name: applied_at
-        description: 'Must be a valid date.'
-        required: false
-        example: '2025-04-21T12:50:22'
-        type: string
+        description: 'The date when the candidate applied'
+        required: true
+        example: '2023-05-15'
+        type: date
         enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
-      job_opening_id: architecto
-      candidate_id: architecto
-      code_sample_url: 'http://bailey.com/'
-      status: pending
-      rejection_reason: m
-      notes: architecto
-      referral_source: 'n'
-      applied_at: '2025-04-21T12:50:22'
+      job_opening_id: 1
+      candidate_id: 1
+      code_sample_url: 'https://github.com/username/repo'
+      status: applied
+      current_stage_id: 1
+      rejection_reason: 'Position filled'
+      notes: 'Candidate seems promising'
+      referral_source: linkedin
+      applied_at: '2023-05-15'
     fileParameters: []
     responses: []
     responseFields: []
@@ -395,7 +407,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Delete an application'
       description: ''
       authenticated: true
       custom: []
@@ -408,14 +420,14 @@ endpoints:
         name: id
         description: 'The ID of the application.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

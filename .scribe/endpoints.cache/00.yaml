@@ -124,44 +124,9 @@ endpoints:
       category:
         name: category
         description: ''
-        required: true
-        example: database
+        required: false
+        example: null
         type: string
-        enumValues:
-          - language
-          - framework
-          - database
-          - tool
-          - platform
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      is_language:
-        name: is_language
-        description: ''
-        required: false
-        example: false
-        type: boolean
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      is_framework:
-        name: is_framework
-        description: ''
-        required: false
-        example: false
-        type: boolean
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      is_tool:
-        name: is_tool
-        description: ''
-        required: false
-        example: true
-        type: boolean
         enumValues: []
         exampleWasSpecified: false
         nullable: false
@@ -178,10 +143,6 @@ endpoints:
         custom: []
     cleanBodyParameters:
       name: b
-      category: database
-      is_language: false
-      is_framework: false
-      is_tool: true
       parent_skill_id: 16
     fileParameters: []
     responses: []
@@ -296,7 +257,7 @@ endpoints:
         name: category
         description: ''
         required: true
-        example: language
+        example: platform
         type: string
         enumValues:
           - language
@@ -304,36 +265,6 @@ endpoints:
           - database
           - tool
           - platform
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      is_language:
-        name: is_language
-        description: ''
-        required: false
-        example: false
-        type: boolean
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      is_framework:
-        name: is_framework
-        description: ''
-        required: false
-        example: true
-        type: boolean
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      is_tool:
-        name: is_tool
-        description: ''
-        required: false
-        example: true
-        type: boolean
-        enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
@@ -348,10 +279,7 @@ endpoints:
         nullable: true
         custom: []
     cleanBodyParameters:
-      category: language
-      is_language: false
-      is_framework: true
-      is_tool: true
+      category: platform
       parent_skill_id: 16
     fileParameters: []
     responses: []

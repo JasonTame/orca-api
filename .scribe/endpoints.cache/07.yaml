@@ -131,13 +131,10 @@ endpoints:
       difficulty:
         name: difficulty
         description: ''
-        required: true
-        example: hard
+        required: false
+        example: null
         type: string
-        enumValues:
-          - easy
-          - medium
-          - hard
+        enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
@@ -148,7 +145,6 @@ endpoints:
       instructions: architecto
       repository_url: 'http://bailey.com/'
       time_limit: 27
-      difficulty: hard
     fileParameters: []
     responses: []
     responseFields: []
@@ -311,13 +307,10 @@ endpoints:
       difficulty:
         name: difficulty
         description: ''
-        required: true
-        example: hard
+        required: false
+        example: null
         type: string
-        enumValues:
-          - easy
-          - medium
-          - hard
+        enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
@@ -328,7 +321,6 @@ endpoints:
       instructions: architecto
       repository_url: 'http://bailey.com/'
       time_limit: 27
-      difficulty: hard
     fileParameters: []
     responses: []
     responseFields: []

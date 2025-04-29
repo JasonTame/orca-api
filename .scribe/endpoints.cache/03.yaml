@@ -192,16 +192,11 @@ endpoints:
         name: source
         description: ''
         required: false
-        example: other
+        example: null
         type: string
-        enumValues:
-          - linkedin
-          - indeed
-          - referral
-          - career_site
-          - other
+        enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       notes:
         name: notes
@@ -217,15 +212,11 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: rejected
+        example: null
         type: string
-        enumValues:
-          - active
-          - inactive
-          - hired
-          - rejected
+        enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
       first_name: b
@@ -240,9 +231,7 @@ endpoints:
       current_position: p
       current_company: w
       desired_salary: 16
-      source: other
       notes: architecto
-      status: rejected
     fileParameters: []
     responses: []
     responseFields: []
@@ -466,16 +455,11 @@ endpoints:
         name: source
         description: ''
         required: false
-        example: indeed
+        example: null
         type: string
-        enumValues:
-          - linkedin
-          - indeed
-          - referral
-          - career_site
-          - other
+        enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       notes:
         name: notes
@@ -491,15 +475,11 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: inactive
+        example: null
         type: string
-        enumValues:
-          - active
-          - inactive
-          - hired
-          - rejected
+        enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
     cleanBodyParameters:
       first_name: b
@@ -513,9 +493,7 @@ endpoints:
       current_position: u
       current_company: j
       desired_salary: 87
-      source: indeed
       notes: architecto
-      status: inactive
     fileParameters: []
     responses: []
     responseFields: []

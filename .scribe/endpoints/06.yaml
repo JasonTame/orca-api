@@ -100,7 +100,7 @@ endpoints:
         name: scheduled_at
         description: 'Must be a valid date. Must be a date after <code>now</code>.'
         required: true
-        example: '2051-05-16'
+        example: '2051-05-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -110,7 +110,7 @@ endpoints:
         name: completed_at
         description: 'Must be a valid date. Must be a date after <code>scheduled_at</code>.'
         required: false
-        example: '2062-08-28'
+        example: '2124-04-07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -139,14 +139,10 @@ endpoints:
       status:
         name: status
         description: ''
-        required: true
-        example: cancelled
+        required: false
+        example: null
         type: string
-        enumValues:
-          - scheduled
-          - completed
-          - cancelled
-          - rescheduled
+        enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
@@ -184,14 +180,11 @@ endpoints:
         name: decision
         description: ''
         required: false
-        example: hold
+        example: null
         type: string
-        enumValues:
-          - proceed
-          - reject
-          - hold
+        enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       notes:
         name: notes
@@ -207,15 +200,13 @@ endpoints:
       application_id: 16
       stage_id: 16
       interviewer_id: 16
-      scheduled_at: '2051-05-16'
-      completed_at: '2062-08-28'
+      scheduled_at: '2051-05-23'
+      completed_at: '2124-04-07'
       location: g
       meeting_url: 'http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html'
-      status: cancelled
       technical_score: 3
       cultural_score: 4
       feedback: architecto
-      decision: hold
       notes: architecto
     fileParameters: []
     responses: []
@@ -250,14 +241,14 @@ endpoints:
         name: id
         description: 'The ID of the interview.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -305,14 +296,14 @@ endpoints:
         name: id
         description: 'The ID of the interview.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -350,7 +341,7 @@ endpoints:
         name: scheduled_at
         description: 'Must be a valid date. Must be a date after <code>now</code>.'
         required: true
-        example: '2051-05-16'
+        example: '2051-05-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -360,7 +351,7 @@ endpoints:
         name: completed_at
         description: 'Must be a valid date. Must be a date after <code>scheduled_at</code>.'
         required: false
-        example: '2062-08-28'
+        example: '2124-04-07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -389,14 +380,10 @@ endpoints:
       status:
         name: status
         description: ''
-        required: true
-        example: completed
+        required: false
+        example: null
         type: string
-        enumValues:
-          - scheduled
-          - completed
-          - cancelled
-          - rescheduled
+        enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
@@ -434,14 +421,11 @@ endpoints:
         name: decision
         description: ''
         required: false
-        example: proceed
+        example: null
         type: string
-        enumValues:
-          - proceed
-          - reject
-          - hold
+        enumValues: []
         exampleWasSpecified: false
-        nullable: true
+        nullable: false
         custom: []
       notes:
         name: notes
@@ -457,15 +441,13 @@ endpoints:
       application_id: architecto
       stage_id: architecto
       interviewer_id: architecto
-      scheduled_at: '2051-05-16'
-      completed_at: '2062-08-28'
+      scheduled_at: '2051-05-23'
+      completed_at: '2124-04-07'
       location: g
       meeting_url: 'http://www.okuneva.com/fugiat-sunt-nihil-accusantium-harum-mollitia.html'
-      status: completed
       technical_score: 3
       cultural_score: 4
       feedback: architecto
-      decision: proceed
       notes: architecto
     fileParameters: []
     responses: []
@@ -500,14 +482,14 @@ endpoints:
         name: id
         description: 'The ID of the interview.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
