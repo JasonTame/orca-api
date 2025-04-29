@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
- * 
- *
  * @property int $id
  * @property int $candidate_id
  * @property int $skill_id
@@ -18,6 +16,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Candidate $candidate
  * @property-read \App\Models\TechSkill $skill
+ *
  * @method static \Database\Factories\CandidateSkillFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill newQuery()
@@ -29,6 +28,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill whereSkillId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|CandidateSkill whereYearsExperience($value)
+ *
  * @mixin \Eloquent
  */
 class CandidateSkill extends Model

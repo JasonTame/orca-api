@@ -8,8 +8,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Laravel\Scout\Searchable;
 
 /**
- * 
- *
  * @property int $id
  * @property string $name
  * @property string|null $logo_url
@@ -25,6 +23,7 @@ use Laravel\Scout\Searchable;
  * @property-read int|null $job_openings_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\CompanyMember> $members
  * @property-read int|null $members_count
+ *
  * @method static \Database\Factories\CompanyFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Company newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Company newQuery()
@@ -40,6 +39,7 @@ use Laravel\Scout\Searchable;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Company whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Company whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Company whereWebsite($value)
+ *
  * @mixin \Eloquent
  */
 class Company extends Model
