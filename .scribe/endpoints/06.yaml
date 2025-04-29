@@ -319,7 +319,7 @@ endpoints:
       application_id:
         name: application_id
         description: 'The ID of the application'
-        required: false
+        required: true
         example: 1
         type: integer
         enumValues: []
@@ -329,7 +329,7 @@ endpoints:
       stage_id:
         name: stage_id
         description: 'The ID of the interview stage'
-        required: false
+        required: true
         example: 2
         type: integer
         enumValues: []
@@ -339,7 +339,7 @@ endpoints:
       interviewer_id:
         name: interviewer_id
         description: 'The ID of the interviewer'
-        required: false
+        required: true
         example: 3
         type: integer
         enumValues: []
@@ -349,7 +349,7 @@ endpoints:
       scheduled_at:
         name: scheduled_at
         description: 'When the interview is scheduled'
-        required: false
+        required: true
         example: '2023-05-20T14:00:00Z'
         type: string
         enumValues: []
@@ -389,7 +389,7 @@ endpoints:
       status:
         name: status
         description: 'Status of the interview'
-        required: false
+        required: true
         example: completed
         type: string
         enumValues:

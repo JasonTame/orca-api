@@ -82,19 +82,19 @@ class JobOpeningController extends Controller
     }
 
     #[Endpoint('Update a job opening')]
-    #[BodyParam('company_id', 'integer', 'The ID of the company', required: false, example: 1)]
-    #[BodyParam('hiring_manager_id', 'integer', 'The ID of the hiring manager', required: false, example: 2)]
-    #[BodyParam('title', 'string', 'Job title', required: false, example: 'Lead Software Engineer')]
-    #[BodyParam('description', 'string', 'Detailed job description', required: false, example: 'Updated job description with additional responsibilities...')]
+    #[BodyParam('company_id', 'integer', 'The ID of the company', required: true, example: 1)]
+    #[BodyParam('hiring_manager_id', 'integer', 'The ID of the hiring manager', required: true, example: 2)]
+    #[BodyParam('title', 'string', 'Job title', required: true, example: 'Lead Software Engineer')]
+    #[BodyParam('description', 'string', 'Detailed job description', required: true, example: 'Updated job description with additional responsibilities...')]
     #[BodyParam('team', 'string', 'Team or department', required: false, example: 'Platform Engineering')]
     #[BodyParam('location', 'string', 'Job location', required: false, example: 'Remote')]
-    #[BodyParam('type', 'string', 'Employment type', required: false, enum: JobType::class, example: 'full_time')]
-    #[BodyParam('level', 'string', 'Experience level', required: false, enum: JobLevel::class, example: 'lead')]
+    #[BodyParam('type', 'string', 'Employment type', required: true, enum: JobType::class, example: 'full_time')]
+    #[BodyParam('level', 'string', 'Experience level', required: true, enum: JobLevel::class, example: 'lead')]
     #[BodyParam('salary_min', 'number', 'Minimum salary', required: false, example: 150000)]
     #[BodyParam('salary_max', 'number', 'Maximum salary', required: false, example: 180000)]
     #[BodyParam('requirements', 'string', 'Job requirements', required: false, example: "- 8+ years of experience with web development\n- Strong knowledge of system architecture\n- Team leadership experience")]
     #[BodyParam('benefits', 'string', 'Job benefits', required: false, example: "- Updated benefits package\n- Home office stipend\n- Learning budget")]
-    #[BodyParam('status', 'string', 'Job posting status', required: false, enum: JobStatus::class, example: 'published')]
+    #[BodyParam('status', 'string', 'Job posting status', required: true, enum: JobStatus::class, example: 'published')]
     #[BodyParam('is_remote', 'boolean', 'Whether the job is remote', required: false, example: true)]
     #[BodyParam('published_at', 'string', 'When the job was published', required: false, example: '2023-05-10T00:00:00Z')]
     #[BodyParam('closing_date', 'string', 'When the job posting closes', required: false, example: '2023-06-15T00:00:00Z')]
@@ -107,13 +107,13 @@ class JobOpeningController extends Controller
             'description' => 'sometimes|required|string',
             'team' => 'nullable|string|max:255',
             'location' => 'nullable|string|max:255',
-            'type' => 'sometimes|required|in:full_time,part_time,contract,internship',
-            'level' => 'sometimes|required|in:entry,junior,mid,senior,lead,principal',
+            'type' => 'sometimes|required|in:'.implode(',', JobType::values()),
+            'level' => 'sometimes|required|in:'.implode(',', JobLevel::values()),
             'salary_min' => 'nullable|numeric|min:0',
             'salary_max' => 'nullable|numeric|min:0|gte:salary_min',
             'requirements' => 'nullable|string',
             'benefits' => 'nullable|string',
-            'status' => 'sometimes|required|in:draft,published,closed,archived',
+            'status' => 'sometimes|required|in:'.implode(',', JobStatus::values()),
             'is_remote' => 'boolean',
             'published_at' => 'nullable|date',
             'closing_date' => 'nullable|date|after:published_at',

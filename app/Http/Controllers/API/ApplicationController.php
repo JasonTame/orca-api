@@ -67,10 +67,10 @@ class ApplicationController extends Controller
     }
 
     #[Endpoint('Update an existing application')]
-    #[BodyParam('job_opening_id', 'integer', 'The ID of the job opening', required: false, example: 1)]
-    #[BodyParam('candidate_id', 'integer', 'The ID of the candidate', required: false, example: 1)]
+    #[BodyParam('job_opening_id', 'integer', 'The ID of the job opening', required: true, example: 1)]
+    #[BodyParam('candidate_id', 'integer', 'The ID of the candidate', required: true, example: 1)]
     #[BodyParam('code_sample_url', 'string', "URL to the candidate's code sample", required: false, example: 'https://github.com/username/repo')]
-    #[BodyParam('status', 'string', 'The status of the application', required: false, enum: ApplicationStatus::class, example: 'applied')]
+    #[BodyParam('status', 'string', 'The status of the application', required: true, enum: ApplicationStatus::class, example: 'applied')]
     #[BodyParam('current_stage_id', 'integer', 'The ID of the current interview stage', required: false, example: 1)]
     #[BodyParam('rejection_reason', 'string', 'Reason for rejection', required: false, example: 'Position filled')]
     #[BodyParam('notes', 'string', 'Additional notes about the application', required: false, example: 'Candidate seems promising')]

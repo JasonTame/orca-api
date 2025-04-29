@@ -250,7 +250,7 @@ endpoints:
       name:
         name: name
         description: 'Name of the tech skill'
-        required: false
+        required: true
         example: 'React Native'
         type: string
         enumValues: []
@@ -260,7 +260,7 @@ endpoints:
       category:
         name: category
         description: 'Category of the tech skill'
-        required: false
+        required: true
         example: framework
         type: string
         enumValues:

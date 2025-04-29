@@ -74,16 +74,16 @@ class CompanyMemberController extends Controller
     }
 
     #[Endpoint('Update a company member')]
-    #[BodyParam('company_id', 'integer', 'The ID of the company', required: false, example: 1)]
-    #[BodyParam('name', 'string', 'Full name of the company member', required: false, example: 'Jane Smith Updated')]
-    #[BodyParam('email', 'string', 'Email address of the company member', required: false, example: 'jane.updated@company.com')]
-    #[BodyParam('position', 'string', 'Job position within the company', required: false, example: 'Lead Recruiter')]
-    #[BodyParam('department', 'string', 'Department within the company', required: false, example: 'Talent Acquisition')]
-    #[BodyParam('phone', 'string', 'Contact phone number', required: false, example: '+1 (555) 987-6543')]
+    #[BodyParam('company_id', 'integer', 'The ID of the company', required: true, example: 1)]
+    #[BodyParam('name', 'string', 'Full name of the company member', required: true, example: 'Jane Smith Updated')]
+    #[BodyParam('email', 'string', 'Email address of the company member', required: true, example: 'jane.updated@company.com')]
+    #[BodyParam('position', 'string', 'Job position within the company', required: true, example: 'Lead Recruiter')]
+    #[BodyParam('department', 'string', 'Department within the company', required: true, example: 'Talent Acquisition')]
+    #[BodyParam('phone', 'string', 'Contact phone number', required: true, example: '+1 (555) 987-6543')]
     #[BodyParam('is_hiring_manager', 'boolean', 'Whether this member is a hiring manager', required: false, example: true)]
     #[BodyParam('is_recruiter', 'boolean', 'Whether this member is a recruiter', required: false, example: true)]
     #[BodyParam('is_interviewer', 'boolean', 'Whether this member conducts interviews', required: false, example: true)]
-    #[BodyParam('status', 'string', 'Status of the company member', required: false, enum: EntityStatus::class, example: 'active')]
+    #[BodyParam('status', 'string', 'Status of the company member', required: true, enum: EntityStatus::class, example: 'active')]
     public function update(Request $request, CompanyMember $companyMember): JsonResponse
     {
         $validator = Validator::make($request->all(), [

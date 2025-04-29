@@ -283,7 +283,7 @@ endpoints:
       company_id:
         name: company_id
         description: 'The ID of the company'
-        required: false
+        required: true
         example: 1
         type: integer
         enumValues: []
@@ -293,7 +293,7 @@ endpoints:
       name:
         name: name
         description: 'Full name of the company member'
-        required: false
+        required: true
         example: 'Jane Smith Updated'
         type: string
         enumValues: []
@@ -303,7 +303,7 @@ endpoints:
       email:
         name: email
         description: 'Email address of the company member'
-        required: false
+        required: true
         example: jane.updated@company.com
         type: string
         enumValues: []
@@ -313,7 +313,7 @@ endpoints:
       position:
         name: position
         description: 'Job position within the company'
-        required: false
+        required: true
         example: 'Lead Recruiter'
         type: string
         enumValues: []
@@ -323,7 +323,7 @@ endpoints:
       department:
         name: department
         description: 'Department within the company'
-        required: false
+        required: true
         example: 'Talent Acquisition'
         type: string
         enumValues: []
@@ -333,7 +333,7 @@ endpoints:
       phone:
         name: phone
         description: 'Contact phone number'
-        required: false
+        required: true
         example: '+1 (555) 987-6543'
         type: string
         enumValues: []
@@ -373,7 +373,7 @@ endpoints:
       status:
         name: status
         description: 'Status of the company member'
-        required: false
+        required: true
         example: active
         type: string
         enumValues:

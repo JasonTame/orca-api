@@ -62,12 +62,12 @@ class InterviewStageController extends Controller
     }
 
     #[Endpoint('Update an existing interview stage')]
-    #[BodyParam('job_opening_id', 'integer', 'The ID of the job opening', required: false, example: 1)]
-    #[BodyParam('name', 'string', 'Name of the interview stage', required: false, example: 'System Design Interview')]
+    #[BodyParam('job_opening_id', 'integer', 'The ID of the job opening', required: true, example: 1)]
+    #[BodyParam('name', 'string', 'Name of the interview stage', required: true, example: 'System Design Interview')]
     #[BodyParam('description', 'string', 'Description of the interview stage', required: false, example: 'Evaluation of system design and architecture skills')]
-    #[BodyParam('sequence', 'integer', 'Order of the stage in the interview process', required: false, example: 3)]
-    #[BodyParam('duration', 'integer', 'Duration of the interview stage in minutes', required: false, example: 90)]
-    #[BodyParam('format', 'string', 'Format of the interview', required: false, enum: InterviewFormat::class, example: 'in_person')]
+    #[BodyParam('sequence', 'integer', 'Order of the stage in the interview process', required: true, example: 3)]
+    #[BodyParam('duration', 'integer', 'Duration of the interview stage in minutes', required: true, example: 90)]
+    #[BodyParam('format', 'string', 'Format of the interview', required: true, enum: InterviewFormat::class, example: 'in_person')]
     #[BodyParam('is_technical', 'boolean', 'Whether this is a technical interview stage', required: false, example: true)]
     public function update(Request $request, InterviewStage $interviewStage): JsonResponse
     {

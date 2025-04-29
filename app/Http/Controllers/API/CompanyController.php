@@ -67,7 +67,7 @@ class CompanyController extends Controller
     }
 
     #[Endpoint('Update a company')]
-    #[BodyParam('name', 'string', 'Name of the company', required: false, example: 'Acme Corporation Updated')]
+    #[BodyParam('name', 'string', 'Name of the company', required: true, example: 'Acme Corporation Updated')]
     #[BodyParam('logo_url', 'string', "URL to the company's logo", required: false, example: 'https://example.com/new-logo.png')]
     #[BodyParam('website', 'string', 'Company website URL', required: false, example: 'https://acme-updated.example.com')]
     #[BodyParam('industry', 'string', 'Industry the company operates in', required: false, example: 'Software')]

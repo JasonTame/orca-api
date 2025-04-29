@@ -371,7 +371,7 @@ endpoints:
       company_id:
         name: company_id
         description: 'The ID of the company'
-        required: false
+        required: true
         example: 1
         type: integer
         enumValues: []
@@ -381,7 +381,7 @@ endpoints:
       hiring_manager_id:
         name: hiring_manager_id
         description: 'The ID of the hiring manager'
-        required: false
+        required: true
         example: 2
         type: integer
         enumValues: []
@@ -391,7 +391,7 @@ endpoints:
       title:
         name: title
         description: 'Job title'
-        required: false
+        required: true
         example: 'Lead Software Engineer'
         type: string
         enumValues: []
@@ -401,7 +401,7 @@ endpoints:
       description:
         name: description
         description: 'Detailed job description'
-        required: false
+        required: true
         example: 'Updated job description with additional responsibilities...'
         type: string
         enumValues: []
@@ -431,7 +431,7 @@ endpoints:
       type:
         name: type
         description: 'Employment type'
-        required: false
+        required: true
         example: full_time
         type: string
         enumValues:
@@ -445,7 +445,7 @@ endpoints:
       level:
         name: level
         description: 'Experience level'
-        required: false
+        required: true
         example: lead
         type: string
         enumValues:
@@ -507,7 +507,7 @@ endpoints:
       status:
         name: status
         description: 'Job posting status'
-        required: false
+        required: true
         example: published
         type: string
         enumValues:

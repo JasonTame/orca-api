@@ -345,7 +345,7 @@ endpoints:
       first_name:
         name: first_name
         description: 'First name of the candidate'
-        required: false
+        required: true
         example: John
         type: string
         enumValues: []
@@ -355,7 +355,7 @@ endpoints:
       last_name:
         name: last_name
         description: 'Last name of the candidate'
-        required: false
+        required: true
         example: Doe
         type: string
         enumValues: []
@@ -365,7 +365,7 @@ endpoints:
       email:
         name: email
         description: 'Email address of the candidate'
-        required: false
+        required: true
         example: john.doe@example.com
         type: string
         enumValues: []

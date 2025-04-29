@@ -279,7 +279,7 @@ endpoints:
       job_opening_id:
         name: job_opening_id
         description: 'The ID of the job opening'
-        required: false
+        required: true
         example: 1
         type: integer
         enumValues: []
@@ -289,7 +289,7 @@ endpoints:
       candidate_id:
         name: candidate_id
         description: 'The ID of the candidate'
-        required: false
+        required: true
         example: 1
         type: integer
         enumValues: []
@@ -309,7 +309,7 @@ endpoints:
       status:
         name: status
         description: 'The status of the application'
-        required: false
+        required: true
         example: applied
         type: string
         enumValues:

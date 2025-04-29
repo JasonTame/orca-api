@@ -265,7 +265,7 @@ endpoints:
       name:
         name: name
         description: 'Name of the company'
-        required: false
+        required: true
         example: 'Acme Corporation Updated'
         type: string
         enumValues: []

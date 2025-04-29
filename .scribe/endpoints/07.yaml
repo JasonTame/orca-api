@@ -250,7 +250,7 @@ endpoints:
       job_opening_id:
         name: job_opening_id
         description: 'The ID of the job opening'
-        required: false
+        required: true
         example: 1
         type: integer
         enumValues: []
@@ -260,7 +260,7 @@ endpoints:
       name:
         name: name
         description: 'Name of the interview stage'
-        required: false
+        required: true
         example: 'System Design Interview'
         type: string
         enumValues: []
@@ -280,7 +280,7 @@ endpoints:
       sequence:
         name: sequence
         description: 'Order of the stage in the interview process'
-        required: false
+        required: true
         example: 3
         type: integer
         enumValues: []
@@ -290,7 +290,7 @@ endpoints:
       duration:
         name: duration
         description: 'Duration of the interview stage in minutes'
-        required: false
+        required: true
         example: 90
         type: integer
         enumValues: []
@@ -300,7 +300,7 @@ endpoints:
       format:
         name: format
         description: 'Format of the interview'
-        required: false
+        required: true
         example: in_person
         type: string
         enumValues:

@@ -52,8 +52,8 @@ class TechSkillController extends Controller
     }
 
     #[Endpoint('Update a tech skill')]
-    #[BodyParam('name', 'string', 'Name of the tech skill', required: false, example: 'React Native')]
-    #[BodyParam('category', 'string', 'Category of the tech skill', required: false, enum: TechSkillCategory::class, example: 'framework')]
+    #[BodyParam('name', 'string', 'Name of the tech skill', required: true, example: 'React Native')]
+    #[BodyParam('category', 'string', 'Category of the tech skill', required: true, enum: TechSkillCategory::class, example: 'framework')]
     #[BodyParam('parent_skill_id', 'integer', 'ID of the parent skill (if this is a sub-skill)', required: false, example: 2)]
     public function update(Request $request, TechSkill $techSkill): JsonResponse
     {

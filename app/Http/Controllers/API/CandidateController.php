@@ -81,9 +81,9 @@ class CandidateController extends Controller
     }
 
     #[Endpoint('Update an existing candidate')]
-    #[BodyParam('first_name', 'string', 'First name of the candidate', required: false, example: 'John')]
-    #[BodyParam('last_name', 'string', 'Last name of the candidate', required: false, example: 'Doe')]
-    #[BodyParam('email', 'string', 'Email address of the candidate', required: false, example: 'john.doe@example.com')]
+    #[BodyParam('first_name', 'string', 'First name of the candidate', required: true, example: 'John')]
+    #[BodyParam('last_name', 'string', 'Last name of the candidate', required: true, example: 'Doe')]
+    #[BodyParam('email', 'string', 'Email address of the candidate', required: true, example: 'john.doe@example.com')]
     #[BodyParam('phone', 'string', 'Phone number of the candidate', required: false, example: '+1234567890')]
     #[BodyParam('location', 'string', 'Location of the candidate', required: false, example: 'San Francisco, CA')]
     #[BodyParam('resume_url', 'string', "URL to the candidate's resume", required: false, example: 'https://example.com/resume.pdf')]
