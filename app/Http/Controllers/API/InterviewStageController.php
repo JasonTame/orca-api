@@ -40,7 +40,7 @@ class InterviewStageController extends Controller
             'description' => 'nullable|string',
             'sequence' => 'required|integer|min:1',
             'duration' => 'required|integer|min:1',
-            'format' => 'required|in:' . implode(',', InterviewFormat::values()),
+            'format' => 'required|in:'.implode(',', InterviewFormat::values()),
             'is_technical' => 'nullable|boolean',
         ]);
 
@@ -77,7 +77,7 @@ class InterviewStageController extends Controller
             'description' => 'nullable|string',
             'sequence' => 'sometimes|required|integer|min:1',
             'duration' => 'sometimes|required|integer|min:1',
-            'format' => 'sometimes|required|in:' . implode(',', InterviewFormat::values()),
+            'format' => 'sometimes|required|in:'.implode(',', InterviewFormat::values()),
             'is_technical' => 'nullable|boolean',
         ]);
 

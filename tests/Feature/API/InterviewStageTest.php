@@ -1,6 +1,5 @@
 <?php
 
-use App\Enums\InterviewFormat;
 use App\Models\InterviewStage;
 use App\Models\JobOpening;
 use App\Models\User;
