@@ -1,16 +1,16 @@
-name: 'Interview Stages'
+name: 'Coding Challenges'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/interview-stages
+    uri: api/coding-challenges
     metadata:
-      groupName: 'Interview Stages'
+      groupName: 'Coding Challenges'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'List all interview stages'
+      title: 'List all coding challenges'
       description: ''
       authenticated: true
       custom: []
@@ -47,13 +47,13 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/interview-stages
+    uri: api/coding-challenges
     metadata:
-      groupName: 'Interview Stages'
+      groupName: 'Coding Challenges'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Store a new interview stage'
+      title: 'Create a new coding challenge'
       description: ''
       authenticated: true
       custom: []
@@ -76,11 +76,11 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
-      name:
-        name: name
-        description: 'Name of the interview stage'
+      title:
+        name: title
+        description: 'Title of the coding challenge'
         required: true
-        example: 'Technical Interview'
+        example: 'API Integration Challenge'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -88,66 +88,65 @@ endpoints:
         custom: []
       description:
         name: description
-        description: 'Description of the interview stage'
+        description: 'Description of the challenge'
         required: true
-        example: 'In-depth technical assessment with the development team'
+        example: 'Build a REST API integration with third-party service'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
-      sequence:
-        name: sequence
-        description: 'Order of the stage in the interview process'
+      instructions:
+        name: instructions
+        description: 'Detailed instructions for completing the challenge'
         required: true
-        example: 2
+        example: 'Clone the repository and implement the missing endpoints according to the specification'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      repository_url:
+        name: repository_url
+        description: 'URL to the challenge repository'
+        required: true
+        example: 'https://github.com/company/coding-challenge'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      time_limit:
+        name: time_limit
+        description: 'Time limit in hours'
+        required: true
+        example: 24
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
-      duration:
-        name: duration
-        description: 'Duration of the interview stage in minutes'
+      difficulty:
+        name: difficulty
+        description: 'Difficulty level of the challenge'
         required: true
-        example: 60
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      format:
-        name: format
-        description: 'Format of the interview'
-        required: true
-        example: video
+        example: medium
         type: string
         enumValues:
-          - in_person
-          - video
-          - phone
-          - take_home
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      is_technical:
-        name: is_technical
-        description: 'Whether this is a technical interview stage'
-        required: true
-        example: true
-        type: boolean
-        enumValues: []
+          - easy
+          - medium
+          - hard
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
       job_opening_id: 1
-      name: 'Technical Interview'
-      description: 'In-depth technical assessment with the development team'
-      sequence: 2
-      duration: 60
-      format: video
-      is_technical: true
+      title: 'API Integration Challenge'
+      description: 'Build a REST API integration with third-party service'
+      instructions: 'Clone the repository and implement the missing endpoints according to the specification'
+      repository_url: 'https://github.com/company/coding-challenge'
+      time_limit: 24
+      difficulty: medium
     fileParameters: []
     responses: []
     responseFields: []
@@ -162,13 +161,13 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/interview-stages/{id}'
+    uri: 'api/coding-challenges/{id}'
     metadata:
-      groupName: 'Interview Stages'
+      groupName: 'Coding Challenges'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Get a single interview stage'
+      title: 'Get a single coding challenge'
       description: ''
       authenticated: true
       custom: []
@@ -179,7 +178,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the interview stage.'
+        description: 'The ID of the coding challenge.'
         required: true
         example: 1
         type: integer
@@ -217,13 +216,13 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'api/interview-stages/{id}'
+    uri: 'api/coding-challenges/{id}'
     metadata:
-      groupName: 'Interview Stages'
+      groupName: 'Coding Challenges'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update an existing interview stage'
+      title: 'Update a coding challenge'
       description: ''
       authenticated: true
       custom: []
@@ -234,7 +233,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the interview stage.'
+        description: 'The ID of the coding challenge.'
         required: true
         example: 1
         type: integer
@@ -257,11 +256,11 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
-      name:
-        name: name
-        description: 'Name of the interview stage'
+      title:
+        name: title
+        description: 'Title of the coding challenge'
         required: true
-        example: 'System Design Interview'
+        example: 'Updated API Challenge'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -269,66 +268,65 @@ endpoints:
         custom: []
       description:
         name: description
-        description: 'Description of the interview stage'
+        description: 'Description of the challenge'
         required: true
-        example: 'Evaluation of system design and architecture skills'
+        example: 'Build a REST API integration with authentication'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
-      sequence:
-        name: sequence
-        description: 'Order of the stage in the interview process'
+      instructions:
+        name: instructions
+        description: 'Detailed instructions for completing the challenge'
         required: true
-        example: 3
+        example: 'Clone the repository and implement the missing endpoints following OAuth2 spec'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      repository_url:
+        name: repository_url
+        description: 'URL to the challenge repository'
+        required: true
+        example: 'https://github.com/company/updated-coding-challenge'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      time_limit:
+        name: time_limit
+        description: 'Time limit in hours'
+        required: true
+        example: 48
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
-      duration:
-        name: duration
-        description: 'Duration of the interview stage in minutes'
+      difficulty:
+        name: difficulty
+        description: 'Difficulty level of the challenge'
         required: true
-        example: 90
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      format:
-        name: format
-        description: 'Format of the interview'
-        required: true
-        example: in_person
+        example: hard
         type: string
         enumValues:
-          - in_person
-          - video
-          - phone
-          - take_home
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      is_technical:
-        name: is_technical
-        description: 'Whether this is a technical interview stage'
-        required: true
-        example: true
-        type: boolean
-        enumValues: []
+          - easy
+          - medium
+          - hard
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
       job_opening_id: 1
-      name: 'System Design Interview'
-      description: 'Evaluation of system design and architecture skills'
-      sequence: 3
-      duration: 90
-      format: in_person
-      is_technical: true
+      title: 'Updated API Challenge'
+      description: 'Build a REST API integration with authentication'
+      instructions: 'Clone the repository and implement the missing endpoints following OAuth2 spec'
+      repository_url: 'https://github.com/company/updated-coding-challenge'
+      time_limit: 48
+      difficulty: hard
     fileParameters: []
     responses: []
     responseFields: []
@@ -343,13 +341,13 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/interview-stages/{id}'
+    uri: 'api/coding-challenges/{id}'
     metadata:
-      groupName: 'Interview Stages'
+      groupName: 'Coding Challenges'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Delete an interview stage'
+      title: 'Delete a coding challenge'
       description: ''
       authenticated: true
       custom: []
@@ -360,7 +358,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the interview stage.'
+        description: 'The ID of the coding challenge.'
         required: true
         example: 1
         type: integer

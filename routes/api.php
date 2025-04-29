@@ -6,6 +6,7 @@ use App\Http\Controllers\API\CodingChallengeController;
 use App\Http\Controllers\API\CompanyController;
 use App\Http\Controllers\API\CompanyMemberController;
 use App\Http\Controllers\API\InterviewController;
+use App\Http\Controllers\API\InterviewStageController;
 use App\Http\Controllers\API\JobOpeningController;
 use App\Http\Controllers\API\TechSkillController;
 use Illuminate\Support\Facades\Route;
@@ -48,5 +49,6 @@ Route::middleware([
     Route::apiResource('job-openings', JobOpeningController::class);
     Route::apiResource('applications', ApplicationController::class);
     Route::apiResource('interviews', InterviewController::class);
+    Route::apiResource('interview-stages', InterviewStageController::class);
     Route::apiResource('coding-challenges', CodingChallengeController::class);
 });
