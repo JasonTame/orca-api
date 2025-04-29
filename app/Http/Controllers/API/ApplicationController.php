@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Enums\ApplicationStatus;
+use App\Enums\ReferralSource;
 use App\Http\Controllers\Controller;
 use App\Models\Application;
 use Illuminate\Http\JsonResponse;
@@ -26,11 +28,11 @@ class ApplicationController extends Controller
             'job_opening_id' => 'required|integer|exists:job_openings,id',
             'candidate_id' => 'required|integer|exists:candidates,id',
             'code_sample_url' => 'nullable|url',
-            'status' => 'required|in:pending,reviewing,interviewing,offered,accepted,rejected',
+            'status' => 'required|in:' . implode(',', ApplicationStatus::values()),
             'current_stage_id' => 'nullable|exists:interview_stages,id',
             'rejection_reason' => 'nullable|string|max:255',
             'notes' => 'nullable|string',
-            'referral_source' => 'nullable|string|max:255',
+            'referral_source' => 'nullable|string|in:' . implode(',', ReferralSource::values()),
             'applied_at' => 'nullable|date',
         ]);
 
@@ -56,11 +58,11 @@ class ApplicationController extends Controller
             'job_opening_id' => 'sometimes|required|exists:job_openings,id',
             'candidate_id' => 'sometimes|required|exists:candidates,id',
             'code_sample_url' => 'nullable|url',
-            'status' => 'sometimes|required|in:pending,reviewing,interviewing,offered,accepted,rejected',
+            'status' => 'sometimes|required|in:' . implode(',', ApplicationStatus::values()),
             'current_stage_id' => 'nullable|exists:interview_stages,id',
             'rejection_reason' => 'nullable|string|max:255',
             'notes' => 'nullable|string',
-            'referral_source' => 'nullable|string|max:255',
+            'referral_source' => 'nullable|string|in:' . implode(',', ReferralSource::values()),
             'applied_at' => 'nullable|date',
         ]);
 

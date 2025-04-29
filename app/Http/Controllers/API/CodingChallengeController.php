@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Enums\ChallengeDifficulty;
 use App\Http\Controllers\Controller;
 use App\Models\CodingChallenge;
 use Illuminate\Http\JsonResponse;
@@ -29,7 +30,7 @@ class CodingChallengeController extends Controller
             'instructions' => 'required|string',
             'repository_url' => 'required|url',
             'time_limit' => 'required|integer|min:1',
-            'difficulty' => 'required|in:easy,medium,hard',
+            'difficulty' => 'required|in:' . implode(',', ChallengeDifficulty::values()),
         ]);
 
         if ($validator->fails()) {
@@ -57,7 +58,7 @@ class CodingChallengeController extends Controller
             'instructions' => 'sometimes|required|string',
             'repository_url' => 'sometimes|required|url',
             'time_limit' => 'sometimes|required|integer|min:1',
-            'difficulty' => 'sometimes|required|in:easy,medium,hard',
+            'difficulty' => 'sometimes|required|in:' . implode(',', ChallengeDifficulty::values()),
         ]);
 
         if ($validator->fails()) {

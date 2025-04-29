@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Enums\CompanySize;
+use App\Enums\EntityStatus;
 use App\Http\Controllers\Controller;
 use App\Models\Company;
 use Illuminate\Http\JsonResponse;
@@ -31,10 +33,10 @@ class CompanyController extends Controller
             'logo_url' => 'nullable|url',
             'website' => 'nullable|url',
             'industry' => 'nullable|string|max:255',
-            'size' => 'nullable|in:small,medium,large,enterprise',
+            'size' => 'nullable|in:' . implode(',', CompanySize::values()),
             'description' => 'nullable|string',
             'location' => 'nullable|string|max:255',
-            'status' => 'nullable|in:active,inactive',
+            'status' => 'nullable|in:' . implode(',', EntityStatus::values()),
         ]);
 
         if ($validator->fails()) {
@@ -58,10 +60,10 @@ class CompanyController extends Controller
             'logo_url' => 'nullable|url',
             'website' => 'nullable|url',
             'industry' => 'nullable|string|max:255',
-            'size' => 'nullable|in:small,medium,large,enterprise',
+            'size' => 'nullable|in:' . implode(',', CompanySize::values()),
             'description' => 'nullable|string',
             'location' => 'nullable|string|max:255',
-            'status' => 'nullable|in:active,inactive',
+            'status' => 'nullable|in:' . implode(',', EntityStatus::values()),
         ]);
 
         if ($validator->fails()) {

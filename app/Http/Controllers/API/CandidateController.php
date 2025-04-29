@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Enums\CandidateSource;
+use App\Enums\CandidateStatus;
 use App\Http\Controllers\Controller;
 use App\Models\Candidate;
 use Illuminate\Http\JsonResponse;
@@ -39,9 +41,9 @@ class CandidateController extends Controller
             'current_position' => 'nullable|string|max:255',
             'current_company' => 'nullable|string|max:255',
             'desired_salary' => 'nullable|numeric|min:0',
-            'source' => 'nullable|in:linkedin,indeed,referral,career_site,other',
+            'source' => 'nullable|in:' . implode(',', CandidateSource::values()),
             'notes' => 'nullable|string',
-            'status' => 'nullable|in:active,inactive,hired,rejected',
+            'status' => 'nullable|in:' . implode(',', CandidateStatus::values()),
         ]);
 
         if ($validator->fails()) {
@@ -63,7 +65,7 @@ class CandidateController extends Controller
         $validator = Validator::make($request->all(), [
             'first_name' => 'sometimes|required|string|max:255',
             'last_name' => 'sometimes|required|string|max:255',
-            'email' => 'sometimes|required|email|unique:candidates,email,'.$candidate->id,
+            'email' => 'sometimes|required|email|unique:candidates,email,' . $candidate->id,
             'phone' => 'nullable|string|max:20',
             'location' => 'nullable|string|max:255',
             'resume_url' => 'nullable|url',
@@ -73,9 +75,9 @@ class CandidateController extends Controller
             'current_position' => 'nullable|string|max:255',
             'current_company' => 'nullable|string|max:255',
             'desired_salary' => 'nullable|numeric|min:0',
-            'source' => 'nullable|in:linkedin,indeed,referral,career_site,other',
+            'source' => 'nullable|in:' . implode(',', CandidateSource::values()),
             'notes' => 'nullable|string',
-            'status' => 'nullable|in:active,inactive,hired,rejected',
+            'status' => 'nullable|in:' . implode(',', CandidateStatus::values()),
         ]);
 
         if ($validator->fails()) {

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Enums\InterviewDecision;
+use App\Enums\InterviewStatus;
 use App\Http\Controllers\Controller;
 use App\Models\Interview;
 use Illuminate\Http\JsonResponse;
@@ -30,11 +32,11 @@ class InterviewController extends Controller
             'completed_at' => 'nullable|date|after:scheduled_at',
             'location' => 'nullable|string|max:255',
             'meeting_url' => 'nullable|url',
-            'status' => 'required|in:scheduled,completed,cancelled,rescheduled',
+            'status' => 'required|in:' . implode(',', InterviewStatus::values()),
             'technical_score' => 'nullable|integer|min:1|max:5',
             'cultural_score' => 'nullable|integer|min:1|max:5',
             'feedback' => 'nullable|string',
-            'decision' => 'nullable|in:proceed,reject,hold',
+            'decision' => 'nullable|in:' . implode(',', InterviewDecision::values()),
             'notes' => 'nullable|string',
         ]);
 
@@ -64,11 +66,11 @@ class InterviewController extends Controller
             'completed_at' => 'nullable|date|after:scheduled_at',
             'location' => 'nullable|string|max:255',
             'meeting_url' => 'nullable|url',
-            'status' => 'sometimes|required|in:scheduled,completed,cancelled,rescheduled',
+            'status' => 'sometimes|required|in:' . implode(',', InterviewStatus::values()),
             'technical_score' => 'nullable|integer|min:1|max:5',
             'cultural_score' => 'nullable|integer|min:1|max:5',
             'feedback' => 'nullable|string',
-            'decision' => 'nullable|in:proceed,reject,hold',
+            'decision' => 'nullable|in:' . implode(',', InterviewDecision::values()),
             'notes' => 'nullable|string',
         ]);
 
