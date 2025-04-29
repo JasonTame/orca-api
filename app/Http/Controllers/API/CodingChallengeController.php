@@ -16,7 +16,7 @@ use Knuckles\Scribe\Attributes\Endpoint;
  */
 class CodingChallengeController extends Controller
 {
-    #[Endpoint("List all coding challenges")]
+    #[Endpoint('List all coding challenges')]
     public function index(): JsonResponse
     {
         $codingChallenges = CodingChallenge::with(['jobOpening'])->get();
@@ -24,14 +24,14 @@ class CodingChallengeController extends Controller
         return response()->json($codingChallenges);
     }
 
-    #[Endpoint("Create a new coding challenge")]
-    #[BodyParam("job_opening_id", "integer", "The ID of the job opening", required: true, example: 1)]
-    #[BodyParam("title", "string", "Title of the coding challenge", required: true, example: "API Integration Challenge")]
-    #[BodyParam("description", "string", "Description of the challenge", required: true, example: "Build a REST API integration with third-party service")]
-    #[BodyParam("instructions", "string", "Detailed instructions for completing the challenge", required: true, example: "Clone the repository and implement the missing endpoints according to the specification")]
-    #[BodyParam("repository_url", "string", "URL to the challenge repository", required: true, example: "https://github.com/company/coding-challenge")]
-    #[BodyParam("time_limit", "integer", "Time limit in hours", required: true, example: 24)]
-    #[BodyParam("difficulty", "string", "Difficulty level of the challenge", required: true, enum: ChallengeDifficulty::class, example: "medium")]
+    #[Endpoint('Create a new coding challenge')]
+    #[BodyParam('job_opening_id', 'integer', 'The ID of the job opening', required: true, example: 1)]
+    #[BodyParam('title', 'string', 'Title of the coding challenge', required: true, example: 'API Integration Challenge')]
+    #[BodyParam('description', 'string', 'Description of the challenge', required: true, example: 'Build a REST API integration with third-party service')]
+    #[BodyParam('instructions', 'string', 'Detailed instructions for completing the challenge', required: true, example: 'Clone the repository and implement the missing endpoints according to the specification')]
+    #[BodyParam('repository_url', 'string', 'URL to the challenge repository', required: true, example: 'https://github.com/company/coding-challenge')]
+    #[BodyParam('time_limit', 'integer', 'Time limit in hours', required: true, example: 24)]
+    #[BodyParam('difficulty', 'string', 'Difficulty level of the challenge', required: true, enum: ChallengeDifficulty::class, example: 'medium')]
     public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -41,7 +41,7 @@ class CodingChallengeController extends Controller
             'instructions' => 'required|string',
             'repository_url' => 'required|url',
             'time_limit' => 'required|integer|min:1',
-            'difficulty' => 'required|in:' . implode(',', ChallengeDifficulty::values()),
+            'difficulty' => 'required|in:'.implode(',', ChallengeDifficulty::values()),
         ]);
 
         if ($validator->fails()) {
@@ -53,7 +53,7 @@ class CodingChallengeController extends Controller
         return response()->json($codingChallenge, 201);
     }
 
-    #[Endpoint("Get a single coding challenge")]
+    #[Endpoint('Get a single coding challenge')]
     public function show(CodingChallenge $codingChallenge): JsonResponse
     {
         $codingChallenge->load(['jobOpening']);
@@ -61,14 +61,14 @@ class CodingChallengeController extends Controller
         return response()->json($codingChallenge);
     }
 
-    #[Endpoint("Update a coding challenge")]
-    #[BodyParam("job_opening_id", "integer", "The ID of the job opening", example: 1)]
-    #[BodyParam("title", "string", "Title of the coding challenge", example: "Updated API Challenge")]
-    #[BodyParam("description", "string", "Description of the challenge", example: "Build a REST API integration with authentication")]
-    #[BodyParam("instructions", "string", "Detailed instructions for completing the challenge", example: "Clone the repository and implement the missing endpoints following OAuth2 spec")]
-    #[BodyParam("repository_url", "string", "URL to the challenge repository", example: "https://github.com/company/updated-coding-challenge")]
-    #[BodyParam("time_limit", "integer", "Time limit in hours", example: 48)]
-    #[BodyParam("difficulty", "string", "Difficulty level of the challenge", enum: ChallengeDifficulty::class, example: "hard")]
+    #[Endpoint('Update a coding challenge')]
+    #[BodyParam('job_opening_id', 'integer', 'The ID of the job opening', example: 1)]
+    #[BodyParam('title', 'string', 'Title of the coding challenge', example: 'Updated API Challenge')]
+    #[BodyParam('description', 'string', 'Description of the challenge', example: 'Build a REST API integration with authentication')]
+    #[BodyParam('instructions', 'string', 'Detailed instructions for completing the challenge', example: 'Clone the repository and implement the missing endpoints following OAuth2 spec')]
+    #[BodyParam('repository_url', 'string', 'URL to the challenge repository', example: 'https://github.com/company/updated-coding-challenge')]
+    #[BodyParam('time_limit', 'integer', 'Time limit in hours', example: 48)]
+    #[BodyParam('difficulty', 'string', 'Difficulty level of the challenge', enum: ChallengeDifficulty::class, example: 'hard')]
     public function update(Request $request, CodingChallenge $codingChallenge): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -78,7 +78,7 @@ class CodingChallengeController extends Controller
             'instructions' => 'sometimes|required|string',
             'repository_url' => 'sometimes|required|url',
             'time_limit' => 'sometimes|required|integer|min:1',
-            'difficulty' => 'sometimes|required|in:' . implode(',', ChallengeDifficulty::values()),
+            'difficulty' => 'sometimes|required|in:'.implode(',', ChallengeDifficulty::values()),
         ]);
 
         if ($validator->fails()) {
@@ -90,7 +90,7 @@ class CodingChallengeController extends Controller
         return response()->json($codingChallenge);
     }
 
-    #[Endpoint("Delete a coding challenge")]
+    #[Endpoint('Delete a coding challenge')]
     public function destroy(CodingChallenge $codingChallenge): JsonResponse
     {
         $codingChallenge->delete();
