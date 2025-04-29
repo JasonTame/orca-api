@@ -2,12 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\Interview;
+use App\Enums\InterviewDecision;
+use App\Enums\InterviewStatus;
 use App\Models\Application;
 use App\Models\CompanyMember;
-use App\Enums\InterviewStatus;
+use App\Models\Interview;
 use App\Models\InterviewStage;
-use App\Enums\InterviewDecision;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class InterviewFactory extends Factory

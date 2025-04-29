@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Enums\TechSkillCategory;
 use App\Models\TechSkill;
 use Illuminate\Database\Seeder;
-use App\Enums\TechSkillCategory;
 
 class TechSkillSeeder extends Seeder
 {

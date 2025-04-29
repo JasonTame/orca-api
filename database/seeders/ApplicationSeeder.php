@@ -34,7 +34,7 @@ class ApplicationSeeder extends Seeder
             $jobOpening = $jobOpenings->random();
             $candidate = $candidates->random();
 
-            $key = $jobOpening->id . '-' . $candidate->id;
+            $key = $jobOpening->id.'-'.$candidate->id;
             if (in_array($key, $usedCombinations)) {
                 continue;
             }
@@ -42,7 +42,7 @@ class ApplicationSeeder extends Seeder
                 ->orderBy('sequence', 'asc')
                 ->first();
 
-            if (!$firstStage) {
+            if (! $firstStage) {
                 continue;
             }
 
@@ -56,7 +56,7 @@ class ApplicationSeeder extends Seeder
             Application::create([
                 'job_opening_id' => $jobOpening->id,
                 'candidate_id' => $candidate->id,
-                'code_sample_url' => rand(0, 1) ? 'https://github.com/' . $candidate->first_name . $candidate->last_name . '/code-sample' : null,
+                'code_sample_url' => rand(0, 1) ? 'https://github.com/'.$candidate->first_name.$candidate->last_name.'/code-sample' : null,
                 'status' => $status,
                 'current_stage_id' => $firstStage->id,
                 'rejection_reason' => $status === ApplicationStatus::REJECTED->value ? $this->getRandomRejectionReason() : null,

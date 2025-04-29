@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Models\TechSkill;
-use Illuminate\Http\Request;
 use App\Enums\TechSkillCategory;
-use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
+use App\Models\TechSkill;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -25,7 +25,7 @@ class TechSkillController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255|unique:tech_skills,name',
-            'category' => 'required|in:' . implode(',', TechSkillCategory::values()),
+            'category' => 'required|in:'.implode(',', TechSkillCategory::values()),
             'parent_skill_id' => 'nullable|integer|exists:tech_skills,id',
         ]);
 

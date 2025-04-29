@@ -32,11 +32,11 @@ class InterviewController extends Controller
             'completed_at' => 'nullable|date|after:scheduled_at',
             'location' => 'nullable|string|max:255',
             'meeting_url' => 'nullable|url',
-            'status' => 'required|in:' . implode(',', InterviewStatus::values()),
+            'status' => 'required|in:'.implode(',', InterviewStatus::values()),
             'technical_score' => 'nullable|integer|min:1|max:5',
             'cultural_score' => 'nullable|integer|min:1|max:5',
             'feedback' => 'nullable|string',
-            'decision' => 'nullable|in:' . implode(',', InterviewDecision::values()),
+            'decision' => 'nullable|in:'.implode(',', InterviewDecision::values()),
             'notes' => 'nullable|string',
         ]);
 
@@ -66,11 +66,11 @@ class InterviewController extends Controller
             'completed_at' => 'nullable|date|after:scheduled_at',
             'location' => 'nullable|string|max:255',
             'meeting_url' => 'nullable|url',
-            'status' => 'sometimes|required|in:' . implode(',', InterviewStatus::values()),
+            'status' => 'sometimes|required|in:'.implode(',', InterviewStatus::values()),
             'technical_score' => 'nullable|integer|min:1|max:5',
             'cultural_score' => 'nullable|integer|min:1|max:5',
             'feedback' => 'nullable|string',
-            'decision' => 'nullable|in:' . implode(',', InterviewDecision::values()),
+            'decision' => 'nullable|in:'.implode(',', InterviewDecision::values()),
             'notes' => 'nullable|string',
         ]);
 

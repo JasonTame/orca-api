@@ -2,10 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\Candidate;
-use App\Models\TechSkill;
-use App\Models\CandidateSkill;
 use App\Enums\CandidateSkillProficiency;
+use App\Models\Candidate;
+use App\Models\CandidateSkill;
+use App\Models\TechSkill;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CandidateSkillFactory extends Factory

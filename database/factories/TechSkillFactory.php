@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\TechSkill;
 use App\Enums\TechSkillCategory;
+use App\Models\TechSkill;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TechSkillFactory extends Factory

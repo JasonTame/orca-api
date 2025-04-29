@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Enums\JobType;
 use App\Enums\JobLevel;
 use App\Enums\JobStatus;
-use App\Models\JobOpening;
-use Illuminate\Http\Request;
-use Illuminate\Http\JsonResponse;
+use App\Enums\JobType;
 use App\Http\Controllers\Controller;
+use App\Models\JobOpening;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -32,13 +32,13 @@ class JobOpeningController extends Controller
             'description' => 'required|string',
             'team' => 'nullable|string|max:255',
             'location' => 'nullable|string|max:255',
-            'type' => 'required|in:' . implode(',', JobType::values()),
-            'level' => 'required|in:' . implode(',', JobLevel::values()),
+            'type' => 'required|in:'.implode(',', JobType::values()),
+            'level' => 'required|in:'.implode(',', JobLevel::values()),
             'salary_min' => 'nullable|numeric|min:0',
             'salary_max' => 'nullable|numeric|min:0|gte:salary_min',
             'requirements' => 'nullable|string',
             'benefits' => 'nullable|string',
-            'status' => 'required|in:' . implode(',', JobStatus::values()),
+            'status' => 'required|in:'.implode(',', JobStatus::values()),
             'is_remote' => 'boolean',
             'published_at' => 'nullable|date',
             'closing_date' => 'nullable|date|after:published_at',

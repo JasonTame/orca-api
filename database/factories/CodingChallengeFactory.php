@@ -2,9 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\JobOpening;
-use App\Models\CodingChallenge;
 use App\Enums\CodingChallengeDifficulty;
+use App\Models\CodingChallenge;
+use App\Models\JobOpening;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CodingChallengeFactory extends Factory

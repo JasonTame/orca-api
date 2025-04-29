@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\JobOpening;
-use App\Models\CodingChallenge;
-use Illuminate\Database\Seeder;
 use App\Enums\CodingChallengeDifficulty;
+use App\Models\CodingChallenge;
+use App\Models\JobOpening;
+use Illuminate\Database\Seeder;
 
 class CodingChallengeSeeder extends Seeder
 {

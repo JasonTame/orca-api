@@ -26,13 +26,14 @@ class InterviewSeeder extends Seeder
             ApplicationStatus::REVIEWING->value,
             ApplicationStatus::INTERVIEWING->value,
             ApplicationStatus::OFFERED->value,
-            ApplicationStatus::ACCEPTED->value
+            ApplicationStatus::ACCEPTED->value,
         ])->get();
 
         $interviewers = CompanyMember::where('is_interviewer', true)->get();
 
         if ($interviewers->isEmpty()) {
             echo "No interviewers found. Please make sure there are company members with is_interviewer set to true.\n";
+
             return;
         }
 
@@ -77,11 +78,11 @@ class InterviewSeeder extends Seeder
                     'interviewer_id' => $interviewer->id,
                     'scheduled_at' => $scheduledDate,
                     'completed_at' => $status === InterviewStatus::COMPLETED->value ? $scheduledDate->copy()->addHours(1) : null,
-                    'location' => $stage->format === InterviewFormat::IN_PERSON->value ? 'Company HQ, Room ' . rand(100, 500) : null,
-                    'meeting_url' => $stage->format === InterviewFormat::VIDEO->value ? 'https://meet.company.com/' . Str::random(10) : null,
+                    'location' => $stage->format === InterviewFormat::IN_PERSON->value ? 'Company HQ, Room '.rand(100, 500) : null,
+                    'meeting_url' => $stage->format === InterviewFormat::VIDEO->value ? 'https://meet.company.com/'.Str::random(10) : null,
                     'status' => $status,
                     'technical_score' => $status === InterviewStatus::COMPLETED->value && $stage->is_technical ? rand(1, 10) : null,
-                    'cultural_score' => $status === InterviewStatus::COMPLETED->value && !$stage->is_technical ? rand(1, 10) : null,
+                    'cultural_score' => $status === InterviewStatus::COMPLETED->value && ! $stage->is_technical ? rand(1, 10) : null,
                     'feedback' => $status === InterviewStatus::COMPLETED->value ? $this->getRandomFeedback($stage->is_technical) : null,
                     'decision' => $status === InterviewStatus::COMPLETED->value ? InterviewDecision::random() : null,
                     'notes' => $this->getRandomNotes(),

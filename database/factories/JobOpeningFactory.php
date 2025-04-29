@@ -2,12 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Enums\JobType;
 use App\Enums\JobLevel;
-use App\Models\Company;
 use App\Enums\JobStatus;
-use App\Models\JobOpening;
+use App\Enums\JobType;
+use App\Models\Company;
 use App\Models\CompanyMember;
+use App\Models\JobOpening;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class JobOpeningFactory extends Factory

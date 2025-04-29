@@ -39,7 +39,7 @@ class CompanyMemberController extends Controller
             'is_hiring_manager' => 'boolean',
             'is_recruiter' => 'boolean',
             'is_interviewer' => 'boolean',
-            'status' => 'required|in:' . implode(',', EntityStatus::values()),
+            'status' => 'required|in:'.implode(',', EntityStatus::values()),
         ]);
 
         if ($validator->fails()) {
@@ -63,14 +63,14 @@ class CompanyMemberController extends Controller
         $validator = Validator::make($request->all(), [
             'company_id' => 'sometimes|required|exists:companies,id',
             'name' => 'sometimes|required|string|max:255',
-            'email' => 'sometimes|required|email|unique:company_members,email,' . $companyMember->id,
+            'email' => 'sometimes|required|email|unique:company_members,email,'.$companyMember->id,
             'position' => 'sometimes|required|string|max:255',
             'department' => 'sometimes|required|string|max:255',
             'phone' => 'sometimes|required|string|max:255',
             'is_hiring_manager' => 'boolean',
             'is_recruiter' => 'boolean',
             'is_interviewer' => 'boolean',
-            'status' => 'sometimes|required|in:' . implode(',', EntityStatus::values()),
+            'status' => 'sometimes|required|in:'.implode(',', EntityStatus::values()),
         ]);
 
         if ($validator->fails()) {

@@ -33,10 +33,10 @@ class CompanyController extends Controller
             'logo_url' => 'nullable|url',
             'website' => 'nullable|url',
             'industry' => 'nullable|string|max:255',
-            'size' => 'nullable|in:' . implode(',', CompanySize::values()),
+            'size' => 'nullable|in:'.implode(',', CompanySize::values()),
             'description' => 'nullable|string',
             'location' => 'nullable|string|max:255',
-            'status' => 'nullable|in:' . implode(',', EntityStatus::values()),
+            'status' => 'nullable|in:'.implode(',', EntityStatus::values()),
         ]);
 
         if ($validator->fails()) {
@@ -60,10 +60,10 @@ class CompanyController extends Controller
             'logo_url' => 'nullable|url',
             'website' => 'nullable|url',
             'industry' => 'nullable|string|max:255',
-            'size' => 'nullable|in:' . implode(',', CompanySize::values()),
+            'size' => 'nullable|in:'.implode(',', CompanySize::values()),
             'description' => 'nullable|string',
             'location' => 'nullable|string|max:255',
-            'status' => 'nullable|in:' . implode(',', EntityStatus::values()),
+            'status' => 'nullable|in:'.implode(',', EntityStatus::values()),
         ]);
 
         if ($validator->fails()) {

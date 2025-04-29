@@ -2,10 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\Candidate;
-use App\Enums\ReferralSource;
 use App\Enums\CandidateSource;
 use App\Enums\CandidateStatus;
+use App\Models\Candidate;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CandidateFactory extends Factory

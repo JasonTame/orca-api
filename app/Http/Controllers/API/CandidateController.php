@@ -41,9 +41,9 @@ class CandidateController extends Controller
             'current_position' => 'nullable|string|max:255',
             'current_company' => 'nullable|string|max:255',
             'desired_salary' => 'nullable|numeric|min:0',
-            'source' => 'nullable|in:' . implode(',', CandidateSource::values()),
+            'source' => 'nullable|in:'.implode(',', CandidateSource::values()),
             'notes' => 'nullable|string',
-            'status' => 'nullable|in:' . implode(',', CandidateStatus::values()),
+            'status' => 'nullable|in:'.implode(',', CandidateStatus::values()),
         ]);
 
         if ($validator->fails()) {
@@ -65,7 +65,7 @@ class CandidateController extends Controller
         $validator = Validator::make($request->all(), [
             'first_name' => 'sometimes|required|string|max:255',
             'last_name' => 'sometimes|required|string|max:255',
-            'email' => 'sometimes|required|email|unique:candidates,email,' . $candidate->id,
+            'email' => 'sometimes|required|email|unique:candidates,email,'.$candidate->id,
             'phone' => 'nullable|string|max:20',
             'location' => 'nullable|string|max:255',
             'resume_url' => 'nullable|url',
@@ -75,9 +75,9 @@ class CandidateController extends Controller
             'current_position' => 'nullable|string|max:255',
             'current_company' => 'nullable|string|max:255',
             'desired_salary' => 'nullable|numeric|min:0',
-            'source' => 'nullable|in:' . implode(',', CandidateSource::values()),
+            'source' => 'nullable|in:'.implode(',', CandidateSource::values()),
             'notes' => 'nullable|string',
-            'status' => 'nullable|in:' . implode(',', CandidateStatus::values()),
+            'status' => 'nullable|in:'.implode(',', CandidateStatus::values()),
         ]);
 
         if ($validator->fails()) {

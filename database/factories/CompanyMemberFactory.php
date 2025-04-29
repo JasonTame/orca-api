@@ -2,9 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Enums\CompanyMemberStatus;
 use App\Models\Company;
 use App\Models\CompanyMember;
-use App\Enums\CompanyMemberStatus;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

@@ -2,12 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\Candidate;
-use App\Models\JobOpening;
-use App\Models\Application;
-use App\Enums\ReferralSource;
-use App\Models\InterviewStage;
 use App\Enums\ApplicationStatus;
+use App\Enums\ReferralSource;
+use App\Models\Application;
+use App\Models\Candidate;
+use App\Models\InterviewStage;
+use App\Models\JobOpening;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ApplicationFactory extends Factory

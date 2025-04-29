@@ -28,11 +28,11 @@ class ApplicationController extends Controller
             'job_opening_id' => 'required|integer|exists:job_openings,id',
             'candidate_id' => 'required|integer|exists:candidates,id',
             'code_sample_url' => 'nullable|url',
-            'status' => 'required|in:' . implode(',', ApplicationStatus::values()),
+            'status' => 'required|in:'.implode(',', ApplicationStatus::values()),
             'current_stage_id' => 'nullable|exists:interview_stages,id',
             'rejection_reason' => 'nullable|string|max:255',
             'notes' => 'nullable|string',
-            'referral_source' => 'nullable|string|in:' . implode(',', ReferralSource::values()),
+            'referral_source' => 'nullable|string|in:'.implode(',', ReferralSource::values()),
             'applied_at' => 'nullable|date',
         ]);
 
@@ -58,11 +58,11 @@ class ApplicationController extends Controller
             'job_opening_id' => 'sometimes|required|exists:job_openings,id',
             'candidate_id' => 'sometimes|required|exists:candidates,id',
             'code_sample_url' => 'nullable|url',
-            'status' => 'sometimes|required|in:' . implode(',', ApplicationStatus::values()),
+            'status' => 'sometimes|required|in:'.implode(',', ApplicationStatus::values()),
             'current_stage_id' => 'nullable|exists:interview_stages,id',
             'rejection_reason' => 'nullable|string|max:255',
             'notes' => 'nullable|string',
-            'referral_source' => 'nullable|string|in:' . implode(',', ReferralSource::values()),
+            'referral_source' => 'nullable|string|in:'.implode(',', ReferralSource::values()),
             'applied_at' => 'nullable|date',
         ]);
 
